@@ -18,7 +18,9 @@ const Navbar = () => {
         </button>
       </div>
       <div className='absolute left-[50%] -translate-x-[50%]'>
-        <img src={Logo} alt="L'Amour Brut" className="h-8 mx-auto" />
+        <img 
+         onClick={() => (window.location.href = '/')}
+        src={Logo} alt="L'Amour Brut" className="h-8 mx-auto" />
       </div>
       <Link to="/about-us" className=" hover:text-blue-800">
         <BsCart size={32} className="cursor-pointer hover:text-blue-800" />
