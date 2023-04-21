@@ -6,6 +6,7 @@ module.exports = {
       'times-new-roman': ['Times New Roman', 'serif'],
       'comic-sans': ['Comic Sans MS', 'cursive'],
       roboto: ['Roboto', 'sans-serif'],
+      vcr: ['VCR OSD Mono', 'monospace'],
     },
     container: {
       padding: {
@@ -20,13 +21,13 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: '#0a0a0a',
-        accent: '#42a6e3',
+        // primary: '#0a0a0a',
+        // accent: '#42a6e3',
       },
       backgroundImage: {
-        site: "url('./assets/site-bg.jpg')",
-        about: "url('./assets/about.png')",
-        services: "url('./assets/services.png')",
+        // site: "url('./assets/site-bg.jpg')",
+        // about: "url('./assets/about.png')",
+        // services: "url('./assets/services.png')",
       },
     },
   },

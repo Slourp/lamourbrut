@@ -1,12 +1,24 @@
-import React from 'react'
+// screens/Home.js
+import React from 'react';
+import Hero from '../components/Home/Hero';
+import Video from '../components/shared/Video';
+import Backstage from '../components/Home/Backstage';
+import Story from '../components/Home/Story';
+import ContactUs from '../components/Home/ContactUs';
+import Headline from '../components/shared/Headline';
 
 const Home = () => {
   return (
-    <div>
-      <h1>Home</h1>
-      <p>Welcome to our website! This is the home page.</p>
+    <div className='overflow-hidden'>
+      <Hero />
+      <Headline />
+      <Video />
+      <Headline />
+      <Story />
+      {/* <Backstage /> */}
+      <ContactUs />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
