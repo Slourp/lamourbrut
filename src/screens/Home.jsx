@@ -15,7 +15,6 @@ const Home = () => {
       <Video />
       <Headline />
       <Story />
-      {/* <Backstage /> */}
       <ContactUs />
     </div>
   );
