@@ -1,12 +1,11 @@
 import React from 'react';
 
-import Image1 from '../../assets/home/amourbrut002.jpg';
-import Image2 from '../../assets/home/img20230328_203103302.jpg';
+import Image1 from '../../assets/home/photocontact.jpg';
 
 const ContactUs = () => {
   return (
     <section className="flex bg-black relative">
-      <h2 className='text-white absolute top-[18vh] left-10 text-[160px] opacity-[.08]'>
+      <h2 className='text-white absolute top-[18vh] left-10 text-[80px] opacity-[0.8]'>
         Contact
       </h2>
       <div className='w-1/2 p-20 mt-[30vh]'>
@@ -31,7 +30,9 @@ const ContactUs = () => {
         <div className='flex'>
 
           <div>
-            <img src={Image2} alt="Left Image" />
+            <img
+            className='h-screen object-cover'
+             src={Image1} alt="Left Image" />
           </div>
         </div>
       </div>
