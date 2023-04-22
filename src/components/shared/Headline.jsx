@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Headline = ({ headlines, backgroundColor, textColor }) => {
   return (
     <div className={`${backgroundColor} font-vcr flex justify-around`}>
-      <div className={`flex whitespace-nowrap space-x-26 marquee`}>
+      <div className={`flex whitespace-nowrap space-x-[150px] marquee`}>
 
         {headlines.map((headline, index) => (
           <span key={index} className={`${textColor} text-[58px]`}>

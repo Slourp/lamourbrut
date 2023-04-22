@@ -7,13 +7,13 @@ import ContactUs from '../components/Home/ContactUs';
 import Headline from '../components/shared/Headline';
 import OurStory from '../components/Home/OurStory'
 import Footer from '../layout/Footer';
-
+import { headline1 } from '../data/headlines';
 const Home = () => {
   return (
     <div className='overflow-hidden'>
       <Hero />
       <Headline
-        headlines={['BRUT DE DOUCEUR', 'FOLIE CONTROLEE']}
+        headlines={headline1}
         backgroundColor='bg-black'
         textColor='text-white'
 
@@ -24,7 +24,7 @@ const Home = () => {
       <OurStory />
       <ContactUs />
       <Headline
-        headlines={['BRUT DE DOUCEUR', 'FOLIE CONTROLEE']}
+        headlines={headline1}
         backgroundColor='bg-white'
         textColor='text-back'
       />

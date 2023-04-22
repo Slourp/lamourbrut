@@ -8,19 +8,21 @@
   font-weight: normal;
   font-style: normal;
 }
-/* App.css */
+
 @keyframes marquee {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
 .marquee {
-  animation: marquee 10s linear infinite;
+  display: flex;
+  animation: marquee 30s linear infinite;
 }
+
 body {
   cursor: url('./cursor.svg') 75 75;
   margin: 0;
