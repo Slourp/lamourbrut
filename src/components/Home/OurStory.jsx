@@ -30,7 +30,7 @@ const OurStory = () => {
         </p>
         <button onClick={() =>
           window.location.href = '/story'
-        } className='my-12 flex items-center text-[32px] font-extrabold border-[6px] border-black uppercase p-1 px-5'>
+        } className='my-12 flex items-center text-[22px] font-extrabold border-[6px] border-black uppercase p-1 px-5'>
           Read more
           <HiArrowRight className='ml-4' />
         </button>
