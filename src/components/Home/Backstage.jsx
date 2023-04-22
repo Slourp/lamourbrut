@@ -9,11 +9,11 @@ const images = [Image1, Image2, Image3, Image4];
 const Backstage = () => {
   return (
     <section className="bg-black p-20">
-      <h2 className='text-white'>01. Backstage</h2>
+      <h2 className='text-white text-[80px] opacity-[0.8]' >Backstage</h2>
       <div className="grid grid-cols-4 gap-4 items-center">
         {images.map((image, index) => (
           <div key={index} className=' flex justify-center'>
-            <img src={image} alt="" className="h-full object-cover" />
+            <img src={image} alt="" className="h-full object-cover backstage-img" />
           </div>
         ))}
       </div>
@@ -27,3 +27,7 @@ const Backstage = () => {
 };
 
 export default Backstage;
+
+
+
+

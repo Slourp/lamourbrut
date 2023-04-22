@@ -5,7 +5,7 @@ import Image1 from '../../assets/home/photocontact.jpg';
 const ContactUs = () => {
   return (
     <section className="flex bg-black relative">
-      <h2 className='text-white absolute top-[18vh] left-10 text-[80px] opacity-[0.8]'>
+      <h2 className='text-white absolute top-[18vh] left-12 text-[80px] opacity-[0.8]'>
         Contact
       </h2>
       <div className='w-1/2 p-20 mt-[30vh]'>

@@ -7,6 +7,7 @@ import Story from '../components/Home/Story';
 import ContactUs from '../components/Home/ContactUs';
 import Headline from '../components/shared/Headline';
 import OurStory from '../components/Home/Story'
+import Footer from '../layout/Footer';
 
 const Home = () => {
   return (
@@ -15,9 +16,10 @@ const Home = () => {
       <Headline />
       <Video />
       <Headline />
+      <Backstage />
       <OurStory />
-      {/* <Backstage /> */}
       <ContactUs />
+      <Footer />
     </div>
   );
 };
