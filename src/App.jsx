@@ -31,7 +31,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="shop" element={<Shop />} />
           <Route path="about-us" element={<AboutUs />} />
-          <Route path="ourstory" element={<Story />  } />
+          <Route path="story" element={<Story />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </MainLayout>

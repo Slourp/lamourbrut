@@ -17,7 +17,9 @@ const Navbar = () => {
           SHOP
         </button>
       </div>
-      <div className='absolute left-[50%] -translate-x-[50%]'>
+      <div className='absolute left-[50%] -translate-x-[50%]  cursor-pointer ' onClick={() =>
+        window.location.href = '/'
+      }>
         <img src={Logo} alt="L'Amour Brut" className="h-8 mx-auto" />
       </div>
       <Link to="/about-us" className=" hover:text-blue-800">

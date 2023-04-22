@@ -27,7 +27,7 @@ body {
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  line-height: 1.7;
   font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -40,16 +40,21 @@ body {
   body {
     @apply font-roboto;
   }
+  p {
+    @apply text-[18px];
+  }
   h1 {
-    @apply -tracking-[2px] uppercase mb-4 font-arial-black font-bold text-[55px] leading-[0.8] lg:text-[30px];
+    @apply -tracking-[2px] uppercase mb-4 font-arial-black font-bold text-[45px] leading-[0.8];
   }
   h2 {
-    @apply -tracking-[2px] uppercase mb-16 font-arial-black font-bold text-[55px] leading-[0.8] lg:text-[30px];
+    @apply -tracking-[2px] uppercase mb-10 font-arial-black font-bold text-[45px] leading-[0.8];
   }
   h3 {
-    @apply -tracking-[2px] uppercase mb-12 font-arial-black font-bold text-[35px] leading-[0.8] lg:text-[26px];
+    @apply -tracking-[2px] uppercase mb-12 font-arial-black font-bold text-[35px] leading-[0.8];
   }
-  p {
-    @apply text-[24px];
+  .story-bg-container video {
+    @apply w-full h-full object-cover fixed top-0 left-0 z-[-1];
   }
 }
+
+/* ! u can right pure css in top of file and copilot will suggest tailwind code while typing class name in @apply condition */

@@ -5,13 +5,13 @@ import Image1 from '../../assets/home/photocontact.jpg';
 const ContactUs = () => {
   return (
     <section className="flex bg-black relative">
-      <h2 className='text-white absolute top-[18vh] left-12 text-[80px] opacity-[0.8]'>
-        Contact
-      </h2>
       <div className='w-1/2 p-20 mt-[30vh]'>
-        <h3 className='text-white underline cursor-pointer'>e-mail</h3>
-        <h3 className='text-white underline cursor-pointer'>instagram</h3>
-        <h3 className='text-white underline cursor-pointer'>shop</h3>
+        <h2 className='text-white '>
+          Contact
+        </h2>
+        <p className='text-white underline cursor-pointer'>e-mail</p>
+        <p className='text-white underline cursor-pointer'>instagram</p>
+        <p className='text-white underline cursor-pointer'>shop</p>
         <div className='mt-24'>
           <p className='text-white'>L'Amour Brut</p>
           <p className='text-white'>75010 Paris, France</p>
@@ -31,8 +31,8 @@ const ContactUs = () => {
 
           <div>
             <img
-            className='h-screen object-cover'
-             src={Image1} alt="Left Image" />
+              className='h-screen object-cover'
+              src={Image1} alt="Left Image" />
           </div>
         </div>
       </div>

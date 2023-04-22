@@ -9,7 +9,7 @@ const images = [Image1, Image2, Image3, Image4];
 const Backstage = () => {
   return (
     <section className="bg-black p-20">
-      <h2 className='text-white text-[80px] opacity-[0.8]' >Backstage</h2>
+      <h2 className='text-white text-[80px]' >Backstage</h2>
       <div className="grid grid-cols-4 gap-4 items-center">
         {images.map((image, index) => (
           <div key={index} className=' flex justify-center'>
@@ -17,7 +17,7 @@ const Backstage = () => {
           </div>
         ))}
       </div>
-      <p className='text-white'>
+      <p className='text-white mt-12'>
         lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
         tincidunt, nisl eget ultricies tincidunt, nisl nisl aliquam
         libero, eget lacinia nisl nisl eget nisl. Sed tincidunt, nisl

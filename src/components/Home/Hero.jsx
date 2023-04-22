@@ -9,7 +9,7 @@ const Hero = () => {
           <span className=" uppercase font-arial-black mr-[14px] text-[28px]  lg:text-[58px] ">L'Amour</span>
           <span className="font-times-new-roman text-[28px] lg:text-[60px]">Brut</span>
         </h1>
-        <p className='text-[16px] lg:text-[26px] max-w-[495px]'>
+        <p >
           <strong>lorem</strong> string sit amet, consectetur  sit amet, consectetur Sed euismod  consectetur Sed euismod.
         </p>
       </div>
