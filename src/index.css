@@ -8,7 +8,19 @@
   font-weight: normal;
   font-style: normal;
 }
+/* App.css */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
+.marquee {
+  animation: marquee 10s linear infinite;
+}
 body {
   cursor: url('./cursor.svg') 75 75;
   margin: 0;
@@ -47,7 +59,7 @@ body {
     @apply -tracking-[2px] uppercase mb-4 font-arial-black font-bold text-[45px] leading-[0.8];
   }
   h2 {
-    @apply -tracking-[2px] uppercase mb-10 font-arial-black font-bold text-[120px] leading-[0.8];
+    @apply -tracking-[2px] uppercase mb-10 font-arial-black font-bold text-[100px] leading-[0.8];
   }
   h3 {
     @apply -tracking-[2px] uppercase mb-12 font-arial-black font-bold text-[35px] leading-[0.8];

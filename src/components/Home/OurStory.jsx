@@ -6,7 +6,7 @@ import { HiArrowRight } from 'react-icons/hi';
 const OurStory = () => {
   return (
     <section className="flex overflow-hidden h-screen">
-      <div className="w-[50%] flex">
+      <div className="w-[55%] flex">
         <img
           src={Image1}
           alt="Hero"
@@ -18,7 +18,7 @@ const OurStory = () => {
           className="flex-1 max-w-[50%] object-cover h-screen"
         />
       </div>
-      <div className="w-[50%] p-12 flex flex-col justify-center items-baseline">
+      <div className="w-[45%] p-12 flex flex-col justify-center items-baseline">
         <h2>
           Our Story
         </h2>

@@ -12,12 +12,22 @@ const Home = () => {
   return (
     <div className='overflow-hidden'>
       <Hero />
-      <Headline />
+      <Headline
+        headlines={['BRUT DE DOUCEUR', 'FOLIE CONTROLEE']}
+        backgroundColor='bg-black'
+        textColor='text-white'
+
+      />
       <Video />
-      {/* <Headline /> */}
+
       <Backstage />
       <OurStory />
       <ContactUs />
+      <Headline
+        headlines={['BRUT DE DOUCEUR', 'FOLIE CONTROLEE']}
+        backgroundColor='bg-white'
+        textColor='text-back'
+      />
       <Footer />
     </div>
   );
