@@ -20,11 +20,16 @@
     "popmotion": "^11.0.5",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
+    "react-18-image-lightbox": "^5.1.4",
     "react-dom": "^18.2.0",
+    "react-grid-gallery": "^1.0.0",
     "react-icons": "^4.8.0",
     "react-intersection-observer": "^9.4.3",
+    "react-photo-album": "^2.0.4",
     "react-router-dom": "^6.10.0",
-    "react-scroll": "^1.8.9"
+    "react-scroll": "^1.8.9",
+    "react-sticky": "^6.0.3",
+    "yet-another-react-lightbox": "^3.5.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
