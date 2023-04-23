@@ -22,7 +22,7 @@ const OurStory = () => {
         <h2>
           Our Story
         </h2>
-        <p>
+        <p className='max-w-[550px] text-[22px]'>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit.
           Veritatis, distinctio amet aliquam rerum atque commodi,
           velit culpa inventore eligendi nemo iste facere

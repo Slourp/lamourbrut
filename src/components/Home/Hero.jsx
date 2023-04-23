@@ -3,13 +3,13 @@ import HeaderHome from '../../assets/home/hero.jpg';
 
 const Hero = () => {
   return (
-    <section className="flex overflow-hidden h-[68vh]">
+    <section className="flex overflow-hidden h-[68vh] container mx-auto">
       <div className="w-[50%] p-12">
-        <h1 style={{ letterSpacing: '-4px' }} className="uppercase flex-wrap  tracking-tight mt-[12vh] ">
+        <h1 style={{ letterSpacing: '-4px' }} className="uppercase flex-wrap tracking-tight mt-[15vh] ">
           <span className=" uppercase font-arial-black mr-[14px] text-[28px]  lg:text-[58px] ">L'Amour</span>
           <span className="font-times-new-roman text-[28px] lg:text-[60px]">Brut</span>
         </h1>
-        <p >
+        <p className='max-w-[550px] text-[22px]'>
           <strong>lorem</strong> string sit amet, consectetur  sit amet, consectetur Sed euismod  consectetur Sed euismod.
         </p>
       </div>

@@ -8,20 +8,22 @@ const images = [Image1, Image2, Image3, Image4];
 
 const Backstage = () => {
   return (
-    <section className="bg-black p-20">
-      <h2 className='text-white' >Backstage</h2>
-      <div className="grid grid-cols-4 gap-4 items-center">
-        {images.map((image, index) => (
-          <div key={index} className=' flex justify-center'>
-            <img src={image} alt="" className="h-full object-cover backstage-img" />
-          </div>
-        ))}
+    <section className="bg-black p-20 ">
+      <div className=' container mx-auto'>
+        <h2 className='text-white' >Backstage</h2>
+        <div className="grid grid-cols-4 gap-4 items-center">
+          {images.map((image, index) => (
+            <div key={index} className=' flex justify-center'>
+              <img src={image} alt="" className="h-full object-cover backstage-img" />
+            </div>
+          ))}
+        </div>
+        <p className='text-white mt-6'>
+          lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+          tincidunt, nisl eget ultricies tincidunt, nisl nisl aliquam
+          libero, eget lacinia nisl nisl eget nisl. Sed tincidunt, nisl
+        </p>
       </div>
-      <p className='text-white mt-6'>
-        lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-        tincidunt, nisl eget ultricies tincidunt, nisl nisl aliquam
-        libero, eget lacinia nisl nisl eget nisl. Sed tincidunt, nisl
-      </p>
     </section>
   );
 };

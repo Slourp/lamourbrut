@@ -19,7 +19,6 @@ const Home = () => {
 
       />
       <Video />
-
       <Backstage />
       <OurStory />
       <ContactUs />

@@ -41,30 +41,32 @@ const tmpComponent = (
 const ContactUs = () => {
   return (
     <section className="flex overflow-hidden h-screen bg-black">
-      <div className="text-white w-[55%] p-12 flex flex-col justify-center items-baseline">
-        <h2>
-          Contact
-        </h2>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Veritatis, distinctio amet aliquam rerum atque commodi,
-          velit culpa inventore eligendi nemo iste facere
-          exercitationem accusantium nam quia at quod natus iure!
-        </p>
-        <button onClick={() =>
-          window.location.href = '/story'
-        } className='my-12 flex items-center text-[22px] font-extrabold border-[6px] border-white uppercase p-1 px-5'>
-          Contact us
-          <HiArrowRight className='ml-4' />
-        </button>
-      </div>
-      <div className="w-[60%] flex">
-        <img
-          src={Image1}
-          alt="Hero"
-          className="flex-1  object-cover h-screen"
-        />
+      <div className='flex container mx-auto'>
+        <div className="text-white w-[55%] p-12 flex flex-col justify-center items-baseline ">
+          <h2>
+            Contact
+          </h2>
+          <p className='max-w-[550px] text-[22px]'>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Veritatis, distinctio amet aliquam rerum atque commodi,
+            velit culpa inventore eligendi nemo iste facere
+            exercitationem accusantium nam quia at quod natus iure!
+          </p>
+          <button onClick={() =>
+            window.location.href = '/story'
+          } className='my-12 flex items-center text-[22px] font-extrabold border-[6px] border-white uppercase p-1 px-5'>
+            Contact us
+            <HiArrowRight className='ml-4' />
+          </button>
+        </div>
+        <div className="w-[60%] flex">
+          <img
+            src={Image1}
+            alt="Hero"
+            className="flex-1  object-cover h-screen"
+          />
 
+        </div>
       </div>
     </section >
   );
