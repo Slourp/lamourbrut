@@ -13,6 +13,9 @@
   0% {
     transform: translateX(0);
   }
+  50% {
+    transform: translateX(-25%);
+  }
   100% {
     transform: translateX(-50%);
   }
@@ -20,7 +23,7 @@
 
 .marquee {
   display: flex;
-  animation: marquee 30s linear infinite;
+  animation: marquee 80s linear infinite;
 }
 
 body {
@@ -37,6 +40,9 @@ body {
 
 .backstage-img {
   height: 40vh;
+}
+.navbar-transition {
+  transition: transform 0.2s;
 }
 
 :root {
@@ -60,6 +66,17 @@ body {
   padding: 0 12px;
 }
 
+.sticky-headline {
+  position: fixed;
+  top: 20%;
+  left: 0;
+  z-index: 105;
+  transform: rotate(90deg);
+  transform-origin: left bottom;
+  width: 100vh;
+  background: black;
+}
+
 @layer base {
   body {
     @apply font-roboto;
@@ -68,10 +85,10 @@ body {
     @apply text-[18px];
   }
   h1 {
-    @apply -tracking-[2px] uppercase mb-10 font-arial-black font-bold text-[45px] leading-[0.8];
+    @apply -tracking-[2px] uppercase mb-10 font-arial font-bold text-[45px] leading-[0.8];
   }
   h2 {
-    @apply -tracking-[2px] uppercase mb-10 font-arial-black font-bold text-[100px] leading-[0.8];
+    @apply -tracking-[2px] uppercase mb-10 font-arial font-bold text-[100px] leading-[0.8];
   }
   h3 {
     @apply -tracking-[2px] uppercase mb-12 font-arial-black font-bold text-[35px] leading-[0.8];

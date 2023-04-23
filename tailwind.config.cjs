@@ -3,6 +3,7 @@ module.exports = {
   theme: {
     fontFamily: {
       'arial-black': ['Arial Black', 'sans-serif'],
+      arial: ['Arial', 'sans-serif'],
       'times-new-roman': ['Times New Roman', 'serif'],
       'comic-sans': ['Comic Sans MS', 'cursive'],
       roboto: ['Roboto', 'sans-serif'],
@@ -14,11 +15,17 @@ module.exports = {
       },
     },
     screens: {
-      sm: '640px',
-      md: '768px',
-      lg: '960px',
-      xl: '1200px',
+      xs: '480px', // Extra Small (pour les petits appareils mobiles)
+      sm: '640px', // Small (pour la plupart des appareils mobiles)
+      tablet: '768px', // Medium (pour les tablettes et les petits écrans d'ordinateurs portables)
+      md: '1024px', // Medium (pour les tablettes et les petits écrans d'ordinateurs portables)
+      lg: '960px', // Large (pour les ordinateurs portables et les petits écrans d'ordinateurs de bureau)
+      xl: '1200px', // Extra Large (pour les grands écrans d'ordinateurs de bureau)
+      '2xl': '1440px', // 2X Large (pour les très grands écrans d'ordinateurs de bureau)
+      '3xl': '1920px', // 3X Large (pour les écrans 4K)
+      '4xl': '2560px', // 4X Large (pour les écrans 5K et plus)
     },
+
     extend: {
       colors: {
         // primary: '#0a0a0a',

@@ -5,6 +5,7 @@ import Headline from '../components/shared/Headline'
 import imgProfile from '../assets/about/profile.png'
 import Logo from '../assets/lamourbrutlogo.png'
 import Gallery from '../components/shared/Gallery'
+import Footer from '../layout/Footer'
 
 const Profile = () => {
   return (
@@ -160,6 +161,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

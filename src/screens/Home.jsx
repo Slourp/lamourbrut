@@ -1,4 +1,3 @@
-// screens/Home.js
 import React from 'react';
 import Hero from '../components/Home/Hero';
 import Video from '../components/shared/Video';
@@ -16,22 +15,24 @@ const Home = () => {
         headlines={headline1}
         backgroundColor='bg-black'
         textColor='text-white'
-
+        textSize={32}
       />
       <OurStory />
+      <Headline
+        headlines={headline1}
+        backgroundColor='bg-black'
+        textColor='text-white'
+        textSize={32}
+      />
       <Video />
       <Backstage />
       <Headline
         headlines={headline1}
         backgroundColor='bg-white'
-        textColor='text-back'
+        textColor=''
+        textSize={32}
       />
       <ContactUs />
-      <Headline
-        headlines={headline1}
-        backgroundColor='bg-white'
-        textColor='text-back'
-      />
       <Footer />
     </div>
   );
