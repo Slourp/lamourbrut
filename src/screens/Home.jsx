@@ -18,9 +18,14 @@ const Home = () => {
         textColor='text-white'
 
       />
+      <OurStory />
       <Video />
       <Backstage />
-      <OurStory />
+      <Headline
+        headlines={headline1}
+        backgroundColor='bg-white'
+        textColor='text-back'
+      />
       <ContactUs />
       <Headline
         headlines={headline1}
