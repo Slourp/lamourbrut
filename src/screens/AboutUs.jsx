@@ -11,11 +11,11 @@ import PhotographerList from '../components/shared/Photographers'
 
 const Profile = () => {
   return (
-    <div className="profile flex flex-col items-center h-[1600px]">
+    <div className="profile flex flex-col items-center h-[1600px] py-5">
       <div>
         <div className="ml-2 mt-2 flex flex-col items-center">
           <div>
-            <a href="" className="text-blue-500 underline ml-5">
+            <a href="" className="text-blue-500 font-bold text-[25px] underline ml-5">
               lamour brut
             </a>
             <img className="w-32 h-32" src={imgProfile} alt="" />
