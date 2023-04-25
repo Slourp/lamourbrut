@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed z-10 flex justify-between top-0 w-full bg-white p-2 px-8 border-b-2 border-black navbar-transition`}
+      className={`fixed z-100 flex justify-between top-0 w-full bg-white p-2 px-8 border-b-2 border-black navbar-transition`}
       style={{ transform: showNavbar ? 'translateY(0)' : 'translateY(-100%)' }}
     >
       <div className="flex gap-2">
@@ -46,7 +46,7 @@ const Navbar = () => {
 
       <div className='flex gap-4'>
         <button
-          className="border-[3px] border-black font-extrabold px-2"
+          className="border-[3px] border-black font-extrabold px-2 z-50"
           onClick={() => (window.location.href = '/shop')}
         >
           SHOP
