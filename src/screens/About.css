@@ -1,0 +1,33 @@
+
+.article-content {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.links-presse {
+  display: flex;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.links-presse a {
+  padding: 0 2rem;
+  text-decoration: underline;
+}
+
+.poh-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links-poh {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+
+.links-poh a {
+  text-decoration: underline;
+}
+

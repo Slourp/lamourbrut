@@ -21,7 +21,9 @@ export default function App() {
         images={images}
         onClick={handleClick}
         enableImageSelection={false}
+        rowHeight={500}
       />
+      
       <Lightbox
         slides={slides}
         open={index >= 0}
