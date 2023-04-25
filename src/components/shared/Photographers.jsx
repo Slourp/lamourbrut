@@ -1,3 +1,6 @@
+import { Carousel } from 'react-responsive-carousel';
+
+
 import coc1 from '../../assets/about/speos/coc-karelvaldmann/coc1.jpg'
 import coc2 from '../../assets/about/speos/coc-karelvaldmann/coc2.jpg'
 import coc3 from '../../assets/about/speos/coc-karelvaldmann/coc3.jpg'
@@ -126,10 +129,11 @@ function PhotographerList() {
       >
       {photographers.map((photographer) => (
         <div key={photographer.name}>
-          <h2 style={{fontSize: '20px', textAlign: 'center'}}>{photographer.name}</h2>
+          <h2 style={{fontSize: '20px', textAlign: 'center', margin:'2rem 0'}}>{photographer.name}</h2>
+          
           <div style={{display: 'flex'}}>
             {photographer.images.map((image, index) => (
-              <img style={{height: '150px', padding: '2rem 0'}} key={index} src={image.src} alt={image.alt} />
+              <img style={{height: '300px'}} key={index} src={image.src} alt={image.alt} />
             ))}
           </div>
         </div>

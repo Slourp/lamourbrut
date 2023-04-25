@@ -8,6 +8,13 @@ import coc6 from '../../assets/about/speos/coc-karelvaldmann/coc6.jpg'
 import coc7 from '../../assets/about/speos/coc-karelvaldmann/coc7.jpg'
 import coc8 from '../../assets/about/speos/coc-karelvaldmann/coc8.jpg'
 
+import awp1 from '../../assets/about/speos/awp-elyasaiapina/awp1.jpg'
+import awp2 from '../../assets/about/speos/awp-elyasaiapina/awp2.jpg'
+import awp3 from '../../assets/about/speos/awp-elyasaiapina/awp3.jpg'
+import awp4 from '../../assets/about/speos/awp-elyasaiapina/awp4.jpg'
+import awp5 from '../../assets/about/speos/awp-elyasaiapina/awp5.jpg'
+
+
 /* import us1 from '../../assets/about/speos/us-teradanatsuki/us1.jpg'
 import us2 from '../../assets/about/speos/us-teradanatsuki/us2.jpg'
 import us3 from '../../assets/about/speos/us-teradanatsuki/us3.jpg'
@@ -27,12 +34,6 @@ import uatw3 from '../../assets/about/speos/uatw-raphaelgarsault/uatw3.jpg'
 import uatw4 from '../../assets/about/speos/uatw-raphaelgarsault/uatw4.jpg'
 import uatw5 from '../../assets/about/speos/uatw-raphaelgarsault/uatw5.jpg'
 import uatw6 from '../../assets/about/speos/uatw-raphaelgarsault/uatw6.jpg'
-
-import awp1 from '../../assets/about/speos/awp-elyasaiapina/awp1.jpg'
-import awp2 from '../../assets/about/speos/awp-elyasaiapina/awp2.jpg'
-import awp3 from '../../assets/about/speos/awp-elyasaiapina/awp3.jpg'
-import awp4 from '../../assets/about/speos/awp-elyasaiapina/awp4.jpg'
-import awp5 from '../../assets/about/speos/awp-elyasaiapina/awp5.jpg'
 
 
  */
@@ -87,6 +88,49 @@ export const imagesSpeosCoc = [
   {
     src: coc8,
     original: coc8,
+    tags: [{ value: "Nature", title: "Nature" }],
+    caption: "8H (gratisography.com)",
+  },
+];
+
+
+export const imagesAwp = [
+  {
+    src: awp1,
+    original: awp1,
+
+    tags: [
+      { value: "Nature", title: "Nature" },
+      { value: "Flora", title: "Flora" },
+    ],
+    caption: "After Rain (Jeshu John - designerspics.com)",
+  },
+  {
+    src: awp2,
+    original: awp2,
+    caption: "Boats (Jeshu John - designerspics.com)",
+  },
+
+  {
+    src: awp3,
+    original: awp3,
+    caption: "37H (gratispgraphy.com)",
+  },
+  {
+    src: awp4,
+    original: awp4,
+    tags: [{ value: "Nature", title: "Nature" }],
+    caption: "8H (gratisography.com)",
+  },
+  {
+    src: coc5,
+    original: coc5,
+    tags: [{ value: "Nature", title: "Nature" }],
+    caption: "8H (gratisography.com)",
+  },
+  {
+    src: awp5,
+    original: awp5,
     tags: [{ value: "Nature", title: "Nature" }],
     caption: "8H (gratisography.com)",
   },
