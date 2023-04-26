@@ -28,28 +28,20 @@ const Profile = () => {
       <div>
         <div className="ml-2 mt-2 flex flex-col items-center">
           <div>
-            <a
-              href=""
-              className="text-blue-500 font-bold text-[25px] underline ml-5"
-            >
-              lamour brut
-            </a>
+          
             <img className="w-32 h-32" src={imgProfile} alt="" />
           </div>
           <div>
             <img src={Logo} alt="" />
           </div>
-          <p
+          <p className="font-arial-black"
             style={{
-              fontSize: '18px',
-
+              fontSize: '20px',
               textAlign: 'center',
               margin: '2rem',
             }}
           >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Laudantium voluptates aliquam quisquam, saepe labore
-            maxime vel amet illum.
+            WELCOME IN OUR MINDS
           </p>
           <span />
         </div>
@@ -129,13 +121,13 @@ const Content = () => {
       >
         <div>
           <Gallery images={article1} />
-          <p className='p-4'>
-            Hello, You can find there our last collection PURSUIT OF
+          <p className='p-4 text-article'>
+            Hello,<br /> You can find there our last collection PURSUIT OF
             HAPPINESS that was presented at the Vancouver Fashion Week
             in 2022. This collection tells the story of life, through
             parts of it from childhood to college, the working life
             and the wedding. As it is for some people the consecration
-            of Happiness. Hope you like it, xoxo, L'AMOUR BRUT
+            of Happiness.<br /> Hope you like it,<br /> xoxo, L'AMOUR BRUT
           </p>
         </div>
       </Article>
@@ -145,7 +137,7 @@ const Content = () => {
       >
         <div>
           <Gallery images={article2} />
-          <p className='p-4'>
+          <p className='p-4 text-article'>
             To tell you a bit about this shoot, we worked with our
             family on it and we can feel it through those photos. It is
             important to us to work with our friends, our brothers and
@@ -159,26 +151,27 @@ const Content = () => {
         title="COLLABORATION WITH SPEOS PHOTOGRAPHERS"
         createDate="#Posté le Jeudi 27 Avril 2023"
       >
-        <div>
-          <p>CIRCLE OF LIFE BY <a className='underline' href="https://www.instagram.com/erakl.rakums/" target="_blank" rel="noopener noreferrer">KAREL VALDMANN</a></p>
-       <Gallery images={person1} />
-          <p>UNIVERS BY <a className='underline' href="https://www.instagram.com/terada_natsuki/" target="_blank" rel="noopener noreferrer">TERADA NATSUKI</a></p>
-          <Gallery images={person5} />
-          <p>SELFLOVE BY <a className='underline' href="https://www.instagram.com/amirasnaerosjabali/"target="_blank" rel="noopener noreferrer">AMIRA SNAEROS JABALI</a></p>
-          <Gallery images={person3} />
-          <p>US AGAINST THE WOLD BY <a className='underline' href="https://www.instagram.com/studiogarso/" target="_blank" rel="noopener noreferrer">RAPHAEL GARSAULT</a></p>
-          <Gallery images={person4} />
-          <p>AFTER WASHING PARTY BY <a className='underline' href="https://www.instagram.com/elyasaiapina/" target="_blank" rel="noopener noreferrer">ELYA SAIAPINA</a></p>
-          <Gallery images={person2} />
-          <p>LA FEMME BY <a className='underline' href="https://www.instagram.com/noabayle/" target="_blank" rel="noopener noreferrer">NOA BAYLE</a></p>
-          <Gallery images={person6} />
-          <p className='p-4'>
+          <p className='p-4 text-article'>
             This year we had the opportunity to work with photographers
             from the SPEOS photo school.They all imagined their story
             through the theme we gave them: DRAMATURGY IN REAL
-            LIFEDiscover the universe of each photographer through their
+            LIFE <br /> Discover  the universe of each photographer through their
             photos and their Instagram.
           </p>
+        <div>
+          <p className='font-bold title-speos'>CIRCLE OF LIFE BY <a className='underline' href="https://www.instagram.com/erakl.rakums/" target="_blank" rel="noopener noreferrer">KAREL VALDMANN</a></p>
+       <Gallery images={person1} />
+          <p className='font-bold title-speos'>VENUS BY <a className='underline' href="https://www.instagram.com/terada_natsuki/" target="_blank" rel="noopener noreferrer">TERADA NATSUKI</a></p>
+          <Gallery images={person5} />
+          <p className='font-bold title-speos'>SELFLOVE BY <a className='underline' href="https://www.instagram.com/amirasnaerosjabali/"target="_blank" rel="noopener noreferrer">AMIRA SNAEROS JABALI</a></p>
+          <Gallery images={person3} />
+          <p className='font-bold title-speos'>US AGAINST THE WOLD BY <a className='underline' href="https://www.instagram.com/studiogarso/" target="_blank" rel="noopener noreferrer">RAPHAEL GARSAULT</a></p>
+          <Gallery images={person4} />
+          <p className='font-bold title-speos'>AFTER WASHING PARTY BY <a className='underline' href="https://www.instagram.com/elyasaiapina/" target="_blank" rel="noopener noreferrer">ELYA SAIAPINA</a></p>
+          <Gallery images={person2} />
+          <p className='font-bold title-speos'>LA FEMME BY <a className='underline' href="https://www.instagram.com/noabayle/" target="_blank" rel="noopener noreferrer">NOA BAYLE</a></p>
+          <Gallery images={person6} />
+        
         </div>
       </Article>
     </div>

@@ -1,13 +1,13 @@
 export const headline1 = [
   `L'AMOUR BRUT`,
   'LOVEWEAR',
-  'COMMING SOON',
+  'COMING SOON',
   `L'AMOUR BRUT`,
   'LOVEWEAR',
-  'COMMING SOON',
+  'COMING SOON',
   `L'AMOUR BRUT`,
   'LOVEWEAR',
-  'COMMING SOON',
+  'COMING SOON',
 ]
 
 export const headline2 = [

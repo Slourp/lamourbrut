@@ -17,10 +17,14 @@ const ContactUs = () => {
         />
       </div>
       <div className="w-full md:w-[40%] text-white px-4 md:p-12 flex flex-col justify-center items-baseline mt-3">
-        <h2 className="text-5xl md:text-[90px]">
+        <h2
+        style={{fontFamily: 'Arial Black'}}
+         className="text-5xl md:text-[90px]">
           Contact
         </h2>
-        <p className="mt-4 md:mt-8 max-w-[800px] text-lg md:text-[22px]">
+        <p
+        style={{fontFamily: 'times-new-roman'}}
+         className="mt-4 md:mt-8 max-w-[800px] text-lg md:text-[25px]">
           Please contact us if you have any questions, and we will get back to you as soon as possible.
         </p>
         <button

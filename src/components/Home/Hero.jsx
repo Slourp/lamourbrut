@@ -13,6 +13,7 @@ const Hero = () => {
 
           }}>Brut</span>
         </h1>
+        <p style={{fontFamily: 'Arial Black'}} className='text-center text-[32px]'>FALL IN LOVE CLOTHES</p>
       </div>
       <div className="w-[50%] z-1 absolute right-0 z-[-1]">
         <img src={HeaderHome} alt="Hero" className="flex-1 h-[700px] object-cover" />
