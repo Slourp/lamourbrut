@@ -16,6 +16,7 @@ import {
   person3,
   person4,
   person5,
+  person6
 } from '../components/shared/Images'
 
 const Profile = () => {
@@ -168,6 +169,9 @@ const Content = () => {
           <Gallery images={person4} />
           <p>AFTER WASHING PARTY BY ELYA SAIAPINA</p>
           <Gallery images={person5} />
+          <p>LA FEMME BY NOAH BAYLE</p> 
+          <Gallery images={person6} />
+
           <p className='p-4'>
             This year we had the opportunity to work with photographers
             from the SPEOS photo school.They all imagined their story

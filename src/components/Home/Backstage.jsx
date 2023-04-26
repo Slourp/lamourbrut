@@ -32,6 +32,7 @@ const Backstage = () => {
           US page to discover them.
         </p>
       </div>
+     
     </section>
   )
 }

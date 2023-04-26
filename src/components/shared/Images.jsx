@@ -44,6 +44,13 @@ import awp3 from '../../assets/about/speos/awp-elyasaiapina/awp3.jpg'
 import awp4 from '../../assets/about/speos/awp-elyasaiapina/awp4.jpg'
 import awp5 from '../../assets/about/speos/awp-elyasaiapina/awp5.jpg'
 
+import lf1 from '../../assets/about/speos/lafemme-noabayle/lf1.jpg'
+import lf2 from '../../assets/about/speos/lafemme-noabayle/lf2.jpg'
+import lf3 from '../../assets/about/speos/lafemme-noabayle/lf3.jpg'
+import lf4 from '../../assets/about/speos/lafemme-noabayle/lf4.jpg'
+import lf5 from '../../assets/about/speos/lafemme-noabayle/lf5.jpg'
+import lf6 from '../../assets/about/speos/lafemme-noabayle/lf6.jpg'
+
 export const article1 = [
   {
     src: Img1,
@@ -240,5 +247,32 @@ export const person5 = [
   {
     src: us5,
     original: us5,
+  },
+]
+
+export const person6 = [
+  {
+    src: lf1,
+    original: lf1,
+  },
+  {
+    src: lf2,
+    original: lf2,
+  },
+  {
+    src: lf3,
+    original: lf3,
+  },
+  {
+    src: lf4,
+    original: lf4,
+  },
+  {
+    src: lf5,
+    original: lf5,
+  },
+  {
+    src: lf6,
+    original: lf6,
   },
 ]
