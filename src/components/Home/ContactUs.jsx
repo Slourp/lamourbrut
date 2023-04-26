@@ -17,10 +17,7 @@ const ContactUs = () => {
           Contact
         </h2>
         <p className="mt-4 md:mt-8 max-w-[800px] text-lg md:text-[22px]">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Veritatis,
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Veritatis,
+        Please contact us if you have any questions, and we will get back to you as soon as possible.
         </p>
         <button
           onClick={() => window.location.href = '/story'}

@@ -26,10 +26,10 @@ const OurStory = () => {
           Our Story
         </h2>
         <p className=" text-justify mt-4 md:mt-8 max-w-[550px] text-lg md:text-[22px]">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Veritatis, distinctio amet aliquam rerum atque commodi,
-          velit culpa inventore eligendi nemo iste facere
-          exercitationem accusantium nam quia at quod natus iure!
+          L’AMOUR BRUT tells the story of the opposition and the
+          coming together of two visions. On the one hand, the love
+          that wants to be light and sensual, and on the other hand, a
+          raw exterior that is imperfect and refractory.
         </p>
         <button
           onClick={() => (window.location.href = '/story')}
