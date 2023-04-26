@@ -13,7 +13,7 @@ const ContactUs = () => {
         />
       </div>
       <div className="w-full md:w-[40%] text-white px-4 md:p-12 flex flex-col justify-center items-baseline">
-        <h2 className="text-4xl md:text-[88px]">
+        <h2 className="text-5xl md:text-[90px]">
           Contact
         </h2>
         <p className="mt-4 md:mt-8 max-w-[800px] text-lg md:text-[22px]">

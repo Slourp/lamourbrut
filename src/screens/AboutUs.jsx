@@ -189,7 +189,6 @@ const AboutUs = () => {
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundRepeat: 'repeat',
-
         }}
       >
         <div className="flex-col mx-auto sm:flex sm:flex-row gap-14 items-start pt-24 max-w-[1200px] p-8">
