@@ -32,17 +32,23 @@ const Navbar = () => {
       style={{ transform: showNavbar ? 'translateY(0)' : 'translateY(-100%)' }}
     >
       <div className="flex gap-2">
-        <RxHamburgerMenu
+       {/*  <RxHamburgerMenu
           size={32}
           className="inline-block mr-6 cursor-pointer hover:text-blue-800"
-        />
+        /> */}
       </div>
-      <div
+    {/*   <div
         className="absolute left-[50%] -translate-x-[50%] cursor-pointer"
         onClick={() => (window.location.href = '/')}
       >
         <img src={Logo} alt="L'Amour Brut" className="h-8 mx-auto" />
-      </div>
+      </div> */}
+    <div
+  className="absolute left-4 md:left-[50%] md:-translate-x-[50%] cursor-pointer"
+  onClick={() => (window.location.href = '/')}
+>
+  <img src={Logo} alt="L'Amour Brut" className="h-8 mx-auto md:mx-0" />
+</div>
 
       <div className='flex gap-4'>
         <button
