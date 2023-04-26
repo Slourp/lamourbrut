@@ -1,21 +1,18 @@
 import React from 'react';
-import { FaInstagramSquare, FaTwitter, FaFacebook } from 'react-icons/fa';
+import { FaInstagramSquare } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <section className="p-64 bg-black  text-white">
-      <h3 className='text-center mb-4'>Follow Us</h3>
-      <div className="flex justify-center gap-8 mt-9">
-        <FaInstagramSquare className='text-[50px]' />
-        <FaTwitter className=' text-[50px]' />
-        <FaFacebook className=' text-[50px]' />
-      </div>
-      <div className='text-center mt-14'>
-        <p className=''>L'Amour Brut</p>
-        <p className=''>75010 Paris, France</p>
-        <p className=''>+32 2 123 45 67</p>
-      </div>
+    <section className="p-8 md:p-8 lg:p-16 bg-black text-white">
+      <h3 className="text-center mb-4 text-lg md:text-xl xl:text-[40px] pt-[60px]">Follow Us</h3>
+      <div className="flex justify-center gap-8 mt-6 md:mt-9">
+      <a href="https://www.instagram.com/lamour_brut/?hl=fr"><FaInstagramSquare className="text-2xl md:text-4xl" /></a>
 
+      </div>
+      <div className="text-center mt-10 md:mt-14">
+        <p className="text-sm md:text-base">L'Amour Brut</p>
+        <p className="text-sm md:text-base">75001 Paris, France</p>
+      </div>
     </section>
   );
 };
