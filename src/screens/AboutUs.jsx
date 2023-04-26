@@ -20,6 +20,9 @@ import {
 } from '../components/shared/Images'
 
 const Profile = () => {
+  const handleContactUs = () => {
+    window.location.href = 'mailto:contactlamourbrut@gmail.com';
+  };
   return (
     <div className="profile flex flex-col items-center  py-5">
       <div>
@@ -58,12 +61,12 @@ const Profile = () => {
             <a href="/story">Our Story</a>
           </li>
           <li>
-            <a href="https://www.instagram.com/lamour_brut/?hl=fr">
+            <a href="https://www.instagram.com/lamour_brut/?hl=fr" target="_blank" rel="noopener noreferrer">
               Instagram
             </a>
           </li>
           <li>
-            <a href="">Mail</a>
+            <a href="" onClick={handleContactUs}>Mail</a>
           </li>
         </ul>
       </div>
@@ -98,22 +101,22 @@ const Content = () => {
       >
         <ul className="flex gap-12 underline justify-center h-[100px] items-center">
           <li>
-            <a href="https://www.vogue.mx/moda/galeria/vancouver-fashion-week-2022-como-la-plataforma-de-disenadores-responsables">
+            <a href="https://www.vogue.mx/moda/galeria/vancouver-fashion-week-2022-como-la-plataforma-de-disenadores-responsables" target="_blank" rel="noopener noreferrer">
               VOGUE MEXIQUE
             </a>
           </li>
           <li>
-            <a href="https://flanellemag.com/amour-brut-fw22-pursuit-of-happiness-at-vancouver-fashion-week/">
+            <a href="https://flanellemag.com/amour-brut-fw22-pursuit-of-happiness-at-vancouver-fashion-week/" target="_blank" rel="noopener noreferrer">
               FLANELLE
             </a>
           </li>
           <li>
-            <a href="https://www.jandrewspeaks.com/2022/04/20/lamour-brut-is-brave-bold-at-vfw-f-w22/">
+            <a href="https://www.jandrewspeaks.com/2022/04/20/lamour-brut-is-brave-bold-at-vfw-f-w22/" target="_blank" rel="noopener noreferrer">
               DRESS THE PART
             </a>
           </li>
           <li>
-            <a href="https://www.vogue.co.kr/2022/05/13/%EB%B0%B4%EC%BF%A0%EB%B2%84%ED%8C%A8%EC%85%98%EC%9C%84%ED%81%AC-2/">
+            <a href="https://www.vogue.co.kr/2022/05/13/%EB%B0%B4%EC%BF%A0%EB%B2%84%ED%8C%A8%EC%85%98%EC%9C%84%ED%81%AC-2/" target="_blank" rel="noopener noreferrer">
               VOGUE COREE
             </a>
           </li>
@@ -155,20 +158,19 @@ const Content = () => {
         title="COLLABORATION WITH SPEOS PHOTOGRAPHERS"
         createDate="#Posté le Jeudi 27 Avril 2023"
       >
-        <div className='text-center'>
-          <p className='text-[25x] mt-5'>CIRCLE OF LIFE BY <a className='underline' href="https://www.instagram.com/erakl.rakums/">KAREL VALDMANN</a></p>
-          <Gallery images={person1} />
-          <p className='text-[25x] mt-5'>UNIVERS BY <a className='underline' href="https://www.instagram.com/terada_natsuki/">TERADA NATSUKI</a></p>
-          <Gallery images={person2} />
-          <p className='text-[25x] mt-5'>SELFLOVE BY <a className='underline' href="https://www.instagram.com/amirasnaerosjabali/">AMIRA SNAEROS JABALI</a></p>
-          <Gallery images={person3} />
-          <p className='text-[25x] mt-5'>US AGAINST THE WOLD BY <a className='underline' href="https://www.instagram.com/studiogarso/">RAPHAEL GARSAULT</a></p>
-          <Gallery images={person4} />
-          <p className='text-[25x] mt-5'>AFTER WASHING PARTY BY <a className='underline' href="https://www.instagram.com/elyasaiapina/">ELYA SAIAPINA</a></p>
+        <div>
+          <p>CIRCLE OF LIFE BY <a className='underline' href="https://www.instagram.com/erakl.rakums/" target="_blank" rel="noopener noreferrer">KAREL VALDMANN</a></p>
+       <Gallery images={person1} />
+          <p>UNIVERS BY <a className='underline' href="https://www.instagram.com/terada_natsuki/" target="_blank" rel="noopener noreferrer">TERADA NATSUKI</a></p>
           <Gallery images={person5} />
-          <p className='text-[25x] mt-5'>LA FEMME BY <a className='underline' href="https://www.instagram.com/noabayle/">NOAH BAYE</a></p> 
+          <p>SELFLOVE BY <a className='underline' href="https://www.instagram.com/amirasnaerosjabali/"target="_blank" rel="noopener noreferrer">AMIRA SNAEROS JABALI</a></p>
+          <Gallery images={person3} />
+          <p>US AGAINST THE WOLD BY <a className='underline' href="https://www.instagram.com/studiogarso/" target="_blank" rel="noopener noreferrer">RAPHAEL GARSAULT</a></p>
+          <Gallery images={person4} />
+          <p>AFTER WASHING PARTY BY <a className='underline' href="https://www.instagram.com/elyasaiapina/" target="_blank" rel="noopener noreferrer">ELYA SAIAPINA</a></p>
+          <Gallery images={person2} />
+          <p>LA FEMME BY <a className='underline' href="https://www.instagram.com/noabayle/" target="_blank" rel="noopener noreferrer">NOA BAYLE</a></p>
           <Gallery images={person6} />
-
           <p className='p-4'>
             This year we had the opportunity to work with photographers
             from the SPEOS photo school.They all imagined their story

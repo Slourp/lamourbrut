@@ -63,9 +63,9 @@ const Navbar = () => {
         >
           ABOUT
         </button>
-        <Link to="/about-us" className="hover:text-blue-800">
+        {/* <Link to="/about-us" className="hover:text-blue-800">
           <BsCart size={32} className="cursor-pointer hover:text-blue-800" />
-        </Link>
+        </Link> */}
       </div>
     </nav>
   );
