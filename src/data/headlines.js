@@ -1,15 +1,14 @@
 export const headline1 = [
-  'BRUT DE DOUCEUR',
-  'FOLIE CONTROLEE',
-  'BRUT DE DOUCEUR',
-  'FOLIE CONTROLEE',
-  'BRUT DE DOUCEUR',
-  'FOLIE CONTROLEE',
-  'BRUT DE DOUCEUR',
-  'FOLIE CONTROLEE',
+  `L'AMOUR BRUT`,
+  'LOVEWEAR',
+  'COMMING SOON',
+  `L'AMOUR BRUT`,
+  'LOVEWEAR',
+  'COMMING SOON',
+  `L'AMOUR BRUT`,
+  'LOVEWEAR',
+  'COMMING SOON',
 ]
-
-
 
 
 export const articles = [
