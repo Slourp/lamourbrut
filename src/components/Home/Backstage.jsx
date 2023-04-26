@@ -8,7 +8,8 @@ const images = [Image1, Image2, Image3, Image4]
 
 const Backstage = () => {
   return (
-    <section className="bg-black p-20 ">
+    <section className="bg-black p-20">
+      
       <div className="container mx-auto">
         <h2 className="text-white text-5xl md:text-6xl lg:text-5xl xl:text-[90px] 2xl:text-7xl">
           Backstage

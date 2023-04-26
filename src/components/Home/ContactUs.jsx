@@ -16,7 +16,7 @@ const ContactUs = () => {
           className="w-full object-cover h-[50vh] md:h-screen"
         />
       </div>
-      <div className="w-full md:w-[40%] text-white px-4 md:p-12 flex flex-col justify-center items-baseline">
+      <div className="w-full md:w-[40%] text-white px-4 md:p-12 flex flex-col justify-center items-baseline mt-3">
         <h2 className="text-5xl md:text-[90px]">
           Contact
         </h2>

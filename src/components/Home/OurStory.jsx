@@ -18,7 +18,7 @@ const OurStory = () => {
           className="w-full md:w-1/2 object-cover h-[50vh] md:h-screen"
         />
       </div>
-      <div className="w-full md:w-[45%] px-4 md:p-12 flex flex-col justify-center items-baseline">
+      <div className="w-full md:w-[45%] px-4 md:p-12 flex flex-col justify-center items-baseline mt-3">
         {/*  <h2 className="text-2xl md:text-4xl">
           Our Story
         </h2> */}
