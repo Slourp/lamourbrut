@@ -63,9 +63,6 @@ const Profile = () => {
             </a>
           </li>
           <li>
-            <a href="">Twitter</a>
-          </li>
-          <li>
             <a href="">Mail</a>
           </li>
         </ul>
@@ -158,18 +155,18 @@ const Content = () => {
         title="COLLABORATION WITH SPEOS PHOTOGRAPHERS"
         createDate="#Posté le Jeudi 27 Avril 2023"
       >
-        <div>
-          <p>CIRCLE OF LIFE BY KAREL VALDMANN</p>
+        <div className='text-center'>
+          <p className='text-[25x] mt-5'>CIRCLE OF LIFE BY <a className='underline' href="https://www.instagram.com/erakl.rakums/">KAREL VALDMANN</a></p>
           <Gallery images={person1} />
-          <p>UNIVERS BY TERADA NATSUKI</p>
+          <p className='text-[25x] mt-5'>UNIVERS BY <a className='underline' href="https://www.instagram.com/terada_natsuki/">TERADA NATSUKI</a></p>
           <Gallery images={person2} />
-          <p>SELFLOVE BY AMIRA SNAEROS JABALI</p>
+          <p className='text-[25x] mt-5'>SELFLOVE BY <a className='underline' href="https://www.instagram.com/amirasnaerosjabali/">AMIRA SNAEROS JABALI</a></p>
           <Gallery images={person3} />
-          <p>US AGAINST THE WOLD BY RAPHAEL GARSAULT</p>
+          <p className='text-[25x] mt-5'>US AGAINST THE WOLD BY <a className='underline' href="https://www.instagram.com/studiogarso/">RAPHAEL GARSAULT</a></p>
           <Gallery images={person4} />
-          <p>AFTER WASHING PARTY BY ELYA SAIAPINA</p>
+          <p className='text-[25x] mt-5'>AFTER WASHING PARTY BY <a className='underline' href="https://www.instagram.com/elyasaiapina/">ELYA SAIAPINA</a></p>
           <Gallery images={person5} />
-          <p>LA FEMME BY NOAH BAYLE</p> 
+          <p className='text-[25x] mt-5'>LA FEMME BY <a className='underline' href="https://www.instagram.com/noabayle/">NOAH BAYE</a></p> 
           <Gallery images={person6} />
 
           <p className='p-4'>
