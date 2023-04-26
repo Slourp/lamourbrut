@@ -10,6 +10,17 @@ export const headline1 = [
   'COMMING SOON',
 ]
 
+export const headline2 = [
+  'IT-ACCESSORIES',
+  'COMING SOON',
+  'IT-ACCESSORIES',
+  'COMING SOON',
+  'IT-ACCESSORIES',
+  'COMING SOON',
+  'IT-ACCESSORIES',
+  'COMING SOON',
+]
+
 
 export const articles = [
   {
