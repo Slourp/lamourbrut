@@ -21,6 +21,13 @@ export const headline2 = [
   'COMING SOON',
 ]
 
+export const headline3 = [
+  'PRESSE',
+  'PRESSE',
+  'PRESSE',
+  'PRESSE',
+  'PRESSE',
+]
 
 
 

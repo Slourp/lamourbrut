@@ -81,12 +81,13 @@ const Profile = () => {
 const Article = ({ title, children, createDate }) => {
   return (
     <div className="article bg-white overflow-hidden">
-      <Headline headlines={[title]} textSize={20} animated={false} />
+      <Headline headlines={[title]} textSize={20} animated={true} />
       {children}
       <Headline
         headlines={[createDate]}
         textSize={16}
-        animated={false}
+        animated={true}
+        
       />
     </div>
   )
@@ -99,7 +100,7 @@ const Content = () => {
         title="PRESSE"
         createDate="#Posté le Jeudi 27 Avril 2023"
       >
-        <ul className="flex gap-12 underline justify-center h-[100px] items-center">
+        <ul className="flex gap-10 underline justify-center h-[100px] items-center">
           <li>
             <a href="https://www.vogue.mx/moda/galeria/vancouver-fashion-week-2022-como-la-plataforma-de-disenadores-responsables" target="_blank" rel="noopener noreferrer">
               VOGUE MEXIQUE
