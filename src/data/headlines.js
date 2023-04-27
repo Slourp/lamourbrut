@@ -1,13 +1,35 @@
 export const headline1 = [
-  'BRUT DE DOUCEUR',
-  'FOLIE CONTROLEE',
-  'BRUT DE DOUCEUR',
-  'FOLIE CONTROLEE',
-  'BRUT DE DOUCEUR',
-  'FOLIE CONTROLEE',
-  'BRUT DE DOUCEUR',
-  'FOLIE CONTROLEE',
+  `L'AMOUR BRUT`,
+  'LOVEWEAR',
+  'COMING SOON',
+  `L'AMOUR BRUT`,
+  'LOVEWEAR',
+  'COMING SOON',
+  `L'AMOUR BRUT`,
+  'LOVEWEAR',
+  'COMING SOON',
 ]
+
+export const headline2 = [
+  'IT-ACCESSORIES',
+  'COMING SOON',
+  'IT-ACCESSORIES',
+  'COMING SOON',
+  'IT-ACCESSORIES',
+  'COMING SOON',
+  'IT-ACCESSORIES',
+  'COMING SOON',
+]
+
+export const headline3 = [
+  'PRESSE',
+  'PRESSE',
+  'PRESSE',
+  'PRESSE',
+  'PRESSE',
+]
+
+
 
 export const articles = [
   {

@@ -4,6 +4,14 @@
   flex-direction: column-reverse;
 }
 
+.text-article {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.title-speos {
+  font-family: 'Arial Black';
+}
+
 .links-presse {
   display: flex;
   text-align: center;

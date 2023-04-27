@@ -16,36 +16,32 @@ import {
   person3,
   person4,
   person5,
+  person6
 } from '../components/shared/Images'
 
 const Profile = () => {
+  const handleContactUs = () => {
+    window.location.href = 'mailto:contactlamourbrut@gmail.com';
+  };
   return (
     <div className="profile flex flex-col items-center  py-5">
       <div>
         <div className="ml-2 mt-2 flex flex-col items-center">
           <div>
-            <a
-              href=""
-              className="text-blue-500 font-bold text-[25px] underline ml-5"
-            >
-              lamour brut
-            </a>
+          
             <img className="w-32 h-32" src={imgProfile} alt="" />
           </div>
           <div>
             <img src={Logo} alt="" />
           </div>
-          <p
+          <p className="font-arial-black"
             style={{
-              fontSize: '18px',
-
+              fontSize: '20px',
               textAlign: 'center',
               margin: '2rem',
             }}
           >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Laudantium voluptates aliquam quisquam, saepe labore
-            maxime vel amet illum.
+            WELCOME IN OUR MINDS
           </p>
           <span />
         </div>
@@ -57,15 +53,12 @@ const Profile = () => {
             <a href="/story">Our Story</a>
           </li>
           <li>
-            <a href="https://www.instagram.com/lamour_brut/?hl=fr">
+            <a href="https://www.instagram.com/lamour_brut/?hl=fr" target="_blank" rel="noopener noreferrer">
               Instagram
             </a>
           </li>
           <li>
-            <a href="">Twitter</a>
-          </li>
-          <li>
-            <a href="">Mail</a>
+            <a href="" onClick={handleContactUs}>Mail</a>
           </li>
         </ul>
       </div>
@@ -80,12 +73,13 @@ const Profile = () => {
 const Article = ({ title, children, createDate }) => {
   return (
     <div className="article bg-white overflow-hidden">
-      <Headline headlines={[title]} textSize={20} animated={false} />
+      <Headline headlines={[title]} textSize={20} animated={true} />
       {children}
       <Headline
         headlines={[createDate]}
         textSize={16}
-        animated={false}
+        animated={true}
+        
       />
     </div>
   )
@@ -98,24 +92,24 @@ const Content = () => {
         title="PRESSE"
         createDate="#Posté le Jeudi 27 Avril 2023"
       >
-        <ul className="flex gap-12 underline justify-center h-[100px] items-center">
+        <ul className="flex gap-10 underline justify-center h-[100px] items-center">
           <li>
-            <a href="https://www.vogue.mx/moda/galeria/vancouver-fashion-week-2022-como-la-plataforma-de-disenadores-responsables">
+            <a href="https://www.vogue.mx/moda/galeria/vancouver-fashion-week-2022-como-la-plataforma-de-disenadores-responsables" target="_blank" rel="noopener noreferrer">
               VOGUE MEXIQUE
             </a>
           </li>
           <li>
-            <a href="https://flanellemag.com/amour-brut-fw22-pursuit-of-happiness-at-vancouver-fashion-week/">
+            <a href="https://flanellemag.com/amour-brut-fw22-pursuit-of-happiness-at-vancouver-fashion-week/" target="_blank" rel="noopener noreferrer">
               FLANELLE
             </a>
           </li>
           <li>
-            <a href="https://www.jandrewspeaks.com/2022/04/20/lamour-brut-is-brave-bold-at-vfw-f-w22/">
+            <a href="https://www.jandrewspeaks.com/2022/04/20/lamour-brut-is-brave-bold-at-vfw-f-w22/" target="_blank" rel="noopener noreferrer">
               DRESS THE PART
             </a>
           </li>
           <li>
-            <a href="https://www.vogue.co.kr/2022/05/13/%EB%B0%B4%EC%BF%A0%EB%B2%84%ED%8C%A8%EC%85%98%EC%9C%84%ED%81%AC-2/">
+            <a href="https://www.vogue.co.kr/2022/05/13/%EB%B0%B4%EC%BF%A0%EB%B2%84%ED%8C%A8%EC%85%98%EC%9C%84%ED%81%AC-2/" target="_blank" rel="noopener noreferrer">
               VOGUE COREE
             </a>
           </li>
@@ -127,13 +121,13 @@ const Content = () => {
       >
         <div>
           <Gallery images={article1} />
-          <p className='p-4'>
-            Hello, You can find there our last collection PURSUIT OF
+          <p className='p-4 text-article'>
+            Hello,<br /> You can find there our last collection PURSUIT OF
             HAPPINESS that was presented at the Vancouver Fashion Week
             in 2022. This collection tells the story of life, through
             parts of it from childhood to college, the working life
             and the wedding. As it is for some people the consecration
-            of Happiness. Hope you like it, xoxo, L'AMOUR BRUT
+            of Happiness.<br /> Hope you like it,<br /> xoxo, L'AMOUR BRUT
           </p>
         </div>
       </Article>
@@ -143,7 +137,7 @@ const Content = () => {
       >
         <div>
           <Gallery images={article2} />
-          <p className='p-4'>
+          <p className='p-4 text-article'>
             To tell you a bit about this shoot, we worked with our
             family on it and we can feel it through those photos. It is
             important to us to work with our friends, our brothers and
@@ -157,24 +151,27 @@ const Content = () => {
         title="COLLABORATION WITH SPEOS PHOTOGRAPHERS"
         createDate="#Posté le Jeudi 27 Avril 2023"
       >
-        <div>
-          <p>CIRCLE OF LIFE BY KAREL VALDMANN</p>
-          <Gallery images={person1} />
-          <p>UNIVERS BY TERADA NATSUKI</p>
-          <Gallery images={person2} />
-          <p>SELFLOVE BY AMIRA SNAEROS JABALI</p>
-          <Gallery images={person3} />
-          <p>US AGAINST THE WOLD BY RAPHAEL GARSAULT</p>
-          <Gallery images={person4} />
-          <p>AFTER WASHING PARTY BY ELYA SAIAPINA</p>
-          <Gallery images={person5} />
-          <p className='p-4'>
+          <p className='p-4 text-article'>
             This year we had the opportunity to work with photographers
             from the SPEOS photo school.They all imagined their story
             through the theme we gave them: DRAMATURGY IN REAL
-            LIFEDiscover the universe of each photographer through their
+            LIFE <br /> Discover  the universe of each photographer through their
             photos and their Instagram.
           </p>
+        <div>
+          <p className='font-bold title-speos'>CIRCLE OF LIFE BY <a className='underline' href="https://www.instagram.com/erakl.rakums/" target="_blank" rel="noopener noreferrer">KAREL VALDMANN</a></p>
+       <Gallery images={person1} />
+          <p className='font-bold title-speos'>VENUS BY <a className='underline' href="https://www.instagram.com/terada_natsuki/" target="_blank" rel="noopener noreferrer">TERADA NATSUKI</a></p>
+          <Gallery images={person5} />
+          <p className='font-bold title-speos'>SELFLOVE BY <a className='underline' href="https://www.instagram.com/amirasnaerosjabali/"target="_blank" rel="noopener noreferrer">AMIRA SNAEROS JABALI</a></p>
+          <Gallery images={person3} />
+          <p className='font-bold title-speos'>US AGAINST THE WOLD BY <a className='underline' href="https://www.instagram.com/studiogarso/" target="_blank" rel="noopener noreferrer">RAPHAEL GARSAULT</a></p>
+          <Gallery images={person4} />
+          <p className='font-bold title-speos'>AFTER WASHING PARTY BY <a className='underline' href="https://www.instagram.com/elyasaiapina/" target="_blank" rel="noopener noreferrer">ELYA SAIAPINA</a></p>
+          <Gallery images={person2} />
+          <p className='font-bold title-speos'>LA FEMME BY <a className='underline' href="https://www.instagram.com/noabayle/" target="_blank" rel="noopener noreferrer">NOA BAYLE</a></p>
+          <Gallery images={person6} />
+        
         </div>
       </Article>
     </div>
@@ -189,7 +186,6 @@ const AboutUs = () => {
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundRepeat: 'repeat',
-
         }}
       >
         <div className="flex-col mx-auto sm:flex sm:flex-row gap-14 items-start pt-24 max-w-[1200px] p-8">
