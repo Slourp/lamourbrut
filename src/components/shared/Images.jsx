@@ -8,7 +8,6 @@ import poh1 from '../../assets/about/poh/poh1.jpg'
 import poh2 from '../../assets/about/poh/poh2.jpg'
 import poh4 from '../../assets/about/poh/poh4.jpg'
 import poh5 from '../../assets/about/poh/poh5.jpg'
-
 import coc1 from '../../assets/about/speos/coc-karelvaldmann/coc1.jpg'
 import coc2 from '../../assets/about/speos/coc-karelvaldmann/coc2.jpg'
 import coc3 from '../../assets/about/speos/coc-karelvaldmann/coc3.jpg'
