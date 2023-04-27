@@ -160,10 +160,6 @@ export const person2 = [
     original: awp4,
   },
   {
-    src: coc5,
-    original: coc5,
-  },
-  {
     src: awp5,
     original: awp5,
   },
