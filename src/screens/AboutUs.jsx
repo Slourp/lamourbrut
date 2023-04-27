@@ -47,8 +47,8 @@ const Profile = () => {
         </div>
       </div>
       <div className="flex items-center ml-2">
-        <p className="mr-4 text-base">LIENS :</p>
-        <ul className="links flex text-blue-500 underline gap-3">
+        <p className="mr-4 text-base max-xs:text-[10px] text-[15px]">LIENS :</p>
+        <ul className="links flex text-blue-500 underline gap-3 max-xs:text-[10px] text-[15px]">
           <li>
             <a href="/story">Our Story</a>
           </li>
@@ -92,7 +92,7 @@ const Content = () => {
         title="PRESSE"
         createDate="#Posté le Jeudi 27 Avril 2023"
       >
-        <ul className="flex gap-10 underline justify-center h-[100px] items-center">
+        <ul className="flex gap-3 underline justify-center h-[100px] items-center max-xs:text-[6px] text-[13px]">
           <li>
             <a href="https://www.vogue.mx/moda/galeria/vancouver-fashion-week-2022-como-la-plataforma-de-disenadores-responsables" target="_blank" rel="noopener noreferrer">
               VOGUE MEXIQUE
