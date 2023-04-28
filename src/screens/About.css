@@ -1,8 +1,10 @@
-
+/* 
 .article-content {
   display: flex;
   flex-direction: column-reverse;
-}
+} */
+
+
 
 .text-article {
   font-family: 'Times New Roman', Times, serif;

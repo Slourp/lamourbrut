@@ -24,7 +24,7 @@ const Profile = () => {
     window.location.href = 'mailto:contactlamourbrut@gmail.com';
   };
   return (
-    <div className="profile flex flex-col items-center  py-5">
+    <div className="profile flex flex-col items-center py-5">
       <div>
         <div className="ml-2 mt-2 flex flex-col items-center">
           <div>
@@ -47,8 +47,8 @@ const Profile = () => {
         </div>
       </div>
       <div className="flex items-center ml-2">
-        <p className="mr-4 text-base max-xs:text-[10px] text-[15px]">LIENS :</p>
-        <ul className="links flex text-blue-500 underline gap-3 max-xs:text-[10px] text-[15px]">
+        <p className="mr-4 text-base max-xs:text-[13px] text-[15px] max-lg:text-[12px]">LIENS :</p>
+        <ul className="links flex text-blue-500 underline gap-3 max-xs:text-[12px] max-sm:text-[15px] text-[14px] max-lg:text-[10px]">
           <li>
             <a href="/story">Our Story</a>
           </li>
@@ -87,12 +87,12 @@ const Article = ({ title, children, createDate }) => {
 
 const Content = () => {
   return (
-    <div className="content flex flex-col gap-12 mb-24">
+    <div className="content flex flex-col gap-10 mb-24">
       <Article
         title="PRESSE"
         createDate="#Posté le Jeudi 27 Avril 2023"
       >
-        <ul className="flex gap-3 underline justify-center h-[100px] items-center max-xs:text-[6px] text-[13px]">
+        <ul className="flex gap-3 underline justify-center h-[100px] items-center max-xs:text-[7px] max-sm:text-[13px] text-[16px] max-lg:text-[13px]">
           <li>
             <a href="https://www.vogue.mx/moda/galeria/vancouver-fashion-week-2022-como-la-plataforma-de-disenadores-responsables" target="_blank" rel="noopener noreferrer">
               VOGUE MEXIQUE
