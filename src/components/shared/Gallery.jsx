@@ -18,8 +18,7 @@ export default function CustomGallery({ images }) {
         images={images}
         onClick={handleClick}
         enableImageSelection={false}
-/*         rowHeight={500}
- */
+
       />
       <Lightbox
         slides={slides}
