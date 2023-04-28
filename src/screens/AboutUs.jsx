@@ -158,7 +158,7 @@ const Content = () => {
             LIFE <br /> Discover  the universe of each photographer through their
             photos and their Instagram.
           </p>
-        <div>
+        <div className='text-center'>
           <p className='font-bold title-speos'>CIRCLE OF LIFE BY <a className='underline' href="https://www.instagram.com/erakl.rakums/" target="_blank" rel="noopener noreferrer">KAREL VALDMANN</a></p>
        <Gallery images={person1} />
           <p className='font-bold title-speos'>VENUS BY <a className='underline' href="https://www.instagram.com/terada_natsuki/" target="_blank" rel="noopener noreferrer">TERADA NATSUKI</a></p>
