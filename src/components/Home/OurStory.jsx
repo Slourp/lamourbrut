@@ -36,7 +36,7 @@ const OurStory = () => {
           that wants to be light and sensual, and on the other hand, a
           raw exterior that is imperfect and refractory.
         </p>
-        <motion.button variants={fadeIn('left', 0.07)}
+        <button variants={fadeIn('left', 0.07)}
           initial="hidden"
           whileInView={'show'}
           viewport={{ once: false, amount: 0.3 }}
@@ -45,7 +45,7 @@ const OurStory = () => {
         >
           Read more
           <HiArrowRight className="ml-4" />
-        </motion.button>
+        </button>
       </div>
     </section>
   )

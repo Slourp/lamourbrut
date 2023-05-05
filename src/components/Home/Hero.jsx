@@ -7,11 +7,7 @@ const Hero = () => {
   return (
     <section className="flex overflow-hidden h-[68vh] container mx-auto">
       <div className="w-[50%] absolute z-10">
-        <motion.h1
-          variants={fadeIn('down', 0.03)}
-          initial="hidden"
-          whileInView={'show'}
-          viewport={{ once: false, amount: 0.3 }}
+        <h1
           style={{ letterSpacing: '-4px', marginBottom: 0 }}
           className="z-10 uppercase flex-wrap mt-[25vh] "
         >
@@ -27,17 +23,13 @@ const Hero = () => {
           >
             Brut
           </span>
-        </motion.h1>
-        <motion.p
-         variants={fadeIn('up', 0.8)}
-         initial="hidden"
-         whileInView={'show'}
-         viewport={{ once: false, amount: 0.3 }}
+        </h1>
+        <p
           style={{ fontFamily: 'Arial Black', marginTop: 0 }}
           className="text-center text-[15px] max-xs:text-[12px] lg:text-[30px]"
         >
           FALL IN LOVE CLOTHES
-        </motion.p>
+        </p>
       </div>
       <div className="w-[50%] z-1 absolute right-0 z-[-1]">
         <img
