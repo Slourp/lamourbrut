@@ -1,5 +1,5 @@
 import React from 'react'
-import backgroundImage from '../assets/about/aboutus2.jpg'
+import backgroundImage from '../assets/about/about-us.jpg'
 import Headline from '../components/shared/Headline'
 import imgProfile from '../assets/about/profile.png'
 import Logo from '../assets/lamourbrutlogo.png'
@@ -183,12 +183,11 @@ const AboutUs = () => {
   return (
     <div>
       <div
-        className="bg-image'"
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundRepeat: 'repeat',
-        }}
-      >
+      className="bg-fixed bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+      }}
+    >
         <div className="flex-col mx-auto sm:flex sm:flex-row gap-14 items-start pt-24 max-w-[1200px] p-8">
           <div className=" bg-white  w-full sm:w-1/3">
             <Profile />
