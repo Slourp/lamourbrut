@@ -64,7 +64,7 @@ function ContactForm() {
           type="submit"
           className=" px-4 py-2 bg-white text-black font-medium rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-opacity-50"
         >
-          Envoyer mon message
+          Send Message
         </button>
       </div>
     </form>

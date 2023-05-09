@@ -4,20 +4,20 @@ import Headline from '../components/shared/Headline'
 import imgProfile from '../assets/about/profile.png'
 import Logo from '../assets/lamourbrutlogo.png'
 import Gallery from '../components/shared/Gallery'
-import { headline4 } from '../data/headlines'
 
 import Footer from '../layout/Footer'
 import './About.css'
 
 import {
   article1,
-  article2,
   person1,
   person2,
   person3,
   person4,
   person5,
   person6,
+  person7,
+  person8,
 } from '../components/shared/Images'
 
 const Profile = () => {
@@ -89,7 +89,7 @@ const Content = () => {
     <div className="content flex flex-col gap-10 mb-24">
       <Article
         title="PRESS"
-        createDate="#Posté le Jeudi 27 Avril 2023"
+        createDate="#posted on Thursday 11th March 2023"
       >
         <ul className="font-arial-black font-bold flex gap-3 underline justify-center h-[100px] items-center max-xs:text-[7px] max-sm:text-[10px] text-[16px] max-lg:text-[13px]">
           <li>
@@ -142,7 +142,7 @@ const Content = () => {
 
       <Article
         title="VANCOUVER FASHION WEEK APRIL 22"
-        createDate="#Posté le Jeudi 27 Avril 2023"
+        createDate="#posted on Friday 8th April 2022"
       >
         <div>
           <Gallery images={article1} />
@@ -161,10 +161,9 @@ const Content = () => {
       </Article>
       <Article
         title="SHOOT PURSUIT OF HAPPINESS"
-        createDate="#Posté le Jeudi 27 Avril 2023"
+        createDate="#posted on Saturday 23rd April 2022"
       >
         <div>
-          <Gallery images={article2} />
           <p className="p-4 text-article">
             To tell you a bit about this shoot, we worked with our
             family on it and we can feel it through those photos. It
@@ -174,11 +173,146 @@ const Content = () => {
             Discover our photos and backstage of the Pursuit of
             Happiness shoot.
           </p>
+          <div className="text-center font-arial-black p-8  max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
+            BY{' '}
+            <a
+              className="underline font-bold text-lbgreen "
+              href="https://www.instagram.com/maxscrd/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              MAXIME SICARD
+            </a>
+          </div>
+          <Gallery images={person7} />
+          <div className="text-center font-arial-black p-8  max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
+            BY{' '}
+            <a
+              className="underline font-bold text-lbgreen "
+              href="https://www.instagram.com/lmbinet/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LOUISE BINET
+            </a>
+          </div>
+
+          <Gallery images={person8} />
         </div>
+        <ul className="flex justify-around p-8 font-semibold max-xs:text-[12px] max-sm:text-[15px] text-[14px] max-lg:text-[10px]">
+          <li className="flex flex-col gap-1 ">
+            <p className="font-arial-black   max-xs:text-[10px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
+              ASSISTANTS PLATEAUX
+            </p>
+            <li />
+            <a
+              className="underline text-lbgreen "
+              href="https://www.instagram.com/lilian.aoust/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LILIAN AOUST
+            </a>
+            <a
+              className="text-lbgreen underline"
+              href="https://www.instagram.com/oscar_dubois"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              OSCAR DUBOIS
+            </a>
+          </li>
+          <li className="flex flex-col gap-1">
+            <p className="font-arial-black  max-xs:text-[10px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
+              MANNEQUINS
+            </p>
+            <a
+              className="text-lbgreen underline"
+              href="https://www.instagram.com/ines_dacosta_/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              INES
+            </a>
+            <a
+              className="text-lbgreen underline "
+              href="https://www.instagram.com/ia.steph/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              STEPHANE
+            </a>
+            <a
+              className="text-lbgreen underline "
+              href="https://www.instagram.com/aminepuisable/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              AMINE
+            </a>
+            <a
+              className="text-lbgreen underline "
+              href="https://www.instagram.com/gnurbanel/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LENA
+            </a>
+            <a
+              className="text-lbgreen underline "
+              href="https://www.instagram.com/ylanbougaieff/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              YLAN
+            </a>
+            <a
+              className="text-lbgreen underline "
+              href="https://www.instagram.com/delgcht/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              DELPHINE
+            </a>
+            <a
+              className="text-lbgreen underline "
+              href="https://www.instagram.com/cmartindeline/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CELIA
+            </a>
+            <a
+              className="text-lbgreen underline "
+              href="https://www.instagram.com/mak_kitah/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              MAK KITÄH
+            </a>
+            <a
+              className="text-lbgreen underline "
+              href="https://www.instagram.com/rouchonparis/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ROUCHON PARIS
+            </a>
+            <a
+              className="text-lbgreen underline "
+              href="https://www.instagram.com/zdoudaa/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              MUA
+            </a>
+          </li>
+        </ul>
       </Article>
+
       <Article
         title="COLLABORATION WITH SPEOS PHOTOGRAPHERS"
-        createDate="#Posté le Jeudi 27 Avril 2023"
+        createDate="#posted on Thursday 11th March 2023"
       >
         <p className="p-4 text-article">
           This year we had the opportunity to work with photographers
@@ -187,8 +321,8 @@ const Content = () => {
           <br /> Discover the universe of each photographer through
           their photos and their Instagram.
         </p>
-        <div className="text-center">
-          <p className="title-speos">
+        <div className="text-center font-arial-black p-8">
+          <p className="m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
             CIRCLE OF LIFE BY{' '}
             <a
               className="underline text-lbgreen font-bold"
@@ -200,7 +334,7 @@ const Content = () => {
             </a>
           </p>
           <Gallery images={person1} />
-          <p className="font-bold title-speos">
+          <p className="m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
             VENUS BY{' '}
             <a
               className="underline text-lbgreen font-bold"
@@ -212,7 +346,7 @@ const Content = () => {
             </a>
           </p>
           <Gallery images={person5} />
-          <p className="font-bold title-speos">
+          <p className="m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
             SELFLOVE BY{' '}
             <a
               className="underline text-lbgreen font-bold"
@@ -224,7 +358,7 @@ const Content = () => {
             </a>
           </p>
           <Gallery images={person3} />
-          <p className="font-bold title-speos">
+          <p className="m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
             US AGAINST THE WOLD BY{' '}
             <a
               className="underline text-lbgreen font-bold"
@@ -236,7 +370,7 @@ const Content = () => {
             </a>
           </p>
           <Gallery images={person4} />
-          <p className="font-bold title-speos">
+          <p className="m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
             AFTER WASHING PARTY BY{' '}
             <a
               className="underline text-lbgreen font-bold"
@@ -248,7 +382,7 @@ const Content = () => {
             </a>
           </p>
           <Gallery images={person2} />
-          <p className="font-bold title-speos">
+          <p className="m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
             LA FEMME BY{' '}
             <a
               className="underline text-lbgreen font-bold"
@@ -275,15 +409,6 @@ const AboutUs = () => {
           backgroundImage: `url(${backgroundImage})`,
         }}
       >
-       {/*  <div className='pt-12 overflow-hidden font-bold'>
-          <Headline
-            headlines={headline4}
-            backgroundColor="bg-lbpink"
-            textColor="text-lbgreen"
-            textSize={32}
-          />
-        </div> */}
-
         <div className="flex-col mx-auto sm:flex sm:flex-row gap-14 items-start pt-24 max-w-[1200px] p-8">
           <div className=" bg-white  w-full sm:w-1/3">
             <Profile />

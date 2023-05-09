@@ -1,18 +1,7 @@
-/* 
-.article-content {
-  display: flex;
-  flex-direction: column-reverse;
-} */
-
 
 
 .text-article {
   font-family: 'Times New Roman', Times, serif;
-}
-
-.title-speos {
-  font-family: 'Arial Black';
-  padding: 1.5rem;
 }
 
 .links-presse {

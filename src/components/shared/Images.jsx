@@ -4,10 +4,6 @@ import Img3 from '../../assets/about/vfw/IMG_6488.JPG'
 import Img4 from '../../assets/about/vfw/IMG_6499.JPG'
 import Img5 from '../../assets/about/vfw/IMG_6501.JPG'
 
-import poh1 from '../../assets/about/poh/poh1.jpg'
-import poh2 from '../../assets/about/poh/poh2.jpg'
-import poh4 from '../../assets/about/poh/poh4.jpg'
-import poh5 from '../../assets/about/poh/poh5.jpg'
 import coc1 from '../../assets/about/speos/coc-karelvaldmann/coc1.jpg'
 import coc2 from '../../assets/about/speos/coc-karelvaldmann/coc2.jpg'
 import coc3 from '../../assets/about/speos/coc-karelvaldmann/coc3.jpg'
@@ -50,17 +46,48 @@ import lf4 from '../../assets/about/speos/lafemme-noabayle/lf4.jpg'
 import lf5 from '../../assets/about/speos/lafemme-noabayle/lf5.jpg'
 import lf6 from '../../assets/about/speos/lafemme-noabayle/lf6.jpg'
 
+import poh1 from '../../assets/about/poh-maxime/poh-1.jpg'
+import poh2 from '../../assets/about/poh-maxime/poh-2.jpg'
+import poh3 from '../../assets/about/poh-maxime/poh-3.jpg'
+import poh4 from '../../assets/about/poh-maxime/poh-4.jpg'
+import poh5 from '../../assets/about/poh-maxime/poh-5.jpg'
+import poh6 from '../../assets/about/poh-maxime/poh-6.jpg'
+import poh7 from '../../assets/about/poh-maxime/poh-7.jpg'
+import poh8 from '../../assets/about/poh-maxime/poh-8.jpg'
+import poh9 from '../../assets/about/poh-maxime/poh-9.jpg'
+import poh10 from '../../assets/about/poh-maxime/poh-10.jpg'
+import poh11 from '../../assets/about/poh-maxime/poh-11.jpg'
+import poh12 from '../../assets/about/poh-maxime/poh-12.jpg'
+import poh13 from '../../assets/about/poh-maxime/poh-13.jpg'
+import poh14 from '../../assets/about/poh-maxime/poh-14.jpg'
+import poh15 from '../../assets/about/poh-maxime/poh-15.jpg'
+import poh16 from '../../assets/about/poh-maxime/poh-16.jpg'
+import poh17 from '../../assets/about/poh-maxime/poh-17.jpg'
+import poh18 from '../../assets/about/poh-maxime/poh-18.jpg'
+import poh19 from '../../assets/about/poh-maxime/poh-19.jpg'
+import poh20 from '../../assets/about/poh-maxime/poh-20.jpg'
+import poh21 from '../../assets/about/poh-maxime/poh-21.jpg'
+import poh22 from '../../assets/about/poh-maxime/poh-22.jpg'
+import poh23 from '../../assets/about/poh-maxime/poh-23.jpg'
+
+import poh24 from '../../assets/about/poh-louise/poh-24.JPG'
+import poh25 from '../../assets/about/poh-louise/poh-25.JPG'
+import poh26 from '../../assets/about/poh-louise/poh-26.JPG'
+import poh27 from '../../assets/about/poh-louise/poh-27.JPG'
+import poh28 from '../../assets/about/poh-louise/poh-28.JPG'
+import poh29 from '../../assets/about/poh-louise/poh-29.JPG'
+import poh30 from '../../assets/about/poh-louise/poh-30.JPG'
+import poh31 from '../../assets/about/poh-louise/poh-31.JPG'
+import poh32 from '../../assets/about/poh-louise/poh-32.JPG'
+
 export const article1 = [
   {
     src: Img1,
     original: Img1,
-
-
   },
   {
     src: Img2,
     original: Img2,
-
   },
   {
     src: Img3,
@@ -79,24 +106,19 @@ export const article2 = [
   {
     src: poh1,
     original: poh1,
-
-
   },
   {
     src: poh2,
     original: poh2,
-
   },
 
   {
     src: poh4,
     original: poh4,
-
   },
   {
     src: poh5,
     original: poh5,
-
   },
 ]
 
@@ -140,11 +162,6 @@ export const person2 = [
   {
     src: awp1,
     original: awp1,
-    // tags: [
-    //   { value: 'Nature', title: 'Nature' },
-    //   { value: 'Flora', title: 'Flora' },
-    // ],
-    // caption: 'After Rain (Jeshu John - designerspics.com)',
   },
   {
     src: awp2,
@@ -269,5 +286,139 @@ export const person6 = [
   {
     src: lf6,
     original: lf6,
+  },
+]
+
+export const person7 = [
+  {
+    src: poh1,
+    original: poh1,
+  },
+  {
+    src: poh2,
+    original: poh2,
+  },
+  {
+    src: poh3,
+    original: poh3,
+  },
+  {
+    src: poh4,
+    original: poh4,
+  },
+  {
+    src: poh5,
+    original: poh5,
+  },
+  {
+    src: poh6,
+    original: poh6,
+  },
+  {
+    src: poh7,
+    original: poh7,
+  },
+  {
+    src: poh8,
+    original: poh8,
+  },
+  {
+    src: poh9,
+    original: poh9,
+  },
+  {
+    src: poh10,
+    original: poh10,
+  },
+  {
+    src: poh11,
+    original: poh11,
+  },
+  {
+    src: poh12,
+    original: poh12,
+  },
+  {
+    src: poh13,
+    original: poh13,
+  },
+  {
+    src: poh14,
+    original: poh14,
+  },
+  {
+    src: poh15,
+    original: poh15,
+  },
+  {
+    src: poh16,
+    original: poh16,
+  },
+  {
+    src: poh17,
+    original: poh17,
+  },
+  {
+    src: poh18,
+    original: poh18,
+  },
+  {
+    src: poh19,
+    original: poh19,
+  },
+  {
+    src: poh20,
+    original: poh20,
+  },
+  {
+    src: poh21,
+    original: poh21,
+  },
+  {
+    src: poh22,
+    original: poh22,
+  },
+  {
+    src: poh23,
+    original: poh23,
+  },
+]
+
+export const person8 = [
+  {
+    src: poh24,
+    original: poh24,
+  },
+  {
+    src: poh25,
+    original: poh25,
+  },
+  {
+    src: poh26,
+    original: poh26,
+  },
+  {
+    src: poh27,
+    original: poh27,
+  },
+  {
+    src: poh28,
+    original: poh28,
+  },
+  {
+    src: poh29,
+    original: poh29,
+  },
+  {
+    src: poh30,
+    original: poh30,
+  },
+  {
+    src: poh31,
+    original: poh31,
+  },
+  {
+    src: poh32,
+    original: poh32,
   },
 ]
