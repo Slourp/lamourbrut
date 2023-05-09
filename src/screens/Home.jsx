@@ -7,6 +7,8 @@ import Headline from '../components/shared/Headline';
 import OurStory from '../components/Home/OurStory'
 import Footer from '../layout/Footer';
 import { headline1 } from '../data/headlines';
+
+
 const Home = () => {
   return (
     <div className='overflow-hidden flex-col mx-auto'>

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Headline = ({ headlines, backgroundColor, textColor, textSize, animationDuration, fixed }) => {
   return (
     <div className={`${fixed ? 'sticky-headline' : ''} ${backgroundColor} font-vcr flex justify-around z-10`}>
-      <div className={`flex whitespace-nowrap space-x-[150px] marquee`} style={{animationDuration: animationDuration}}>
+     <div className={`flex whitespace-nowrap space-x-[150px] marquee`} style={{animationDuration: animationDuration}}> 
         {headlines.map((headline, index) => (
           <span key={index} className={`${textColor}`} style={{
             fontSize: textSize + 'px',

@@ -4,6 +4,7 @@ import Headline from '../components/shared/Headline'
 import imgProfile from '../assets/about/profile.png'
 import Logo from '../assets/lamourbrutlogo.png'
 import Gallery from '../components/shared/Gallery'
+import { headline4 } from '../data/headlines'
 
 import Footer from '../layout/Footer'
 import './About.css'
@@ -40,9 +41,7 @@ const Profile = () => {
               textAlign: 'center',
               margin: '2rem',
             }}
-          >
-           
-          </p>
+          />
           <span />
         </div>
       </div>
@@ -89,10 +88,10 @@ const Content = () => {
   return (
     <div className="content flex flex-col gap-10 mb-24">
       <Article
-        title="PRESSE"
+        title="PRESS"
         createDate="#Posté le Jeudi 27 Avril 2023"
       >
-        <ul className="font-arial-black text-lbgreen font-bold flex gap-3 underline justify-center h-[100px] items-center max-xs:text-[7px] max-sm:text-[13px] text-[16px] max-lg:text-[13px]">
+        <ul className="font-arial-black text-lbgreen font-bold flex gap-3 underline justify-center h-[100px] items-center max-xs:text-[7px] max-sm:text-[10px] text-[16px] max-lg:text-[13px]">
           <li>
             <a
               href="https://www.vogue.mx/moda/galeria/vancouver-fashion-week-2022-como-la-plataforma-de-disenadores-responsables"
@@ -161,7 +160,7 @@ const Content = () => {
         </div>
       </Article>
       <Article
-        title="SHOOT POURSUIT OF HAPPINESS"
+        title="SHOOT PURSUIT OF HAPPINESS"
         createDate="#Posté le Jeudi 27 Avril 2023"
       >
         <div>
@@ -276,6 +275,15 @@ const AboutUs = () => {
           backgroundImage: `url(${backgroundImage})`,
         }}
       >
+       {/*  <div className='pt-12 overflow-hidden font-bold'>
+          <Headline
+            headlines={headline4}
+            backgroundColor="bg-lbpink"
+            textColor="text-lbgreen"
+            textSize={32}
+          />
+        </div> */}
+
         <div className="flex-col mx-auto sm:flex sm:flex-row gap-14 items-start pt-24 max-w-[1200px] p-8">
           <div className=" bg-white  w-full sm:w-1/3">
             <Profile />
