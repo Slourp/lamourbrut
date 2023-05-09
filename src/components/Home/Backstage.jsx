@@ -10,14 +10,15 @@ const Backstage = () => {
   return (
     <section className="bg-black p-2">
       <div className="container mx-auto m-8">
-        <h2 
-          style={{fontFamily: 'Arial Black'}}
+        <h2
+          style={{ fontFamily: 'Arial Black' }}
           className="text-white text-5xl md:text-6xl lg:text-5xl xl:text-[90px] 2xl:text-7xl"
         >
           Backstage
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 items-center col-12"
-             style={{flexDirection: 'column'}}
+        <div
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 items-center col-12"
+          style={{ flexDirection: 'column' }}
         >
           {images.map((image, index) => (
             <div key={index} className="flex justify-center">
@@ -30,18 +31,19 @@ const Backstage = () => {
           ))}
         </div>
         <p
-          style={{fontFamily: 'Arial Black'}} 
-          className='text-white mt-6'
+          style={{ fontFamily: 'Arial Black' }}
+          className="text-white mt-6"
         >
           BEHIND THE SCENE WITH L'AMOUR BRUT'S FAMILY
         </p>
         <p
-          style={{fontFamily:'times-new-roman'}}
+          style={{ fontFamily: 'times-new-roman' }}
           className="text-white text-justify mt-4 md:mt-8 text-lg md:text-[25px]"
         >
-          We like to think that working with our friends and acquaintances allows us to
-          go further together. We met our photographers in school and our models are our friends. 
-          Feel free to check out the ABOUT US page to discover them.
+          We like to think that working with our friends and
+          acquaintances allows us to go further together. We met our
+          photographers in school and our models are our friends. Feel
+          free to check out the ABOUT US page to discover them.
         </p>
       </div>
     </section>

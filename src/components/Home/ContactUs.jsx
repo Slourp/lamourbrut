@@ -1,14 +1,15 @@
-import React from 'react';
-import { HiArrowRight } from 'react-icons/hi';
-import Image1 from '../../assets/home/photocontact.jpg';
+import React from 'react'
+import { HiArrowRight } from 'react-icons/hi'
+import ContactForm from '../Form/ContactForm'
+import Image1 from '../../assets/home/photocontact.jpg'
 
 const ContactUs = () => {
   const handleContactUs = () => {
-    window.location.href = 'mailto:contactlamourbrut@gmail.com';
-  };
+    window.location.href = 'mailto:contactlamourbrut@gmail.com'
+  }
 
   return (
-    <section className="flex flex-col md:flex-row overflow-hidden h-full md:h-screen bg-black">
+    <section className="flex flex-col pb-5 md:flex-row overflow-hidden h-full md:h-screen bg-black">
       <div className="w-full md:w-[60%]">
         <img
           src={Image1}
@@ -16,7 +17,7 @@ const ContactUs = () => {
           className="w-full object-cover h-[50vh] md:h-screen"
         />
       </div>
-      <div className="w-full md:w-[40%] text-white px-4 md:p-12 flex flex-col justify-center items-baseline mt-3">
+      {/*    <div className="w-full md:w-[40%] text-white px-4 md:p-12 flex flex-col justify-center items-baseline mt-3">
         <h2
         style={{fontFamily: 'Arial Black'}}
          className="text-5xl md:text-[90px]">
@@ -34,9 +35,20 @@ const ContactUs = () => {
           Contact us
           <HiArrowRight className="ml-4" />
         </button>
+      </div> */}
+      <div className="w-full md:w-[40%] text-white px-4 md:p-12 flex flex-col justify-center items-baseline mt-3">
+        <h2
+          style={{ fontFamily: 'Arial Black' }}
+          className="text-5xl md:text-[90px] pt-5"
+        >
+          Contact
+        </h2>
+        <div className="items-baseline pb-5">
+          <ContactForm />
+        </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default ContactUs;
+export default ContactUs

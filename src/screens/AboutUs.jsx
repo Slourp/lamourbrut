@@ -91,7 +91,7 @@ const Content = () => {
         title="PRESS"
         createDate="#Posté le Jeudi 27 Avril 2023"
       >
-        <ul className="font-arial-black text-lbgreen font-bold flex gap-3 underline justify-center h-[100px] items-center max-xs:text-[7px] max-sm:text-[10px] text-[16px] max-lg:text-[13px]">
+        <ul className="font-arial-black font-bold flex gap-3 underline justify-center h-[100px] items-center max-xs:text-[7px] max-sm:text-[10px] text-[16px] max-lg:text-[13px]">
           <li>
             <a
               href="https://www.vogue.mx/moda/galeria/vancouver-fashion-week-2022-como-la-plataforma-de-disenadores-responsables"
@@ -121,7 +121,7 @@ const Content = () => {
           </li>
           <li>
             <a
-              href="https://www.moncarnet-gala.fr/articles/view/L-AMOUR-BRUT"
+              href="https://www.vogue.co.kr/2022/05/13/%EB%B0%B4%EC%BF%A0%EB%B2%84%ED%8C%A8%EC%85%98%EC%9C%84%ED%81%AC-2/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -130,7 +130,7 @@ const Content = () => {
           </li>
           <li>
             <a
-              href="https://www.vogue.co.kr/2022/05/13/%EB%B0%B4%EC%BF%A0%EB%B2%84%ED%8C%A8%EC%85%98%EC%9C%84%ED%81%AC-2/"
+              href="https://www.moncarnet-gala.fr/articles/view/L-AMOUR-BRUT"
               target="_blank"
               rel="noopener noreferrer"
             >

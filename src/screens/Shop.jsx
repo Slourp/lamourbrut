@@ -7,7 +7,8 @@ import CountDown from '../components/shared/CountDown'
 
 const Products = () => {
   return (
-    <section className="overflow-hidden flex-col mx-auto"
+    <section
+      className="overflow-hidden flex-col mx-auto"
       style={{
         backgroundImage: `url(${Image})`,
         backgroundSize: 'cover',
