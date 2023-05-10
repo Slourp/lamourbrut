@@ -1,8 +1,15 @@
-import Img1 from '../../assets/about/vfw/IMG_6485.JPG'
-import Img2 from '../../assets/about/vfw/IMG_6503.JPG'
-import Img3 from '../../assets/about/vfw/IMG_6488.JPG'
-import Img4 from '../../assets/about/vfw/IMG_6499.JPG'
-import Img5 from '../../assets/about/vfw/IMG_6501.JPG'
+import vfw1 from '../../assets/about/vfw/vfw1.JPG'
+import vfw2 from '../../assets/about/vfw/vfw2.JPG'
+import vfw3 from '../../assets/about/vfw/vfw3.JPG'
+import vfw4 from '../../assets/about/vfw/vfw4.JPG'
+import vfw5 from '../../assets/about/vfw/vfw5.JPG'
+import vfw6 from '../../assets/about/vfw/vfw6.JPG'
+import vfw7 from '../../assets/about/vfw/vfw7.JPG'
+import vfw8 from '../../assets/about/vfw/vfw8.JPG'
+import vfw9 from '../../assets/about/vfw/vfw9.JPG'
+import vfw10 from '../../assets/about/vfw/vfw10.JPG'
+import vfw11 from '../../assets/about/vfw/vfw11.JPG'
+import vfw12 from '../../assets/about/vfw/vfw12.JPG'
 
 import coc1 from '../../assets/about/speos/coc-karelvaldmann/coc1.jpg'
 import coc2 from '../../assets/about/speos/coc-karelvaldmann/coc2.jpg'
@@ -82,24 +89,52 @@ import poh32 from '../../assets/about/poh-louise/poh-32.JPG'
 
 export const article1 = [
   {
-    src: Img1,
-    original: Img1,
+    src: vfw12,
+    original: vfw12,
   },
   {
-    src: Img2,
-    original: Img2,
+    src: vfw1,
+    original: vfw1,
   },
   {
-    src: Img3,
-    original: Img3,
+    src: vfw2,
+    original: vfw2,
   },
   {
-    src: Img4,
-    original: Img4,
+    src: vfw3,
+    original: vfw3,
   },
   {
-    src: Img5,
-    original: Img5,
+    src: vfw4,
+    original: vfw4,
+  },
+  {
+    src: vfw5,
+    original: vfw5,
+  },
+  {
+    src: vfw6,
+    original: vfw6,
+  },
+  {
+    src: vfw7,
+    original: vfw7,
+  },
+  {
+    src: vfw8,
+    original: vfw8,
+  },
+  {
+    src: vfw9,
+    original: vfw9,
+  },
+  {
+    src: vfw10,
+    original: vfw5,
+  },
+  {
+    src: vfw11,
+    original: vfw11,
   },
 ]
 export const article2 = [
@@ -124,12 +159,28 @@ export const article2 = [
 
 export const person1 = [
   {
-    src: coc1,
-    original: coc1,
+    src: coc4,
+    original: coc4,
+  },
+  {
+    src: coc8,
+    original: coc8,
   },
   {
     src: coc2,
     original: coc2,
+  },
+  {
+    src: coc7,
+    original: coc7,
+  },
+  {
+    src: coc5,
+    original: coc5,
+  },
+  {
+    src: coc1,
+    original: coc1,
   },
 
   {
@@ -137,24 +188,8 @@ export const person1 = [
     original: coc3,
   },
   {
-    src: coc4,
-    original: coc4,
-  },
-  {
-    src: coc5,
-    original: coc5,
-  },
-  {
     src: coc6,
     original: coc6,
-  },
-  {
-    src: coc7,
-    original: coc7,
-  },
-  {
-    src: coc8,
-    original: coc8,
   },
 ]
 
@@ -184,30 +219,28 @@ export const person2 = [
 
 export const person3 = [
   {
-    src: sl1,
-    original: sl1,
+    src: sl5,
+    original: sl5,
+  },
+  {
+    src: sl3,
+    original: sl3,
   },
   {
     src: sl2,
     original: sl2,
   },
-
   {
-    src: sl3,
-    original: sl3,
+    src: sl6,
+    original: sl6,
   },
-
   {
     src: sl4,
     original: sl4,
   },
   {
-    src: sl5,
-    original: sl5,
-  },
-  {
-    src: sl6,
-    original: sl6,
+    src: sl1,
+    original: sl1,
   },
 ]
 
@@ -241,14 +274,6 @@ export const person4 = [
 
 export const person5 = [
   {
-    src: us1,
-    original: us1,
-  },
-  {
-    src: us2,
-    original: us2,
-  },
-  {
     src: us3,
     original: us3,
   },
@@ -260,24 +285,24 @@ export const person5 = [
     src: us5,
     original: us5,
   },
+  {
+    src: us1,
+    original: us1,
+  },
+  {
+    src: us2,
+    original: us2,
+  },
 ]
 
 export const person6 = [
   {
-    src: lf1,
-    original: lf1,
-  },
-  {
-    src: lf2,
-    original: lf2,
+    src: lf4,
+    original: lf4,
   },
   {
     src: lf3,
     original: lf3,
-  },
-  {
-    src: lf4,
-    original: lf4,
   },
   {
     src: lf5,
@@ -286,6 +311,14 @@ export const person6 = [
   {
     src: lf6,
     original: lf6,
+  },
+  {
+    src: lf1,
+    original: lf1,
+  },
+  {
+    src: lf2,
+    original: lf2,
   },
 ]
 
@@ -317,10 +350,6 @@ export const person7 = [
   {
     src: poh7,
     original: poh7,
-  },
-  {
-    src: poh8,
-    original: poh8,
   },
   {
     src: poh9,
@@ -359,10 +388,6 @@ export const person7 = [
     original: poh17,
   },
   {
-    src: poh18,
-    original: poh18,
-  },
-  {
     src: poh19,
     original: poh19,
   },
@@ -378,13 +403,17 @@ export const person7 = [
     src: poh22,
     original: poh22,
   },
-  {
-    src: poh23,
-    original: poh23,
-  },
 ]
 
 export const person8 = [
+  {
+    src: poh32,
+    original: poh32,
+  },
+  {
+    src: poh31,
+    original: poh31,
+  },
   {
     src: poh24,
     original: poh24,
@@ -394,31 +423,19 @@ export const person8 = [
     original: poh25,
   },
   {
-    src: poh26,
-    original: poh26,
-  },
-  {
-    src: poh27,
-    original: poh27,
-  },
-  {
-    src: poh28,
-    original: poh28,
+    src: poh30,
+    original: poh30,
   },
   {
     src: poh29,
     original: poh29,
   },
   {
-    src: poh30,
-    original: poh30,
+    src: poh28,
+    original: poh28,
   },
   {
-    src: poh31,
-    original: poh31,
-  },
-  {
-    src: poh32,
-    original: poh32,
+    src: poh27,
+    original: poh27,
   },
 ]

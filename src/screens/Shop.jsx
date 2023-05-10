@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from '../assets/shop/shop.png'
+import Image from '../assets/shop/eshop.jpg'
 import Headline from '../components/shared/Headline'
 import { headline2 } from '../data/headlines'
 import Footer from '../layout/Footer'
