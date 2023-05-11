@@ -10,6 +10,7 @@
     "test": "vitest"
   },
   "dependencies": {
+    "14": "^3.1.6",
     "@emotion/react": "^11.10.6",
     "@fontsource/aldrich": "^4.5.7",
     "@fontsource/orbitron": "^4.5.11",
@@ -19,13 +20,12 @@
     "axios": "^1.4.0",
     "framer-motion": "^10.12.4",
     "lazyload": "^2.0.0-rc.2",
-    "nodemailer": "^6.9.1",
+    "nodemailer": "^6.6.3",
     "popmotion": "^11.0.5",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-18-image-lightbox": "^5.1.4",
     "react-dom": "^18.2.0",
-    "react-ga": "^3.3.1",
     "react-grid-gallery": "^1.0.0",
     "react-icons": "^4.8.0",
     "react-intersection-observer": "^9.4.3",
@@ -33,7 +33,6 @@
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.10.0",
     "react-scroll": "^1.8.9",
-    "react-sticky": "^6.0.3",
     "yet-another-react-lightbox": "^3.5.0"
   },
   "devDependencies": {

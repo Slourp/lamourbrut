@@ -83,7 +83,7 @@ export const headline4 = [
   'WELCOME IN OUR MINDS',
   'WELCOME IN OUR MINDS',
   'WELCOME IN OUR MINDS',
-  'WELCOME IN OUR MINDS'
+  'WELCOME IN OUR MINDS',
 ]
 
 export const articles = [

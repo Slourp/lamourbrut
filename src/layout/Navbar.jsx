@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../assets/lamourbrutlogo.png';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { BsCart } from 'react-icons/bs';
+import Sidebar from './Sidebar'
 
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true);
@@ -32,11 +33,13 @@ const Navbar = () => {
       style={{ transform: showNavbar ? 'translateY(0)' : 'translateY(-100%)' }}
     >
       <div className="flex gap-2">
+
        {/*  <RxHamburgerMenu
           size={32}
           className="inline-block mr-6 cursor-pointer hover:text-blue-800"
         /> */}
       </div>
+      
     {/*   <div
         className="absolute left-[50%] -translate-x-[50%] cursor-pointer"
         onClick={() => (window.location.href = '/')}

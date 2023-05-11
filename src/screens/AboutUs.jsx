@@ -4,9 +4,8 @@ import Headline from '../components/shared/Headline'
 import imgProfile from '../assets/about/profile.png'
 import Logo from '../assets/lamourbrutlogo.png'
 import Gallery from '../components/shared/Gallery'
-import { headline4 } from '../data/headlines'
-
 import Footer from '../layout/Footer'
+import { headline4 } from '../data/headlines'
 import './About.css'
 
 import {
@@ -321,9 +320,10 @@ const Content = () => {
         <p className="p-4 text-article">
           This year we had the opportunity to work with photographers
           from the SPEOS photo school.They all imagined their story
-          through the theme we gave them:<br /> DRAMATURGY IN REAL LIFE{' '}
-          <br /> Discover the universe of each photographer through
-          their photos and their Instagram.
+          through the theme we gave them:
+          <br /> DRAMATURGY IN REAL LIFE <br /> Discover the universe
+          of each photographer through their photos and their
+          Instagram.
         </p>
         <div className="text-center font-arial-black p-8">
           <p className="m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
@@ -400,16 +400,16 @@ const Content = () => {
           <Gallery images={person6} />
         </div>
         <p className="text-center m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
-            CREDITS ECOLE:{' '}
-            <a
-              className="underline text-lbgreen font-bold"
-              href="https://www.instagram.com/speos_photo/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              SPEOS
-            </a>
-            </p>
+          CREDITS ECOLE:{' '}
+          <a
+            className="underline text-lbgreen font-bold"
+            href="https://www.instagram.com/speos_photo/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            SPEOS
+          </a>
+        </p>
       </Article>
     </div>
   )
@@ -425,6 +425,15 @@ const AboutUs = () => {
           backgroundPosition: 'center 10px', // Déplace le fond d'écran de 10 pixels vers le bas
         }}
       >
+        <div className="mt-12 overflow-hidden">
+          <Headline
+            headlines={headline4}
+            backgroundColor="bg-lbpink"
+            textColor="text-lbgreen"
+            textSize={32}
+          />
+        </div>
+
         <div className="flex-col mx-auto sm:flex sm:flex-row gap-14 items-start pt-24 max-w-[1200px] p-8">
           <div className=" bg-white  w-full sm:w-1/3">
             <Profile />
