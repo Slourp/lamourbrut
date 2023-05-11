@@ -34,7 +34,7 @@ function ContactForm() {
       ref={form}
       onSubmit={sendEmail}
       style={{ fontFamily: 'arial-black' }}
-      className="max-w-lg mx-auto flex-col"
+      className="pb-8 max-w-lg mx-auto flex-col"
     >
       <div className="mb-4">
         <label htmlFor="name" className="block font-medium mb-2">
