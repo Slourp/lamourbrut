@@ -30,7 +30,7 @@ function NewsLetter() {
   }
 
   return (
-    <div className="bg-lbpink border-2 border-lbgreen mt-3 max-sm:w-full">
+    <div className="bg-lbpink border-2 border-lbgreen rounded-lg mt-3 max-sm:w-full">
       <div />
       <h2 className="mt-4 leading-5 font-arial-black max-xs:text-[15px] max-sm:text-[12px] text-[15px] max-lg:text-[20px]">
         The IT-ACCESSORIES are coming out soon, if you want yours,

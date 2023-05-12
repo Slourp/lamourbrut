@@ -145,10 +145,10 @@ const Content = () => {
 
       <Article
         title="VANCOUVER FASHION WEEK APRIL 22"
-        createDate="#posted on Friday 8th April 2022"
+        createDate="#posted on Friday 8th April 2022"
       >
         <div>
-          <Gallery images={article1} />
+          <Gallery images={article1} loading="lazy" />
           <p className="p-4 text-article">
             Hello,
             <br /> You can find there our last collection PURSUIT OF
@@ -187,7 +187,7 @@ const Content = () => {
               MAXIME SICARD
             </a>
           </div>
-          <Gallery images={person7} />
+          <Gallery images={person7} loading="lazy" />
           <div className="text-center font-arial-black p-8  max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
             BY{' '}
             <a
@@ -200,7 +200,7 @@ const Content = () => {
             </a>
           </div>
 
-          <Gallery images={person8} />
+          <Gallery images={person8} loading="lazy" />
         </div>
         <ul className="flex justify-around p-8 font-semibold max-xs:text-[12px] max-sm:text-[15px] text-[14px] max-lg:text-[10px]">
           <li className="flex flex-col gap-1 ">
@@ -337,7 +337,7 @@ const Content = () => {
               KAREL VALDMANN
             </a>
           </p>
-          <Gallery images={person1} />
+          <Gallery images={person1} loading="lazy" />
           <p className="m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
             UNIVERS BY{' '}
             <a
@@ -349,7 +349,7 @@ const Content = () => {
               TERADA NATSUKI
             </a>
           </p>
-          <Gallery images={person5} />
+          <Gallery images={person5} loading="lazy" />
           <p className="m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
             SELFLOVE BY{' '}
             <a
@@ -361,7 +361,7 @@ const Content = () => {
               AMIRA SNAEROS JABALI
             </a>
           </p>
-          <Gallery images={person3} />
+          <Gallery images={person3} loading="lazy" />
           <p className="m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
             US AGAINST THE WOLD BY{' '}
             <a
@@ -373,7 +373,7 @@ const Content = () => {
               RAPHAEL GARSAULT
             </a>
           </p>
-          <Gallery images={person4} />
+          <Gallery images={person4} loading="lazy" />
           <p className="m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
             AFTER WASHING PARTY BY{' '}
             <a
@@ -397,7 +397,7 @@ const Content = () => {
               NOA BAYLE
             </a>
           </p>
-          <Gallery images={person6} />
+          <Gallery images={person6} loading="lazy" />
         </div>
         <p className="text-center m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
           CREDITS ECOLE:{' '}

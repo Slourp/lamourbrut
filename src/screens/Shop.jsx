@@ -25,13 +25,13 @@ const Products = () => {
         <Suspense fallback={<div>Loading...</div>}>
           <CountDown />
         </Suspense>
-        <div className='w-1/3 mt-1'>
-        <Suspense fallback={<div>Loading...</div>}>
-          <NewsLetter />
-        </Suspense>
+        <div className="w-1/3 mt-1">
+          <Suspense fallback={<div>Loading...</div>}>
+            <NewsLetter />
+          </Suspense>
+        </div>
       </div>
-      </div>
-     
+
       <Headline
         headlines={headline2}
         backgroundColor="bg-black"
