@@ -91,10 +91,11 @@ const Content = () => {
   return (
     <div className="content flex flex-col gap-10 mb-24">
       <Article
+        className="article"
         title="PRESS"
         createDate="#posted on Thursday 11th March 2023"
       >
-        <ul className="font-arial-black font-bold flex gap-3 underline justify-center h-[100px] items-center max-xs:text-[7px] max-sm:text-[10px] text-[16px] max-lg:text-[13px]">
+        <ul className="font-arial-black font-bold flex gap-3 underline justify-center h-[100px] items-center max-xs:text-[6px] max-sm:text-[10px] text-[16px] max-lg:text-[11px]">
           <li>
             <a
               href="https://www.vogue.mx/moda/galeria/vancouver-fashion-week-2022-como-la-plataforma-de-disenadores-responsables"
@@ -163,6 +164,7 @@ const Content = () => {
         </div>
       </Article>
       <Article
+        className="article"
         title="SHOOT PURSUIT OF HAPPINESS"
         createDate="#posted on Saturday 23rd April 2022"
       >
@@ -314,6 +316,7 @@ const Content = () => {
       </Article>
 
       <Article
+        className="article"
         title="COLLABORATION WITH SPEOS PHOTOGRAPHERS"
         createDate="#posted on Thursday 11th March 2023"
       >

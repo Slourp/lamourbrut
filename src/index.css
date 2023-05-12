@@ -21,6 +21,10 @@
   }
 }
 
+.navbar {
+  z-index: 1; /* Ajoutez cette ligne */
+}
+
 .marquee {
   display: flex;
   animation: marquee 80s linear infinite;
@@ -41,8 +45,13 @@ body {
 .backstage-img {
   height: 40vh;
 }
+
 .navbar-transition {
   transition: transform 0.2s;
+}
+
+.article {
+  z-index: 0; /* Ajoutez cette ligne */
 }
 
 :root {
