@@ -30,11 +30,11 @@ function NewsLetter() {
   }
 
   return (
-    <div className="w-[400px] mb-3 max-sm:w-[300px] opacity-80 text-white bg-lbpink shadow-md p-4 flex flex-col justify-center h-72 border-2 border-white rounded-md max-sm:mb-5">
+    <div className="w-[400px] mb-3 max-sm:w-[300px] opacity-80 text-white bg-lbpink shadow-md flex flex-col justify-center border-2 border-white rounded-md max-sm:mb-5 p-2 h-auto">
       <h3 className="text-2xl max-sm:text-[20px] font-arial-black text-center">
         BE THE FIRST TO KNOW
       </h3>
-      <p className="font-serif text-center max-sm:text-[15px]">
+      <p className="font-serif text-center max-sm:text-[14px]">
         The IT-ACCESSORIES are coming out soon, if you want yours,
         enter your email and we'll keep you posted !
       </p>

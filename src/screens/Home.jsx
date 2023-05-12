@@ -11,7 +11,7 @@ import { headline1 } from '../data/headlines'
 const Home = () => {
   return (
     <div className="overflow-hidden flex-col mx-auto">
-      <Hero />
+      <Hero loading="lazy" />
       <Headline
         headlines={headline1}
         backgroundColor="bg-black"
@@ -26,14 +26,14 @@ const Home = () => {
         textSize={32}
       />
       <Video />
-      <Backstage />
+      <Backstage loading="lazy" />
       <Headline
         headlines={headline1}
         backgroundColor="bg-white"
         textColor=""
         textSize={32}
       />
-      <ContactUs />
+      <ContactUs loading="lazy" />
       <Footer />
     </div>
   )
