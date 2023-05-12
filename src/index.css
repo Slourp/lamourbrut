@@ -54,6 +54,10 @@ body {
   z-index: 0; /* Ajoutez cette ligne */
 }
 
+.title {
+  z-index: 0;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.7;

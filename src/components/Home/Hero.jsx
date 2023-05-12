@@ -4,19 +4,19 @@ import HeaderHome from '../../assets/home/hero.jpg'
 const Hero = () => {
   return (
     <section className="flex overflow-hidden h-[68vh] container mx-auto">
-      <div className="w-[50%] absolute z-10">
+      <div className="w-[50%] absolute">
         <h1
           style={{ letterSpacing: '-4px', marginBottom: 0 }}
-          className="z-10 uppercase flex-wrap mt-[25vh] "
+          className="uppercase flex-wrap mt-[25vh] "
         >
           <span
             style={{}}
-            className="uppercase font-arial-black mr-[14px] text-[60px] lg:text-[110px] max-xs:text-[45px]"
+            className="title uppercase font-arial-black mr-[14px] text-[60px] lg:text-[110px] max-xs:text-[45px]"
           >
             L'Amour
           </span>
           <span
-            className="font-times-new-roman text-[60px] lg:text-[120px] ml-4 max-xs:text-[45px]"
+            className="title font-times-new-roman text-[60px] lg:text-[120px] ml-4 max-xs:text-[45px]"
             style={{}}
           >
             Brut
