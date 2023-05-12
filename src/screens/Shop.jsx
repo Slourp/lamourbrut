@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import Image from '../assets/shop/eshop.jpg'
 import Headline from '../components/shared/Headline'
 import { headline2 } from '../data/headlines'
 import Footer from '../layout/Footer'
-import CountDown from '../components/shared/CountDown'
+import NewLetter from '../components/shared/NewsLetter'
+const CountDown = React.lazy(() =>
+  import('../components/shared/CountDown')
+)
+const NewsLetter = React.lazy(() =>
+  import('../components/shared/NewsLetter')
+)
 
 const Products = () => {
   return (
@@ -15,9 +21,17 @@ const Products = () => {
         backgroundPosition: 'center',
       }}
     >
-      <div className="flex justify-center items-center h-[90vh]">
-        <CountDown />
+      <div className="flex flex-col justify-center items-center h-[90vh]">
+        <Suspense fallback={<div>Loading...</div>}>
+          <CountDown />
+        </Suspense>
+        <div className='w-1/3 mt-1'>
+        <Suspense fallback={<div>Loading...</div>}>
+          <NewsLetter />
+        </Suspense>
       </div>
+      </div>
+     
       <Headline
         headlines={headline2}
         backgroundColor="bg-black"

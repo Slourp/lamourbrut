@@ -25,9 +25,11 @@ const ContactUs = () => {
           Contact
         </h2>
         <p
-        style={{fontFamily: 'times-new-roman'}}
-         className="mb-8 max-w-[800px] text-lg md:text-[25px]">
-          Please contact us if you have any questions, and we will get back to you as soon as possible.
+          style={{ fontFamily: 'times-new-roman' }}
+          className="mb-8 max-w-[800px] text-lg md:text-[25px]"
+        >
+          Please contact us if you have any questions, and we will get
+          back to you as soon as possible.
         </p>
         <div className="items-baseline pb-5">
           <ContactForm />

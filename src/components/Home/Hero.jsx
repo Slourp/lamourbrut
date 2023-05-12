@@ -1,6 +1,4 @@
 import React from 'react'
-import { motion } from 'framer-motion'
-import { fadeIn } from '../../../variants'
 import HeaderHome from '../../assets/home/hero.jpg'
 
 const Hero = () => {

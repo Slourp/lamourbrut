@@ -60,7 +60,6 @@ import poh4 from '../../assets/about/poh-maxime/poh-4.jpg'
 import poh5 from '../../assets/about/poh-maxime/poh-5.jpg'
 import poh6 from '../../assets/about/poh-maxime/poh-6.jpg'
 import poh7 from '../../assets/about/poh-maxime/poh-7.jpg'
-import poh8 from '../../assets/about/poh-maxime/poh-8.jpg'
 import poh9 from '../../assets/about/poh-maxime/poh-9.jpg'
 import poh10 from '../../assets/about/poh-maxime/poh-10.jpg'
 import poh11 from '../../assets/about/poh-maxime/poh-11.jpg'
@@ -70,12 +69,10 @@ import poh14 from '../../assets/about/poh-maxime/poh-14.jpg'
 import poh15 from '../../assets/about/poh-maxime/poh-15.jpg'
 import poh16 from '../../assets/about/poh-maxime/poh-16.jpg'
 import poh17 from '../../assets/about/poh-maxime/poh-17.jpg'
-import poh18 from '../../assets/about/poh-maxime/poh-18.jpg'
 import poh19 from '../../assets/about/poh-maxime/poh-19.jpg'
 import poh20 from '../../assets/about/poh-maxime/poh-20.jpg'
 import poh21 from '../../assets/about/poh-maxime/poh-21.jpg'
 import poh22 from '../../assets/about/poh-maxime/poh-22.jpg'
-import poh23 from '../../assets/about/poh-maxime/poh-23.jpg'
 
 import poh24 from '../../assets/about/poh-louise/poh-24.JPG'
 import poh25 from '../../assets/about/poh-louise/poh-25.JPG'
@@ -437,5 +434,9 @@ export const person8 = [
   {
     src: poh27,
     original: poh27,
+  },
+  {
+    src: poh26,
+    original: poh26,
   },
 ]
