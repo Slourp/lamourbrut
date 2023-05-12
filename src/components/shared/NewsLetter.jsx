@@ -30,36 +30,31 @@ function NewsLetter() {
   }
 
   return (
-    <div className="bg-lbpink border-2 border-lbgreen rounded-lg mt-3 max-sm:w-full">
-      <div />
-      <h2 className="mt-4 leading-5 font-arial-black max-xs:text-[15px] max-sm:text-[12px] text-[15px] max-lg:text-[20px]">
+    <div className="w-[400px] mb-3 max-sm:w-[300px] opacity-80 text-white bg-lbpink shadow-md p-4 flex flex-col justify-center h-72 border-2 border-white rounded-md max-sm:mb-5">
+      <h3 className="text-2xl max-sm:text-[20px] font-arial-black text-center">
+        BE THE FIRST TO KNOW
+      </h3>
+      <p className="font-serif text-center max-sm:text-[15px]">
         The IT-ACCESSORIES are coming out soon, if you want yours,
         enter your email and we'll keep you posted !
-      </h2>
+      </p>
       <form
-        ref={form}
         onSubmit={sendEmail}
-        className="flex flex-col items-center"
+        className="flex flex-col sm:flex-row justify-center items-center mt-4"
       >
-        <div className="flex flex-col sm:justify-between items-center">
-          <label className="sm:mr-2 mb-2 sm:mb-0" htmlFor="email">
-            Adresse e-mail :
-          </label>
-          <input
-            type="email"
-            name="user_email"
-            id="email"
-            className="w-full sm:w-auto px-3 py-2 leading-tight border-2 border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:border-lbgreen"
-            placeholder="Entrez votre adresse e-mail"
-            required
-          />
-        </div>
-
+        <input
+          type="email"
+          name="user_email"
+          id="email"
+          placeholder="enter your email"
+          required
+          className="border border-gray-400 rounded-md px-4 py-2 mb-2 sm:mb-0 sm:mr-2 min-w-[200px] max-sm:text-[12px]"
+        />
         <button
           type="submit"
-          className="mt-6 px-5 py-2 mb-4 text-white font-semibold bg-lbgreen rounded-md shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75"
+          className="bg-black text-white rounded-md px-4 py-2 max-sm:text-[12px]"
         >
-          S'inscrire
+          SUBSCRIBE
         </button>
       </form>
     </div>

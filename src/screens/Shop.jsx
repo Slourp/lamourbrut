@@ -14,32 +14,36 @@ const NewsLetter = React.lazy(() =>
 const Products = () => {
   return (
     <section
-      className="overflow-hidden flex-col mx-auto"
-      style={{
-        backgroundImage: `url(${Image})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
-      <div className="flex flex-col justify-center items-center h-[90vh]">
+    className="overflow-hidden flex-col mx-auto h-screen"
+    style={{
+      backgroundImage: `url(${Image})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}
+  >
+    <div className="flex flex-col justify-center items-center h-[90vh] relative">
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
         <Suspense fallback={<div>Loading...</div>}>
           <CountDown />
         </Suspense>
-        <div className="w-1/3 mt-1">
-          <Suspense fallback={<div>Loading...</div>}>
-            <NewsLetter />
-          </Suspense>
-        </div>
       </div>
-
-      <Headline
-        headlines={headline2}
-        backgroundColor="bg-black"
-        textColor="text-white"
-        textSize={32}
-      />
-      <Footer />
-    </section>
+      <div style={{ position: 'absolute', bottom: 0, left: 0 }}>
+        <Suspense fallback={<div>Loading...</div>}>
+          <NewsLetter />
+        </Suspense>
+      </div>
+    </div>
+  
+    <Headline
+      headlines={headline2}
+      backgroundColor="bg-black"
+      textColor="text-white"
+      textSize={32}
+    />
+    
+    <Footer />
+  </section>
+  
   )
 }
 
