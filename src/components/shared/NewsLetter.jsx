@@ -39,6 +39,7 @@ function NewsLetter() {
         enter your email and we'll keep you posted !
       </p>
       <form
+        ref={form}
         onSubmit={sendEmail}
         className="flex flex-col sm:flex-row justify-center items-center mt-4"
       >
@@ -48,11 +49,11 @@ function NewsLetter() {
           id="email"
           placeholder="enter your email"
           required
-          className="border border-gray-400 rounded-md px-4 py-2 mb-2 sm:mb-0 sm:mr-2 min-w-[200px] max-sm:text-[12px]"
+          className="text-black border border-gray-400 rounded-md px-4 py-2 mb-2 sm:mb-0 sm:mr-2 min-w-[200px] max-sm:text-[12px]"
         />
         <button
           type="submit"
-          className="bg-black text-white rounded-md px-4 py-2 max-sm:text-[12px]"
+          className="bg-black text-rounded-md px-4 py-2 max-sm:text-[12px]"
         >
           SUBSCRIBE
         </button>
