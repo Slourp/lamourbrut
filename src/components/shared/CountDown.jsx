@@ -44,7 +44,7 @@ const CountDown = () => {
         textShadow: '1px 1px 2px black',
       }}
     >
-      <div className="w-[800px] mx-autoshadow-lg rounded-md p-4 ">
+      <div className="w-[800px] p-4 ">
         <div className="">
           <h2 className="font-bold text-center mb-4 font-arial-black max-xs:text-[30px] max-sm:text-[50px] text-[80px] max-lg:text-[50px]">
             IT-ACCESSORIES
