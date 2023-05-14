@@ -76,7 +76,13 @@ import poh22 from '../../assets/about/poh-maxime/poh-22.jpg'
 
 import poh24 from '../../assets/about/poh-louise/poh-24.JPG'
 import poh25 from '../../assets/about/poh-louise/poh-25.JPG'
-
+import poh26 from '../../assets/about/poh-louise/poh-26.JPG'
+import poh27 from '../../assets/about/poh-louise/poh-27.JPG'
+import poh28 from '../../assets/about/poh-louise/poh-28.JPG'
+import poh29 from '../../assets/about/poh-louise/poh-29.JPG'
+import poh30 from '../../assets/about/poh-louise/poh-30.JPG'
+import poh31 from '../../assets/about/poh-louise/poh-32.JPG'
+import poh32 from '../../assets/about/poh-louise/poh-32.JPG'
 
 export const article1 = [
   {
@@ -404,5 +410,33 @@ export const person8 = [
   {
     src: poh25,
     original: poh25,
-  }
+  },
+  {
+    src: poh26,
+    original: poh26,
+  },
+  {
+    src: poh27,
+    original: poh27,
+  },
+  {
+    src: poh28,
+    original: poh28,
+  },
+  {
+    src: poh29,
+    original: poh29,
+  },
+  {
+    src: poh30,
+    original: poh30,
+  },
+  {
+    src: poh31,
+    original: poh31,
+  },
+  {
+    src: poh32,
+    original: poh32,
+  },
 ]
