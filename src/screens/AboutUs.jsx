@@ -491,6 +491,17 @@ const Content = () => {
           of each photographer through their photos and their
           Instagram.
         </p>
+        <p className="text-center m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
+          CREDITS ECOLE:{' '}
+          <a
+            className="underline text-lbgreen font-bold"
+            href="https://www.instagram.com/speos_photo/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            SPEOS
+          </a>
+        </p>
         <div className="text-center font-arial-black p-8">
           <p className="m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
             CIRCLE OF LIFE BY{' '}
@@ -565,17 +576,6 @@ const Content = () => {
           </p>
           <Gallery images={person6} loading="lazy" />
         </div>
-        <p className="text-center m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
-          CREDITS ECOLE:{' '}
-          <a
-            className="underline text-lbgreen font-bold"
-            href="https://www.instagram.com/speos_photo/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            SPEOS
-          </a>
-        </p>
       </Article>
     </div>
   )
@@ -597,6 +597,7 @@ const AboutUs = () => {
             backgroundColor="bg-lbpink"
             textColor="text-lbgreen"
             textSize={32}
+            fontWeight="font-extrabold"
           />
         </div>
 

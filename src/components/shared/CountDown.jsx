@@ -45,11 +45,11 @@ const CountDown = () => {
       }}
     >
       <div className="w-[800px] p-4 ">
-        <div className="">
-          <h2 className="font-bold text-center mb-4 font-arial-black max-xs:text-[30px] max-sm:text-[50px] text-[80px] max-lg:text-[50px]">
+        <div className="flex justify-center flex-col items-center">
+          <h2 className="font-bold text-center mb-4 font-arial-black max-xs:text-[40px] max-sm:text-[50px] text-[100px] whitespace-nowrap max-lg:text-[50px]">
             IT-ACCESSORIES
           </h2>
-          <p className="text-center max-xs:text-[25px] max-sm:text-[30px] text-[50px] max-lg:text-[50px] p-2">
+          <p className="text-center max-xs:text-[30px] max-sm:text-[30px] text-[50px] max-lg:text-[50px]">
             FRIDAY 30th JUNE 23
           </p>
         </div>
