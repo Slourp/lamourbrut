@@ -21,7 +21,7 @@ const Products = () => {
         backgroundPosition: 'center',
       }}
     >
-      <div className='pt-11'>
+      <div className="pt-11">
         <Headline
           headlines={headline2}
           backgroundColor="bg-black"
@@ -43,13 +43,12 @@ const Products = () => {
         </div>
       </div>
 
-         <Headline
+      <Headline
         headlines={headline2}
         backgroundColor="bg-black"
         textColor="text-white"
         textSize={32}
       />
-     
 
       <Footer />
     </section>

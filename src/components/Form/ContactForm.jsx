@@ -8,6 +8,15 @@ function ContactForm() {
 
   const sendEmail = (e) => {
     e.preventDefault()
+    const name = form.current.elements.user_name.value
+    const email = form.current.elements.user_email.value
+    const message = form.current.elements.message.value
+
+    if (!name || !email || !message) {
+      toast.error('Please fill in all required fields')
+      return
+    }
+
     emailjs
       .sendForm(
         'service_q3ltw1t',

@@ -148,7 +148,7 @@ const Content = () => {
         title="VANCOUVER FASHION WEEK APRIL 22"
         createDate="#posted on Friday 8th April 2022"
       >
-        <div>
+        <div className="">
           <Gallery images={article1} loading="lazy" />
           <p className="p-4 text-article font-times-new-roman">
             Hello,
@@ -223,7 +223,9 @@ const Content = () => {
 
                 <div />
                 <div className="flex flex-col items-baseline justify-end ml-12">
-                  <p className="mt-3 max-xs:text-[12px]">MODELS</p>
+                  <p className="mt-3 max-xs:text-[12px] max-xs:ml-3">
+                    MODELS
+                  </p>
 
                   <div className="flex justify-center">
                     <ul className="flex flex-col">
@@ -327,7 +329,7 @@ const Content = () => {
           <Gallery images={person7} loading="lazy" />
           <div className="text-center font-arial-black p-8  max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px] max-xs:flex flex-col items-center">
             <div className="flex flex-col items-baseline">
-              <h4 className="text-[30px] max-xs:text-[20px]">
+              <h4 className="text-[30px] max-xs:text-[15px]">
                 PURSUIT OF HAPPINESS GALA SHOOT
               </h4>
 
@@ -364,7 +366,9 @@ const Content = () => {
 
                 <div />
                 <div className="flex flex-col items-baseline justify-end ml-12">
-                  <p className="mt-3 max-xs:text-[12px]">MODELS</p>
+                  <p className="mt-3 max-xs:text-[12px] max-xs:ml-3">
+                    MODELS
+                  </p>
 
                   <div className="flex justify-center">
                     <ul className="flex flex-col max-xs:text-[12px] ">
