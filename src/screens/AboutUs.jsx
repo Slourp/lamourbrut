@@ -171,24 +171,29 @@ const Content = () => {
         <div>
           <div className="text-center font-arial-black p-8  max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px] max-xs:flex flex-col items-center">
             <div className="flex flex-col items-baseline">
-              <h4 className="text-[30px] max-xs:text-[20px]">
+              <h4 className="text-[30px] max-xs:text-[15px]">
                 PURSUIT OF HAPPINESS SHOOT
               </h4>
-              <p>
-                PHOTOGRAPH -
-                <a
-                  className="underline font-bold text-lbgreen ml-1 font-times-new-roman"
-                  href="https://www.instagram.com/maxscrd/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  MAXIME SICARD
-                </a>
-              </p>
+              <div className="text-center">
+                <p className="max-xs:mt-3 max-xs:text-[12px] max-xs:ml-5">
+                  PHOTOGRAPH -
+                  <a
+                    className="underline font-bold text-lbgreen ml-1 font-times-new-roman"
+                    href="https://www.instagram.com/maxscrd/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    MAXIME SICARD
+                  </a>
+                </p>
+              </div>
+
               <div className="flex max-xs:flex-col max-xs:items-center">
                 <div className="flex flex-col items-baseline">
-                  <p className="mt-3">ASSISTANTS</p>
-                  <div className="flex flex-col font-times-new-roman">
+                  <p className="mt-3 max-xs:text-[12px]">
+                    ASSISTANTS
+                  </p>
+                  <div className="flex flex-col font-times-new-roman max-xs:text-[12px]">
                     <a
                       className="underline text-lbgreen"
                       href="https://www.instagram.com/lilian.aoust/"
@@ -218,11 +223,11 @@ const Content = () => {
 
                 <div />
                 <div className="flex flex-col items-baseline justify-end ml-12">
-                  <p className="mt-3">MODELS</p>
+                  <p className="mt-3 max-xs:text-[12px]">MODELS</p>
 
                   <div className="flex justify-center">
                     <ul className="flex flex-col">
-                      <div className="flex flex-col items-baseline font-times-new-roman">
+                      <div className="flex flex-col items-baseline font-times-new-roman max-xs:text-[12px]">
                         <a
                           className="text-lbgreen underline"
                           href="https://www.instagram.com/ines_dacosta_/"
@@ -267,7 +272,7 @@ const Content = () => {
                     </ul>
 
                     <ul
-                      className="flex flex-col items-baseline"
+                      className="flex flex-col items-baseline max-xs:text-[12px]"
                       style={{ padding: '0 1rem' }}
                     >
                       <div className="flex flex-col items-baseline font-times-new-roman">
@@ -325,21 +330,27 @@ const Content = () => {
               <h4 className="text-[30px] max-xs:text-[20px]">
                 PURSUIT OF HAPPINESS GALA SHOOT
               </h4>
-              <p>
-                PHOTOGRAPH -
-                <a
-                  className="underline font-bold text-lbgreen ml-1 font-times-new-roman"
-                  href="https://www.instagram.com/maxscrd/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  LOUISE BINET
-                </a>
-              </p>
+
+              <div className="text-center">
+                <p className="max-xs:mt-3 max-xs:text-[12px]  max-xs:ml-5">
+                  PHOTOGRAPH -
+                  <a
+                    className="underline font-bold text-lbgreen ml-1 font-times-new-roman"
+                    href="https://www.instagram.com/lmbinet/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LOUISE BINET
+                  </a>
+                </p>
+              </div>
+
               <div className="flex max-xs:flex-col max-xs:items-center">
                 <div className="flex flex-col items-baseline">
-                  <p className="mt-3">ASSISTANTS</p>
-                  <div className="flex flex-col font-times-new-roman">
+                  <p className="mt-3 max-xs:text-[12px]">
+                    ASSISTANTS
+                  </p>
+                  <div className="flex flex-col font-times-new-roman max-xs:text-[12px] ">
                     <a
                       className="underline text-lbgreen"
                       href="https://www.instagram.com/lilian.aoust/"
@@ -353,10 +364,10 @@ const Content = () => {
 
                 <div />
                 <div className="flex flex-col items-baseline justify-end ml-12">
-                  <p className="mt-3">MODELS</p>
+                  <p className="mt-3 max-xs:text-[12px]">MODELS</p>
 
                   <div className="flex justify-center">
-                    <ul className="flex flex-col">
+                    <ul className="flex flex-col max-xs:text-[12px] ">
                       <div className="flex flex-col items-baseline font-times-new-roman">
                         <a
                           className="text-lbgreen underline"
@@ -402,7 +413,7 @@ const Content = () => {
                     </ul>
 
                     <ul
-                      className="flex flex-col items-baseline"
+                      className="flex flex-col items-baseline max-xs:text-[12px] "
                       style={{ padding: '0 1rem' }}
                     >
                       <div className="flex flex-col items-baseline font-times-new-roman">

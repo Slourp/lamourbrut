@@ -35,33 +35,35 @@ function NewsLetter() {
   }
 
   return (
-    <div className="w-[500px] max-sm:w-full mt-5 h-[200px] opacity-80 text-white bg-lbpink shadow-md flex flex-col justify-center border-2 border-white rounded-md max-sm:mb-0">
-      <h3 className="text-2xl max-sm:text-[20px] font-arial-black text-center mb-4">
+    <div className="w-[500px] max-sm:w-full max-xs:h-[150px] mt-5 h-[180px] opacity-80 text-white bg-lbpink shadow-md flex flex-col  items-centerjustify-center border-2 border-white rounded-md max-sm:mb-0">
+      <h3 className="text-2xl max-sm:text-[20px] max-xs:text-[14px] font-arial-black text-center mb-4">
         BE THE FIRST TO KNOW
       </h3>
-      <p className="font-serif text-center max-sm:text-[14px]">
+      <p className="font-serif text-center max-sm:text-[14px] max-xs:text-[12px]">
         The IT-ACCESSORIES are coming out soon, if you want yours,
         enter your email and we'll keep you posted !
       </p>
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="flex flex-col sm:flex-row justify-center items-center mt-2"
+        className="flex flex-col sm:flex-row justify-center items-center mt-2 max-xs:flex-row"
       >
-        <input
-          type="email"
-          name="user_email"
-          id="email"
-          placeholder="enter your email"
-          required
-          className="text-black border border-gray-400 rounded-md px-2 py-1 sm:mb-0 sm:mr-2 max-w-[160px] max-sm:text-[12px]"
-        />
-        <button
-          type="submit"
-          className="bg-black text-rounded-md px-2 py-1 max-sm:text-[12px] max-sm:mt-3"
-        >
-          SUBSCRIBE
-        </button>
+        <div>
+          <input
+            type="email"
+            name="user_email"
+            id="email"
+            placeholder="enter your email"
+            required
+            className="text-black border border-gray-400 rounded-md px-2 py-1 sm:mb-0 sm:mr-2 max-w-[160px] max-sm:text-[12px]"
+          />
+          <button
+            type="submit"
+            className="bg-black text-rounded-md px-2 py-1 max-sm:text-[12px] max-sm:mt-3"
+          >
+            SUBSCRIBE
+          </button>
+        </div>
       </form>
       <ToastContainer position="center-right" />
     </div>

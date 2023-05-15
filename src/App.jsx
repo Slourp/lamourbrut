@@ -14,8 +14,6 @@ import Navbar from './layout/Navbar'
 
 import './App.css'
 import Story from './screens/Story'
-import CarousselCol from './components/shared/CarousselCol'
-import { CarousselColData } from './data/CarousselData'
 
 function MainLayout({ children }) {
   return (
