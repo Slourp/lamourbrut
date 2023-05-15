@@ -1,5 +1,7 @@
 import React, { useRef } from 'react'
 import emailjs from '@emailjs/browser'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 function NewsLetter() {
   const form = useRef()
@@ -16,17 +18,20 @@ function NewsLetter() {
       .then(
         (result) => {
           console.log(result.text)
+          toast.success(
+            'Vous êtes maintenant bien abonnés à votre Newsletter !',
+            {
+              autoClose: 10000,
+            }
+          )
+          setTimeout(() => {
+            document.location.href = '/'
+          }, 10000)
         },
         (error) => {
           console.log(error.text)
         }
       )
-    if (sendEmail) {
-      document.location.href = '/'
-      alert(
-        `Merci de vous être abonné(e) à notre NewsLetter pour ne rien rater !`
-      )
-    }
   }
 
   return (
@@ -58,6 +63,7 @@ function NewsLetter() {
           SUBSCRIBE
         </button>
       </form>
+      <ToastContainer position="center-right" />
     </div>
   )
 }
