@@ -20,8 +20,8 @@ const OurStory = () => {
       </div>
       <div className="w-full md:w-[45%] px-4 md:p-12 flex flex-col justify-center items-baseline mt-3">
         {/*  <h2 className="text-2xl md:text-4xl">
-          Our Story
-        </h2> */}
+            Our Story
+          </h2> */}
         <h2
           style={{ fontFamily: 'Arial Black' }}
           className="text-5xl md:text-6xl lg:text-5xl xl:text-[80px] 2xl:text-7xl"

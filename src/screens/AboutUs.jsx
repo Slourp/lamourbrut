@@ -150,7 +150,7 @@ const Content = () => {
       >
         <div>
           <Gallery images={article1} loading="lazy" />
-          <p className="p-4 text-article">
+          <p className="p-4 text-article font-times-new-roman">
             Hello,
             <br /> You can find there our last collection PURSUIT OF
             HAPPINESS that was presented at the Vancouver Fashion Week
@@ -171,7 +171,7 @@ const Content = () => {
         <div>
           <div className="text-center font-arial-black p-8  max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px] max-xs:flex flex-col items-center">
             <div className="flex flex-col items-baseline">
-              <h4 className="text-[30px]">
+              <h4 className="text-[30px] max-xs:text-[20px]">
                 PURSUIT OF HAPPINESS SHOOT
               </h4>
               <p>
@@ -322,8 +322,8 @@ const Content = () => {
           <Gallery images={person7} loading="lazy" />
           <div className="text-center font-arial-black p-8  max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px] max-xs:flex flex-col items-center">
             <div className="flex flex-col items-baseline">
-              <h4 className="text-[30px]">
-                PURSUIT OF HAPPINESS SHOOT
+              <h4 className="text-[30px] max-xs:text-[20px]">
+                PURSUIT OF HAPPINESS GALA SHOOT
               </h4>
               <p>
                 PHOTOGRAPH -
@@ -455,7 +455,7 @@ const Content = () => {
           </div>
 
           <Gallery images={person8} loading="lazy" />
-          <p className="p-4 text-article">
+          <p className="p-4 text-article font-times-new-roman">
             To tell you a bit about this shoot, we worked with our
             family on it and we can feel it through those photos. It
             is important to us to work with our friends, our brothers
@@ -472,7 +472,7 @@ const Content = () => {
         title="COLLABORATION WITH SPEOS PHOTOGRAPHERS"
         createDate="#posted on Thursday 11th March 2023"
       >
-        <p className="p-4 text-article">
+        <p className="p-4 text-article font-times-new-roman">
           This year we had the opportunity to work with photographers
           from the SPEOS photo school.They all imagined their story
           through the theme we gave them:

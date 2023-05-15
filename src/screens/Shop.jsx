@@ -20,6 +20,7 @@ const Products = () => {
       backgroundSize: 'cover',
       backgroundPosition: 'center',
     }}
+    
   >
     <div className="flex flex-col justify-center items-center h-[90vh] relative">
       <div style={{ display: 'flex', justifyContent: 'center' }}>
