@@ -19,7 +19,7 @@ function NewsLetter() {
         (result) => {
           console.log(result.text)
           toast.success(
-            'Vous êtes maintenant bien abonnés à votre Newsletter !',
+            'Hello, You’re now subscribed to our newsletter, See you soon. L’Amour Brut',
             {
               autoClose: 10000,
             }

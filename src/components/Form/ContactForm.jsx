@@ -28,7 +28,7 @@ function ContactForm() {
         (result) => {
           console.log(result.text)
           toast.success(
-           
+            'Hello,Your message has been sent, and we thank you for it. We will answer you as soon as possible. Xoxo L’Amour Brut',
             {
               autoClose: 5000,
             }
