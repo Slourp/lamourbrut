@@ -36,7 +36,7 @@ function NewsLetter() {
 
   return (
     <div className="w-[475px] max-sm:w-full max-xs:h-[150px] mt-5 h-[180px] opacity-80 text-white bg-lbpink shadow-md flex flex-col  items-centerjustify-center border-2 border-white rounded-md max-sm:mb-0">
-      <h3 className="text-2xl max-sm:text-[20px] max-xs:text-[14px] font-arial-black text-center mb-4">
+      <h3 className="text-2xl max-sm:text-[20px] max-xs:text-[14px] max-xs:tracking-wide	 font-arial-black text-center mb-4">
         BE THE FIRST TO KNOW
       </h3>
       <p className="font-serif text-center max-sm:text-[14px] max-xs:text-[12px]">

@@ -148,8 +148,8 @@ const Content = () => {
         title="VANCOUVER FASHION WEEK APRIL 22"
         createDate="#posted on Friday 8th April 2022"
       >
-        <div className="px-4">
-          <Gallery images={article1} loading="lazy" />
+        <div className="px-5">
+            <Gallery images={article1} loading="lazy" />
           <p className="p-4 text-article font-times-new-roman">
             Hello,
             <br /> You can find there our last collection PURSUIT OF
@@ -487,7 +487,7 @@ const Content = () => {
         title="COLLABORATION WITH SPEOS PHOTOGRAPHERS"
         createDate="#posted on Thursday 11th March 2023"
       >
-        <p className="p-4 text-article font-times-new-roman">
+        <p className="text-justify  p-4 text-article font-times-new-roman">
           This year we had the opportunity to work with photographers
           from the SPEOS photo school.They all imagined their story
           through the theme we gave them:
@@ -495,7 +495,7 @@ const Content = () => {
           of each photographer through their photos and their
           Instagram.
         </p>
-        <p className="text-center m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
+        <p className="text-left m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
           CREDITS ECOLE:{' '}
           <a
             className="underline text-lbgreen font-bold"
