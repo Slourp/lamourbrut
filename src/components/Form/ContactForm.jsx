@@ -19,16 +19,16 @@ function ContactForm() {
 
     emailjs
       .sendForm(
-        'service_q3ltw1t',
-        'template_vvq2wv6',
+        'service_619rvqa',
+        'template_dyjd0bm',
         form.current,
-        'ydGYh6NeaKR8hWmrF'
+        'szbbO2U5yMpdLf8mH'
       )
       .then(
         (result) => {
           console.log(result.text)
           toast.success(
-            "Votre message a bien été pris en compte et nous en vous remercions. Nous vous répondrons dans les plus brefs délais. L'Amour Brut",
+           
             {
               autoClose: 5000,
             }

@@ -10,10 +10,10 @@ function NewsLetter() {
     e.preventDefault()
     emailjs
       .sendForm(
-        'service_q3ltw1t',
-        'template_qdyl6su',
+        'service_kngbh0f',
+        'template_g8cvysg',
         form.current,
-        'ydGYh6NeaKR8hWmrF'
+        'szbbO2U5yMpdLf8mH'
       )
       .then(
         (result) => {
