@@ -1,15 +1,11 @@
-import React, { Suspense } from 'react'
-import Image from '../assets/shop/eshop.jpg'
-import Headline from '../components/shared/Headline'
-import { headline2 } from '../data/headlines'
-import Footer from '../layout/Footer'
-import NewLetter from '../components/shared/NewsLetter'
-const CountDown = React.lazy(() =>
-  import('../components/shared/CountDown')
-)
-const NewsLetter = React.lazy(() =>
-  import('../components/shared/NewsLetter')
-)
+import React, { Suspense } from 'react';
+import Image from '../assets/shop/eshop.jpg';
+import Headline from '../components/shared/Headline';
+import { headline2 } from '../data/headlines';
+import Footer from '../layout/Footer';
+import NewLetter from '../components/shared/NewsLetter';
+const CountDown = React.lazy(() => import('../components/shared/CountDown'));
+const NewsLetter = React.lazy(() => import('../components/shared/NewsLetter'));
 
 const Products = () => {
   return (
@@ -22,12 +18,14 @@ const Products = () => {
       }}
     >
       <div className="pt-11">
-        <Headline
-          headlines={headline2}
-          backgroundColor="bg-black"
-          textColor="text-white"
-          textSize={32}
-        />
+        <div className="flex justify-center">
+          <Headline
+            headlines={headline2}
+            backgroundColor="bg-black"
+            textColor="text-white"
+            textSize={32}
+          />
+        </div>
       </div>
 
       <div className="flex flex-col justify-center items-center h-[77.3vh] relative">
@@ -43,16 +41,18 @@ const Products = () => {
         </div>
       </div>
 
-      <Headline
-        headlines={headline2}
-        backgroundColor="bg-black"
-        textColor="text-white"
-        textSize={32}
-      />
+      <div className="flex justify-center">
+        <Headline
+          headlines={headline2}
+          backgroundColor="bg-black"
+          textColor="text-white"
+          textSize={32}
+        />
+      </div>
 
       <Footer />
     </section>
-  )
-}
+  );
+};
 
-export default Products
+export default Products;

@@ -96,6 +96,12 @@ body {
   background: black;
 }
 
+@font-face {
+  font-family: 'Arial Black';
+  src: url('/path/to/arial-black.ttf');
+  /* Autres propriétés de la police */
+}
+
 @layer base {
   body {
     @apply font-roboto;
