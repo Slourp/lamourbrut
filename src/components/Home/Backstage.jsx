@@ -27,10 +27,7 @@ const Backstage = () => {
             </div>
           ))}
         </div>
-        <p
-          style={{ fontFamily: 'Arial Black' }}
-          className="text-white mt-6"
-        >
+        <p className="text-white mt-6 font-arial-black">
           BEHIND THE SCENE WITH L'AMOUR BRUT'S FAMILY
         </p>
         <p className="text-white text-justify mt-4 md:mt-8 text-lg md:text-[25px] font-times-new-roman">

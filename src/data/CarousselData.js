@@ -13,6 +13,18 @@ import Us3 from '../assets/about/speos/us-teradanatsuki/us3.jpg'
 import Us4 from '../assets/about/speos/us-teradanatsuki/us4.jpg'
 import Us5 from '../assets/about/speos/us-teradanatsuki/us5.jpg'
 
+import Bs1 from '../assets/home/backstage/bs1.jpg'
+import Bs2 from '../assets/home/backstage/bs2.jpg'
+import Bs3 from '../assets/home/backstage/bs3.jpg'
+import Bs4 from '../assets/home/backstage/bs4.jpg'
+import Bs5 from '../assets/home/backstage/bs5.jpg'
+import Bs6 from '../assets/home/backstage/bs6.jpg'
+import Bs7 from '../assets/home/backstage/bs7.jpg'
+import Bs8 from '../assets/home/backstage/bs8.jpg'
+import Bs9 from '../assets/home/backstage/bs9.jpg'
+import Bs10 from '../assets/home/backstage/bs10.jpg'
+import Bs11 from '../assets/home/backstage/bs11.jpg'
+
 export const CarousselColData = [
   {
     image: Col1,
@@ -55,5 +67,41 @@ export const CarousselUniversData = [
   },
   {
     image: Us5,
+  },
+]
+
+export const CarousselBackstageData = [
+  {
+    image: Bs1,
+  },
+  {
+    image: Bs2,
+  },
+  {
+    image: Bs3,
+  },
+  {
+    image: Bs4,
+  },
+  {
+    image: Bs5,
+  },
+  {
+    image: Bs6,
+  },
+  {
+    image: Bs7,
+  },
+  {
+    image: Bs8,
+  },
+  {
+    image: Bs9,
+  },
+  {
+    image: Bs10,
+  },
+  {
+    image: Bs11,
   },
 ]
