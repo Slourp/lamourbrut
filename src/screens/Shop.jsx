@@ -28,7 +28,7 @@ const Products = () => {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center items-center h-[77.3vh] relative">
+      <div className="flex flex-col justify-center items-center h-[75vh] relative">
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <Suspense fallback={<div>Loading...</div>}>
             <CountDown />
