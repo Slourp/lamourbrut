@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { Gallery } from 'react-grid-gallery'
 import Lightbox from 'yet-another-react-lightbox'
+import { isMobile } from 'react-device-detect'
 import 'yet-another-react-lightbox/styles.css'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 
@@ -21,6 +22,7 @@ export default function CustomGallery({ images }) {
       <Gallery
         images={images}
         onClick={handleClick}
+        rowHeight={isMobile ? 100 : 330}
         enableImageSelection={false}
         renderImage={(props) => (
           <LazyLoadImage

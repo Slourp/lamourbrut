@@ -148,7 +148,7 @@ const Content = () => {
         title="VANCOUVER FASHION WEEK APRIL 22"
         createDate="#posted on Friday 8th April 2022"
       >
-        <div className="">
+        <div className="px-4">
           <Gallery images={article1} loading="lazy" />
           <p className="p-4 text-article font-times-new-roman">
             Hello,
@@ -168,7 +168,7 @@ const Content = () => {
         title="SHOOT PURSUIT OF HAPPINESS"
         createDate="#posted on Saturday 23rd April 2022"
       >
-        <div>
+        <div className="px-4">
           <div className="text-center font-arial-black p-8  max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px] max-xs:flex flex-col items-center">
             <div className="flex flex-col items-baseline">
               <h4 className="text-[30px] max-xs:text-[15px]">
