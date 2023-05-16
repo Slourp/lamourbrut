@@ -595,9 +595,14 @@ const AboutUs = () => {
           backgroundPosition: 'center 10px', // Déplace le fond d'écran de 10 pixels vers le bas
           WebkitBackdropFilter: 'none', // Désactive le filtre de flou
           // Ajoutez les styles spécifiques aux iPhones ici
-          '@media only screen and (max-device-width: 414px)': {
-            backgroundAttachment: 'scroll', // Modifie l'attachement du fond d'écran pour éviter le flou
-          },
+          '@media only screen and (max-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3)':
+            {
+              backgroundAttachment: 'scroll', // Modifie l'attachement du fond d'écran pour éviter le flou
+            },
+          '@media only screen and (max-device-width: 414px) and (max-device-height: 896px) and (-webkit-device-pixel-ratio: 2)':
+            {
+              backgroundAttachment: 'scroll', // Modifie l'attachement du fond d'écran pour éviter le flou
+            },
         }}
       >
         <div className="mt-12 overflow-hidden">
