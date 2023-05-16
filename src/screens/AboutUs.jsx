@@ -149,7 +149,7 @@ const Content = () => {
         createDate="#posted on Friday 8th April 2022"
       >
         <div className="px-5">
-            <Gallery images={article1} loading="lazy" />
+          <Gallery images={article1} loading="lazy" />
           <p className="p-4 text-article font-times-new-roman">
             Hello,
             <br /> You can find there our last collection PURSUIT OF
@@ -589,7 +589,7 @@ const AboutUs = () => {
   return (
     <div>
       <div
-        className="bg-fixed bg-cover bg-center bg-no-repeat"
+        className="bg-fixed bg-cover bg-center bg-no-repeat blur-background"
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundPosition: 'center 10px', // Déplace le fond d'écran de 10 pixels vers le bas
