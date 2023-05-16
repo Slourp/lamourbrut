@@ -593,6 +593,7 @@ const AboutUs = () => {
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundPosition: 'center 10px', // Déplace le fond d'écran de 10 pixels vers le bas
+          WebkitBackdropFilter: 'none', // Désactive le filtre de flou
         }}
       >
         <div className="mt-12 overflow-hidden">
