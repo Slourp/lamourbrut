@@ -10,10 +10,7 @@ const Backstage = () => {
   return (
     <section className="bg-black p-2">
       <div className="container mx-auto m-8">
-        <h2
-          style={{ fontFamily: 'Arial Black' }}
-          className="text-white text-5xl md:text-6xl lg:text-5xl xl:text-[90px] 2xl:text-7xl"
-        >
+        <h2 className="text-white text-5xl md:text-6xl lg:text-5xl xl:text-[90px] 2xl:text-7xl font-arial-black">
           Backstage
         </h2>
         <div
@@ -36,10 +33,7 @@ const Backstage = () => {
         >
           BEHIND THE SCENE WITH L'AMOUR BRUT'S FAMILY
         </p>
-        <p
-          style={{ fontFamily: 'times-new-roman' }}
-          className="text-white text-justify mt-4 md:mt-8 text-lg md:text-[25px]"
-        >
+        <p className="text-white text-justify mt-4 md:mt-8 text-lg md:text-[25px] font-times-new-roman">
           We like to think that working with our friends and
           acquaintances allows us to go further together. We met our
           photographers in school and our models are our friends. Feel

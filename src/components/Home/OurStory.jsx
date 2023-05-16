@@ -22,16 +22,10 @@ const OurStory = () => {
         {/*  <h2 className="text-2xl md:text-4xl">
             Our Story
           </h2> */}
-        <h2
-          style={{ fontFamily: 'Arial Black' }}
-          className="text-5xl md:text-6xl lg:text-5xl xl:text-[80px] 2xl:text-7xl"
-        >
+        <h2 className="text-5xl md:text-6xl lg:text-5xl xl:text-[80px] 2xl:text-7xl font-arial-black">
           Our Story
         </h2>
-        <p
-          style={{ fontFamily: 'times-new-roman' }}
-          className=" text-justify mt-4 md:mt-8 max-w-[550px] text-lg md:text-[25px]"
-        >
+        <p className=" text-justify mt-4 md:mt-8 max-w-[550px] text-lg md:text-[25px] font-times-new-roman">
           L’AMOUR BRUT tells the story of the opposition and the
           coming together of two visions. On the one hand, the love
           that wants to be light and sensual, and on the other hand, a

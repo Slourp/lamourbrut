@@ -18,16 +18,10 @@ const ContactUs = () => {
         />
       </div>
       <div className="w-full md:w-[40%] text-white px-4 md:p-12 flex flex-col justify-center items-baseline mt-3 max-xs:mx-5">
-        <h2
-          style={{ fontFamily: 'Arial Black' }}
-          className="text-5xl md:text-[90px] pt-5"
-        >
+        <h2 className="text-5xl md:text-[90px] pt-5 font-arial-black">
           Contact
         </h2>
-        <p
-          style={{ fontFamily: 'times-new-roman' }}
-          className="mb-8 max-w-[800px] text-lg md:text-[25px]"
-        >
+        <p className="mb-8 max-w-[800px] text-lg md:text-[25px] font-times-new-roman">
           Please contact us if you have any questions, and we will get
           back to you as soon as possible.
         </p>
