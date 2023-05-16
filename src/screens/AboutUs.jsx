@@ -594,6 +594,10 @@ const AboutUs = () => {
           backgroundImage: `url(${backgroundImage})`,
           backgroundPosition: 'center 10px', // Déplace le fond d'écran de 10 pixels vers le bas
           WebkitBackdropFilter: 'none', // Désactive le filtre de flou
+          // Ajoutez les styles spécifiques aux iPhones ici
+          '@media only screen and (max-device-width: 414px)': {
+            backgroundAttachment: 'scroll', // Modifie l'attachement du fond d'écran pour éviter le flou
+          },
         }}
       >
         <div className="mt-12 overflow-hidden">
