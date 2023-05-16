@@ -13,7 +13,11 @@ const CarousselCol = ({ slides }) => {
   const totalGroups = Math.ceil(slides.length / 3)
 
   const nextGroup = () => {
-    setCurrentGroup(currentGroup === totalGroups - 1 ? currentGroup : currentGroup + 1)
+    setCurrentGroup(
+      currentGroup === totalGroups - 1
+        ? currentGroup
+        : currentGroup + 1
+    )
   }
 
   const prevGroup = () => {
@@ -37,7 +41,10 @@ const CarousselCol = ({ slides }) => {
       {currentImage !== null && (
         <div className="fullscreen-image">
           <button onClick={() => setCurrentImage(null)}>Close</button>
-          <img src={slides[currentImage].image} alt="backstage image" />
+          <img
+            src={slides[currentImage].image}
+            alt="backstage image"
+          />
         </div>
       )}
       <FaArrowAltCircleLeft
@@ -51,7 +58,7 @@ const CarousselCol = ({ slides }) => {
       {currentSlides.map((slide, index) => {
         return (
           <div
-            className={'slide'}
+            className="slide"
             key={startIndex + index}
             onClick={() => handleImageClick(startIndex + index)}
           >

@@ -4,6 +4,8 @@ import Col3 from '../assets/about/speos/coc-karelvaldmann/coc3.jpg'
 import Col4 from '../assets/about/speos/coc-karelvaldmann/coc4.jpg'
 import Col5 from '../assets/about/speos/coc-karelvaldmann/coc5.jpg'
 import Col6 from '../assets/about/speos/coc-karelvaldmann/coc6.jpg'
+import Col7 from '../assets/about/speos/coc-karelvaldmann/coc7.jpg'
+import Col8 from '../assets/about/speos/coc-karelvaldmann/coc8.jpg'
 
 import Us1 from '../assets/about/speos/us-teradanatsuki/us1.jpg'
 import Us2 from '../assets/about/speos/us-teradanatsuki/us2.jpg'
@@ -29,6 +31,12 @@ export const CarousselColData = [
   },
   {
     image: Col6,
+  },
+  {
+    image: Col7,
+  },
+  {
+    image: Col8,
   },
 ]
 
