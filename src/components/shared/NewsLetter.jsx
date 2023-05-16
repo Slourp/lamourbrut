@@ -65,7 +65,7 @@ function NewsLetter() {
           </button>
         </div>
       </form>
-      <ToastContainer position="center-right" />
+      <ToastContainer className="mt-[150px]" />
     </div>
   )
 }
