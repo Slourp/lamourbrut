@@ -363,7 +363,6 @@ export const person7 = [
     src: poh17,
     original: poh17,
   },
- 
 
   {
     src: poh21,

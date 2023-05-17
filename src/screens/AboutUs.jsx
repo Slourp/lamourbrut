@@ -489,23 +489,22 @@ const Content = () => {
       >
         <p className="text-justify  p-4 text-article font-times-new-roman">
           This year we had the opportunity to work with photographers
-          from the SPEOS photo school.They all imagined their story
-          through the theme we gave them:
-          <br /> DRAMATURGY IN REAL LIFE <br /> Discover the universe
-          of each photographer through their photos and their
-          Instagram.
-        </p>
-        <p className="text-left m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
-          CREDITS ECOLE:{' '}
+          from the 
           <a
-            className="underline text-lbgreen font-bold"
+            className="underline text-lbgreen font-bold m-2"
             href="https://www.instagram.com/speos_photo/"
             target="_blank"
             rel="noopener noreferrer"
           >
             SPEOS
           </a>
+          photo school. They all imagined their story through the theme
+          we gave them:
+          <br /> DRAMATURGY IN REAL LIFE <br /> Discover the universe
+          of each photographer through their photos and their
+          Instagram.
         </p>
+
         <div className="text-center font-arial-black p-8">
           <p className="m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
             CIRCLE OF LIFE BY{' '}
