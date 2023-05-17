@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { BsCart } from 'react-icons/bs'
 import Logo from '../assets/lamourbrutlogo.png'
+import Sidebar from './Sidebar'
 
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true)

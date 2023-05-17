@@ -489,7 +489,7 @@ const Content = () => {
       >
         <p className="text-justify  p-4 text-article font-times-new-roman">
           This year we had the opportunity to work with photographers
-          from the 
+          from the
           <a
             className="underline text-lbgreen font-bold m-2"
             href="https://www.instagram.com/speos_photo/"
@@ -498,8 +498,8 @@ const Content = () => {
           >
             SPEOS
           </a>
-          photo school. They all imagined their story through the theme
-          we gave them:
+          photo school. They all imagined their story through the
+          theme we gave them:
           <br /> DRAMATURGY IN REAL LIFE <br /> Discover the universe
           of each photographer through their photos and their
           Instagram.
