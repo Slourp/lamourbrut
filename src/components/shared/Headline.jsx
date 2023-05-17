@@ -54,7 +54,7 @@ Headline.defaultProps = {
   backgroundColor: 'bg-black',
   textColor: 'text-white',
   textSize: 58,
-  animationDuration: '80s',
+  animationDuration: '300s',
 }
 
 export default Headline

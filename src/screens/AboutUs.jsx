@@ -149,7 +149,6 @@ const Content = () => {
         createDate="#posted on Friday 8th April 2022"
       >
         <div className="px-5">
-          <Gallery images={article1} loading="lazy" />
           <p className="p-4 text-article font-times-new-roman">
             Hello,
             <br /> You can find there our last collection PURSUIT OF
@@ -161,6 +160,7 @@ const Content = () => {
             <br /> Hope you like it,
             <br /> xoxo, L'AMOUR BRUT
           </p>
+          <Gallery images={article1} loading="lazy" />
         </div>
       </Article>
       <Article
@@ -169,6 +169,15 @@ const Content = () => {
         createDate="#posted on Saturday 23rd April 2022"
       >
         <div className="px-4">
+          <p className="p-4 text-article font-times-new-roman">
+            To tell you a bit about this shoot, we worked with our
+            family on it and we can feel it through those photos. It
+            is important to us to work with our friends, our brothers
+            and sisters, and our family in one word. The most
+            important thing is to create a respectful environment.
+            Discover our photos and backstage of the Pursuit of
+            Happiness shoot.
+          </p>
           <div className="text-center font-arial-black p-8  max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px] max-xs:flex flex-col items-center">
             <div className="flex flex-col items-baseline">
               <h4 className="text-[30px] max-xs:text-[15px]">
@@ -470,15 +479,6 @@ const Content = () => {
           </div>
 
           <Gallery images={person8} loading="lazy" />
-          <p className="p-4 text-article font-times-new-roman">
-            To tell you a bit about this shoot, we worked with our
-            family on it and we can feel it through those photos. It
-            is important to us to work with our friends, our brothers
-            and sisters, and our family in one word. The most
-            important thing is to create a respectful environment.
-            Discover our photos and backstage of the Pursuit of
-            Happiness shoot.
-          </p>
         </div>
       </Article>
 
@@ -592,17 +592,6 @@ const AboutUs = () => {
         className="bg-fixed bg-cover bg-center bg-no-repeat blur-background"
         style={{
           backgroundImage: `url(${backgroundImage})`,
-          backgroundPosition: 'center 10px', // Déplace le fond d'écran de 10 pixels vers le bas
-          WebkitBackdropFilter: 'none', // Désactive le filtre de flou
-          // Ajoutez les styles spécifiques aux iPhones ici
-          '@media only screen and (max-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3)':
-            {
-              backgroundAttachment: 'scroll', // Modifie l'attachement du fond d'écran pour éviter le flou
-            },
-          '@media only screen and (max-device-width: 414px) and (max-device-height: 896px) and (-webkit-device-pixel-ratio: 2)':
-            {
-              backgroundAttachment: 'scroll', // Modifie l'attachement du fond d'écran pour éviter le flou
-            },
         }}
       >
         <div className="mt-12 overflow-hidden">
