@@ -593,7 +593,7 @@ const AboutUs = () => {
           backgroundImage: `url(${backgroundImage})`,
         }}
       >
-        <div className="mt-11 overflow-hidden">
+        <div className="mt-12 overflow-hidden">
           <Headline
             headlines={headline4}
             backgroundColor="bg-lbpink"
