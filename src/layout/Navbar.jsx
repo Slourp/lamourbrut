@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import { RxHamburgerMenu } from 'react-icons/rx'
-import { BsCart } from 'react-icons/bs'
 import Logo from '../assets/lamourbrutlogo.png'
 import Sidebar from './Sidebar'
 
@@ -37,6 +34,10 @@ const Navbar = () => {
     }
   }, [lastScrollPos])
 
+  const handleRedirect = (path) => {
+    window.location.href = path
+  }
+
   return (
     <nav
       className="navbar fixed z-100 flex justify-between top-0 w-full bg-white p-2 px-8 border-b-2 border-black navbar-transition"
@@ -49,9 +50,17 @@ const Navbar = () => {
       <div className="flex gap-2">{isMobile && <Sidebar />}</div>
 
       <div
-        className={`absolute right-4 md:right-[50%] md:translate-x-[50%] cursor-pointer ${isMobile ? 'top-[50%] transform translate-y-[-50%]' : ''
-          }`}
-        onClick={() => (window.location.href = '/')}
+        className={`absolute right-4 md:right-[50%] md:translate-x-[50%] cursor-pointer ${
+          isMobile ? 'top-[50%] transform translate-y-[-50%]' : ''
+        }`}
+        onClick={() => handleRedirect('/')}
+        onKeyPress={(e) => {
+          if (e.key === 'Enter') {
+            handleRedirect('/')
+          }
+        }}
+        role="button"
+        tabIndex={0}
       >
         <img
           src={Logo}
@@ -60,17 +69,19 @@ const Navbar = () => {
         />
       </div>
 
-      {isMobile ? null : (
+      {!isMobile && (
         <div className="flex gap-4">
           <button
             className="border-[3px] border-black font-extrabold px-2 z-50"
-            onClick={() => (window.location.href = '/shop')}
+            onClick={() => handleRedirect('/shop')}
+            type="button"
           >
             SHOP
           </button>
           <button
             className="border-[3px] border-black font-extrabold px-2"
-            onClick={() => (window.location.href = '/about-us')}
+            onClick={() => handleRedirect('/about-us')}
+            type="button"
           >
             ABOUT
           </button>

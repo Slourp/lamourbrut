@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import Image from '../assets/shop/eshop.jpg';
 import Headline from '../components/shared/Headline';
 import { headline2 } from '../data/headlines';
-import Navbar from '../Layout/Navbar';
+import Navbar from '../layout/Navbar';
 import Footer from '../layout/Footer';
 import NewLetter from '../components/shared/NewsLetter';
 const CountDown = React.lazy(() => import('../components/shared/CountDown'));

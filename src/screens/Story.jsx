@@ -1,5 +1,5 @@
 import React from 'react'
-import { HiArrowRight, HiArrowLeft } from 'react-icons/hi'
+import { HiArrowLeft } from 'react-icons/hi'
 import movie from '../assets/video/story.mp4'
 
 const Story = () => {
@@ -44,8 +44,11 @@ const Story = () => {
           </div>
           <div className="flex justify-center">
             <button
-              onClick={() => (window.location.href = '/')}
-              className=" text-white flex items-center text-[44px] font-extrabold border-[6px] border-white uppercase p-1 px-5"
+              type="button"
+              onClick={() => {
+                window.location.href = '/'
+              }}
+              className="text-white flex items-center text-[44px] font-extrabold border-[6px] border-white uppercase p-1 px-5"
             >
               <HiArrowLeft className="mr-4" /> Back
             </button>
