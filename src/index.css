@@ -25,6 +25,11 @@
   z-index: 1; /* Ajoutez cette ligne */
 }
 
+.sidebar {
+  z-index: 1; /* Ajoutez cette ligne */
+
+}
+
 .marquee {
   display: flex;
   animation: marquee 80s linear infinite;

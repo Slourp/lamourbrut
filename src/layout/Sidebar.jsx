@@ -4,20 +4,28 @@ import * as AiIcons from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import { IconContext } from 'react-icons'
 import { SidebarData } from '../data/SidebarData'
+import Burger from '../assets/burger.png'
 
 import './Sidebar.css'
 
-const Sidebar = () => {
-  const [theSideBar, setTheSideBar] = useState(false)
+const Sidebar = ({ isOpen, onClose }) => {
+  const [theSideBar, setTheSideBar] = useState(isOpen)
 
   const showSidebar = () => setTheSideBar(true)
-  const closeSidebar = () => setTheSideBar(false)
+  const closeSidebar = () => {
+    setTheSideBar(false)
+    onClose()
+  }
 
   return (
     <IconContext.Provider value={{ color: undefined }}>
-      <div className="sidebar">
-        <Link to="#" className="menu-bars">
-          <FaIcons.FaBars onClick={showSidebar} />
+      <div className={theSideBar ? 'sidebar active' : 'sidebar'}>
+        <Link to="#" className="menu-bars" onClick={showSidebar}>
+          <img
+            src={Burger}
+            alt="Burger"
+            className="h-10 cursor-pointer"
+          />
         </Link>
       </div>
       <nav
@@ -33,7 +41,7 @@ const Sidebar = () => {
             return (
               <li key={index} className={item.cName}>
                 <Link to={item.path}>
-                  <span>{item.title}</span>
+                  <span className='font-arial-black'>{item.title}</span>
                 </Link>
               </li>
             )
