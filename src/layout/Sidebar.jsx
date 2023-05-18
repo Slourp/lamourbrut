@@ -14,7 +14,6 @@ const Sidebar = ({ isOpen, onClose }) => {
   const showSidebar = () => setTheSideBar(true)
   const closeSidebar = () => {
     setTheSideBar(false)
-    onClose()
   }
 
   return (
