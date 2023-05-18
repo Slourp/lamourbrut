@@ -99,7 +99,7 @@ body {
 
 @font-face {
   font-family: 'Arial Black';
-  src: url('/path/to/arial-black.ttf');
+  src: url('../public/fonts/Arial-Black.ttf');
   /* Autres propriétés de la police */
 }
 
