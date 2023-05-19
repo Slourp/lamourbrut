@@ -14,9 +14,17 @@ const Sidebar = ({ isOpen }) => {
 
   const iconContextValue = useMemo(() => ({ color: undefined }), [])
 
+  const handleLinkClick = () => {
+    closeSidebar()
+  }
+
   return (
     <IconContext.Provider value={iconContextValue}>
-      <div className={theSideBar ? 'sidebar active' : 'sidebar'}>
+      <div
+        className={`sidebar ${
+          theSideBar ? 'active' : ''
+        } transition-transform duration-300 ease-out`}
+      >
         <button
           type="button"
           className="menu-bars"
@@ -30,7 +38,9 @@ const Sidebar = ({ isOpen }) => {
         </button>
       </div>
       <nav
-        className={theSideBar ? 'nav-sidebar active' : 'nav-sidebar'}
+        className={`nav-sidebar ${
+          theSideBar ? 'active' : ''
+        } transition-opacity duration-300 ease-out`}
       >
         <ul className="nav-sidebar-items">
           <li className="sidebar-toggle">
@@ -49,7 +59,7 @@ const Sidebar = ({ isOpen }) => {
           </li>
           {SidebarData.map((item) => (
             <li key={item.title} className={item.cName}>
-              <Link to={item.path}>
+              <Link to={item.path} onClick={handleLinkClick}>
                 <span className="font-arial-black">{item.title}</span>
               </Link>
             </li>
