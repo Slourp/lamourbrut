@@ -6,16 +6,18 @@ import Logo from '../assets/lamourbrutlogo.png'
 import Gallery from '../components/shared/Gallery'
 import Footer from '../layout/Footer'
 import { headline4 } from '../data/headlines'
+import CarousselUnivers from '../components/Caroussel/CarousselUnivers'
+import CarousselCol from '../components/Caroussel/CarousselCol'
+import CarousselSl from '../components/Caroussel/CarousselSl'
+import CarousselUatw from '../components/Caroussel/CarousselUatw'
+import CarousselAwp from '../components/Caroussel/CarousselAwp'
+import CarousselLf from '../components/Caroussel/CarousselLf'
+import HeadlineVertical  from '../components/shared/HeadlineVertical'
+
 import './About.css'
 
 import {
   article1,
-  person1,
-  person2,
-  person3,
-  person4,
-  person5,
-  person6,
   person7,
   person8,
 } from '../components/shared/Images'
@@ -521,7 +523,7 @@ const Content = () => {
               KAREL VALDMANN
             </a>
           </p>
-          <Gallery images={person1} loading="lazy" />
+          <CarousselCol />
           <p className="m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
             UNIVERS BY{' '}
             <a
@@ -533,7 +535,7 @@ const Content = () => {
               TERADA NATSUKI
             </a>
           </p>
-          <Gallery images={person5} loading="lazy" />
+          <CarousselUnivers />
           <p className="m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
             SELFLOVE BY{' '}
             <a
@@ -545,7 +547,7 @@ const Content = () => {
               AMIRA SNAEROS JABALI
             </a>
           </p>
-          <Gallery images={person3} loading="lazy" />
+          <CarousselSl />
           <p className="m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
             US AGAINST THE WOLD BY{' '}
             <a
@@ -557,7 +559,7 @@ const Content = () => {
               RAPHAEL GARSAULT
             </a>
           </p>
-          <Gallery images={person4} loading="lazy" />
+          <CarousselUatw />
           <p className="m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
             AFTER WASHING PARTY BY{' '}
             <a
@@ -569,7 +571,7 @@ const Content = () => {
               ELYA SAIAPINA
             </a>
           </p>
-          <Gallery images={person2} />
+          <CarousselAwp />
           <p className="m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
             LA FEMME BY{' '}
             <a
@@ -581,7 +583,7 @@ const Content = () => {
               NOA BAYLE
             </a>
           </p>
-          <Gallery images={person6} loading="lazy" />
+          <CarousselLf />
         </div>
       </Article>
     </div>
@@ -592,7 +594,7 @@ const AboutUs = () => {
   return (
     <div>
       <div
-        className="bg-fixed bg-cover bg-center bg-no-repeat blur-background"
+        className="bg-fixed bg-cover bg-center bg-no-repeat blur-background "
         style={{
           backgroundImage: `url(${backgroundImage})`,
         }}
@@ -606,6 +608,14 @@ const AboutUs = () => {
             fontWeight="font-extrabold"
           />
         </div>
+
+        {/*     <HeadlineVertical
+          headlines={headline4}
+          backgroundColor="bg-lbpink"
+          textColor="text-lbgreen"
+          textSize={32}
+          animationDuration="10s" // Spécifiez la durée souhaitée
+        /> */}
 
         <div className="flex-col mx-auto sm:flex sm:flex-row gap-14 items-start pt-24 max-w-[1200px] p-8">
           <div className=" bg-white  w-full sm:w-1/3">
