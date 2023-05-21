@@ -604,7 +604,7 @@ const Content = () => {
 const AboutUs = () => {
   return (
     <div>
-      <div className="absolute">
+      {/*  <div className="absolute">
         <HeadlineVertical
           headlines={headline4}
           backgroundColor="bg-lbpink"
@@ -612,7 +612,7 @@ const AboutUs = () => {
           textSize={32}
           animationDuration="10s" // Spécifiez la durée souhaitée
         />
-      </div>
+      </div> */}
       <div
         className="bg-fixed bg-cover bg-center bg-no-repeat blur-background "
         style={{
