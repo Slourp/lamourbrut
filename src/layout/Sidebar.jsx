@@ -56,7 +56,9 @@ const Sidebar = ({ isOpen }) => {
           {SidebarData.map((item) => (
             <li key={item.title} className={item.cName}>
               <Link to={item.path} onClick={handleLinkClick}>
-                <span className="font-arial-black">{item.title}</span>
+                <span className="font-arial-black text-2xl">
+                  {item.title}
+                </span>
               </Link>
             </li>
           ))}

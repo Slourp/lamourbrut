@@ -53,7 +53,7 @@
 .nav-text a {
   text-decoration: none;
   color: #151414;
-  font-size: 18px;
+  font-size: 50px;
   width: 95%;
   height: 100%;
   display: flex;
@@ -83,3 +83,10 @@
 span {
   margin-left: 16px;
 }
+
+.nav-text a,
+.nav-text a:hover,
+.nav-text span {
+  font-family: 'Arial Black', sans-serif;
+}
+
