@@ -8,6 +8,7 @@ const HeadlineVertical = ({
   textSize,
   animationDuration,
   fixed,
+  scrollSpeed,
 }) => {
   return (
     <div
@@ -15,12 +16,18 @@ const HeadlineVertical = ({
         fixed ? 'sticky-headline' : ''
       } ${backgroundColor} font-vcr flex justify-around z-10`}
       style={{
+        position: 'fixed',
+        top: 0,
+        bottom: 0,
+        left: 0,
+        right: 0,
         backgroundColor,
         color: textColor,
         fontSize: `${textSize}px`,
-        writingMode: 'vertical-rl', // Texte de bas en haut
+        writingMode: 'vertical-rl',
         width: '50px',
         height: '100%',
+        transform: 'rotate(180deg)', // Ajout de la rotation pour inverser l'affichage
       }}
     >
       <div
@@ -58,6 +65,7 @@ HeadlineVertical.propTypes = {
     'bottomLeft',
     'bottomRight',
   ]),
+  scrollSpeed: PropTypes.number, // Ajout de la prop pour la vitesse de défilement
 }
 
 HeadlineVertical.defaultProps = {
@@ -65,7 +73,8 @@ HeadlineVertical.defaultProps = {
   backgroundColor: 'bg-black',
   textColor: 'text-white',
   textSize: 58,
-  animationDuration: '10s', // Durée de l'animation en secondes
+  animationDuration: '10s',
+  scrollSpeed: 1, // Valeur par défaut de la vitesse de défilement
 }
 
 export default HeadlineVertical

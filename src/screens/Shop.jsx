@@ -20,8 +20,7 @@ const Products = () => {
           backgroundPosition: 'center',
         }}
       >
-
-        <div className="pt-11">
+        <div className="pt-11 sticky-top">
           <div className="flex justify-center">
             <Headline
               headlines={headline2}
@@ -38,7 +37,7 @@ const Products = () => {
               <CountDown />
             </Suspense>
           </div>
-          <div  style={{ position: 'absolute', bottom: 0, left: 0 }}>
+          <div style={{ position: 'absolute', bottom: 0, left: 0 }} className="sticky-bottom">
             <Suspense fallback={<div>Loading...</div>}>
               <NewsLetter />
             </Suspense>
@@ -56,10 +55,7 @@ const Products = () => {
 
         <Footer />
       </section>
-
-
     </>
-
   );
 };
 

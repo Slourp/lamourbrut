@@ -12,7 +12,7 @@ import CarousselSl from '../components/Caroussel/CarousselSl'
 import CarousselUatw from '../components/Caroussel/CarousselUatw'
 import CarousselAwp from '../components/Caroussel/CarousselAwp'
 import CarousselLf from '../components/Caroussel/CarousselLf'
-import HeadlineVertical  from '../components/shared/HeadlineVertical'
+import HeadlineVertical from '../components/shared/HeadlineVertical'
 
 import './About.css'
 
@@ -83,12 +83,19 @@ const Profile = () => {
   )
 }
 
-const Article = ({ title, children, createDate }) => {
+const Article = ({ title, children, createDate, repetitions }) => {
+  const repeatedTitles = Array(repetitions).fill(title)
+  const repeatedCreateDates = Array(repetitions).fill(createDate)
+
   return (
     <div className="article bg-white overflow-hidden">
-      <Headline headlines={[title]} textSize={20} animated />
+      <Headline headlines={repeatedTitles} textSize={20} animated />
       {children}
-      <Headline headlines={[createDate]} textSize={16} animated />
+      <Headline
+        headlines={repeatedCreateDates}
+        textSize={16}
+        animated
+      />
     </div>
   )
 }
@@ -100,6 +107,7 @@ const Content = () => {
         className="article"
         title="PRESS"
         createDate="#posted on Thursday 11th March 2023"
+        repetitions={100}
       >
         <ul className="font-arial-black font-bold flex gap-3 underline justify-center h-[100px] items-center max-xs:text-[6px] max-sm:text-[10px] text-[16px] max-lg:text-[11px]">
           <li>
@@ -153,6 +161,7 @@ const Content = () => {
       <Article
         title="VANCOUVER FASHION WEEK APRIL 22"
         createDate="#posted on Friday 8th April 2022"
+        repetitions={100}
       >
         <div className="px-5">
           <p className="p-4 text-article font-times-new-roman">
@@ -173,6 +182,7 @@ const Content = () => {
         className="article"
         title="SHOOT PURSUIT OF HAPPINESS"
         createDate="#posted on Saturday 23rd April 2022"
+        repetitions={100}
       >
         <div className="px-4">
           <p className="p-4 text-article font-times-new-roman">
@@ -492,6 +502,7 @@ const Content = () => {
         className="article"
         title="COLLABORATION WITH SPEOS PHOTOGRAPHERS"
         createDate="#posted on Thursday 11th March 2023"
+        repetitions={100}
       >
         <p className="text-justify  p-4 text-article font-times-new-roman">
           This year we had the opportunity to work with photographers
@@ -593,30 +604,22 @@ const Content = () => {
 const AboutUs = () => {
   return (
     <div>
-      <div
-        className="bg-fixed bg-cover bg-center bg-no-repeat blur-background "
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-        }}
-      >
-        <div className="mt-12 overflow-hidden">
-          <Headline
-            headlines={headline4}
-            backgroundColor="bg-lbpink"
-            textColor="text-lbgreen"
-            textSize={32}
-            fontWeight="font-extrabold"
-          />
-        </div>
-
-        {/*     <HeadlineVertical
+      <div className="absolute">
+        <HeadlineVertical
           headlines={headline4}
           backgroundColor="bg-lbpink"
           textColor="text-lbgreen"
           textSize={32}
           animationDuration="10s" // Spécifiez la durée souhaitée
-        /> */}
-
+        />
+      </div>
+      <div
+        className="bg-fixed bg-cover bg-center bg-no-repeat blur-background "
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+          height: '100%',
+        }}
+      >
         <div className="flex-col mx-auto sm:flex sm:flex-row gap-14 items-start pt-24 max-w-[1200px] p-8">
           <div className=" bg-white  w-full sm:w-1/3">
             <Profile />

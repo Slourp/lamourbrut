@@ -37,11 +37,7 @@ const Sidebar = ({ isOpen }) => {
           />
         </button>
       </div>
-      <nav
-        className={`nav-sidebar ${
-          theSideBar ? 'active' : ''
-        } transition-opacity duration-300 ease-out`}
-      >
+      <nav className={`nav-sidebar ${theSideBar ? 'active' : ''} `}>
         <ul className="nav-sidebar-items">
           <li className="sidebar-toggle">
             <button
