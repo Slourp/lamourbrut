@@ -22,7 +22,7 @@ export default function CustomGallery({ images }) {
       <Gallery
         images={images}
         onClick={handleClick}
-        rowHeight={isMobile ? 100 : 330}
+        rowHeight={isMobile ? 100 : 372}
         enableImageSelection={false}
         renderImage={(props) => (
           <LazyLoadImage
