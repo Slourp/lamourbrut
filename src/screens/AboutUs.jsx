@@ -175,7 +175,7 @@ const Content = () => {
             <br /> Hope you like it,
             <br /> xoxo, L'AMOUR BRUT
           </p>
-          <div className="mx-10 max-xs:mx-0-auto">
+          <div className="mx-0-auto max-xs:mx-0-auto">
             <Gallery images={article1} loading="lazy" />
           </div>
         </div>
@@ -348,7 +348,7 @@ const Content = () => {
             </div>
           </div>
 
-          <div className="mx-10 max-xs:mx-0-auto">
+          <div className="mx-0-auto max-xs:mx-0-auto">
             <Gallery images={person7} loading="lazy" />
           </div>
 
@@ -488,7 +488,7 @@ const Content = () => {
             </div>
           </div>
 
-          <div className="mx-10 max-xs:mx-0-auto">
+          <div className="mx-0-auto max-xs:mx-0-auto">
             <Gallery images={person8} loading="lazy" />
           </div>
         </div>
