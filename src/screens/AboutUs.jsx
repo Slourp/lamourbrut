@@ -163,7 +163,7 @@ const Content = () => {
         createDate="#posted on Friday 8th April 2022"
         repetitions={100}
       >
-        <div className="px-5">
+        <div className="mx-0-auto">
           <p className="p-4 text-article font-times-new-roman">
             Hello,
             <br /> You can find there our last collection PURSUIT OF
@@ -175,7 +175,9 @@ const Content = () => {
             <br /> Hope you like it,
             <br /> xoxo, L'AMOUR BRUT
           </p>
-          <Gallery images={article1} loading="lazy" />
+          <div className="mx-10 max-xs:mx-0-auto">
+            <Gallery images={article1} loading="lazy" />
+          </div>
         </div>
       </Article>
       <Article
@@ -184,7 +186,7 @@ const Content = () => {
         createDate="#posted on Saturday 23rd April 2022"
         repetitions={100}
       >
-        <div className="px-4">
+        <div className="mx-0-auto">
           <p className="p-4 text-article font-times-new-roman">
             To tell you a bit about this shoot, we worked with our
             family on it and we can feel it through those photos. It
@@ -346,7 +348,7 @@ const Content = () => {
             </div>
           </div>
 
-          <div className="ml-6 max-xs:my-8">
+          <div className="mx-10 max-xs:mx-0-auto">
             <Gallery images={person7} loading="lazy" />
           </div>
 
@@ -486,7 +488,7 @@ const Content = () => {
             </div>
           </div>
 
-          <div className="ml-6 max-xs:my-8">
+          <div className="mx-10 max-xs:mx-0-auto">
             <Gallery images={person8} loading="lazy" />
           </div>
         </div>
