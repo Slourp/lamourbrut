@@ -54,7 +54,10 @@ const Sidebar = ({ isOpen }) => {
             </button>
           </li>
           {SidebarData.map((item) => (
-            <li key={item.title} className={item.cName}>
+            <li
+              key={item.title}
+              className={`sidebar-link mb-4 ${item.cName}`}
+            >
               <Link to={item.path} onClick={handleLinkClick}>
                 <span className="font-arial-black text-2xl">
                   {item.title}
