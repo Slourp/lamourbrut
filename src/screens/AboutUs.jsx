@@ -50,6 +50,8 @@ const Profile = () => {
           <span />
         </div>
       </div>
+
+      {/* PROFILE */}
       <div className="flex items-center ml-2">
         <ul className="font-arial-black links flex text-lbgreen font-bold  underline gap-3 max-xs:text-[12px] max-sm:text-[15px] text-[14px] max-lg:text-[10px]">
           <li>
@@ -103,6 +105,7 @@ const Article = ({ title, children, createDate, repetitions }) => {
 const Content = () => {
   return (
     <div className="content flex flex-col gap-10 mb-24">
+      {/* PRESS */}
       <Article
         className="article"
         title="PRESS"
@@ -175,11 +178,26 @@ const Content = () => {
             <br /> Hope you like it,
             <br /> xoxo, L'AMOUR BRUT
           </p>
-          <div className="mx-0-auto max-xs:mx-0-auto">
+          <div className="m-2 ">
+            <p className="max-xs:text-[12px] font-arial-black">
+              CREDITS:{'  '}
+              <a
+                className="underline text-lbgreen font-times-new-roman"
+                href="https://www.instagram.com/vanfashionweek/?hl=fr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                INSTA VFW
+              </a>
+            </p>
+          </div>
+
+          <div className="mx-0-auto max-xs:m-0-auto">
             <Gallery images={article1} loading="lazy" />
           </div>
         </div>
       </Article>
+
       <Article
         className="article"
         title="SHOOT PURSUIT OF HAPPINESS"
@@ -203,6 +221,7 @@ const Content = () => {
               </h4>
 
               <div className="max-xs:flex flex-col items-center">
+                {/* PHOTOGRAPH */}
                 <div className="flex flex-col items-baseline max-xs:ml-10">
                   <p className="mt-3 max-xs:text-[12px]">
                     PHOTOGRAPH
@@ -218,6 +237,7 @@ const Content = () => {
                 </div>
 
                 <div className="flex max-xs:flex-col max-xs:items-center">
+                  {/* ASSISTANTS */}
                   <div className="flex flex-col items-baseline">
                     <p className="mt-3 max-xs:text-[12px]">
                       ASSISTANTS
@@ -251,6 +271,8 @@ const Content = () => {
                   </div>
 
                   <div />
+
+                  {/* MODELS */}
                   <div className="flex flex-col items-baseline justify-end ml-12">
                     <p className="mt-3 max-xs:text-[12px] max-xs:ml-3">
                       MODELS
@@ -291,14 +313,6 @@ const Content = () => {
                           >
                             LENA
                           </a>
-                          <a
-                            className="text-lbgreen underline "
-                            href="https://www.instagram.com/ylanbougaieff/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            YLAN
-                          </a>
                         </div>
                       </ul>
 
@@ -333,15 +347,32 @@ const Content = () => {
                           </a>
                           <a
                             className="text-lbgreen underline "
-                            href="https://www.instagram.com/rouchonparis/"
+                            href="https://www.instagram.com/ylanbougaieff/"
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            ROUCHON {/* PARIS */}
+                            YLAN
                           </a>
                         </div>
                       </ul>
                     </div>
+                  </div>
+
+                  {/* PLACE */}
+                  <div className="flex flex-col items-baseline">
+                    <p className="mt-3 max-xs:text-[12px]">PLACE</p>
+                    <div className="flex flex-col font-times-new-roman max-xs:text-[12px]">
+                      <a
+                        className="underline text-lbgreen"
+                        href="https://www.instagram.com/rouchonparis/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        ROUCHON {/* PARIS */}
+                      </a>
+                    </div>
+
+                    <div className="flex flex-col font-times-new-roman max-xs:text-[12px]" />
                   </div>
                 </div>
               </div>
@@ -359,6 +390,7 @@ const Content = () => {
               </h4>
 
               <div className="max-xs:flex flex-col items-center">
+                {/* PHOTOGRAPH */}
                 <div className="flex flex-col items-baseline max-xs:ml-10">
                   <p className="mt-3 max-xs:text-[12px]">
                     PHOTOGRAPH
@@ -374,6 +406,7 @@ const Content = () => {
                 </div>
 
                 <div className="flex max-xs:flex-col max-xs:items-center">
+                  {/* ASSSISTANTS */}
                   <div className="flex flex-col items-baseline">
                     <p className="mt-3 max-xs:text-[12px]">
                       ASSISTANTS
@@ -389,13 +422,13 @@ const Content = () => {
                       </a>
                     </div>
                   </div>
-
                   <div />
+
+                  {/* MODELS */}
                   <div className="flex flex-col items-baseline justify-end ml-12">
                     <p className="mt-3 max-xs:text-[12px] max-xs:ml-3">
                       MODELS
                     </p>
-
                     <div className="flex justify-center">
                       <ul className="flex flex-col">
                         <div className="flex flex-col items-baseline font-times-new-roman max-xs:text-[12px]">
@@ -431,17 +464,8 @@ const Content = () => {
                           >
                             LENA
                           </a>
-                          <a
-                            className="text-lbgreen underline "
-                            href="https://www.instagram.com/ylanbougaieff/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            YLAN
-                          </a>
                         </div>
                       </ul>
-
                       <ul
                         className="flex flex-col items-baseline max-xs:text-[12px]"
                         style={{ padding: '0 1rem' }}
@@ -473,15 +497,32 @@ const Content = () => {
                           </a>
                           <a
                             className="text-lbgreen underline "
-                            href="https://www.instagram.com/rouchonparis/"
+                            href="https://www.instagram.com/ylanbougaieff/"
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            ROUCHON {/* PARIS */}
+                            YLAN
                           </a>
                         </div>
                       </ul>
                     </div>
+                  </div>
+
+                  {/* PLACE */}
+                  <div className="flex flex-col items-baseline">
+                    <p className="mt-3 max-xs:text-[12px]">PLACE</p>
+                    <div className="flex flex-col font-times-new-roman max-xs:text-[12px]">
+                      <a
+                        className="underline text-lbgreen"
+                        href="https://www.instagram.com/rouchonparis/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        ROUCHON {/* PARIS */}
+                      </a>
+                    </div>
+
+                    <div className="flex flex-col font-times-new-roman max-xs:text-[12px]" />
                   </div>
                 </div>
               </div>
@@ -500,7 +541,7 @@ const Content = () => {
         createDate="#posted on Thursday 11th March 2023"
         repetitions={100}
       >
-        <p className="text-justify  p-4 text-article font-times-new-roman">
+        <p className="text-justify p-4 text-article font-times-new-roman">
           This year we had the opportunity to work with photographers
           from the
           <a
@@ -518,8 +559,8 @@ const Content = () => {
           Instagram.
         </p>
 
-        <div className="text-center font-arial-black p-8">
-          <p className="m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
+        <div className="text-center font-arial-black max-xs:py- ">
+          <p className="mt-9 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
             CIRCLE OF LIFE BY{' '}
             <a
               className="underline text-lbgreen font-bold font-times-new-roman"
@@ -531,7 +572,7 @@ const Content = () => {
             </a>
           </p>
           <CarousselCol />
-          <p className="m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
+          <p className="mt-9 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
             UNIVERS BY{' '}
             <a
               className="underline text-lbgreen font-bold font-times-new-roman"
@@ -543,7 +584,7 @@ const Content = () => {
             </a>
           </p>
           <CarousselUnivers />
-          <p className="m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
+          <p className="mt-9 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
             SELFLOVE BY{' '}
             <a
               className="underline text-lbgreen font-bold font-times-new-roman"
@@ -555,7 +596,7 @@ const Content = () => {
             </a>
           </p>
           <CarousselSl />
-          <p className="m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
+          <p className="mt-9  max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
             US AGAINST THE WOLD BY{' '}
             <a
               className="underline text-lbgreen font-bold font-times-new-roman"
@@ -567,7 +608,7 @@ const Content = () => {
             </a>
           </p>
           <CarousselUatw />
-          <p className="m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
+          <p className="mt-9  max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
             AFTER WASHING PARTY BY{' '}
             <a
               className="underline text-lbgreen font-bold font-times-new-roman"
@@ -579,7 +620,7 @@ const Content = () => {
             </a>
           </p>
           <CarousselAwp />
-          <p className="m-5 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
+          <p className="mt-9  max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
             LA FEMME BY{' '}
             <a
               className="underline text-lbgreen font-bold font-times-new-roman"

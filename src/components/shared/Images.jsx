@@ -380,20 +380,20 @@ export const person7 = [
 
 export const person8 = [
   {
-    src: poh24,
-    original: poh24,
-  },
-  {
-    src: poh25,
-    original: poh25,
-  },
-  {
     src: poh26,
     original: poh26,
   },
   {
     src: poh27,
     original: poh27,
+  },
+  {
+    src: poh24,
+    original: poh24,
+  },
+  {
+    src: poh25,
+    original: poh25,
   },
   {
     src: poh28,
