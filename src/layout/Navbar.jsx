@@ -40,7 +40,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="navbar fixed z-100 flex justify-between top-0 w-full bg-white p-2 px-8 border-b-2 border-black navbar-transition"
+      className="navbar fixed z-100 flex justify-between items-center top-0 w-full bg-white p-2 px-4 border-b-2 border-black navbar-transition"
       style={{
         transform: showNavbar ? 'translateY(0)' : 'translateY(-100%)',
         top: 0,
@@ -50,9 +50,7 @@ const Navbar = () => {
       <div className="flex gap-2">{isMobile && <Sidebar />}</div>
 
       <div
-        className={`absolute right-4 md:right-[50%] md:translate-x-[50%] cursor-pointer ${
-          isMobile ? 'top-[50%] transform translate-y-[-50%]' : ''
-        }`}
+        className="absolute right-4 md:right-[50%] md:translate-x-[50%] cursor-pointer"
         onClick={() => handleRedirect('/')}
         onKeyPress={(e) => {
           if (e.key === 'Enter') {
@@ -62,11 +60,7 @@ const Navbar = () => {
         role="button"
         tabIndex={0}
       >
-        <img
-          src={Logo}
-          alt="L'Amour Brut"
-          className="h-8 mx-auto md:mx-0"
-        />
+        <img src={Logo} alt="L'Amour Brut" className="h-8 mx-auto" />
       </div>
 
       {!isMobile && (

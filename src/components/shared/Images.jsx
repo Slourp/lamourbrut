@@ -73,9 +73,11 @@ import poh19 from '../../assets/about/poh-maxime/poh-19.jpg'
 import poh20 from '../../assets/about/poh-maxime/poh-20.jpg'
 import poh21 from '../../assets/about/poh-maxime/poh-21.jpg'
 import poh22 from '../../assets/about/poh-maxime/poh-22.jpg'
-import poh33 from '../../assets/about/poh-maxime/poh-33.jpg'
 import poh34 from '../../assets/about/poh-maxime/poh-34.jpg'
 import poh35 from '../../assets/about/poh-maxime/poh-35.jpg'
+import poh36 from '../../assets/about/poh-maxime/poh-36.jpg'
+import poh39 from '../../assets/about/poh-maxime/poh-39.jpg'
+import poh37 from '../../assets/about/poh-maxime/poh-37.jpg'
 
 import poh24 from '../../assets/about/poh-louise/poh-24.JPG'
 import poh25 from '../../assets/about/poh-louise/poh-25.JPG'
@@ -308,8 +310,8 @@ export const person7 = [
     original: poh1,
   },
   {
-    src: poh2,
-    original: poh2,
+    src: poh39,
+    original: poh39,
   },
   {
     src: poh3,
@@ -373,12 +375,12 @@ export const person7 = [
     original: poh22,
   },
   {
-    src: poh4,
-    original: poh4,
+    src: poh37,
+    original: poh37,
   },
   {
-    src: poh33,
-    original: poh33,
+    src: poh36,
+    original: poh36,
   },
   {
     src: poh34,
@@ -396,17 +398,18 @@ export const person8 = [
     original: poh26,
   },
   {
-    src: poh27,
-    original: poh27,
+    src: poh25,
+    original: poh25,
   },
   {
     src: poh24,
     original: poh24,
   },
   {
-    src: poh25,
-    original: poh25,
+    src: poh27,
+    original: poh27,
   },
+
   {
     src: poh28,
     original: poh28,

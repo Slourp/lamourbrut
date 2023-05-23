@@ -28,11 +28,11 @@ const Profile = () => {
   }
   return (
     <div
-      className="profile flex flex-col items-center py-5"
+      className="profile flex flex-col items-center py-5 lg:h-[900px]"
       style={{ border: '7px solid black' }}
     >
       <div>
-        <div className="ml-2 mt-2 flex flex-col items-center">
+        <div className="ml-2 mt-6 flex flex-col items-center">
           <div>
             <img className="w-32 h-32" src={imgProfile} alt="" />
           </div>
@@ -53,7 +53,7 @@ const Profile = () => {
 
       {/* PROFILE */}
       <div className="flex items-center ml-2">
-        <ul className="font-arial-black links flex text-lbgreen font-bold  underline gap-3 max-xs:text-[12px] max-sm:text-[15px] text-[14px] max-lg:text-[10px]">
+        <ul className="font-arial-black links flex text-lbgreen font-bold  underline gap-3 max-xs:text-[12px] max-sm:text-[15px] text-[14px] max-lg:text-[8px]">
           <li>
             <a href="/story">OUR STORY</a>
           </li>
@@ -106,60 +106,62 @@ const Content = () => {
   return (
     <div className="content flex flex-col gap-10 mb-24">
       {/* PRESS */}
-      <Article
-        className="article"
-        title="PRESS"
-        createDate="#posted on Thursday 11th March 2023"
-        repetitions={100}
-      >
-        <ul className="font-arial-black font-bold flex gap-3 underline justify-center h-[100px] items-center max-xs:text-[6px] max-sm:text-[10px] text-[16px] max-lg:text-[11px]">
-          <li>
-            <a
-              href="https://www.vogue.mx/moda/galeria/vancouver-fashion-week-2022-como-la-plataforma-de-disenadores-responsables"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              VOGUE MEXIQUE
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://flanellemag.com/amour-brut-fw22-pursuit-of-happiness-at-vancouver-fashion-week/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              FLANELLE
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.jandrewspeaks.com/2022/04/20/lamour-brut-is-brave-bold-at-vfw-f-w22/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              DRESS THE PART
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.vogue.co.kr/2022/05/13/%EB%B0%B4%EC%BF%A0%EB%B2%84%ED%8C%A8%EC%85%98%EC%9C%84%ED%81%AC-2/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              VOGUE COREE
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.moncarnet-gala.fr/articles/view/L-AMOUR-BRUT"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GALA
-            </a>
-          </li>
-        </ul>
-      </Article>
+      <div className="max-xs:mt-2">
+        <Article
+          className="article"
+          title="PRESS"
+          createDate="#posted on Thursday 11th March 2023"
+          repetitions={100}
+        >
+          <ul className="font-arial-black font-bold flex gap-3 underline justify-center h-[100px] items-center max-xs:text-[6px] max-sm:text-[10px] text-[16px] max-lg:text-[11px]">
+            <li>
+              <a
+                href="https://www.vogue.mx/moda/galeria/vancouver-fashion-week-2022-como-la-plataforma-de-disenadores-responsables"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                VOGUE MEXIQUE
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://flanellemag.com/amour-brut-fw22-pursuit-of-happiness-at-vancouver-fashion-week/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                FLANELLE
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.jandrewspeaks.com/2022/04/20/lamour-brut-is-brave-bold-at-vfw-f-w22/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                DRESS THE PART
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.vogue.co.kr/2022/05/13/%EB%B0%B4%EC%BF%A0%EB%B2%84%ED%8C%A8%EC%85%98%EC%9C%84%ED%81%AC-2/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                VOGUE COREE
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.moncarnet-gala.fr/articles/view/L-AMOUR-BRUT"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GALA
+              </a>
+            </li>
+          </ul>
+        </Article>
+      </div>
 
       <Article
         title="VANCOUVER FASHION WEEK APRIL 22"
@@ -211,10 +213,10 @@ const Content = () => {
           </p>
 
           {/* DIV PRINCIPALE */}
-          <div className="flex justify-center gap-8 my-3 max-xs:flex-col max-xs:items-center">
+          <div className="flex justify-center gap-8 my-3 max-xs:flex-col max-xs:items-center max-lg:gap-6 max-lg:text-xs">
             {/* PHOTOGRAPH */}
             <div className="flex flex-col">
-              <p className="max-xs:text-[12px] font-arial-black">
+              <p className="max-xs:text-[12px] font-arial-black max-lg:text-[12px]">
                 PHOTOGRAPH
               </p>
               <div className="flex flex-col font-times-new-roman max-xs:text-[12px]">
@@ -230,7 +232,7 @@ const Content = () => {
             </div>
             {/* ASSISTANTS */}
             <div className="flex flex-col items-baseline">
-              <p className="max-xs:text-[12px] font-arial-black">
+              <p className="max-xs:text-[12px] font-arial-black max-lg:text-[12px]">
                 ASSISTANTS
               </p>
               <div className="flex flex-col font-times-new-roman max-xs:text-[12px]">
@@ -262,7 +264,7 @@ const Content = () => {
             </div>
             {/* MODELS */}
             <div className="flex flex-col items-baseline">
-              <p className="max-xs:text-[12px] font-arial-black mx-auto">
+              <p className="max-xs:text-[12px] font-arial-black mx-auto max-lg:text-[12px]">
                 MODELS
               </p>
               <div className="flex">
@@ -342,7 +344,7 @@ const Content = () => {
             </div>
             {/* PLACE */}
             <div className="flex flex-col">
-              <p className="max-xs:text-[12px] font-arial-black">
+              <p className="max-xs:text-[12px] font-arial-black max-lg:text-[12px]">
                 PLACE
               </p>
               <div className="flex flex-col font-times-new-roman max-xs:text-[12px]">
@@ -365,10 +367,10 @@ const Content = () => {
           </div>
 
           {/* DIV PRINCIPALE */}
-          <div className="flex justify-center gap-8 my-3 max-xs:flex-col max-xs:items-center py-5">
+          <div className="flex justify-center gap-8 my-3 max-xs:flex-col max-xs:items-center py-5 max-lg:gap-6 max-lg:text-xs">
             {/* PHOTOGRAPH */}
             <div className="flex flex-col">
-              <p className="max-xs:text-[12px] font-arial-black">
+              <p className="max-xs:text-[12px] font-arial-black max-lg:text-[12px]">
                 PHOTOGRAPH
               </p>
               <div className="flex flex-col font-times-new-roman max-xs:text-[12px]">
@@ -384,7 +386,7 @@ const Content = () => {
             </div>
             {/* ASSISTANTS */}
             <div className="flex flex-col items-baseline">
-              <p className="max-xs:text-[12px] font-arial-black">
+              <p className="max-xs:text-[12px] font-arial-black max-lg:text-[12px]">
                 ASSISTANTS
               </p>
               <div className="flex flex-col font-times-new-roman max-xs:text-[12px]">
@@ -416,7 +418,7 @@ const Content = () => {
             </div>
             {/* MODELS */}
             <div className="flex flex-col items-baseline">
-              <p className="max-xs:text-[12px] font-arial-black mx-auto">
+              <p className="max-xs:text-[12px] font-arial-black mx-auto max-lg:text-[12px]">
                 MODELS
               </p>
               <div className="flex">
@@ -496,7 +498,7 @@ const Content = () => {
             </div>
             {/* PLACE */}
             <div className="flex flex-col">
-              <p className="max-xs:text-[12px] font-arial-black">
+              <p className="max-xs:text-[12px] font-arial-black max-lg:text-[12px]">
                 PLACE
               </p>
               <div className="flex flex-col font-times-new-roman max-xs:text-[12px]">
@@ -642,8 +644,8 @@ const AboutUs = () => {
           height: '100%',
         }}
       >
-        <div className="flex-col mx-auto sm:flex sm:flex-row gap-14 items-start pt-24 max-w-[1200px] p-8">
-          <div className=" bg-white  w-full sm:w-1/3">
+        <div className="flex-col mx-auto sm:flex sm:flex-row gap-3 items-start pt-24 max-w-[1200px] p-8">
+          <div className=" bg-white w-full sm:w-1/3">
             <Profile />
           </div>
           <div className="w-full sm:w-2/3 min-h-screen">

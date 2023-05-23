@@ -24,9 +24,9 @@ const Hero = () => {
         </h1>
         <p
           style={{ fontFamily: 'Arial Black', marginTop: 0 }}
-          className="text-center text-[15px] max-xs:text-[12px] lg:text-[30px]"
+          className="text-center text-[15px] max-xs:text-[10px] lg:text-[30px]"
         >
-          FALL IN LOVE CLOTHES
+          FALL IN LOVE WITH CLOTHES
         </p>
       </div>
       <div className="w-[50%] z-1 absolute right-0 z-[-1]">

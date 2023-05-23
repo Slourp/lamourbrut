@@ -25,7 +25,7 @@ const ContactUs = () => {
           Please contact us if you have any questions, and we will get
           back to you as soon as possible.
         </p>
-        <div className="items-baseline pb-5">
+        <div className="items-baseline pb-5 ">
           <ContactForm />
         </div>
       </div>
