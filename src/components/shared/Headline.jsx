@@ -13,7 +13,7 @@ const Headline = ({
     <div
       className={`${
         fixed ? 'sticky-headline' : ''
-      } ${backgroundColor} font-vcr flex justify-around z-10`}
+      } ${backgroundColor} font-arial-black flex justify-around z-10`}
     >
       <div
         className="flex whitespace-nowrap space-x-[150px] marquee"

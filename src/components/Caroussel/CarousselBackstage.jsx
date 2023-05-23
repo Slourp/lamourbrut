@@ -16,6 +16,8 @@ import Bg8 from '../../assets/home/backstage/bs8.jpg'
 import Bg9 from '../../assets/home/backstage/bs9.jpg'
 import Bg11 from '../../assets/home/backstage/bs11.jpg'
 
+import './Caroussel.css'
+
 const CarousselBackstage = () => {
   const slides = [
     {

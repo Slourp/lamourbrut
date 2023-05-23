@@ -39,7 +39,7 @@ function NewsLetter() {
       <h3 className="text-2xl max-sm:text-[20px] max-xs:text-[14px] max-xs:tracking-wide	 font-arial-black text-center mb-4">
         BE THE FIRST TO KNOW
       </h3>
-      <p className="font-serif text-center max-sm:text-[14px] max-xs:text-[12px]">
+      <p className="font-times-new-roman text-center max-sm:text-[14px] max-xs:text-[12px]">
         The IT-ACCESSORIES are coming out soon, if you want yours,
         enter your email and we'll keep you posted !
       </p>
