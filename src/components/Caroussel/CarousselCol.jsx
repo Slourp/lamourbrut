@@ -102,7 +102,7 @@ const CarousselCol = () => {
             className={`text-2xl cursor-pointer ${
               slideIndex >= currentIndex &&
               slideIndex <= currentIndex + (slideToShow - 1)
-                ? 'text-red-500'
+                ? 'text-lbpink'
                 : 'text-gray-500'
             }`}
           >

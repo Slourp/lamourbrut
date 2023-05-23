@@ -170,7 +170,15 @@ const Content = () => {
           <p className="p-4 text-article font-times-new-roman">
             Hello,
             <br /> You can find there our last collection PURSUIT OF
-            HAPPINESS that was presented at the Vancouver Fashion Week
+            HAPPINESS that was presented at the{' '}
+            <a
+              className="underline text-lbgreen font-times-new-roman mx-1"
+              href="https://www.instagram.com/vanfashionweek/?hl=fr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Vancouver Fashion Week
+            </a>
             in 2022. This collection tells the story of life, through
             parts of it from childhood to college, the working life
             and the wedding. As it is for some people the consecration
@@ -178,19 +186,6 @@ const Content = () => {
             <br /> Hope you like it,
             <br /> xoxo, L'AMOUR BRUT
           </p>
-          <div className="m-2 ">
-            <p className="max-xs:text-[12px] font-arial-black">
-              CREDITS:{'  '}
-              <a
-                className="underline text-lbgreen font-times-new-roman"
-                href="https://www.instagram.com/vanfashionweek/?hl=fr"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                INSTA VFW
-              </a>
-            </p>
-          </div>
 
           <div className="mx-0-auto max-xs:m-0-auto">
             <Gallery images={article1} loading="lazy" />

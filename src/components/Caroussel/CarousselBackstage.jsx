@@ -14,13 +14,18 @@ import Bg6 from '../../assets/home/backstage/bs6.jpg'
 import Bg7 from '../../assets/home/backstage/bs7.jpg'
 import Bg8 from '../../assets/home/backstage/bs8.jpg'
 import Bg9 from '../../assets/home/backstage/bs9.jpg'
-import Bg10 from '../../assets/home/backstage/bs10.jpg'
 import Bg11 from '../../assets/home/backstage/bs11.jpg'
 
 const CarousselBackstage = () => {
   const slides = [
     {
       url: Bg1,
+    },
+    {
+      url: Bg6,
+    },
+    {
+      url: Bg9,
     },
     {
       url: Bg2,
@@ -35,19 +40,10 @@ const CarousselBackstage = () => {
       url: Bg5,
     },
     {
-      url: Bg6,
-    },
-    {
       url: Bg7,
     },
     {
       url: Bg8,
-    },
-    {
-      url: Bg9,
-    },
-    {
-      url: Bg10,
     },
     {
       url: Bg11,
@@ -114,7 +110,7 @@ const CarousselBackstage = () => {
             className={`text-2xl cursor-pointer ${
               slideIndex >= currentIndex &&
               slideIndex <= currentIndex + (slideToShow - 1)
-                ? 'text-red-500'
+                ? 'text-lbpink'
                 : 'text-gray-500'
             }`}
           >
