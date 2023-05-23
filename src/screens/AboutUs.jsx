@@ -214,168 +214,154 @@ const Content = () => {
             Discover our photos and backstage of the Pursuit of
             Happiness shoot.
           </p>
-          <div className="text-center font-arial-black p-8  max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px] max-xs:flex flex-col items-center">
-            <div className="flex flex-col items-baseline max-xs:items-start">
-              <h4 className="text-[30px] max-xs:text-[15px]">
-                PURSUIT OF HAPPINESS SHOOT
-              </h4>
 
-              <div className="max-xs:flex flex-col items-center">
-                {/* PHOTOGRAPH */}
-                <div className="flex flex-col items-baseline max-xs:ml-10">
-                  <p className="mt-3 max-xs:text-[12px]">
-                    PHOTOGRAPH
-                  </p>
-                  <a
-                    className="underline text-lbgreen font-times-new-roman"
-                    href="https://www.instagram.com/maxscrd/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    MAXIME SICARD
-                  </a>
-                </div>
-
-                <div className="flex max-xs:flex-col max-xs:items-center">
-                  {/* ASSISTANTS */}
-                  <div className="flex flex-col items-baseline">
-                    <p className="mt-3 max-xs:text-[12px]">
-                      ASSISTANTS
-                    </p>
-                    <div className="flex flex-col font-times-new-roman max-xs:text-[12px]">
-                      <a
-                        className="underline text-lbgreen"
-                        href="https://www.instagram.com/lilian.aoust/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        LILIAN AOUST
-                      </a>
-                      <a
-                        className="underline text-lbgreen"
-                        href="https://www.instagram.com/maxscrd/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        LOUISE BINET
-                      </a>
-                      <a
-                        className="text-lbgreen underline"
-                        href="https://www.instagram.com/oscar_dubois"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        OSCAR DUBOIS
-                      </a>
-                    </div>
-                  </div>
-
-                  <div />
-
-                  {/* MODELS */}
-                  <div className="flex flex-col items-baseline justify-end ml-12">
-                    <p className="mt-3 max-xs:text-[12px] max-xs:ml-3">
-                      MODELS
-                    </p>
-
-                    <div className="flex justify-center">
-                      <ul className="flex flex-col">
-                        <div className="flex flex-col items-baseline font-times-new-roman max-xs:text-[12px]">
-                          <a
-                            className="text-lbgreen underline"
-                            href="https://www.instagram.com/ines_dacosta_/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            INES
-                          </a>
-                          <a
-                            className="text-lbgreen underline "
-                            href="https://www.instagram.com/ia.steph/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            STEPHANE
-                          </a>
-                          <a
-                            className="text-lbgreen underline "
-                            href="https://www.instagram.com/aminepuisable/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            AMINE
-                          </a>
-                          <a
-                            className="text-lbgreen underline "
-                            href="https://www.instagram.com/gnurbanel/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            LENA
-                          </a>
-                        </div>
-                      </ul>
-
-                      <ul
-                        className="flex flex-col items-baseline max-xs:text-[12px]"
-                        style={{ padding: '0 1rem' }}
-                      >
-                        <div className="flex flex-col items-baseline font-times-new-roman">
-                          <a
-                            className="text-lbgreen underline"
-                            href="https://www.instagram.com/delgcht/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            DELPHINE
-                          </a>
-                          <a
-                            className="text-lbgreen underline "
-                            href="https://www.instagram.com/cmartindeline/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            CELIA
-                          </a>
-                          <a
-                            className="text-lbgreen underline "
-                            href="https://www.instagram.com/mak_kitah/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            MAKKITÄH
-                          </a>
-                          <a
-                            className="text-lbgreen underline "
-                            href="https://www.instagram.com/ylanbougaieff/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            YLAN
-                          </a>
-                        </div>
-                      </ul>
-                    </div>
-                  </div>
-
-                  {/* PLACE */}
-                  <div className="flex flex-col items-baseline">
-                    <p className="mt-3 max-xs:text-[12px]">PLACE</p>
-                    <div className="flex flex-col font-times-new-roman max-xs:text-[12px]">
-                      <a
-                        className="underline text-lbgreen"
-                        href="https://www.instagram.com/rouchonparis/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        ROUCHON {/* PARIS */}
-                      </a>
-                    </div>
-
-                    <div className="flex flex-col font-times-new-roman max-xs:text-[12px]" />
-                  </div>
-                </div>
+          {/* DIV PRINCIPALE */}
+          <div className="flex justify-center gap-8 my-3 max-xs:flex-col max-xs:items-center">
+            {/* PHOTOGRAPH */}
+            <div className="flex flex-col">
+              <p className="max-xs:text-[12px] font-arial-black">
+                PHOTOGRAPH
+              </p>
+              <div className="flex flex-col font-times-new-roman max-xs:text-[12px]">
+                <a
+                  className="underline text-lbgreen"
+                  href="https://www.instagram.com/maxscrd/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  MAXIME SICARD
+                </a>
               </div>
+            </div>
+            {/* ASSISTANTS */}
+            <div className="flex flex-col items-baseline">
+              <p className="max-xs:text-[12px] font-arial-black">
+                ASSISTANTS
+              </p>
+              <div className="flex flex-col font-times-new-roman max-xs:text-[12px]">
+                <a
+                  className="underline text-lbgreen"
+                  href="https://www.instagram.com/lilian.aoust/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LILIAN AOUST
+                </a>
+                <a
+                  className="underline text-lbgreen"
+                  href="https://www.instagram.com/maxscrd/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LOUISE BINET
+                </a>
+                <a
+                  className="text-lbgreen underline"
+                  href="https://www.instagram.com/oscar_dubois"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  OSCAR DUBOIS
+                </a>
+              </div>
+            </div>
+            {/* MODELS */}
+            <div className="flex flex-col items-baseline">
+              <p className="max-xs:text-[12px] font-arial-black mx-auto">
+                MODELS
+              </p>
+              <div className="flex">
+                <ul className="flex flex-col">
+                  <div className="flex flex-col items-baseline font-times-new-roman max-xs:text-[12px] mx-2">
+                    <a
+                      className="text-lbgreen underline"
+                      href="https://www.instagram.com/ines_dacosta_/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      INES
+                    </a>
+                    <a
+                      className="text-lbgreen underline "
+                      href="https://www.instagram.com/ia.steph/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      STEPHANE
+                    </a>
+                    <a
+                      className="text-lbgreen underline "
+                      href="https://www.instagram.com/aminepuisable/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      AMINE
+                    </a>
+                    <a
+                      className="text-lbgreen underline "
+                      href="https://www.instagram.com/gnurbanel/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      LENA
+                    </a>
+                  </div>
+                </ul>
+                <ul className="flex flex-col items-baseline max-xs:text-[12px]">
+                  <div className="flex flex-col items-baseline font-times-new-roman">
+                    <a
+                      className="text-lbgreen underline"
+                      href="https://www.instagram.com/delgcht/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      DELPHINE
+                    </a>
+                    <a
+                      className="text-lbgreen underline "
+                      href="https://www.instagram.com/cmartindeline/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      CELIA
+                    </a>
+                    <a
+                      className="text-lbgreen underline"
+                      href="https://www.instagram.com/mak_kitah/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      MAKKITÄH
+                    </a>
+                    <a
+                      className="text-lbgreen underline "
+                      href="https://www.instagram.com/ylanbougaieff/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      YLAN
+                    </a>
+                  </div>
+                </ul>
+              </div>
+            </div>
+            {/* PLACE */}
+            <div className="flex flex-col">
+              <p className="max-xs:text-[12px] font-arial-black">
+                PLACE
+              </p>
+              <div className="flex flex-col font-times-new-roman max-xs:text-[12px]">
+                <a
+                  className="underline text-lbgreen"
+                  href="https://www.instagram.com/rouchonparis/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  ROUCHON {/* PARIS */}
+                </a>
+              </div>
+
+              <div className="flex flex-col font-times-new-roman max-xs:text-[12px]" />
             </div>
           </div>
 
@@ -383,149 +369,153 @@ const Content = () => {
             <Gallery images={person7} loading="lazy" />
           </div>
 
-          <div className="text-center font-arial-black p-8  max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px] max-xs:flex flex-col items-center">
-            <div className="flex flex-col items-baseline max-xs:items-start">
-              <h4 className="text-[30px] max-xs:text-[15px]">
-                PURSUIT OF HAPPINESS GALA SHOOT
-              </h4>
-
-              <div className="max-xs:flex flex-col items-center">
-                {/* PHOTOGRAPH */}
-                <div className="flex flex-col items-baseline max-xs:ml-10">
-                  <p className="mt-3 max-xs:text-[12px]">
-                    PHOTOGRAPH
-                  </p>
-                  <a
-                    className="underline text-lbgreen font-times-new-roman max-xs:mr-5"
-                    href="https://www.instagram.com/maxscrd/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    LOUISE BINET
-                  </a>
-                </div>
-
-                <div className="flex max-xs:flex-col max-xs:items-center">
-                  {/* ASSSISTANTS */}
-                  <div className="flex flex-col items-baseline">
-                    <p className="mt-3 max-xs:text-[12px]">
-                      ASSISTANTS
-                    </p>
-                    <div className="flex flex-col font-times-new-roman max-xs:text-[12px]">
-                      <a
-                        className="underline text-lbgreen"
-                        href="https://www.instagram.com/lilian.aoust/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        LILIAN AOUST
-                      </a>
-                    </div>
-                  </div>
-                  <div />
-
-                  {/* MODELS */}
-                  <div className="flex flex-col items-baseline justify-end ml-12">
-                    <p className="mt-3 max-xs:text-[12px] max-xs:ml-3">
-                      MODELS
-                    </p>
-                    <div className="flex justify-center">
-                      <ul className="flex flex-col">
-                        <div className="flex flex-col items-baseline font-times-new-roman max-xs:text-[12px]">
-                          <a
-                            className="text-lbgreen underline"
-                            href="https://www.instagram.com/ines_dacosta_/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            INES
-                          </a>
-                          <a
-                            className="text-lbgreen underline "
-                            href="https://www.instagram.com/ia.steph/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            STEPHANE
-                          </a>
-                          <a
-                            className="text-lbgreen underline "
-                            href="https://www.instagram.com/aminepuisable/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            AMINE
-                          </a>
-                          <a
-                            className="text-lbgreen underline "
-                            href="https://www.instagram.com/gnurbanel/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            LENA
-                          </a>
-                        </div>
-                      </ul>
-                      <ul
-                        className="flex flex-col items-baseline max-xs:text-[12px]"
-                        style={{ padding: '0 1rem' }}
-                      >
-                        <div className="flex flex-col items-baseline font-times-new-roman">
-                          <a
-                            className="text-lbgreen underline"
-                            href="https://www.instagram.com/delgcht/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            DELPHINE
-                          </a>
-                          <a
-                            className="text-lbgreen underline "
-                            href="https://www.instagram.com/cmartindeline/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            CELIA
-                          </a>
-                          <a
-                            className="text-lbgreen underline "
-                            href="https://www.instagram.com/mak_kitah/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            MAKKITÄH
-                          </a>
-                          <a
-                            className="text-lbgreen underline "
-                            href="https://www.instagram.com/ylanbougaieff/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            YLAN
-                          </a>
-                        </div>
-                      </ul>
-                    </div>
-                  </div>
-
-                  {/* PLACE */}
-                  <div className="flex flex-col items-baseline">
-                    <p className="mt-3 max-xs:text-[12px]">PLACE</p>
-                    <div className="flex flex-col font-times-new-roman max-xs:text-[12px]">
-                      <a
-                        className="underline text-lbgreen"
-                        href="https://www.instagram.com/rouchonparis/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        ROUCHON {/* PARIS */}
-                      </a>
-                    </div>
-
-                    <div className="flex flex-col font-times-new-roman max-xs:text-[12px]" />
-                  </div>
-                </div>
+          {/* DIV PRINCIPALE */}
+          <div className="flex justify-center gap-8 my-3 max-xs:flex-col max-xs:items-center py-5">
+            {/* PHOTOGRAPH */}
+            <div className="flex flex-col">
+              <p className="max-xs:text-[12px] font-arial-black">
+                PHOTOGRAPH
+              </p>
+              <div className="flex flex-col font-times-new-roman max-xs:text-[12px]">
+                <a
+                  className="underline text-lbgreen"
+                  href="https://www.instagram.com/maxscrd/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  MAXIME SICARD
+                </a>
               </div>
+            </div>
+            {/* ASSISTANTS */}
+            <div className="flex flex-col items-baseline">
+              <p className="max-xs:text-[12px] font-arial-black">
+                ASSISTANTS
+              </p>
+              <div className="flex flex-col font-times-new-roman max-xs:text-[12px]">
+                <a
+                  className="underline text-lbgreen"
+                  href="https://www.instagram.com/lilian.aoust/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LILIAN AOUST
+                </a>
+                <a
+                  className="underline text-lbgreen"
+                  href="https://www.instagram.com/maxscrd/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LOUISE BINET
+                </a>
+                <a
+                  className="text-lbgreen underline"
+                  href="https://www.instagram.com/oscar_dubois"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  OSCAR DUBOIS
+                </a>
+              </div>
+            </div>
+            {/* MODELS */}
+            <div className="flex flex-col items-baseline">
+              <p className="max-xs:text-[12px] font-arial-black mx-auto">
+                MODELS
+              </p>
+              <div className="flex">
+                <ul className="flex flex-col">
+                  <div className="flex flex-col items-baseline font-times-new-roman max-xs:text-[12px] mx-2">
+                    <a
+                      className="text-lbgreen underline"
+                      href="https://www.instagram.com/ines_dacosta_/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      INES
+                    </a>
+                    <a
+                      className="text-lbgreen underline "
+                      href="https://www.instagram.com/ia.steph/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      STEPHANE
+                    </a>
+                    <a
+                      className="text-lbgreen underline "
+                      href="https://www.instagram.com/aminepuisable/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      AMINE
+                    </a>
+                    <a
+                      className="text-lbgreen underline "
+                      href="https://www.instagram.com/gnurbanel/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      LENA
+                    </a>
+                  </div>
+                </ul>
+                <ul className="flex flex-col items-baseline max-xs:text-[12px]">
+                  <div className="flex flex-col items-baseline font-times-new-roman">
+                    <a
+                      className="text-lbgreen underline"
+                      href="https://www.instagram.com/delgcht/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      DELPHINE
+                    </a>
+                    <a
+                      className="text-lbgreen underline "
+                      href="https://www.instagram.com/cmartindeline/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      CELIA
+                    </a>
+                    <a
+                      className="text-lbgreen underline"
+                      href="https://www.instagram.com/mak_kitah/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      MAKKITÄH
+                    </a>
+                    <a
+                      className="text-lbgreen underline "
+                      href="https://www.instagram.com/ylanbougaieff/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      YLAN
+                    </a>
+                  </div>
+                </ul>
+              </div>
+            </div>
+            {/* PLACE */}
+            <div className="flex flex-col">
+              <p className="max-xs:text-[12px] font-arial-black">
+                PLACE
+              </p>
+              <div className="flex flex-col font-times-new-roman max-xs:text-[12px]">
+                <a
+                  className="underline text-lbgreen"
+                  href="https://www.instagram.com/rouchonparis/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  ROUCHON {/* PARIS */}
+                </a>
+              </div>
+
+              <div className="flex flex-col font-times-new-roman max-xs:text-[12px]" />
             </div>
           </div>
 
@@ -573,7 +563,7 @@ const Content = () => {
           </p>
           <CarousselCol />
           <p className="mt-9 max-xs:text-[15px] max-sm:text-[15px] text-[18px] max-lg:text-[10px]">
-            UNIVERS BY{' '}
+            VENUS BY{' '}
             <a
               className="underline text-lbgreen font-bold font-times-new-roman"
               href="https://www.instagram.com/terada_natsuki/"
