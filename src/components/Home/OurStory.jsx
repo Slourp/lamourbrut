@@ -5,20 +5,20 @@ import Image1 from '../../assets/home/img20230328_203103302.png'
 
 const OurStory = () => {
   return (
-    <section className="flex flex-col text-center md:flex-row overflow-hidden h-full md:h-screen">
-      <div className="w-full md:w-[55%] flex flex-wrap">
+    <section className="flex flex-col text-center md:flex-row sm:flex-row overflow-hidden h-full md:h-screen">
+      <div className="w-full md:w-[55%] sm:w-[50%] flex flex-wrap">
         <img
           src={Image1}
           alt="Hero"
-          className="w-full md:w-1/2 object-cover h-[50vh] md:h-screen"
+          className="w-full md:w-1/2 object-cover h-[50vh]  sm:h-[40vh]  md:h-screen"
         />
         <img
           src={Image2}
           alt="Hero"
-          className="w-full md:w-1/2 object-cover h-[50vh] md:h-screen"
+          className="w-full md:w-1/2 object-cover h-[50vh] sm:h-[40vh] md:h-screen"
         />
       </div>
-      <div className="w-full md:w-[45%] px-4 md:p-12 flex flex-col justify-center items-baseline mt-3">
+      <div className="w-full md:w-[45%] sm:w-[50%] px-4 md:p-12 sm:p-10 sm:mt-[200px] flex flex-col justify-center items-baseline mt-3">
         {/*  <h2 className="text-2xl md:text-4xl">
             Our Story
           </h2> */}

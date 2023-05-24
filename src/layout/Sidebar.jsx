@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { IconContext } from 'react-icons'
 import { AiOutlineClose } from 'react-icons/ai'
 import { SidebarData } from '../data/SidebarData'
-import Burger from '../assets/burger.png'
+import Burger from '../assets/menu.png'
 import './Sidebar.css'
 
 const Sidebar = ({ isOpen }) => {

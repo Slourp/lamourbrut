@@ -9,6 +9,7 @@ import Home from './screens/Home'
 import Shop from './screens/Shop'
 import AboutUs from './screens/AboutUs'
 import NotFound from './screens/NotFound'
+import CountDownVisitors from './components/CountDownVisits/CountDownVisitors'
 
 import Navbar from './layout/Navbar'
 
@@ -34,6 +35,7 @@ function App() {
           <Route path="about-us" element={<AboutUs />} />
           <Route path="story" element={<Story />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/test" element={<CountDownVisitors />} />
         </Routes>
       </MainLayout>
     </Router>

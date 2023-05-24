@@ -13,7 +13,7 @@ const Products = () => {
     <>
       <Navbar />
       <section
-        className="overflow-hidden flex-col h-screen pt-2 z-0"
+        className="overflow-hidden flex-col h-[100%] pt-2 z-0"
         style={{
           backgroundImage: `url(${Image})`,
           backgroundSize: 'cover',

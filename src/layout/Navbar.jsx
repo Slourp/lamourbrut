@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Logo from '../assets/lamourbrutlogo.png'
 import Sidebar from './Sidebar'
+import './Navbar.css'
 
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true)
@@ -50,7 +51,7 @@ const Navbar = () => {
       <div className="flex gap-2">{isMobile && <Sidebar />}</div>
 
       <div
-        className="absolute right-4 md:right-[50%] md:translate-x-[50%] cursor-pointer"
+        className="absolute right-4 md:right-[50%] md:translate-x-[50%] cursor-pointer sm:translate-x-[-380%]"
         onClick={() => handleRedirect('/')}
         onKeyPress={(e) => {
           if (e.key === 'Enter') {

@@ -33,7 +33,7 @@ const Hero = () => {
         <img
           src={HeaderHome}
           alt="Hero"
-          className="flex-1 h-[700px] object-cover"
+          className="flex-1 h-[700px] object-cover sm:h-screen"
         />
         <div className="absolute inset-0 bg-white opacity-10 backdrop-blur-md z-[1]" />
       </div>
