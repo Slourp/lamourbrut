@@ -638,7 +638,7 @@ const AboutUs = () => {
         />
       </div> */}
       <div
-        className="bg-fixed bg-cover bg-center bg-no-repeat blur-background "
+        className="bg-fixed bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${backgroundImage})`,
           height: '100%',

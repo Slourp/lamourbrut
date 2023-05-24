@@ -1,5 +1,7 @@
 import React from 'react'
 import { HiArrowRight } from 'react-icons/hi'
+import { motion } from 'framer-motion'
+import { fadeIn } from '../../../variants'
 import Image2 from '../../assets/home/amourbrut002.jpg'
 import Image1 from '../../assets/home/img20230328_203103302.png'
 
@@ -31,13 +33,17 @@ const OurStory = () => {
           that wants to be light and sensual, and on the other hand, a
           raw exterior that is imperfect and refractory.
         </p>
-        <button
+        <motion.button
+          variants={fadeIn('right', 0.1)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.3 }}
           onClick={() => (window.location.href = '/story')}
           className="my-8 md:my-12 flex items-center text-[22px] font-extrabold border-[6px] border-black uppercase p-1 px-5"
         >
           Read more
           <HiArrowRight className="ml-4" />
-        </button>
+        </motion.button>
       </div>
     </section>
   )
