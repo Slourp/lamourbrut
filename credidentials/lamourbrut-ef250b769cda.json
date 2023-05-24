@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "lamourbrut",
+  "private_key_id": "ef250b769cdabf7a6573835e1fafb774aa989297",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC+j9kRbtiGV7gn\nNgLNlmb7oq3bQW26QTARLJF62hmmhpw74c+ZcGOUbDPHqr82xOSNzKhAh+RZArfz\nUyzfJk46dD0lspzugZDwNTLILnG2+xhJfpJOKJT1FNmpLwAsCqv8IeH6LYRu3e+M\ntczER4EKYge0RovSr+olESqXTnRDLPqzTYH4NK0tWmpqRZuX5PMS/RnlmImSMbW0\na7DWROh/YnpOkdv1kojk3FuRsVNHW0DDbX+0V4q1J4grUu1arYwWMTjAo+JWgAQp\nSw077BSYCblY9xWZUwNdZ2Ve4lzfCtZCqkia98LecD4CSWFLlcVZjtVqdzim36oz\nOM9reORZAgMBAAECgf8izKIXTOa9occ/Yd2hLZYg3dRh9dDT8pOUj08B4FJO1sYx\nKUt/+cY1lIzgKY5BsjMKshUHs8k/d/+fr9DB73zZr+B6weNmqsKNGynq5JBfmfsV\ncMfG/iI1n1kgTDT71fcSVB2wUh+dH2pfh9OdBHHMM5q0kS13jCh2HGxqtSkGGx/J\nOn3qRQqMxiZvvUT9sAHJ601PHBKiUi+4RPh9Jggy/WjcRunsQ1fimnEs+abQ4RUp\nqfn6i3mo6eBVDaj9S2Vpmg0f73r3BLxlckgAP70HZbNG6PXqD+ZwXoo9y302tm+1\n0B4Bj+SKhoGFQDxEbJL/tTipq+Iyp9irHIqoTeECgYEA7dJjnWuVFPQ5g7+d6aoE\nXqpAOIJyYoY8Kym0toV0jnR7O5Q/22kgQtl+bO1fHEmfsMJu+ilhGNLIfCwiiRdR\nu7qeZ43LTl33jAYj/bcg/+dMS2jwmCgQFX074BEg/rQX7qwWfMVSwB3NadZaepc6\nkOa5wMn8BiS84NC6p5J07dECgYEAzSCxnJNntJc7L3Bk2xtKALBUVz1NIZrqNBJ8\ncADCjCjmpjidKeR2SrVp1Hj3cENhw8ufTKIeZc/QeYnXcxZuPL4m3aXpzKUIDdLA\nyJ6jcEJ6dpD2IVBIDVtFpY2h/Ow9YHszix04C8Uw8gmrydsu5Xgh6CiZD6FoXNRZ\naXSOCAkCgYEAsg/9b8c2Jys4yPE2XdZjUTGtxeG9nREeib6/RI2lmGeUQSadrT0H\n36WSqCIOPVLOkvzxNLK4tWpUm8w7y2M/Wgy/P4+F8lYe26NZXUS5G4FluWyH/5S3\nfi93HiwVBT94T8ZfS+o+LAPkYeMReYozWny2Baf13++vz6/YoVDh5ZECgYBwqz2D\nUB/NPKfgla5//sw19qRMyrn79Fghw+mfp3s0ex69PClvIjKrNFvtvYfDnO8tGUHl\nWMKzj2Ll7wVtDGv+Zz93zTLPGfKDjTgguanx9kHHsDXQ9ISu+WwW0+Wew6+ut90G\n00S+ilApEZDPLdnjZonRN8Nip3hoTKbT2pZM6QKBgQDnr6cmNfHQFCW8fH5wojxh\nPN0tWKsFZPIbXF3sfgMUx65+RS3Q7FpYSHZHRt/SBZZV2j6f1T26Rr+e2C3sWQUx\nukVj+9Y47ebA3VuczVQxd6sNCYb6kjqcb0672+LLgjTbQIe1s2lcSpI34HK3flFq\n/nbNtsUcNE0IJjkp3c1Dhw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "lamourbrut@lamourbrut.iam.gserviceaccount.com",
+  "client_id": "118343472153960976660",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/lamourbrut%40lamourbrut.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
