@@ -28,7 +28,7 @@ const Profile = () => {
   }
   return (
     <div
-      className="profile flex flex-col items-center py-5 lg:h-[900px]"
+      className="profile flex flex-col items-center py-5 lg:h-[600px]"
       style={{ border: '7px solid black' }}
     >
       <div>
