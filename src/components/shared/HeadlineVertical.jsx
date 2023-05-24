@@ -14,7 +14,7 @@ const HeadlineVertical = ({
     <div
       className={`${
         fixed ? 'sticky-headline' : ''
-      } ${backgroundColor} font-vcr flex justify-around z-10`}
+      } ${backgroundColor} font-arial-black flex justify-around z-10`}
       style={{
         position: 'fixed',
         top: 0,
