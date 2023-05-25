@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import backgroundImage from '../assets/about/about-us.jpg'
 import Headline from '../components/shared/Headline'
 import imgProfile from '../assets/about/profile.png'
@@ -14,7 +15,7 @@ import CarousselAwp from '../components/Caroussel/CarousselAwp'
 import CarousselLf from '../components/Caroussel/CarousselLf'
 import HeadlineVertical from '../components/shared/HeadlineVertical'
 import ImgAboutUs from '../assets/about/bandeau-aboutus.png'
-
+import { fadeIn } from '../../variants'
 import './About.css'
 
 import {
@@ -32,11 +33,16 @@ const Profile = () => {
       className="profile flex flex-col items-center py-5 lg:h-[600px]"
       style={{ border: '7px solid black' }}
     >
+      <motion.div
+        variants={fadeIn('down', 0.2)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.3 }}
+      >
+        <img src={ImgAboutUs} alt="" />
+      </motion.div>
       <div>
         <div className="ml-2 mt-6 flex flex-col items-center">
-          <div>
-            <img src={ImgAboutUs} alt="" />
-          </div>
           <div>
             <img className="w-32 h-32" src={imgProfile} alt="" />
           </div>
@@ -518,7 +524,7 @@ const Content = () => {
 
               <div className="flex flex-col font-times-new-roman max-xs:text-[12px]" />
             </div>
-            {/* PLACE */}
+            {/* MUA */}
             <div className="flex flex-col">
               <p className="max-xs:text-[12px] font-arial-black max-lg:text-[12px]">
                 MUA

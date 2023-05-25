@@ -40,8 +40,9 @@ function App() {
           <Route path="about-us" element={<AboutUs />} />
           <Route path="story" element={<Story />} />
           <Route path="*" element={<NotFound />} />
-{/*           <Route path="test" element={<CountDownVisitors />} />
- */}        </Routes>
+          {/*           <Route path="test" element={<CountDownVisitors />} />
+           */}{' '}
+        </Routes>
       </MainLayout>
     </Router>
   )
