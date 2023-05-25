@@ -1,5 +1,4 @@
 import React from 'react'
-import { motion } from 'framer-motion'
 import backgroundImage from '../assets/about/about-us.jpg'
 import Headline from '../components/shared/Headline'
 import imgProfile from '../assets/about/profile.png'
@@ -15,7 +14,6 @@ import CarousselAwp from '../components/Caroussel/CarousselAwp'
 import CarousselLf from '../components/Caroussel/CarousselLf'
 import HeadlineVertical from '../components/shared/HeadlineVertical'
 import ImgAboutUs from '../assets/about/bandeau-aboutus.png'
-import { fadeIn } from '../../variants'
 import './About.css'
 
 import {
@@ -33,14 +31,6 @@ const Profile = () => {
       className="profile flex flex-col items-center py-5 lg:h-[600px]"
       style={{ border: '7px solid black' }}
     >
-      <motion.div
-        variants={fadeIn('down', 0.2)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.3 }}
-      >
-        <img src={ImgAboutUs} alt="" />
-      </motion.div>
       <div>
         <div className="ml-2 mt-6 flex flex-col items-center">
           <div>
@@ -63,7 +53,7 @@ const Profile = () => {
 
       {/* PROFILE */}
       <div className="flex items-center ml-2">
-        <ul className="font-arial-black links flex text-lbgreen font-bold  underline gap-3 max-xs:text-[12px] max-sm:text-[15px] text-[14px] max-lg:text-[8px]">
+        <ul className="flex flex-col font-arial-black links flex text-lbgreen font-bold  underline gap-3 max-xs:text-[12px] max-sm:text-[15px] text-[14px] max-lg:text-[8px] text-center">
           <li>
             <a href="/story">OUR STORY</a>
           </li>
@@ -372,7 +362,7 @@ const Content = () => {
             </div>
           </div>
 
-          <div className="mx-0-auto max-xs:mx-0-auto">
+          <div className="">
             <Gallery images={person7} loading="lazy" />
           </div>
 
@@ -386,11 +376,11 @@ const Content = () => {
               <div className="flex flex-col font-times-new-roman max-xs:text-[12px]">
                 <a
                   className="underline text-lbgreen"
-                  href="https://www.instagram.com/maxscrd/"
+                  href="https://www.instagram.com/lmbinet/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  MAXIME SICARD
+                  LOUISE BINET
                 </a>
               </div>
             </div>
@@ -407,22 +397,6 @@ const Content = () => {
                   rel="noopener noreferrer"
                 >
                   LILIAN AOUST
-                </a>
-                <a
-                  className="underline text-lbgreen"
-                  href="https://www.instagram.com/maxscrd/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  LOUISE BINET
-                </a>
-                <a
-                  className="text-lbgreen underline"
-                  href="https://www.instagram.com/oscar_dubois"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  OSCAR DUBOIS
                 </a>
               </div>
             </div>
@@ -544,7 +518,7 @@ const Content = () => {
             </div>
           </div>
 
-          <div className="mx-0-auto max-xs:mx-0-auto">
+          <div className="">
             <Gallery images={person8} loading="lazy" />
           </div>
         </div>
@@ -665,14 +639,33 @@ const AboutUs = () => {
           animationDuration="10s"
         />
       </div> */}
+
       <div
         className="bg-fixed bg-cover bg-center bg-no-repeat flex-grow"
         style={{
           backgroundImage: `url(${backgroundImage})`,
         }}
       >
-        <div className="flex-col mx-auto sm:flex sm:flex-row gap-3 items-start pt-24 max-w-[1200px] p-8">
-          <div className=" bg-white w-full sm:w-1/3">
+        <div
+          className="absolute top-[80px] animate-diagonal"
+          onAnimationEnd={() => {
+            const element = document.querySelector(
+              '.animate-diagonal'
+            )
+            if (element) {
+              element.classList.add('rotate')
+            }
+          }}
+        >
+          <img
+            className="max-xs:h-[90px] max-lg:h-[100px]"
+            src={ImgAboutUs}
+            alt=""
+          />
+        </div>
+
+        <div className="flex-col mx-auto sm:flex sm:flex-row gap-3 items-start pt-24 max-w-[1200px] p-8 justify-end">
+          <div className=" bg-white w-full sm:w-1/5">
             <Profile />
           </div>
           <div className="w-full sm:w-2/3">

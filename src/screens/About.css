@@ -1,2 +1,19 @@
+.animate-diagonal {
+  animation: animate-diagonal 1.5s ease-in-out;
+}
 
+.rotate {
+  transform: rotate(-20deg);
+}
+
+
+
+@keyframes animate-diagonal {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(-20deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(-20deg);
+  }
+}
 
