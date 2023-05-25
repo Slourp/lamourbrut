@@ -36,6 +36,7 @@ module.exports = {
         lbgreen: '#035F1D',
         lbpink: '#E45C96',
         lbblue: '#0F4C81',
+        lbgreenlight: '#97D700',
         // primary: '#0a0a0a',
         // accent: '#42a6e3',
       },

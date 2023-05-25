@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import {
   BsChevronCompactLeft,
   BsChevronCompactRight,
-  BsChevronCompactDown,
 } from 'react-icons/bs'
+import { ImCross } from 'react-icons/im'
+
 import { RxDotFilled } from 'react-icons/rx'
 
 import Us1 from '../../assets/about/speos/us-teradanatsuki/us1.jpg'
@@ -72,7 +73,7 @@ const CarousselUs = () => {
   }
 
   return (
-    <div className="max-w-[1400px] h-[420px] w-full m-auto py-12 px-4 relative group">
+    <div className="max-w-[1400px] h-[420px] w-full m-auto py-5 px-4 relative group">
       <div
         className={`w-full h-[330px] rounded-2xl bg-center bg-cover duration-500 ${
           isMobile ? 'flex flex-col' : 'flex flex-row'
@@ -98,17 +99,11 @@ const CarousselUs = () => {
             </div>
           ))}
         {/* Left Arrow */}
-        <div
-          className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer"
-          style={{ top: '45%' }}
-        >
+        <div className="hidden group-hover:flex absolute top-1/2 -translate-y-1/2 left-2 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
           <BsChevronCompactLeft onClick={prevSlide} size={30} />
         </div>
         {/* Right Arrow */}
-        <div
-          className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer"
-          style={{ top: '45%' }}
-        >
+        <div className="hidden group-hover:flex absolute top-1/2 -translate-y-1/2 right-2 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
           <BsChevronCompactRight onClick={nextSlide} size={30} />
         </div>
       </div>
@@ -137,7 +132,7 @@ const CarousselUs = () => {
             className="max-h-screen max-w-full"
           />
           <div
-            className="fixed top-0 right-0 mt-[100px] mr-4 p-2 bg-white rounded-full cursor-pointer"
+            className="fixed right-0  mr-4 p-2 bg-white rounded-full cursor-pointer"
             onKeyDown={() => {}}
             onClick={() => slideFullscreen(1)}
             role="button"
@@ -146,7 +141,7 @@ const CarousselUs = () => {
             <BsChevronCompactRight size={30} />
           </div>
           <div
-            className="fixed top-0 left-0 mt-[100px] ml-4 p-2 bg-white rounded-full cursor-pointer"
+            className="fixed left-0 ml-4 p-2 bg-white rounded-full cursor-pointer"
             onKeyDown={() => {}}
             onClick={() => slideFullscreen(-1)} // Glissement vers la gauche
             role="button"
@@ -155,13 +150,13 @@ const CarousselUs = () => {
             <BsChevronCompactLeft size={30} />
           </div>
           <div
-            className="fixed bottom-0 right-0 mb-4 mr-4 p-2 bg-white rounded-full cursor-pointer"
+            className="fixed top-10 left-0 mt-4 ml-4 p-2 max-xs:mt-[70px] bg-white rounded-full cursor-pointer"
             onKeyDown={() => {}}
             onClick={closeFullscreen}
             role="button"
             tabIndex={0}
           >
-            <BsChevronCompactDown size={30} />
+            <ImCross size={30} />
           </div>
         </div>
       )}

@@ -1,17 +1,33 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { FaInstagramSquare } from 'react-icons/fa'
 import { motion } from 'framer-motion'
-import { fadeIn } from '../../variants'
 
 const Footer = () => {
+  const [isVisible, setIsVisible] = useState(true)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsVisible((prevVisible) => !prevVisible)
+    }, 500) // Réglez la durée du clignotement en millisecondes
+
+    return () => {
+      clearInterval(interval)
+    }
+  }, [])
   return (
     <section className="p-8 md:p-8 lg:p-16 bg-black text-white">
       <motion.h3
-        variants={fadeIn('down', 0.2)}
+        variants={{
+          hidden: { opacity: 0 },
+          show: {
+            opacity: 1,
+            transition: { duration: 0.5, yoyo: Infinity },
+          },
+        }}
         initial="hidden"
-        whileInView="show"
+        animate={isVisible ? 'show' : 'hidden'}
         viewport={{ once: false, amount: 0.3 }}
-        className="text-center mb-4 text-lg md:text-xl xl:text-[40px] pt-[60px]"
+        className="text-center mb-4 text-lg md:text-xl xl:text-[40px] pt-[60px] text-lbgreen"
       >
         Follow Us
       </motion.h3>

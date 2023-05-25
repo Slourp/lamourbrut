@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import {
   BsChevronCompactLeft,
   BsChevronCompactRight,
-  BsChevronCompactDown,
 } from 'react-icons/bs'
 import { ImCross } from 'react-icons/im'
 import { RxDotFilled } from 'react-icons/rx'
@@ -163,7 +162,7 @@ const CarousselBackstage = () => {
             <BsChevronCompactRight size={30} />
           </div>
           <div
-            className="fixed  left-0  ml-4 p-2 bg-white rounded-full cursor-pointer"
+            className="fixed left-0 ml-4 p-2 bg-white rounded-full cursor-pointer"
             onKeyDown={() => {}}
             onClick={() => slideFullscreen(-1)} // Glissement vers la gauche
             role="button"
@@ -172,7 +171,7 @@ const CarousselBackstage = () => {
             <BsChevronCompactLeft size={30} />
           </div>
           <div
-            className="fixed top-0 left-0 mt-4 ml-4 p-2 max-xs:mt-[70px] bg-white rounded-full cursor-pointer"
+            className="fixed top-10 left-0 mt-4 ml-4 p-2 max-xs:mt-[70px] bg-white rounded-full cursor-pointer"
             onKeyDown={() => {}}
             onClick={closeFullscreen}
             role="button"
