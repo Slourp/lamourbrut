@@ -246,7 +246,7 @@ const Content = () => {
                 </a>
                 <a
                   className="underline text-lbgreen"
-                  href="https://www.instagram.com/maxscrd/"
+                  href="https://www.instagram.com/lmbinet/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -423,58 +423,6 @@ const Content = () => {
                       rel="noopener noreferrer"
                     >
                       STEPHANE
-                    </a>
-                    <a
-                      className="text-lbgreen underline "
-                      href="https://www.instagram.com/aminepuisable/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      AMINE
-                    </a>
-                    <a
-                      className="text-lbgreen underline "
-                      href="https://www.instagram.com/gnurbanel/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      LENA
-                    </a>
-                  </div>
-                </ul>
-                <ul className="flex flex-col items-baseline max-xs:text-[12px]">
-                  <div className="flex flex-col items-baseline font-times-new-roman">
-                    <a
-                      className="text-lbgreen underline"
-                      href="https://www.instagram.com/delgcht/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      DELPHINE
-                    </a>
-                    <a
-                      className="text-lbgreen underline "
-                      href="https://www.instagram.com/cmartindeline/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      CELIA
-                    </a>
-                    <a
-                      className="text-lbgreen underline"
-                      href="https://www.instagram.com/mak_kitah/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      MAKKITÄH
-                    </a>
-                    <a
-                      className="text-lbgreen underline "
-                      href="https://www.instagram.com/ylanbougaieff/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      YLAN
                     </a>
                   </div>
                 </ul>

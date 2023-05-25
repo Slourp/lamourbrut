@@ -14,10 +14,10 @@ const Backstage = () => {
           BEHIND THE SCENE WITH L'AMOUR BRUT'S FAMILY
         </p>
         <p className="text-white text-justify mt-4 md:mt-8 text-lg md:text-[25px] font-times-new-roman">
-          We like to think that working with our friends and
-          acquaintances allows us to go further together. We met our
-          photographers in school and our models are our friends. Feel
-          free to check out the ABOUT US page to discover them.
+          We like to think that working with our friends and entourage
+          allows us to go further together. We met our photographers
+          in school and our models are our friends. Feel free to check
+          out the ABOUT US page to discover them.
         </p>
       </div>
     </section>
