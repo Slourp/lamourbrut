@@ -1,11 +1,24 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { HiArrowRight } from 'react-icons/hi'
 import { motion } from 'framer-motion'
-import { fadeIn } from '../../../variants'
 import Image2 from '../../assets/home/amourbrut002.jpg'
 import Image1 from '../../assets/home/img20230328_203103302.png'
 
+import './OurStory.css'
+
 const OurStory = () => {
+  const [isVisible, setIsVisible] = useState(true)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsVisible((prevVisible) => !prevVisible)
+    }, 500) // Réglez la durée du clignotement en millisecondes
+
+    return () => {
+      clearInterval(interval)
+    }
+  }, [])
+
   return (
     <section className="flex flex-col text-center md:flex-row sm:flex-row overflow-hidden h-full md:h-screen">
       <div className="w-full md:w-[55%] sm:w-[50%] flex flex-wrap">
@@ -34,12 +47,18 @@ const OurStory = () => {
           raw exterior that is imperfect and refractory.
         </p>
         <motion.button
-          variants={fadeIn('right', 0.1)}
+          variants={{
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+              transition: { duration: 0.5, yoyo: Infinity },
+            },
+          }}
           initial="hidden"
-          whileInView="show"
+          animate={isVisible ? 'show' : 'hidden'}
           viewport={{ once: false, amount: 0.3 }}
           onClick={() => (window.location.href = '/story')}
-          className="my-8 md:my-12 flex items-center text-[22px] font-extrabold border-[6px] border-black uppercase p-1 px-5"
+          className="bg-lbpink my-8 md:my-12 flex items-center text-[22px] font-extrabold border-[6px] border-black uppercase p-1 px-5"
         >
           Read more
           <HiArrowRight className="ml-4" />
