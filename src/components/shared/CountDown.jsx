@@ -58,7 +58,7 @@ const CountDown = () => {
             IT-ACCESSORIES
           </motion.h2>
           <motion.p
-            variants={fadeIn('right', 0.5)}
+            variants={fadeIn('down', 0.3)}
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.3 }}
@@ -70,7 +70,7 @@ const CountDown = () => {
 
         {isReady && (
           <motion.div
-            variants={fadeIn('right', 0.7)}
+            variants={fadeIn('up', 0.3)}
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.3 }}

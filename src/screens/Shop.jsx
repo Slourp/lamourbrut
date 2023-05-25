@@ -21,7 +21,7 @@ const Products = () => {
         }}
       >
         <div className="pt-11 sticky-top">
-          <div className="flex justify-center">
+          <div className="flex justify-center ">
             <Headline
               headlines={headline2}
               backgroundColor="bg-black"
