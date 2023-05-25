@@ -37,7 +37,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaInstagramSquare className="text-2xl md:text-4xl" />
+          <FaInstagramSquare className="text-2xl md:text-4xl text-lbpink" />
         </a>
       </div>
       <div className="text-center mt-10 md:mt-14">
