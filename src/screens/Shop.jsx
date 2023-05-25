@@ -12,16 +12,17 @@ const Products = () => {
   return (
     <>
       <Navbar />
-      <div className="mt-12 fixed-top">
-          <div className="flex justify-center top-9 ">
-            <Headline
-              headlines={headline2}
-              backgroundColor="bg-black"
-              textColor="text-white"
-              textSize={32}
-            />
-          </div>
+      <div className="mt-12 fixed-top overflow-hidden">
+        <div className="flex justify-center top-9 overflow-hidden max-w-screen">
+          <Headline
+            className="overflow-hidden"
+            headlines={headline2}
+            backgroundColor="bg-black"
+            textColor="text-white"
+            textSize={32}
+          />
         </div>
+      </div>
       <section
         className="overflow-hidden flex-col h-[100%] pt-2 z-0"
         style={{
@@ -30,8 +31,6 @@ const Products = () => {
           backgroundPosition: 'center',
         }}
       >
-       
-
         <div className="flex flex-col justify-center items-center h-[70vh] relative">
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <Suspense>
