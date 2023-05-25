@@ -627,28 +627,27 @@ const Content = () => {
 
 const AboutUs = () => {
   return (
-    <div>
+    <div className="flex flex-col">
       {/*  <div className="absolute">
         <HeadlineVertical
           headlines={headline4}
           backgroundColor="bg-lbpink"
           textColor="text-lbgreen"
           textSize={32}
-          animationDuration="10s" // Spécifiez la durée souhaitée
+          animationDuration="10s"
         />
       </div> */}
       <div
-        className="bg-fixed bg-cover bg-center bg-no-repeat"
+        className="bg-fixed bg-cover bg-center bg-no-repeat flex-grow"
         style={{
           backgroundImage: `url(${backgroundImage})`,
-          height: '100%',
         }}
       >
         <div className="flex-col mx-auto sm:flex sm:flex-row gap-3 items-start pt-24 max-w-[1200px] p-8">
           <div className=" bg-white w-full sm:w-1/3">
             <Profile />
           </div>
-          <div className="w-full sm:w-2/3 min-h-screen">
+          <div className="w-full sm:w-2/3">
             <Content />
           </div>
         </div>

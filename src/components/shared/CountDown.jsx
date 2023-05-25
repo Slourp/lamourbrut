@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import { fadeIn } from '../../../variants'
 
 const CountDown = () => {
   const [isReady, setIsReady] = useState(false)
@@ -46,16 +48,34 @@ const CountDown = () => {
     >
       <div className="w-[800px] p-4 ">
         <div className="flex justify-center flex-col items-center">
-          <h2 className="font-bold text-center mb-4 font-arial-black max-xs:text-[40px] max-sm:text-[50px] text-[100px] whitespace-nowrap max-lg:text-[50px]">
+          <motion.h2
+            variants={fadeIn('down', 0.1)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.3 }}
+            className="font-bold text-center mb-4 font-arial-black max-xs:text-[40px] max-sm:text-[50px] text-[100px] whitespace-nowrap max-lg:text-[50px]"
+          >
             IT-ACCESSORIES
-          </h2>
-          <p className="text-center max-xs:text-[30px] max-sm:text-[30px] text-[50px] max-lg:text-[50px]">
+          </motion.h2>
+          <motion.p
+            variants={fadeIn('right', 0.5)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.3 }}
+            className="text-center max-xs:text-[30px] max-sm:text-[30px] text-[50px] max-lg:text-[50px]"
+          >
             FRIDAY 30th JUNE 23
-          </p>
+          </motion.p>
         </div>
 
         {isReady && (
-          <div className="flex justify-center items-center space-x-8">
+          <motion.div
+            variants={fadeIn('right', 0.7)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.3 }}
+            className="flex justify-center items-center space-x-8"
+          >
             <div className="flex flex-col items-center p-2">
               <div className="text-7xl font-bold max-xs:text-[20px] max-sm:text-[30px] text-[70px] max-lg:text-[50px]">
                 {countdown.days}
@@ -86,7 +106,7 @@ const CountDown = () => {
                 Seconds
               </div>
             </div>
-          </div>
+          </motion.div>
         )}
       </div>
     </div>
