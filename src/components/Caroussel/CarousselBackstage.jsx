@@ -3,7 +3,6 @@ import {
   BsChevronCompactLeft,
   BsChevronCompactRight,
   BsChevronCompactDown,
-
 } from 'react-icons/bs'
 import { RxDotFilled } from 'react-icons/rx'
 

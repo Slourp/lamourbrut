@@ -78,7 +78,7 @@ const Navbar = () => {
             onClick={() => handleRedirect('/about-us')}
             type="button"
           >
-            ABOUT
+            ABOUT US
           </button>
         </div>
       )}

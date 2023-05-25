@@ -13,6 +13,11 @@ module.exports = {
       padding: {
         DEFAULT: '15px',
       },
+      variants: {
+        extend: {
+          animation: ['hover', 'focus', 'group-hover'],
+        },
+      },
     },
     screens: {
       xs: '480px', // Extra Small (pour les petits appareils mobiles)
