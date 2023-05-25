@@ -27,7 +27,7 @@ const Footer = () => {
         initial="hidden"
         animate={isVisible ? 'show' : 'hidden'}
         viewport={{ once: false, amount: 0.3 }}
-        className="text-center mb-4 text-lg md:text-xl xl:text-[40px] pt-[60px] text-lbgreen"
+        className="text-center mb-4 text-lg md:text-xl xl:text-[40px] pt-[60px] text-lbpink"
       >
         Follow Us
       </motion.h3>
