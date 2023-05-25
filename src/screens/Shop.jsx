@@ -12,16 +12,8 @@ const Products = () => {
   return (
     <>
       <Navbar />
-      <section
-        className="overflow-hidden flex-col h-[100%] pt-2 z-0"
-        style={{
-          backgroundImage: `url(${Image})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="pt-11 sticky-top">
-          <div className="flex justify-center ">
+      <div className="mt-12 fixed-top">
+          <div className="flex justify-center top-9 ">
             <Headline
               headlines={headline2}
               backgroundColor="bg-black"
@@ -30,6 +22,15 @@ const Products = () => {
             />
           </div>
         </div>
+      <section
+        className="overflow-hidden flex-col h-[100%] pt-2 z-0"
+        style={{
+          backgroundImage: `url(${Image})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+       
 
         <div className="flex flex-col justify-center items-center h-[70vh] relative">
           <div style={{ display: 'flex', justifyContent: 'center' }}>
