@@ -13,6 +13,7 @@ import CarousselUatw from '../components/Caroussel/CarousselUatw'
 import CarousselAwp from '../components/Caroussel/CarousselAwp'
 import CarousselLf from '../components/Caroussel/CarousselLf'
 import HeadlineVertical from '../components/shared/HeadlineVertical'
+import ImgAboutUs from '../assets/about/bandeau-aboutus.png'
 
 import './About.css'
 
@@ -33,6 +34,9 @@ const Profile = () => {
     >
       <div>
         <div className="ml-2 mt-6 flex flex-col items-center">
+          <div>
+            <img src={ImgAboutUs} alt="" />
+          </div>
           <div>
             <img className="w-32 h-32" src={imgProfile} alt="" />
           </div>
@@ -367,7 +371,7 @@ const Content = () => {
           </div>
 
           {/* DIV PRINCIPALE */}
-          <div className="flex justify-center gap-8 my-3 max-xs:flex-col max-xs:items-center py-5 max-lg:gap-6 max-lg:text-xs">
+          <div className="flex justify-center gap-8 my-3 max-xs:flex-col max-xs:items-center py-5 max-lg:gap-4 max-lg:text-xs">
             {/* PHOTOGRAPH */}
             <div className="flex flex-col">
               <p className="max-xs:text-[12px] font-arial-black max-lg:text-[12px]">
@@ -509,6 +513,24 @@ const Content = () => {
                   rel="noopener noreferrer"
                 >
                   ROUCHON {/* PARIS */}
+                </a>
+              </div>
+
+              <div className="flex flex-col font-times-new-roman max-xs:text-[12px]" />
+            </div>
+            {/* PLACE */}
+            <div className="flex flex-col">
+              <p className="max-xs:text-[12px] font-arial-black max-lg:text-[12px]">
+                MUA
+              </p>
+              <div className="flex flex-col font-times-new-roman max-xs:text-[12px]">
+                <a
+                  className="underline text-lbgreen"
+                  href="https://www.instagram.com/zdoudaa/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LISA
                 </a>
               </div>
 
