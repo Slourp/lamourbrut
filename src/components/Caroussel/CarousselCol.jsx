@@ -51,15 +51,16 @@ const CarousselCol = () => {
   const slideToShow = isMobile ? 1 : 3
 
   const prevSlide = () => {
-    const newIndex =
-      (currentIndex - 1 + slides.length) % slides.length
-    const visibleIndex = (newIndex + slideToShow - 1) % slides.length
+    const newIndex = currentIndex - 1
+    const visibleIndex =
+      newIndex < 0 ? slides.length - slideToShow : newIndex
     setCurrentIndex(visibleIndex)
   }
 
   const nextSlide = () => {
-    const newIndex = (currentIndex + 1) % slides.length
-    const visibleIndex = newIndex
+    const newIndex = currentIndex + 1
+    const visibleIndex =
+      newIndex >= slides.length - slideToShow + 1 ? 0 : newIndex
     setCurrentIndex(visibleIndex)
   }
 

@@ -198,18 +198,17 @@ const Content = () => {
       <Article
         className="article"
         title="SHOOT PURSUIT OF HAPPINESS"
-        createDate="#posted on Saturday 23rd April 2022"
+        createDate="#posted on Saturday 23rd April 2022/23"
         repetitions={100}
       >
         <div className="mx-0-auto">
           <p className="p-4 text-article font-times-new-roman">
             To tell you a bit about this shoot, we worked with our
-            family on it and we can feel it through those photos. It
-            is important to us to work with our friends, our brothers
-            and sisters, and our family in one word. The most
-            important thing is to create a respectful environment.
-            Discover our photos and backstage of the Pursuit of
-            Happiness shoot.
+            family on it and we can feel it through those photos. we
+            are grateful to work with our friends , our brothers and
+            sisters, and our family in one word. The most important
+            thing is to create a respectful environment. Discover our
+            photos of the Pursuit of Happiness shoot.
           </p>
 
           {/* DIV PRINCIPALE */}
@@ -596,6 +595,7 @@ const AboutUs = () => {
       >
         <div
           className="absolute top-[80px] animate-diagonal"
+          style={{ backfaceVisibility: 'hidden' }}
           onAnimationEnd={() => {
             const element = document.querySelector(
               '.animate-diagonal'
