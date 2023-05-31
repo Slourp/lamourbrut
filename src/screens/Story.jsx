@@ -4,10 +4,10 @@ import movie from '../assets/video/story.mp4'
 
 const Story = () => {
   return (
-    <section className="relative container max-sm:flex items-center flex-col">
+    <section className="relative container max-sm:flex items-center flex-col ">
       <div className="absolute">
         <div className="p-24">
-          <h2 className=" text-white fixed top-20 left-10 text-[160px] opacity-[.2]">
+          <h2 className=" text-white fixed top-20 left-10 text-[160px] opacity-[.2] max-xs:text-[90px]">
             OUR STORY
           </h2>
           <div className="text-white py-[16vh] text-center flex flex-col gap-20 uppercase text-[36px] font-arial-black">
