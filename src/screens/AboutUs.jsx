@@ -586,8 +586,6 @@ const Content = () => {
 }
 
 const AboutUs = () => {
-  const isMobile = window.innerWidth < 768
-
   return (
     <div className="flex flex-col">
       {/*  <div className="absolute h-full">
@@ -601,13 +599,9 @@ const AboutUs = () => {
       </div> */}
 
       <div
-        className={`bg-fixed bg-cover bg-center bg-no-repeat flex-grow ${
-          isMobile ? 'bg-green-950' : ''
-        }`}
+        className="bg-fixed bg-cover bg-center bg-no-repeat flex-grow"
         style={{
-          backgroundImage: isMobile
-            ? 'none'
-            : `url(${backgroundImage})`,
+          backgroundImage: `url(${backgroundImage})`,
         }}
       >
         <div
@@ -628,6 +622,7 @@ const AboutUs = () => {
             alt=""
           />
         </div>
+
         <div className="flex-col mx-auto sm:flex sm:flex-row gap-3 items-start pt-24 max-w-[1200px] p-8 justify-end">
           <div className=" bg-white w-full sm:w-1/5">
             <Profile />
