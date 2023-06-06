@@ -1,4 +1,6 @@
 import React from 'react'
+import { useMediaQuery } from 'react-responsive'
+
 import backgroundImage from '../assets/about/about-us.jpg'
 import Headline from '../components/shared/Headline'
 import imgProfile from '../assets/about/profile.png'
@@ -13,7 +15,9 @@ import CarousselUatw from '../components/Caroussel/CarousselUatw'
 import CarousselAwp from '../components/Caroussel/CarousselAwp'
 import CarousselLf from '../components/Caroussel/CarousselLf'
 import HeadlineVertical from '../components/shared/HeadlineVertical'
+import BackgroundMove from '../components/background/BackgroundMove'
 import ImgAboutUs from '../assets/about/bandeau-aboutus.png'
+
 import './About.css'
 
 import {
@@ -581,13 +585,6 @@ const Content = () => {
           <CarousselLf />
         </div>
       </Article>
-    </div>
-  )
-}
-
-const AboutUs = () => {
-  return (
-    <div className="flex flex-col">
       {/*  <div className="absolute h-full">
         <HeadlineVertical
           headlines={headline4}
@@ -597,42 +594,89 @@ const AboutUs = () => {
           animationDuration="10s"
         />
       </div> */}
+    </div>
+  )
+}
 
+const AboutUs = () => {
+  const isMobile = useMediaQuery({ maxWidth: 767 })
+
+  return (
+    <div className="flex flex-col">
+      {isMobile && <BackgroundMove />}
       <div
         className="bg-fixed bg-cover bg-center bg-no-repeat flex-grow"
         style={{
-          backgroundImage: `url(${backgroundImage})`,
+          backgroundImage: isMobile
+            ? 'none'
+            : `url(${backgroundImage})`,
         }}
       >
-        <div
-          className="absolute top-[80px] animate-diagonal"
-          style={{ backfaceVisibility: 'hidden' }}
-          onAnimationEnd={() => {
-            const element = document.querySelector(
-              '.animate-diagonal'
-            )
-            if (element) {
-              element.classList.add('rotate')
-            }
-          }}
-        >
-          <img
-            className="max-xs:h-[90px] max-lg:h-[100px]"
-            src={ImgAboutUs}
-            alt=""
-          />
-        </div>
+        {/* IMAGE ABOUT US */}
+        {isMobile && (
+          <div
+            className="absolute top-[80px] animate-diagonal"
+            style={{ backfaceVisibility: 'hidden', zIndex: '100' }}
+            onAnimationEnd={() => {
+              const element = document.querySelector(
+                '.animate-diagonal'
+              )
+              if (element) {
+                element.classList.add('rotate')
+              }
+            }}
+          >
+            <img
+              className="max-xs:h-[90px] max-lg:h-[100px]"
+              src={ImgAboutUs}
+              alt=""
+            />
+          </div>
+        )}
 
         <div className="flex-col mx-auto sm:flex sm:flex-row gap-3 items-start pt-24 max-w-[1200px] p-8 justify-end">
-          <div className=" bg-white w-full sm:w-1/5">
+          <div
+            className={`bg-white w-full sm:w-1/5 ${
+              isMobile ? 'relative z-10' : ''
+            }`}
+          >
             <Profile />
           </div>
-          <div className="w-full sm:w-2/3">
+          <div
+            className={`w-full sm:w-2/3 ${
+              isMobile ? 'relative z-10' : ''
+            }`}
+          >
             <Content />
           </div>
         </div>
+
+        {!isMobile && (
+          <div
+            className="absolute top-[80px] animate-diagonal"
+            style={{ backfaceVisibility: 'hidden', zIndex: '100' }}
+            onAnimationEnd={() => {
+              const element = document.querySelector(
+                '.animate-diagonal'
+              )
+              if (element) {
+                element.classList.add('rotate')
+              }
+            }}
+          >
+            <img
+              className="max-xs:h-[90px] max-lg:h-[100px]"
+              src={ImgAboutUs}
+              alt=""
+            />
+          </div>
+        )}
       </div>
-      <Footer />
+      <div>
+        <div className={`${isMobile ? 'relative z-10' : ''}`}>
+          <Footer />
+        </div>
+      </div>
     </div>
   )
 }

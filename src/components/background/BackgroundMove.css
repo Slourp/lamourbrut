@@ -1,0 +1,63 @@
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #035F1D, #1d3927, #035F1D, #97D700);
+}
+
+.hearts-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  top: -10px;
+  color: red;
+  pointer-events: none;
+  animation: fallHearts linear infinite;
+  opacity: 0;
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+
+@keyframes fallHearts {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.background {
+  background-color: #000000; /* Couleur de fond par défaut */
+  animation: backgroundAnimation 10s infinite;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-color: #000000; /* Couleur initiale */
+  }
+  25% {
+    background-color: #FF00FF; /* Couleur 1 */
+  }
+  50% {
+    background-color: #FF0000; /* Couleur 2 */
+  }
+  75% {
+    background-color: #FFFFFF; /* Couleur 3 */
+  }
+  100% {
+    background-color: #000000; /* Couleur initiale */
+  }
+}
