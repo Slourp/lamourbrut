@@ -602,7 +602,22 @@ const AboutUs = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 })
 
   return (
-    <div className="flex flex-col">
+    <div
+      className="flex flex-col h-full"
+      style={{ position: 'relative', height: '100%', bottom: '0' }}
+    >
+      {!isMobile && ( // Afficher uniquement si ce n'est pas un mobile
+        <div className="h-full" style={{ height: '100%' }}>
+          <HeadlineVertical
+            headlines={headline4}
+            backgroundColor="bg-lbpink"
+            textColor="text-lbgreen"
+            textSize={32}
+            animationDuration="130s"
+          />
+        </div>
+      )}
+
       {isMobile && <BackgroundMove />}
       <div
         className="bg-fixed bg-cover bg-center bg-no-repeat flex-grow"
@@ -615,7 +630,7 @@ const AboutUs = () => {
         {/* IMAGE ABOUT US */}
         {isMobile && (
           <div
-            className="absolute top-[80px] animate-diagonal"
+            className="absolute top-[70px] animate-diagonal"
             style={{ backfaceVisibility: 'hidden', zIndex: '100' }}
             onAnimationEnd={() => {
               const element = document.querySelector(

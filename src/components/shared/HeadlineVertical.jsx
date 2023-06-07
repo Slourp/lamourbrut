@@ -1,6 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { headline4 } from '../../data/headlines';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 const Headline = ({
   headlines,
@@ -14,9 +13,9 @@ const Headline = ({
     <div
       className={`${
         fixed ? 'sticky-headline' : ''
-      } ${backgroundColor} font-arial-black flex justify-start items-start z-10`}
+      } ${backgroundColor} font-arial-black text-xl flex justify-center items-center z-10`}
       style={{
-        position: fixed ? 'sticky' : 'relative',
+        position: 'absolute',
         top: '0',
         left: '0',
         height: '100%',
@@ -24,14 +23,14 @@ const Headline = ({
       }}
     >
       <div
-        className="flex"
+        className="flex space-y-[100px]"
         style={{
           height: '100%',
           animation: `marquee-animation ${animationDuration} linear infinite`,
-          overflow: 'hidden',
           writingMode: 'vertical-rl',
-          width: 'max-content',
-          maxWidth: '100px',
+          width: '60px',
+          /*           maxWidth: '100px',
+           */
         }}
       >
         {headlines.map((headline, index) => (
@@ -42,6 +41,7 @@ const Headline = ({
               fontSize: `${textSize}px`,
               display: 'block',
               whiteSpace: 'nowrap',
+              transform: 'rotate(180deg)', // Inverser complètement le texte
             }}
           >
             {headline}
@@ -49,8 +49,8 @@ const Headline = ({
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
 Headline.propTypes = {
   headlines: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -59,7 +59,7 @@ Headline.propTypes = {
   textSize: PropTypes.number,
   animationDuration: PropTypes.string,
   fixed: PropTypes.bool,
-};
+}
 
 Headline.defaultProps = {
   fixed: false,
@@ -67,6 +67,6 @@ Headline.defaultProps = {
   textColor: 'text-white',
   textSize: 58,
   animationDuration: '300s',
-};
+}
 
-export default Headline;
+export default Headline

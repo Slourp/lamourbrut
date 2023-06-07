@@ -24,18 +24,14 @@
 /* VERTICAL HEADLINE */
 @keyframes marquee-animation {
   0% {
-    transform: translateY(100%);
+    transform: translateY(-100%);
   }
   100% {
-    transform: translateY(-100%);
+    transform: translateY(0%);
   }
 }
 
-.headline-vertical {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+
 
 .navbar {
   z-index: 1; /* Ajoutez cette ligne */
