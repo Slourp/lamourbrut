@@ -1,6 +1,5 @@
 import React, { Suspense, useEffect, useState } from 'react';
 import Image from '../assets/shop/eshop.jpg';
-import ImageMobile from '../assets/shop/bg-about-mobile.jpg'
 import Headline from '../components/shared/Headline';
 import { headline2 } from '../data/headlines';
 import Navbar from '../layout/Navbar';
