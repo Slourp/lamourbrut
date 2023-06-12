@@ -2,8 +2,8 @@ import React from 'react'
 
 const Mentions = () => {
   return (
-    <div className="mt-[90px] p-3" id="mentions">
-      <h2 className="text-xl text-center font-arial-black">
+    <div className="mt-[90px] p-3" id="mentionslegales">
+      <h2 className="text-xl text-center font-arial-black underline">
         Mentions Légales
       </h2>
       <div className="text-base max-xs:text-sm max-w-[800px] max-xs:leading-9 mx-auto leading-10 font-times-new-roman">

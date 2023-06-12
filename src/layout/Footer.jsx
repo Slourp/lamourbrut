@@ -46,9 +46,18 @@ const Footer = () => {
           <p className="text-sm md:text-base">75001 Paris, France</p>
         </div>
       </div>
-      <div className="flex justify-center gap-4 mt-5">
-        <a href="mentions" className="text-sm md:text-base">
+      <div className="flex justify-center gap-4 mt-5 max-xs:flex-col max-xs:items-center">
+        <a
+          href="mentionslegales"
+          className="text-sm md:text-base underline"
+        >
           Mentions légales
+        </a>
+        <a
+          href="politiquedeconfidentialite"
+          className="text-sm md:text-base underline"
+        >
+          Politique de confidentialités
         </a>
         <p className="text-sm md:text-base text-center">
           {' '}

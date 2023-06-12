@@ -13,6 +13,7 @@ import NotFound from './screens/NotFound'
  */
 import Navbar from './layout/Navbar'
 import Mentions from './components/Mentions/Mentions'
+import Confidentials from './components/Mentions/Confidentials'
 
 import './App.css'
 import Story from './screens/Story'
@@ -36,7 +37,11 @@ function App() {
           <Route path="about-us" element={<AboutUs />} />
           <Route path="story" element={<Story />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="mentions" element={<Mentions />} />
+          <Route path="mentionslegales" element={<Mentions />} />
+          <Route
+            path="politiquedeconfidentialite"
+            element={<Confidentials />}
+          />
         </Routes>
       </MainLayout>
     </Router>
