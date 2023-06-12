@@ -17,6 +17,7 @@ const Home = () => {
         backgroundColor="bg-black"
         textColor="text-white"
         textSize={32}
+        className="max-xs: font-extrabold"
       />
       <OurStory />
       <Headline
@@ -24,6 +25,7 @@ const Home = () => {
         backgroundColor="bg-black"
         textColor="text-white"
         textSize={32}
+        className="max-xs: font-extrabold"
       />
       <Video />
       <Backstage loading="lazy" />
@@ -32,6 +34,7 @@ const Home = () => {
         backgroundColor="bg-white"
         textColor=""
         textSize={32}
+        className="max-xs: font-extrabold"
       />
       <ContactUs loading="lazy" />
       <Footer />

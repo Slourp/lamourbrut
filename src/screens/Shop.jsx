@@ -67,6 +67,7 @@ const Products = () => {
             backgroundColor="bg-black"
             textColor="text-white"
             textSize={32}
+            className="max-xs: font-extrabold"
           />
         </div>
 
