@@ -61,8 +61,8 @@ function ContactForm() {
               name="user_name"
               id="name"
               placeholder="Enter your name"
-              required
               className="w-[300px] lg:w-[500px] sm:w-[300px] px-4 py-2 rounded-lg text-black"
+              required
             />
           </div>
           <div className="mb-4">

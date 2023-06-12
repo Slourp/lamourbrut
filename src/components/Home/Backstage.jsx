@@ -5,7 +5,7 @@ const Backstage = () => {
   return (
     <section className="bg-black p-2">
       <div className="container mx-auto m-8">
-        <h2 className="text-white text-5xl md:text-6xl lg:text-5xl xl:text-[90px] 2xl:text-7xl font-arial-black max-sm:mb-2">
+        <h2 className="text-white text-5xl md:text-6xl lg:text-5xl xl:text-[90px] 2xl:text-7xl font-arial-black max-xs:font-extrabold  max-sm:mb-2">
           Backstage
         </h2>
 
