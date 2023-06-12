@@ -34,10 +34,7 @@ const OurStory = () => {
         />
       </div>
       <div className="w-full md:w-[45%] sm:w-[50%] px-4 md:p-12 sm:p-10 sm:mt-[200px] flex flex-col justify-center items-baseline mt-3">
-        {/*  <h2 className="text-2xl md:text-4xl">
-            Our Story
-          </h2> */}
-        <h2 className="text-5xl md:text-6xl lg:text-5xl xl:text-[80px] 2xl:text-7xl font-arial-black">
+        <h2 className="text-5xl md:text-6xl lg:text-5xl xl:text-[80px] 2xl:text-7xl font-arial-black max-xs:font-extrabold">
           Our Story
         </h2>
         <p className=" text-justify mt-4 md:mt-8 max-w-[550px] text-lg md:text-[25px] font-times-new-roman">

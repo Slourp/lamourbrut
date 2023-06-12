@@ -13,7 +13,7 @@ const Hero = () => {
           whileInView="show"
           viewport={{ once: false, amount: 0.3 }}
           style={{ letterSpacing: '-4px', marginBottom: 0 }}
-          className="uppercase flex-wrap mt-[25vh] "
+          className="uppercase flex-wrap mt-[25vh] font-extrabold"
         >
           <span
             style={{}}
@@ -22,7 +22,7 @@ const Hero = () => {
             L'Amour
           </span>
           <span
-            className="title font-times-new-roman text-[60px] lg:text-[120px] ml-4 max-xs:text-[45px]"
+            className="title font-times-new-roman text-[60px] lg:text-[120px] ml-4 max-xs:text-[45px] font-extrabold"
             style={{}}
           >
             Brut

@@ -12,6 +12,8 @@ import NotFound from './screens/NotFound'
 /* import CountDownVisitors from './components/CountDown/CountDownVisitors'
  */
 import Navbar from './layout/Navbar'
+import Mentions from './components/Mentions/Mentions'
+import Confidentials from './components/Mentions/Confidentials'
 
 import './App.css'
 import Story from './screens/Story'
@@ -37,6 +39,11 @@ function App() {
           <Route path="story" element={<Story />} />
           <Route path="*" element={<NotFound />} />
           <Route path="test" element={<Layout />} />
+          <Route path="mentionslegales" element={<Mentions />} />
+          <Route
+            path="politiquedeconfidentialite"
+            element={<Confidentials />}
+          />
         </Routes>
       </MainLayout>
     </Router>

@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import Image from '../assets/shop/eshop.jpg';
 import Headline from '../components/shared/Headline';
 import { headline2 } from '../data/headlines';
@@ -9,6 +9,22 @@ const CountDown = React.lazy(() => import('../components/shared/CountDown'));
 const NewsLetter = React.lazy(() => import('../components/shared/NewsLetter'));
 
 const Products = () => {
+  const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileOrTablet(window.innerWidth <= 1023);
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -27,8 +43,9 @@ const Products = () => {
         className="overflow-hidden flex-col h-[100%] pt-2 z-0"
         style={{
           backgroundImage: `url(${Image})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundSize: isMobileOrTablet ? 'cover' : 'cover',
+          backgroundPosition: isMobileOrTablet ? 'right -100px' : 'center',
+          backgroundRepeat: isMobileOrTablet ? 'no-repeat' : 'initial',
         }}
       >
         <div className="flex flex-col justify-center items-center h-[70vh] relative">
@@ -50,6 +67,7 @@ const Products = () => {
             backgroundColor="bg-black"
             textColor="text-white"
             textSize={32}
+            className="max-xs: font-extrabold"
           />
         </div>
 

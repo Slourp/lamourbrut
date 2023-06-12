@@ -1,6 +1,6 @@
 import React from 'react'
 import { useMediaQuery } from 'react-responsive'
-
+import videoBackground from '../assets/video/story.mp4'
 import backgroundImage from '../assets/about/about-us.jpg'
 import Headline from '../components/shared/Headline'
 import imgProfile from '../assets/about/profile.png'
@@ -15,7 +15,6 @@ import CarousselUatw from '../components/Caroussel/CarousselUatw'
 import CarousselAwp from '../components/Caroussel/CarousselAwp'
 import CarousselLf from '../components/Caroussel/CarousselLf'
 import HeadlineVertical from '../components/shared/HeadlineVertical'
-import BackgroundMove from '../components/background/BackgroundMove'
 import ImgAboutUs from '../assets/about/bandeau-aboutus.png'
 
 import './About.css'
@@ -268,105 +267,107 @@ const Content = () => {
               </div>
             </div>
 
-            <div className="flex">
-              {/* MODELS */}
-              <div className="flex flex-col items-baseline">
-                <p className="max-xs:text-[12px] font-arial-black mx-auto max-lg:text-[12px]">
-                  MODELS
-                </p>
-                <div className="flex">
-                  <ul className="flex flex-col">
-                    <div className="flex flex-col items-baseline font-times-new-roman max-xs:text-[12px] mx-2">
-                      <a
-                        className="text-lbgreen underline"
-                        href="https://www.instagram.com/ines_dacosta_/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        INES
-                      </a>
-                      <a
-                        className="text-lbgreen underline "
-                        href="https://www.instagram.com/ia.steph/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        STEPHANE
-                      </a>
-                      <a
-                        className="text-lbgreen underline "
-                        href="https://www.instagram.com/aminepuisable/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        AMINE
-                      </a>
-                      <a
-                        className="text-lbgreen underline "
-                        href="https://www.instagram.com/gnurbanel/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        LENA
-                      </a>
-                    </div>
-                  </ul>
-                  <ul className="flex flex-col items-baseline max-xs:text-[12px]">
-                    <div className="flex flex-col items-baseline font-times-new-roman">
-                      <a
-                        className="text-lbgreen underline"
-                        href="https://www.instagram.com/delgcht/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        DELPHINE
-                      </a>
-                      <a
-                        className="text-lbgreen underline "
-                        href="https://www.instagram.com/cmartindeline/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        CELIA
-                      </a>
-                      <a
-                        className="text-lbgreen underline"
-                        href="https://www.instagram.com/mak_kitah/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        MAKKITÄH
-                      </a>
-                      <a
-                        className="text-lbgreen underline "
-                        href="https://www.instagram.com/ylanbougaieff/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        YLAN
-                      </a>
-                    </div>
-                  </ul>
+            <div className="flex gap-4">
+              <div>
+                {/* MODELS */}
+                <div className="flex flex-col items-baseline">
+                  <p className="max-xs:text-[12px] font-arial-black mx-auto max-lg:text-[12px]">
+                    MODELS
+                  </p>
+                  <div className="flex">
+                    <ul className="flex flex-col">
+                      <div className="flex flex-col items-baseline font-times-new-roman max-xs:text-[12px] mx-2">
+                        <a
+                          className="text-lbgreen underline"
+                          href="https://www.instagram.com/ines_dacosta_/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          INES
+                        </a>
+                        <a
+                          className="text-lbgreen underline "
+                          href="https://www.instagram.com/ia.steph/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          STEPHANE
+                        </a>
+                        <a
+                          className="text-lbgreen underline "
+                          href="https://www.instagram.com/aminepuisable/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          AMINE
+                        </a>
+                        <a
+                          className="text-lbgreen underline "
+                          href="https://www.instagram.com/gnurbanel/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          LENA
+                        </a>
+                      </div>
+                    </ul>
+                    <ul className="flex flex-col items-baseline max-xs:text-[12px]">
+                      <div className="flex flex-col items-baseline font-times-new-roman">
+                        <a
+                          className="text-lbgreen underline"
+                          href="https://www.instagram.com/delgcht/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          DELPHINE
+                        </a>
+                        <a
+                          className="text-lbgreen underline "
+                          href="https://www.instagram.com/cmartindeline/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          CELIA
+                        </a>
+                        <a
+                          className="text-lbgreen underline"
+                          href="https://www.instagram.com/mak_kitah/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          MAKKITÄH
+                        </a>
+                        <a
+                          className="text-lbgreen underline "
+                          href="https://www.instagram.com/ylanbougaieff/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          YLAN
+                        </a>
+                      </div>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            {/* PLACE */}
-            <div className="flex flex-col">
-              <p className="max-xs:text-[12px] font-arial-black max-lg:text-[12px]">
-                PLACE
-              </p>
-              <div className="flex flex-col font-times-new-roman max-xs:text-[12px]">
-                <a
-                  className="underline text-lbgreen"
-                  href="https://www.instagram.com/rouchonparis/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  ROUCHON {/* PARIS */}
-                </a>
-              </div>
+              {/* PLACE */}
+              <div className="flex flex-col">
+                <p className="max-xs:text-[12px] font-arial-black max-lg:text-[12px]">
+                  PLACE
+                </p>
+                <div className="flex flex-col font-times-new-roman max-xs:text-[12px]">
+                  <a
+                    className="underline text-lbgreen"
+                    href="https://www.instagram.com/rouchonparis/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    ROUCHON {/* PARIS */}
+                  </a>
+                </div>
 
-              <div className="flex flex-col font-times-new-roman max-xs:text-[12px]" />
+                <div className="flex flex-col font-times-new-roman max-xs:text-[12px]" />
+              </div>
             </div>
           </div>
 
@@ -606,7 +607,7 @@ const AboutUs = () => {
       className="flex flex-col h-full"
       style={{ position: 'relative', height: '100%', bottom: '0' }}
     >
-      {!isMobile && ( // Afficher uniquement si ce n'est pas un mobile
+      {!isMobile && (
         <div className="h-full" style={{ height: '100%' }}>
           <HeadlineVertical
             headlines={headline4}
@@ -618,7 +619,6 @@ const AboutUs = () => {
         </div>
       )}
 
-      {isMobile && <BackgroundMove />}
       <div
         className="bg-fixed bg-cover bg-center bg-no-repeat flex-grow"
         style={{
@@ -627,7 +627,17 @@ const AboutUs = () => {
             : `url(${backgroundImage})`,
         }}
       >
-        {/* IMAGE ABOUT US */}
+        {isMobile && (
+          <video
+            autoPlay
+            muted
+            loop
+            className="absolute top-0 left-0 w-full h-full object-cover"
+          >
+            <source src={videoBackground} type="video/mp4" />
+          </video>
+        )}
+
         {isMobile && (
           <div
             className="absolute top-[70px] animate-diagonal"
@@ -687,6 +697,7 @@ const AboutUs = () => {
           </div>
         )}
       </div>
+
       <div>
         <div className={`${isMobile ? 'relative z-10' : ''}`}>
           <Footer />

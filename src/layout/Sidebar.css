@@ -91,3 +91,15 @@ span {
   font-family: 'Arial Black', sans-serif;
 }
 
+
+@media (max-width: 768px) {
+  .nav-sidebar {
+    /* Styles spécifiques à la version mobile */
+    font-family: 'Arial Black', sans-serif; /* Police pour la version mobile */
+  }
+
+  .nav-text a {
+    /* Styles spécifiques à la version mobile */
+    font-family: 'Arial Black', sans-serif; /* Police pour la version mobile */
+  }
+}

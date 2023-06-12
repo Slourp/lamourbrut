@@ -40,9 +40,29 @@ const Footer = () => {
           <FaInstagramSquare className="text-2xl md:text-4xl text-lbpink" />
         </a>
       </div>
-      <div className="text-center mt-10 md:mt-14">
-        <p className="text-sm md:text-base">L'Amour Brut</p>
-        <p className="text-sm md:text-base">75001 Paris, France</p>
+      <div className="flex justify-center">
+        <div className="text-center mt-10 md:mt-14">
+          <p className="text-sm md:text-base">L'Amour Brut</p>
+          <p className="text-sm md:text-base">75001 Paris, France</p>
+        </div>
+      </div>
+      <div className="flex justify-center gap-4 mt-5 max-xs:flex-col max-xs:items-center">
+        <a
+          href="mentionslegales"
+          className="text-sm md:text-base underline"
+        >
+          Mentions légales
+        </a>
+        <a
+          href="politiquedeconfidentialite"
+          className="text-sm md:text-base underline"
+        >
+          Politique de confidentialités
+        </a>
+        <p className="text-sm md:text-base text-center">
+          {' '}
+          © copyright 2023 L'Amour Brut
+        </p>
       </div>
     </section>
   )
