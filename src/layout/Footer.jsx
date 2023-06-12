@@ -44,15 +44,17 @@ const Footer = () => {
         <div className="text-center mt-10 md:mt-14">
           <p className="text-sm md:text-base">L'Amour Brut</p>
           <p className="text-sm md:text-base">75001 Paris, France</p>
-          {/*   <p className="absolute text-sm md:text-base">
-            Mentions légales
-          </p> */}
         </div>
       </div>
-      <p className="text-sm md:text-base text-center mt-3">
-        {' '}
-        © copyright 2023 L'Amour Brut
-      </p>
+      <div className="flex justify-center gap-4 mt-5">
+        <a href="mentions" className="text-sm md:text-base">
+          Mentions légales
+        </a>
+        <p className="text-sm md:text-base text-center">
+          {' '}
+          © copyright 2023 L'Amour Brut
+        </p>
+      </div>
     </section>
   )
 }

@@ -12,10 +12,10 @@ import NotFound from './screens/NotFound'
 /* import CountDownVisitors from './components/CountDown/CountDownVisitors'
  */
 import Navbar from './layout/Navbar'
+import Mentions from './components/Mentions/Mentions'
 
 import './App.css'
 import Story from './screens/Story'
-import BackgroundMove from './components/background/BackgroundMove'
 
 function MainLayout({ children }) {
   return (
@@ -36,7 +36,7 @@ function App() {
           <Route path="about-us" element={<AboutUs />} />
           <Route path="story" element={<Story />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="test" element={<BackgroundMove />} />
+          <Route path="mentions" element={<Mentions />} />
         </Routes>
       </MainLayout>
     </Router>
