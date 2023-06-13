@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Client from 'shopify-buy'
+import { BsFillBasket3Fill } from 'react-icons/bs'
 import Basket from './Basket'
 import ProductsDetails from './ProductsDetails'
 
@@ -103,9 +104,9 @@ const Products = () => {
   }
 
   return (
-    <div className="flex flex-col bg-lbpinklight">
-      <h2 className="font-arial-black text-[80px] pt-7 text-lbpink pb-5 pl-9 rotate">
-        Accessories
+    <div className="flex flex-col bg-lbpinklight pt-[130px]">
+      <h2 className="font-arial-black text-[120px] text-lbpink px-[65px] absolute">
+        Products
       </h2>
       <ul className="flex mt-[150px justify-center flex-wrap  mx-auto gap-12 pt-[70px]">
         {products.map((product, index) => (
@@ -117,29 +118,23 @@ const Products = () => {
           >
             {product.images && product.images.length > 0 && (
               <img
-                className="w-full h-auto mx-auto h-[300px] object-cover"
+                className="w-full h-auto mx-auto h-[300px] object-cover cursor-pointer"
                 src={product.images[0].src}
                 alt={product.title}
                 onClick={() => handleProductClick(product)}
               />
             )}
-            <h3 className="text-lg font-semibold">{product.title}</h3>
-            {product.variants && product.variants.length > 0 && (
-              <p className="text-gray-600">
-                {product.variants[0].price.amount}{' '}
-                {product.variants[0].price.currencyCode}
-              </p>
-            )}
-
-            {product.variants && product.variants.length > 0 && (
-              <select className="mt-3 p-2 border border-gray-300 rounded">
-                {product.variants.map((variant) => (
-                  <option key={variant.id} value={variant.id}>
-                    {variant.title}
-                  </option>
-                ))}
-              </select>
-            )}
+            <div className="flex justify-between">
+              <h3 className="text-lg font-semibold">
+                {product.title}
+              </h3>
+              {product.variants && product.variants.length > 0 && (
+                <p className="text-gray-600">
+                  {product.variants[0].price.amount}{' '}
+                  {product.variants[0].price.currencyCode}
+                </p>
+              )}
+            </div>
 
             <button
               className="mt-3 px-4 py-2 bg-black text-white font-semibold rounded hover:bg-blue-600"
@@ -149,7 +144,7 @@ const Products = () => {
                 handleAddToCart(product.variants[0].id)
               }
             >
-              Ajouter au panier
+              <BsFillBasket3Fill />
             </button>
           </li>
         ))}

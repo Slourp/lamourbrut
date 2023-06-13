@@ -8,16 +8,16 @@ const ProductsDetails = ({ product }) => {
         <div className="flex justify-around items-center">
           {product.images && product.images.length > 0 && (
             <img
-              className="w-[400px]"
+              className="w-[500px]"
               src={product.images[0].src}
               alt={product.title}
             />
           )}
           <div>
-            <h3>{product.title}</h3>
+            <h3 className='text-[60px]'>{product.title}</h3>
 
             {product.variants && product.variants.length > 0 && (
-              <p>
+              <p className='mb-5'>
                 {product.variants[0].price.amount}{' '}
                 {product.variants[0].price.currencyCode}
               </p>
