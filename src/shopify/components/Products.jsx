@@ -6,9 +6,10 @@ const Products = () => {
   const [products, setProducts] = useState([])
   const [cartItems, setCartItems] = useState([])
   const [cartId, setCartId] = useState(null)
+  const [selectedProduct, setSelectedProduct] = useState(null)
   const client = Client.buildClient({
-    storefrontAccessToken: '7b9e6cf11f4716bd533e7995c43f7777',
-    domain: '670f6a.myshopify.com',
+    storefrontAccessToken: '1d9f0f0b44a441917d1d68078f320d0f',
+    domain: '0b2812-2.myshopify.com',
   })
 
   useEffect(() => {
@@ -45,6 +46,10 @@ const Products = () => {
     fetchProducts()
   }, [])
 
+  const handleProductClick = (product) => {
+    setSelectedProduct(product)
+  }
+
   const handleAddToCart = async (variantId) => {
     const lineItemToAdd = {
       variantId,
@@ -63,7 +68,7 @@ const Products = () => {
       )
 
       if (addedItem) {
-        setCartItems((prevItems) => [...prevItems, addedItem]) // Utilisez le setter de state pour ajouter l'article au panier
+        setCartItems((prevItems) => [...prevItems, addedItem])
       }
     } catch (error) {
       console.error(
@@ -88,7 +93,7 @@ const Products = () => {
 
   return (
     <div className="flex flex-col">
-      <ul className="mt-[150px] flex max-w-[800px] mx-auto gap-5">
+      <ul className="mt-[150px] flex max-w-[1200px] mx-auto gap-5">
         {products.map((product) => (
           <li
             key={product.id}
@@ -106,11 +111,14 @@ const Products = () => {
                 className="w-[300px]"
                 src={product.images[0].src}
                 alt={product.title}
+                onClick={() => handleProductClick(product)}
               />
             )}
-            <p className="mt-3 text-gray-700">
-              {product.description}
-            </p>
+            {selectedProduct === product && (
+              <p className="mt-3 text-gray-700">
+                {product.description}
+              </p>
+            )}
 
             {product.variants && product.variants.length > 0 && (
               <select className="mt-3 p-2 border border-gray-300 rounded">
@@ -135,6 +143,40 @@ const Products = () => {
           </li>
         ))}
       </ul>
+
+      {selectedProduct && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-white p-5 w-[1200px] h-[600px]">
+            <h3 className="text-lg font-semibold">
+              {selectedProduct.title}
+            </h3>
+            {selectedProduct.images &&
+              selectedProduct.images.length > 0 && (
+                <img
+                  className="w-[300px]"
+                  src={selectedProduct.images[0].src}
+                  alt={selectedProduct.title}
+                />
+              )}
+            {selectedProduct.variants &&
+              selectedProduct.variants.length > 0 && (
+                <p className="text-gray-600">
+                  Prix : {selectedProduct.variants[0].price.amount}{' '}
+                  {selectedProduct.variants[0].price.currencyCode}
+                </p>
+              )}
+            <p className="mt-3 text-gray-700">
+              {selectedProduct.description}
+            </p>
+            <button
+              className="mt-3 px-4 py-2 bg-black text-white font-semibold rounded hover:bg-blue-600"
+              onClick={() => setSelectedProduct(null)}
+            >
+              Fermer
+            </button>
+          </div>
+        </div>
+      )}
       <Basket cartItems={cartItems} CartItem={CartItem} />
     </div>
   )
