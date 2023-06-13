@@ -105,14 +105,14 @@ const Products = () => {
 
   return (
     <div className="flex flex-col bg-lbpinklight pt-[130px]">
-      <h2 className="font-arial-black text-[120px] text-lbpink px-[65px] absolute">
+      <h2 className="font-arial-black text-[100px] text-lbpink px-[190px] absolute">
         Products
       </h2>
-      <ul className="flex mt-[150px justify-center flex-wrap  mx-auto gap-12 pt-[70px]">
+      <ul className="flex justify-center flex-wrap  mx-auto gap-[120px] pt-[70px]">
         {products.map((product, index) => (
           <li
             key={product.id}
-            className={`bg-white w-[600px] border border-gray-200 p-5 rounded ${
+            className={`bg-white w-[450px] border border-gray-200 p-5 rounded ${
               index % 2 === 0 ? '' : ''
             }`}
           >
