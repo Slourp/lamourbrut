@@ -103,28 +103,34 @@ const Products = () => {
   }
 
   return (
-    <div className="flex flex-col">
-      <ul className="mt-[150px] flex max-w-[1200px] mx-auto gap-5">
-        {products.map((product) => (
+    <div className="flex flex-col bg-lbpinklight">
+      <h2 className="font-arial-black text-[80px] pt-7 text-lbpink pb-5 pl-9 rotate">
+        Accessories
+      </h2>
+      <ul className="flex mt-[150px justify-center flex-wrap  mx-auto gap-12 pt-[70px]">
+        {products.map((product, index) => (
           <li
             key={product.id}
-            className="border border-gray-200 p-5 rounded"
+            className={`bg-white w-[600px] border border-gray-200 p-5 rounded ${
+              index % 2 === 0 ? '' : ''
+            }`}
           >
-            <h3 className="text-lg font-semibold">{product.title}</h3>
-            {product.variants && product.variants.length > 0 && (
-              <p className="text-gray-600">
-                Prix : {product.variants[0].price.amount}{' '}
-                {product.variants[0].price.currencyCode}
-              </p>
-            )}
             {product.images && product.images.length > 0 && (
               <img
-                className="w-[300px] h-[300px] object-cover"
+                className="w-full h-auto mx-auto h-[300px] object-cover"
                 src={product.images[0].src}
                 alt={product.title}
                 onClick={() => handleProductClick(product)}
               />
             )}
+            <h3 className="text-lg font-semibold">{product.title}</h3>
+            {product.variants && product.variants.length > 0 && (
+              <p className="text-gray-600">
+                {product.variants[0].price.amount}{' '}
+                {product.variants[0].price.currencyCode}
+              </p>
+            )}
+
             {product.variants && product.variants.length > 0 && (
               <select className="mt-3 p-2 border border-gray-300 rounded">
                 {product.variants.map((variant) => (
