@@ -1,23 +1,42 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { HiArrowLeft } from 'react-icons/hi'
 import { TbTruckDelivery, TbRulerMeasure } from 'react-icons/tb'
 import { FaShoppingCart } from 'react-icons/fa'
 
 const ProductsDetails = ({ product }) => {
-  return (
-    <div className="mt-[150px]">
-      <div className="flex flex-col">
-        <div className="flex justify-around items-center">
-          {product.images && product.images.length > 0 && (
-            <img
-              className="w-[500px]"
-              src={product.images[0].src}
-              alt={product.title}
-            />
-          )}
-          <div>
-            <h3 className="text-[60px]">{product.title}</h3>
+  useEffect(() => {
+    window.scrollTo(0, 0) // Fait défiler la page vers le haut lorsque le composant se monte
+  }, [])
 
+  return (
+    <div className="mt-10">
+      <div className="flex flex-col">
+        <div className="flex justify-around  mt-[100px]">
+          <div>
+            <div className="flex justify-center">
+              {product.images && product.images.length > 0 && (
+                <img
+                  className="w-[500px]"
+                  src={product.images[0].src}
+                  alt={product.title}
+                />
+              )}
+            </div>
+            <div className="flex flex-col items-center mt-5">
+              {product.images &&
+                product.images.length > 0 &&
+                product.images.map((image, index) => (
+                  <img
+                    key={index}
+                    className="product-image w-[500px] h-[500px] object-cover my-2 cursor-pointer"
+                    src={image.src}
+                    alt={product.title}
+                  />
+                ))}
+            </div>
+          </div>
+          <div>
+            <h3 className="text-3xl">{product.title}</h3>
             {product.variants && product.variants.length > 0 && (
               <p className="mb-5">
                 {product.variants[0].price.amount}{' '}
@@ -64,7 +83,7 @@ const ProductsDetails = ({ product }) => {
               onClick={() => {
                 window.location.href = '/test'
               }}
-              className="text-black flex items-center text-[24px] font-extrabold border-[6px] border-black uppercase p-1 px-5 mt-12"
+              className="text-black flex items-center text-xl font-extrabold border-6 border-black uppercase p-1 px-5 mt-12"
             >
               <HiArrowLeft className="mr-4" /> Back
             </button>
