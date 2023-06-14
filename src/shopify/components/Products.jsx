@@ -10,8 +10,8 @@ const Products = () => {
   const [cartId, setCartId] = useState(null)
   const [selectedProduct, setSelectedProduct] = useState(null)
   const client = Client.buildClient({
-    storefrontAccessToken: '1d9f0f0b44a441917d1d68078f320d0f',
-    domain: '0b2812-2.myshopify.com',
+    storefrontAccessToken: '066e26865bdd41f342997f449e1ea7a3',
+    domain: '10a614.myshopify.com',
   })
 
   useEffect(() => {
@@ -105,14 +105,17 @@ const Products = () => {
 
   return (
     <div className="flex flex-col bg-white pt-[130px]">
-      <h2 className="font-arial-black text-[70px] text-black px-[325px] absolute">
-        Products
+      <h2 className="font-arial-black text-[120px] text-lbpink rotate absolute">
+        SHOP
+      </h2>
+      <h2 className="font-arial-black text-[40px] text-black px-[335px] absolute ">
+        NEW ARRIVALS
       </h2>
       <ul className="grid grid-cols-2 mx-auto gap-[130px] pt-[70px]">
         {products.map((product, index) => (
           <li
             key={product.id}
-            className={`bg-white w-[300px] border border-gray-200 p-5 rounded ${
+            className={`bg-white w-[300px] border border-gray-200 p-5 rounded hover:border-lbpink ${
               index % 2 === 0 ? '' : ''
             }`}
           >
@@ -137,7 +140,7 @@ const Products = () => {
             </div>
 
             <button
-              className="mt-3 px-4 py-2 bg-black text-white font-semibold rounded hover:bg-blue-600"
+              className="mt-3 px-4 py-2 bg-black text-white font-semibold rounded hover:bg-lbpink "
               onClick={() =>
                 product.variants &&
                 product.variants.length > 0 &&

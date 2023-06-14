@@ -77,13 +77,13 @@ const ProductsDetails = ({ product }) => {
                 {product.description}
               </p>
             )}
-            {/* Ajoutez d'autres informations du produit ici */}
             <button
               type="button"
               onClick={() => {
                 window.location.href = '/test'
               }}
               className="text-black flex items-center text-xl font-extrabold border-6 border-black uppercase p-1 px-5 mt-12"
+              style={{ border: '2px solid black' }}
             >
               <HiArrowLeft className="mr-4" /> Back
             </button>
