@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { HiArrowLeft } from 'react-icons/hi'
 import { TbTruckDelivery, TbRulerMeasure } from 'react-icons/tb'
 import { FaShoppingCart } from 'react-icons/fa'
@@ -7,6 +7,19 @@ const ProductsDetails = ({ product }) => {
   useEffect(() => {
     window.scrollTo(0, 0) // Fait défiler la page vers le haut lorsque le composant se monte
   }, [])
+
+  const [isSizeSelected, setIsSizeSelected] = useState(false)
+  const [isDeliverySelected, setIsDeliverySelected] = useState(false)
+
+  const handleSizeClick = () => {
+    setIsSizeSelected(true)
+    setIsDeliverySelected(false)
+  }
+
+  const handleDeliveryClick = () => {
+    setIsSizeSelected(false)
+    setIsDeliverySelected(true)
+  }
 
   return (
     <div className="mt-10">
@@ -47,6 +60,7 @@ const ProductsDetails = ({ product }) => {
 
             <div className="flex gap-5 items-center">
               <div
+                className="cursor-pointer"
                 style={{
                   backgroundColor: 'black',
                   borderRadius: '50%',
@@ -59,21 +73,31 @@ const ProductsDetails = ({ product }) => {
               >
                 <FaShoppingCart size={30} color="white" />
               </div>
-              <p>ADD TO CART</p>
             </div>
+            <div className="border-dashed border-2 border-black my-8" />
 
-            <div className="py-5 flex justify-start gap-7">
-              <div>
+            <div className="py-0 flex justify-start gap-7">
+              <div
+                className={`cursor-pointer ${
+                  isSizeSelected ? 'underline' : ''
+                }`}
+                onClick={handleSizeClick}
+              >
                 <TbRulerMeasure size={30} />
                 <p className="text-xs text-center">SIZE</p>
               </div>
-              <div>
+              <div
+                className={`cursor-pointer ${
+                  isDeliverySelected ? 'underline bold' : ''
+                }`}
+                onClick={handleDeliveryClick}
+              >
                 <TbTruckDelivery size={30} />
                 <p className="text-xs text-center">DELIVERY</p>
               </div>
             </div>
             {product.description && (
-              <p className="max-w-[600px] leading-9">
+              <p className="max-w-[600px] mt-5 leading-9">
                 {product.description}
               </p>
             )}
