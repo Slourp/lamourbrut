@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { HiArrowLeft } from 'react-icons/hi'
 import { TbTruckDelivery, TbRulerMeasure } from 'react-icons/tb'
 import { FaShoppingCart } from 'react-icons/fa'
+import { MdDescription } from 'react-icons/md'
 
 const ProductsDetails = ({ product }) => {
   useEffect(() => {
@@ -10,15 +11,24 @@ const ProductsDetails = ({ product }) => {
 
   const [isSizeSelected, setIsSizeSelected] = useState(false)
   const [isDeliverySelected, setIsDeliverySelected] = useState(false)
+  const [showDelivery, setShowDelivery] = useState(false)
 
   const handleSizeClick = () => {
     setIsSizeSelected(true)
     setIsDeliverySelected(false)
+    setShowDelivery(false)
   }
 
   const handleDeliveryClick = () => {
     setIsSizeSelected(false)
     setIsDeliverySelected(true)
+    setShowDelivery(true)
+  }
+
+  const handleDescriptionClick = () => {
+    setIsSizeSelected(false)
+    setIsDeliverySelected(false)
+    setShowDelivery(false)
   }
 
   return (
@@ -78,16 +88,28 @@ const ProductsDetails = ({ product }) => {
 
             <div className="py-0 flex justify-start gap-7">
               <div
-                className={`cursor-pointer ${
+                className={`cursor-pointer flex flex-col items-center ${
+                  isSizeSelected ? 'underline' : ''
+                }`}
+                onClick={handleSizeClick}
+              >
+                <MdDescription
+                  size={30}
+                  onClick={handleDescriptionClick}
+                />
+                <p className="text-xs text-center">DETAILS</p>
+              </div>
+              <div
+                className={`cursor-pointer flex flex-col items-center ${
                   isSizeSelected ? 'underline' : ''
                 }`}
                 onClick={handleSizeClick}
               >
                 <TbRulerMeasure size={30} />
-                <p className="text-xs text-center">SIZE</p>
+                <p className="text-xs text-center">SIZE & FIT</p>
               </div>
               <div
-                className={`cursor-pointer ${
+                className={`cursor-pointer flex flex-col items-center ${
                   isDeliverySelected ? 'underline bold' : ''
                 }`}
                 onClick={handleDeliveryClick}
@@ -96,11 +118,19 @@ const ProductsDetails = ({ product }) => {
                 <p className="text-xs text-center">DELIVERY</p>
               </div>
             </div>
-            {product.description && (
-              <p className="max-w-[600px] mt-5 leading-9">
-                {product.description}
-              </p>
-            )}
+            <div
+              className="max-w-[600px] mt-5 leading-9"
+              style={{ minHeight: '100px' }}
+            >
+              {showDelivery ? (
+                <p>
+                  Worldwide shipping with Colissimo. All sales are
+                  final.
+                </p>
+              ) : (
+                <p>{product.description}</p>
+              )}
+            </div>
             <button
               type="button"
               onClick={() => {

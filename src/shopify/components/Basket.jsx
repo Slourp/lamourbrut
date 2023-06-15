@@ -48,7 +48,7 @@ const Basket = ({ cartItems, onRemoveItem }) => {
           <FaShoppingBasket size={20} />
         </button>
         {isOpen && (
-          <div className="absolute top-8 right-0 w-64 bg-white shadow-lg">
+          <div className="absolute top-8 right-0 w-[400px] h-screen bg-white shadow-lg">
             <div className="p-4">
               <h3 className="text-lg font-bold">Panier</h3>
               <ul className="max-w-[60px]">

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { FaShoppingCart } from 'react-icons/fa'
 import Logo from '../assets/lamourbrutlogo.png'
 import Sidebar from './Sidebar'
 import './Navbar.css'
@@ -80,6 +81,13 @@ const Navbar = () => {
           >
             ABOUT US
           </button>
+          {/*  <button
+            className="font-extrabold px-2"
+            onClick={() => handleRedirect('/about-us')}
+            type="button"
+          >
+            <FaShoppingCart size={25} />
+          </button> */}
         </div>
       )}
     </nav>
