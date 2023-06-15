@@ -23,32 +23,17 @@ const CartItem = ({ itemId, name, imgSrc, price, onRemoveItem }) => {
   )
 }
 
-const Basket = ({ cartItems, onRemoveItem }) => {
-  const [isOpen, setIsOpen] = useState(false)
-
-  useEffect(() => {
-    if (cartItems.length > 0) {
-      setIsOpen(true)
-    } else {
-      setIsOpen(false)
-    }
-  }, [cartItems])
-
-  const toggleBasket = () => {
-    setIsOpen(!isOpen)
-  }
-
+const Basket = ({
+  cartItems,
+  onRemoveItem,
+  isOpen,
+  toggleBasket,
+}) => {
   return (
-    <div className="fixed top-[40px] right-0 m-4 mt-10">
-      <div className="relative">
-        <button
-          className="p-2 bg-gray-200 rounded-full relative"
-          onClick={toggleBasket}
-        >
-          <FaShoppingBasket size={20} />
-        </button>
+    <div className="fixed  right-0 m-4 mt-10">
+      <div className="">
         {isOpen && (
-          <div className="absolute top-8 right-0 w-[400px] h-screen bg-white shadow-lg">
+          <div className="absolute top-8 right-0 w-[400px] h-screen shadow-lg bg-lbpink">
             <div className="p-4">
               <h3 className="text-lg font-bold">Panier</h3>
               <ul className="max-w-[60px]">
@@ -59,7 +44,7 @@ const Basket = ({ cartItems, onRemoveItem }) => {
                     name={item.title}
                     imgSrc={item.variant.image.src}
                     price={item.variant.price.amount}
-                    onRemoveItem={onRemoveItem} // Utilisez onRemoveItem au lieu de removeCartItem
+                    onRemoveItem={onRemoveItem}
                   />
                 ))}
               </ul>

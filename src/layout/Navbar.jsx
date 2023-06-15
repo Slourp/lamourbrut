@@ -11,6 +11,7 @@ const Navbar = () => {
   const [lastScrollPos, setLastScrollPos] = useState(0)
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
   const [cartItems, setCartItems] = useState([])
+  const [isBasketOpen, setIsBasketOpen] = useState(false)
 
   const handleRemoveItem = (itemId) => {
     const updatedCartItems = cartItems.filter(
@@ -48,6 +49,10 @@ const Navbar = () => {
 
   const handleRedirect = (path) => {
     window.location.href = path
+  }
+
+  const toggleBasket = () => {
+    setIsBasketOpen(!isBasketOpen)
   }
 
   return (
@@ -91,7 +96,19 @@ const Navbar = () => {
           >
             ABOUT US
           </button>
+          <button className="" onClick={toggleBasket}>
+            <FaShoppingCart size={20} />
+          </button>
         </div>
+      )}
+
+      {isBasketOpen && (
+        <Basket
+          cartItems={cartItems}
+          onRemoveItem={handleRemoveItem}
+          isOpen={isBasketOpen}
+          toggleBasket={toggleBasket}
+        />
       )}
     </nav>
   )
