@@ -2,12 +2,22 @@ import React, { useState, useEffect } from 'react'
 import { FaShoppingCart } from 'react-icons/fa'
 import Logo from '../assets/lamourbrutlogo.png'
 import Sidebar from './Sidebar'
+import Basket from '../shopify/components/Basket'
+
 import './Navbar.css'
 
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true)
   const [lastScrollPos, setLastScrollPos] = useState(0)
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
+  const [cartItems, setCartItems] = useState([])
+
+  const handleRemoveItem = (itemId) => {
+    const updatedCartItems = cartItems.filter(
+      (item) => item.id !== itemId
+    )
+    setCartItems(updatedCartItems)
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -81,13 +91,6 @@ const Navbar = () => {
           >
             ABOUT US
           </button>
-          {/*  <button
-            className="font-extrabold px-2"
-            onClick={() => handleRedirect('/about-us')}
-            type="button"
-          >
-            <FaShoppingCart size={25} />
-          </button> */}
         </div>
       )}
     </nav>

@@ -6,7 +6,7 @@ import { MdDescription } from 'react-icons/md'
 
 const ProductsDetails = ({ product }) => {
   useEffect(() => {
-    window.scrollTo(0, 0) // Fait défiler la page vers le haut lorsque le composant se monte
+    window.scrollTo(0, 0)
   }, [])
 
   const [isSizeSelected, setIsSizeSelected] = useState(false)
@@ -34,12 +34,12 @@ const ProductsDetails = ({ product }) => {
   return (
     <div className="mt-10">
       <div className="flex flex-col">
-        <div className="flex justify-around  mt-[100px]">
-          <div>
+        <div className="flex justify-around mt-10">
+          <div className="w-[500px]">
             <div className="flex justify-center">
               {product.images && product.images.length > 0 && (
                 <img
-                  className="w-[500px]"
+                  className="w-full"
                   src={product.images[0].src}
                   alt={product.title}
                 />
@@ -51,14 +51,14 @@ const ProductsDetails = ({ product }) => {
                 product.images.map((image, index) => (
                   <img
                     key={index}
-                    className="product-image w-[500px] h-[500px] object-cover my-2 cursor-pointer"
+                    className="product-image w-full h-auto object-cover my-2 cursor-pointer"
                     src={image.src}
                     alt={product.title}
                   />
                 ))}
             </div>
           </div>
-          <div>
+          <div className="w-[500px]">
             <h3 className="text-3xl">{product.title}</h3>
             {product.variants && product.variants.length > 0 && (
               <p className="mb-5">
@@ -66,26 +66,12 @@ const ProductsDetails = ({ product }) => {
                 {product.variants[0].price.currencyCode}
               </p>
             )}
-            <div />
-
             <div className="flex gap-5 items-center">
-              <div
-                className="cursor-pointer"
-                style={{
-                  backgroundColor: 'black',
-                  borderRadius: '50%',
-                  width: '50px',
-                  height: '50px',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
+              <div className="cursor-pointer bg-black rounded-full w-12 h-12 flex justify-center items-center">
                 <FaShoppingCart size={30} color="white" />
               </div>
             </div>
             <div className="border-dashed border-2 border-black my-8" />
-
             <div className="py-0 flex justify-start gap-7">
               <div
                 className={`cursor-pointer flex flex-col items-center ${
@@ -99,18 +85,13 @@ const ProductsDetails = ({ product }) => {
                 />
                 <p className="text-xs text-center">DETAILS</p>
               </div>
-              <div
-                className={`cursor-pointer flex flex-col items-center ${
-                  isSizeSelected ? 'underline' : ''
-                }`}
-                onClick={handleSizeClick}
-              >
+              <div className="cursor-pointer flex flex-col items-center">
                 <TbRulerMeasure size={30} />
                 <p className="text-xs text-center">SIZE & FIT</p>
               </div>
               <div
                 className={`cursor-pointer flex flex-col items-center ${
-                  isDeliverySelected ? 'underline bold' : ''
+                  isDeliverySelected ? 'underline font-bold' : ''
                 }`}
                 onClick={handleDeliveryClick}
               >
