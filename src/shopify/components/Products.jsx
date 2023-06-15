@@ -66,11 +66,11 @@ const Products = () => {
 
       // Récupérer l'article ajouté au panier
       const addedItem = updatedCart.lineItems.find(
-        (item) => item.variant.id === variantId
+        (item) => item.variantId === variantId
       )
 
       if (addedItem) {
-        setCartItems((prevItems) => [...prevItems, addedItem])
+        setCartItems([addedItem])
       }
     } catch (error) {
       console.error(
@@ -104,18 +104,18 @@ const Products = () => {
   }
 
   return (
-    <div className="flex flex-col bg-white pt-[130px]">
-      <h2 className="font-arial-black text-[120px] text-lbpink rotate absolute">
+    <div className="flex flex-col pt-[130px] bg-lbpink">
+      <h2 className="font-arial-black text-[120px] text-white rotate absolute">
         SHOP
       </h2>
-      <h2 className="font-arial-black text-[40px] text-black px-[335px] absolute ">
+      <h2 className="font-arial-black text-[40px] text-lbgreenlight px-[335px] absolute ">
         NEW ARRIVALS
       </h2>
       <ul className="grid grid-cols-2 mx-auto gap-[130px] pt-[70px]">
         {products.map((product, index) => (
           <li
             key={product.id}
-            className={`bg-white w-[300px] border border-gray-200 p-5 rounded hover:border-lbpink ${
+            className={`bg-white w-[300px] border-4 border-lbgreenlight  p-5 rounded hover:border-lbgreen ${
               index % 2 === 0 ? '' : ''
             }`}
           >

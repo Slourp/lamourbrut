@@ -33,7 +33,7 @@ const Basket = ({
     <div className="fixed  right-0 m-4 mt-10">
       <div className="">
         {isOpen && (
-          <div className="absolute top-8 right-0 w-[400px] h-screen shadow-lg bg-lbpink">
+          <div className="absolute top-8 right-0 w-[400px] h-screen shadow-lg bg-white">
             <div className="p-4">
               <h3 className="text-lg font-bold">Panier</h3>
               <ul className="max-w-[60px]">

@@ -32,7 +32,7 @@ const ProductsDetails = ({ product }) => {
   }
 
   return (
-    <div className="mt-10">
+    <div className="mt-10 bg-lbpinklight">
       <div className="flex flex-col">
         <div className="flex justify-around mt-10">
           <div className="w-[500px]">
