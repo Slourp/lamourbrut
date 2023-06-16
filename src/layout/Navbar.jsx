@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { FaShoppingCart } from 'react-icons/fa'
+import { BsFillBasketFill } from 'react-icons/bs'
 import Logo from '../assets/lamourbrutlogo.png'
 import Sidebar from './Sidebar'
 import Basket from '../shopify/components/Basket'
@@ -9,16 +9,8 @@ import './Navbar.css'
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true)
   const [lastScrollPos, setLastScrollPos] = useState(0)
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
-  const [cartItems, setCartItems] = useState([])
-  const [isBasketOpen, setIsBasketOpen] = useState(false)
-
-  const handleRemoveItem = (itemId) => {
-    const updatedCartItems = cartItems.filter(
-      (item) => item.id !== itemId
-    )
-    setCartItems(updatedCartItems)
-  }
+  const [isMobile, setIsMobile] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,7 +44,7 @@ const Navbar = () => {
   }
 
   const toggleBasket = () => {
-    setIsBasketOpen(!isBasketOpen)
+    setIsOpen(!isOpen)
   }
 
   return (
@@ -80,35 +72,36 @@ const Navbar = () => {
         <img src={Logo} alt="L'Amour Brut" className="h-8 mx-auto" />
       </div>
 
+      {isOpen && <Basket />}
+
       {!isMobile && (
         <div className="flex gap-4">
+          {!isOpen && (
+            <button
+              className="border-[3px] border-black font-extrabold px-2 z-50"
+              onClick={() => handleRedirect('/shop')}
+              type="button"
+            >
+              SHOP
+            </button>
+          )}
+          {!isOpen && (
+            <button
+              className="border-[3px] border-black font-extrabold px-2"
+              onClick={() => handleRedirect('/about-us')}
+              type="button"
+            >
+              ABOUT US
+            </button>
+          )}
           <button
-            className="border-[3px] border-black font-extrabold px-2 z-50"
-            onClick={() => handleRedirect('/shop')}
+            className="border-[3px] border-black font-extrabold relative"
+            onClick={toggleBasket}
             type="button"
           >
-            SHOP
-          </button>
-          <button
-            className="border-[3px] border-black font-extrabold px-2"
-            onClick={() => handleRedirect('/about-us')}
-            type="button"
-          >
-            ABOUT US
-          </button>
-          <button className="" onClick={toggleBasket}>
-            <FaShoppingCart size={20} />
+            <BsFillBasketFill size={20} />
           </button>
         </div>
-      )}
-
-      {isBasketOpen && (
-        <Basket
-          cartItems={cartItems}
-          onRemoveItem={handleRemoveItem}
-          isOpen={isBasketOpen}
-          toggleBasket={toggleBasket}
-        />
       )}
     </nav>
   )

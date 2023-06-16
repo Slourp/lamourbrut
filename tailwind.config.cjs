@@ -40,6 +40,7 @@ module.exports = {
         lbpinklight: '#F8CDCD',
         lbpurple: '#440099',
         lbgray: '#5F6367',
+        lbyellow: '#FFE4B5',
         // primary: '#0a0a0a',
         // accent: '#42a6e3',
       },

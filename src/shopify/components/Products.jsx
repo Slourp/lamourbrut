@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import Client from 'shopify-buy'
 import { BsFillBasket3Fill } from 'react-icons/bs'
-import Basket from './Basket'
 import ProductsDetails from './ProductsDetails'
+import Basket from './Basket'
 
 const Products = () => {
   const [products, setProducts] = useState([])
-  const [cartItems, setCartItems] = useState([])
   const [cartId, setCartId] = useState(null)
   const [selectedProduct, setSelectedProduct] = useState(null)
+  const [cartItems, setCartItems] = useState([]) // Ajout de l'état cartItems
   const client = Client.buildClient({
     storefrontAccessToken: '066e26865bdd41f342997f449e1ea7a3',
     domain: '10a614.myshopify.com',
@@ -52,60 +52,22 @@ const Products = () => {
     setSelectedProduct(product)
   }
 
-  const handleAddToCart = async (variantId) => {
-    const lineItemToAdd = {
-      variantId,
-      quantity: 1,
-    }
-
-    try {
-      const updatedCart = await client.checkout.addLineItems(cartId, [
-        lineItemToAdd,
-      ])
-      console.log('Produit ajouté au panier !')
-
-      // Récupérer l'article ajouté au panier
-      const addedItem = updatedCart.lineItems.find(
-        (item) => item.variantId === variantId
-      )
-
-      if (addedItem) {
-        setCartItems([addedItem])
-      }
-    } catch (error) {
-      console.error(
-        "Erreur lors de l'ajout du produit au panier :",
-        error
-      )
-    }
+  const handleAddToCart = (product) => {
+    setCartItems([...cartItems, product.title]) // Ajout du produit au panier
   }
-
-  const handleShowCart = () => {
-    const cartContent = cartItems.map((item) => item.title).join(', ')
-    console.log(`Contenu du panier : ${cartContent}`)
-  }
-
-  const CartItem = ({ itemId, name, imgSrc, price }) => (
-    <li>
-      <h4>{name}</h4>
-      <img src={imgSrc} alt={name} />
-      <p>Prix : {price}</p>
-    </li>
-  )
 
   if (selectedProduct) {
     return (
       <ProductsDetails
         product={selectedProduct}
         setSelectedProduct={setSelectedProduct}
-        handleAddToCart={handleAddToCart}
       />
     )
   }
 
   return (
-    <div className="flex flex-col pt-[130px] bg-lbpink">
-      <h2 className="font-arial-black text-[120px] text-white rotate absolute">
+    <div className="flex flex-col pt-[130px] bg-lbyellow">
+      <h2 className="font-arial-black text-[120px] text-lbpink  rotate absolute">
         SHOP
       </h2>
       <h2 className="font-arial-black text-[40px] text-lbgreenlight px-[335px] absolute ">
@@ -115,7 +77,7 @@ const Products = () => {
         {products.map((product, index) => (
           <li
             key={product.id}
-            className={`bg-white w-[300px] border-4 border-lbgreenlight  p-5 rounded hover:border-lbgreen ${
+            className={` w-[300px] border-4 border-lbgreenlight  p-5 rounded hover:border-lbpink ${
               index % 2 === 0 ? '' : ''
             }`}
           >
@@ -137,23 +99,16 @@ const Products = () => {
                   {product.variants[0].price.currencyCode}
                 </p>
               )}
+              <BsFillBasket3Fill
+                className="text-2xl text-lbpink cursor-pointer"
+                onClick={() => handleAddToCart(product)} // Ajout du gestionnaire d'événements onClick
+              />
             </div>
-
-            <button
-              className="mt-3 px-4 py-2 bg-black text-white font-semibold rounded hover:bg-lbpink "
-              onClick={() =>
-                product.variants &&
-                product.variants.length > 0 &&
-                handleAddToCart(product.variants[0].id)
-              }
-            >
-              <BsFillBasket3Fill />
-            </button>
           </li>
         ))}
       </ul>
-
-      <Basket cartItems={cartItems} CartItem={CartItem} />
+      {cartItems.length > 0 && <Basket cartItems={cartItems} />} //
+      Correction ici
     </div>
   )
 }
