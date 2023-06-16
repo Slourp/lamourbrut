@@ -8,7 +8,7 @@ const Products = () => {
   const [products, setProducts] = useState([])
   const [cartId, setCartId] = useState(null)
   const [selectedProduct, setSelectedProduct] = useState(null)
-  const [cartItems, setCartItems] = useState([]) // Ajout de l'état cartItems
+  const [cartItems, setCartItems] = useState([])
   const client = Client.buildClient({
     storefrontAccessToken: '066e26865bdd41f342997f449e1ea7a3',
     domain: '10a614.myshopify.com',
@@ -53,7 +53,18 @@ const Products = () => {
   }
 
   const handleAddToCart = (product) => {
-    setCartItems([...cartItems, product.title]) // Ajout du produit au panier
+    setCartItems([...cartItems, product])
+  }
+
+  const handleRemoveItem = (itemId) => {
+    const updatedCartItems = cartItems.filter(
+      (item) => item.id !== itemId
+    )
+    setCartItems(updatedCartItems)
+  }
+
+  const handleCloseBasket = () => {
+    setCartItems([])
   }
 
   if (selectedProduct) {
@@ -70,14 +81,14 @@ const Products = () => {
       <h2 className="font-arial-black text-[120px] text-lbpink  rotate absolute">
         SHOP
       </h2>
-      <h2 className="font-arial-black text-[40px] text-lbgreenlight px-[335px] absolute ">
+      <h2 className="font-times-new-roman font-extrabold text-[75px] text-lbgreenlight text-center ">
         NEW ARRIVALS
       </h2>
       <ul className="grid grid-cols-2 mx-auto gap-[130px] pt-[70px]">
         {products.map((product, index) => (
           <li
             key={product.id}
-            className={` w-[300px] border-4 border-lbgreenlight  p-5 rounded hover:border-lbpink ${
+            className={` w-[300px] border-4 border-lbgreenlight bg-lbpinklight  p-5 rounded hover:border-lbpink ${
               index % 2 === 0 ? '' : ''
             }`}
           >
@@ -101,14 +112,20 @@ const Products = () => {
               )}
               <BsFillBasket3Fill
                 className="text-2xl text-lbpink cursor-pointer"
-                onClick={() => handleAddToCart(product)} // Ajout du gestionnaire d'événements onClick
+                onClick={() => handleAddToCart(product)}
               />
             </div>
           </li>
         ))}
       </ul>
-      {cartItems.length > 0 && <Basket cartItems={cartItems} />} //
-      Correction ici
+      {cartItems.length > 0 && (
+        <Basket
+          cartItems={cartItems}
+          products={products}
+          onClose={handleCloseBasket}
+          onRemoveItem={handleRemoveItem}
+        />
+      )}
     </div>
   )
 }

@@ -10,7 +10,7 @@ const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true)
   const [lastScrollPos, setLastScrollPos] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
-  const [isOpen, setIsOpen] = useState(false)
+  const [isBasketOpen, setIsBasketOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,39 +44,49 @@ const Navbar = () => {
   }
 
   const toggleBasket = () => {
-    setIsOpen(!isOpen)
+    setIsBasketOpen(!isBasketOpen)
+  }
+
+  const closeBasket = () => {
+    setIsBasketOpen(false)
   }
 
   return (
-    <nav
-      className="navbar fixed z-100 flex justify-between items-center top-0 w-full bg-white p-2 px-4 border-b-2 border-black navbar-transition"
-      style={{
-        transform: showNavbar ? 'translateY(0)' : 'translateY(-100%)',
-        top: 0,
-        zIndex: 9999,
-      }}
-    >
-      <div className="flex gap-2">{isMobile && <Sidebar />}</div>
+    <>
+      {isBasketOpen && <Basket onClose={closeBasket} />}
 
-      <div
-        className="absolute right-4 md:right-[50%] md:translate-x-[50%] cursor-pointer sm:translate-x-[-380%]"
-        onClick={() => handleRedirect('/')}
-        onKeyPress={(e) => {
-          if (e.key === 'Enter') {
-            handleRedirect('/')
-          }
+      <nav
+        className="navbar fixed z-100 flex justify-between items-center top-0 w-full bg-white p-2 px-4 border-b-2 border-black navbar-transition"
+        style={{
+          transform: showNavbar
+            ? 'translateY(0)'
+            : 'translateY(-100%)',
+          top: 0,
+          zIndex: 9999,
         }}
-        role="button"
-        tabIndex={0}
       >
-        <img src={Logo} alt="L'Amour Brut" className="h-8 mx-auto" />
-      </div>
+        <div className="flex gap-2">{isMobile && <Sidebar />}</div>
 
-      {isOpen && <Basket />}
+        <div
+          className="absolute right-4 md:right-[50%] md:translate-x-[50%] cursor-pointer sm:translate-x-[-380%]"
+          onClick={() => handleRedirect('/')}
+          onKeyPress={(e) => {
+            if (e.key === 'Enter') {
+              handleRedirect('/')
+            }
+          }}
+          role="button"
+          tabIndex={0}
+        >
+          <img
+            src={Logo}
+            alt="L'Amour Brut"
+            className="h-8 mx-auto"
+          />
+        </div>
 
-      {!isMobile && (
-        <div className="flex gap-4">
-          {!isOpen && (
+        {!isMobile && (
+          <div className="flex gap-4">
             <button
               className="border-[3px] border-black font-extrabold px-2 z-50"
               onClick={() => handleRedirect('/shop')}
@@ -84,8 +94,7 @@ const Navbar = () => {
             >
               SHOP
             </button>
-          )}
-          {!isOpen && (
+
             <button
               className="border-[3px] border-black font-extrabold px-2"
               onClick={() => handleRedirect('/about-us')}
@@ -93,17 +102,18 @@ const Navbar = () => {
             >
               ABOUT US
             </button>
-          )}
-          <button
-            className="border-[3px] border-black font-extrabold relative"
-            onClick={toggleBasket}
-            type="button"
-          >
-            <BsFillBasketFill size={20} />
-          </button>
-        </div>
-      )}
-    </nav>
+
+            <button
+              className="border-[3px] border-black font-extrabold relative"
+              onClick={toggleBasket}
+              type="button"
+            >
+              <BsFillBasketFill size={20} />
+            </button>
+          </div>
+        )}
+      </nav>
+    </>
   )
 }
 
