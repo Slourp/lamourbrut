@@ -18,6 +18,7 @@ import Confidentials from './components/Mentions/Confidentials'
 import './App.css'
 import Story from './screens/Story'
 import Layout from './shopify/pages/Layout'
+import Footer from './layout/Footer'
 
 function MainLayout({ children }) {
   return (

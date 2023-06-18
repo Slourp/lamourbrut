@@ -9,6 +9,7 @@ const Products = () => {
   const [cartId, setCartId] = useState(null)
   const [selectedProduct, setSelectedProduct] = useState(null)
   const [cartItems, setCartItems] = useState([])
+  const [isProductAdded, setIsProductAdded] = useState(false)
   const client = Client.buildClient({
     storefrontAccessToken: '066e26865bdd41f342997f449e1ea7a3',
     domain: '10a614.myshopify.com',
@@ -51,9 +52,31 @@ const Products = () => {
   const handleProductClick = (product) => {
     setSelectedProduct(product)
   }
-
+/* 
   const handleAddToCart = (product) => {
-    setCartItems([...cartItems, product])
+    const existingItemIndex = cartItems.findIndex(
+      (item) => item.id === product.id
+    )
+
+    if (existingItemIndex !== -1) {
+      const updatedItems = [...cartItems]
+      updatedItems[existingItemIndex].quantity += 1
+      setCartItems(updatedItems)
+    } else {
+      const newItem = { id: product.id, quantity: 1 }
+      setCartItems([...cartItems, newItem])
+    }
+  } */
+
+  const handleAddToCartOnce = (product) => {
+    const existingItemIndex = cartItems.findIndex(
+      (item) => item.id === product.id
+    )
+
+    if (existingItemIndex === -1) {
+      const newItem = { id: product.id, quantity: 1 }
+      setCartItems([...cartItems, newItem])
+    }
   }
 
   const handleRemoveItem = (itemId) => {
@@ -63,8 +86,25 @@ const Products = () => {
     setCartItems(updatedCartItems)
   }
 
+  const handleAddItem = (itemId) => {
+    const updatedItems = cartItems.map((item) =>
+      item.id === itemId
+        ? { ...item, quantity: item.quantity + 1 }
+        : item
+    )
+    setCartItems(updatedItems)
+  }
+
+  const handleDeleteItem = (itemId) => {
+    const updatedItems = cartItems.filter(
+      (item) => item.id !== itemId
+    )
+    setCartItems(updatedItems)
+  }
+
   const handleCloseBasket = () => {
     setCartItems([])
+    setIsProductAdded(false)
   }
 
   if (selectedProduct) {
@@ -77,7 +117,7 @@ const Products = () => {
   }
 
   return (
-    <div className="flex flex-col pt-[130px] bg-lbyellow">
+    <div className="flex flex-col pt-[130px] pb-10 bg-lbyellow">
       <h2 className="font-arial-black text-[120px] text-lbpink  rotate absolute">
         SHOP
       </h2>
@@ -112,7 +152,7 @@ const Products = () => {
               )}
               <BsFillBasket3Fill
                 className="text-2xl text-lbpink cursor-pointer"
-                onClick={() => handleAddToCart(product)}
+                onClick={() => handleAddToCartOnce(product)}
               />
             </div>
           </li>
@@ -124,6 +164,8 @@ const Products = () => {
           products={products}
           onClose={handleCloseBasket}
           onRemoveItem={handleRemoveItem}
+          onAddItem={handleAddItem}
+          onDeleteItem={handleDeleteItem}
         />
       )}
     </div>

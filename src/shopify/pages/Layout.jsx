@@ -1,6 +1,7 @@
 // Layout.jsx
 import React from 'react'
 import Products from '../components/Products'
+import Footer from '../../layout/Footer'
 
 const Layout = () => {
   const handleAddToCart = (item) => {
@@ -8,9 +9,12 @@ const Layout = () => {
   }
 
   return (
-    <div>
-      <Products onAddToCart={handleAddToCart} />
-    </div>
+    <>
+      <div>
+        <Products onAddToCart={handleAddToCart} />
+      </div>
+      <Footer />
+    </>
   )
 }
 
