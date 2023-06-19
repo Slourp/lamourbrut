@@ -9,6 +9,7 @@ import {
 import { BsFillCartCheckFill } from 'react-icons/bs'
 import { CgMathPlus, CgMathMinus } from 'react-icons/cg'
 import { TbTruckDelivery } from 'react-icons/tb'
+import CheckOut from './CheckOut'
 
 import './Basket.css'
 
@@ -20,8 +21,10 @@ const Basket = ({
   onAddItem,
   onDeleteItem,
 }) => {
-  const [isBasketOpen, setIsBasketOpen] = useState(true) // Ajout de l'état isBasketOpen
+  const [isBasketOpen, setIsBasketOpen] = useState(true)
   const [isBasketClosing, setIsBasketClosing] = useState(false)
+  const [isCheckOutOpen, setIsCheckOutOpen] = useState(false)
+  const [selectedItem, setSelectedItem] = useState(null)
 
   const handleRedirect = (path) => {
     window.location.href = path
@@ -47,16 +50,10 @@ const Basket = ({
       (item) => item.id === itemId
     )
     if (itemIndex !== -1) {
-      const updatedItems = [...cartItems]
-      updatedItems[itemIndex].quantity += 1
-      onAddItem(updatedItems)
-    } else {
-      const newItem = {
-        id: itemId,
-        quantity: 1,
-      }
-      const updatedItems = [...cartItems, newItem]
-      onAddItem(updatedItems)
+      setSelectedItem(
+        products.find((product) => product.id === itemId)
+      ) // Trouver l'article sélectionné dans la liste des produits
+      setIsCheckOutOpen(true)
     }
   }
 
@@ -65,10 +62,23 @@ const Basket = ({
   }
 
   const closeBasket = () => {
-    setIsBasketOpen(false) // Fermeture du panier sans vider les articles
     setIsBasketClosing(true)
+    onClose()
+  }
 
-    onClose() // Appel de la fonction onClose pour informer le parent de la fermeture du panier
+  const openCheckOut = () => {
+    window.location.href = '/checkout'
+  }
+
+  const calculateTotalPrice = () => {
+    return cartItems.reduce(
+      (total, item) =>
+        total +
+        item.quantity *
+          products.find((product) => product.id === item.id)
+            .variants[0].price.amount,
+      0
+    )
   }
 
   const getProductQuantity = (itemId) => {
@@ -81,7 +91,7 @@ const Basket = ({
   }
 
   if (!isBasketOpen) {
-    return null // Ne pas afficher le panier s'il est fermé
+    return null
   }
 
   return (
@@ -160,14 +170,19 @@ const Basket = ({
           })}
           <div className="bg-black text-white w-[100%] h-12 mt-[230px] flex items-center gap-5 justify-center">
             <p>TOTAL</p>
-            <p>+</p>
+            <p>{calculateTotalPrice()} €</p>
             <TbTruckDelivery size={25} />
           </div>
           <div className="mt-8 flex gap-5 items-center justify-center">
             <div className="cursor-pointer bg-black rounded-full w-12 h-12 flex items-center justify-center">
               <FaCashRegister size={25} color="white" />
             </div>
-            <p className="text-[18px] font-bold">CHECKOUT</p>
+            <button
+              className="text-[18px] font-bold"
+              onClick={() => openCheckOut()}
+            >
+              CHECKOUT
+            </button>
           </div>
         </div>
       ) : (
@@ -185,6 +200,15 @@ const Basket = ({
             </button>
           </div>
         </div>
+      )}
+      {isCheckOutOpen && (
+        <CheckOut
+          cartItems={cartItems}
+          products={products}
+          totalPrice={calculateTotalPrice()}
+          onBuy={() => {}}
+          selectedItem={selectedItem}
+        />
       )}
     </div>
   )

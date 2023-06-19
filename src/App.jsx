@@ -19,6 +19,7 @@ import './App.css'
 import Story from './screens/Story'
 import Layout from './shopify/pages/Layout'
 import Footer from './layout/Footer'
+import CheckOut from './shopify/components/CheckOut'
 
 function MainLayout({ children }) {
   return (
@@ -40,6 +41,7 @@ function App() {
           <Route path="story" element={<Story />} />
           <Route path="*" element={<NotFound />} />
           <Route path="test" element={<Layout />} />
+          <Route path="checkout" element={<CheckOut />} />
           <Route path="mentionslegales" element={<Mentions />} />
           <Route
             path="politiquedeconfidentialite"

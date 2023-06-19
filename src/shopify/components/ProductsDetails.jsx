@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import Client from 'shopify-buy'
-
-import { HiArrowLeft } from 'react-icons/hi'
+import { HiArrowLeft, HiX } from 'react-icons/hi'
 import { TbTruckDelivery, TbRulerMeasure } from 'react-icons/tb'
 import { FaShoppingCart } from 'react-icons/fa'
 import { MdDescription } from 'react-icons/md'
 import Basket from './Basket'
 
-const ProductsDetails = ({ product }) => {
+const ProductDetails = ({ product }) => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -51,9 +50,12 @@ const ProductsDetails = ({ product }) => {
   const [selectedProduct, setSelectedProduct] = useState(null)
   const [cartItems, setCartItems] = useState([])
   const [isProductAdded, setIsProductAdded] = useState(false)
+  const [isDetailsSelected, setIsDetailsSelected] = useState(false)
   const [isSizeSelected, setIsSizeSelected] = useState(false)
   const [isDeliverySelected, setIsDeliverySelected] = useState(false)
   const [showDelivery, setShowDelivery] = useState(false)
+  const [isCarouselOpen, setIsCarouselOpen] = useState(false)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
   const client = Client.buildClient({
     storefrontAccessToken: '066e26865bdd41f342997f449e1ea7a3',
@@ -64,20 +66,27 @@ const ProductsDetails = ({ product }) => {
     setSelectedProduct(product)
   }
 
-  const handleSizeClick = () => {
-    setIsSizeSelected(true)
+  const handleDetailsClick = () => {
+    setIsDetailsSelected(true)
     setIsDeliverySelected(false)
     setShowDelivery(false)
   }
 
   const handleDeliveryClick = () => {
-    setIsSizeSelected(false)
+    setIsDetailsSelected(false)
+    setIsDeliverySelected(true)
+    setShowDelivery(true)
+  }
+
+  const handleSizeClick = () => {
+    setIsDetailsSelected(false)
+    setIsSizeSelected(true)
     setIsDeliverySelected(true)
     setShowDelivery(true)
   }
 
   const handleDescriptionClick = () => {
-    setIsSizeSelected(false)
+    setIsDetailsSelected(false)
     setIsDeliverySelected(false)
     setShowDelivery(false)
   }
@@ -121,17 +130,39 @@ const ProductsDetails = ({ product }) => {
     setIsProductAdded(false)
   }
 
+  const handleCarouselOpen = (startIndex) => {
+    setCurrentImageIndex(startIndex)
+    setIsCarouselOpen(true)
+  }
+
+  const handleCarouselClose = () => {
+    setIsCarouselOpen(false)
+  }
+
+  const handlePrevImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? product.images.length - 1 : prevIndex - 1
+    )
+  }
+
+  const handleNextImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === product.images.length - 1 ? 0 : prevIndex + 1
+    )
+  }
+
   return (
-    <div className="mt-10 bg-lbyellow">
+    <div className="pt-10 w-[100%] bg-lbyellow max-xs:flex max-md:flex">
       <div className="flex flex-col">
-        <div className="flex justify-around mt-10">
-          <div className="w-[500px]">
+        <div className="flex justify-around mt-10 max-xs:flex-col max-md:flex-col">
+          <div className="w-[500px] max-xs:max-w-[70%] max-md:w-full">
             <div className="flex justify-center">
               {product.images && product.images.length > 0 && (
                 <img
-                  className="w-full"
+                  className="w-full cursor-pointer"
                   src={product.images[0].src}
                   alt={product.title}
+                  onClick={() => handleCarouselOpen(0)}
                 />
               )}
             </div>
@@ -141,14 +172,17 @@ const ProductsDetails = ({ product }) => {
                 product.images.map((image, index) => (
                   <img
                     key={index}
-                    className="product-image w-full h-auto object-cover my-2 cursor-pointer"
+                    className={`product-image w-full h-auto object-cover my-2 cursor-pointer ${
+                      isCarouselOpen ? 'carousel-open' : ''
+                    }`}
                     src={image.src}
                     alt={product.title}
+                    onClick={() => handleCarouselOpen(index)}
                   />
                 ))}
             </div>
           </div>
-          <div className="w-[500px]">
+          <div className="w-[500px] max-md:mx-auto max-xs:mx-auto max-xs:max-w-[100%]">
             <h3 className="text-3xl">{product.title}</h3>
             {product.variants && product.variants.length > 0 && (
               <p className="mb-5">
@@ -169,9 +203,9 @@ const ProductsDetails = ({ product }) => {
             <div className="py-0 flex justify-start gap-7">
               <div
                 className={`cursor-pointer flex flex-col items-center ${
-                  isSizeSelected ? 'underline' : ''
+                  isDetailsSelected ? 'underline' : ''
                 }`}
-                onClick={handleSizeClick}
+                onClick={handleDetailsClick}
               >
                 <MdDescription
                   size={30}
@@ -194,7 +228,7 @@ const ProductsDetails = ({ product }) => {
               </div>
             </div>
             <div
-              className="max-w-[600px] mt-5 leading-9"
+              className="max-w-[600px] mt-5 leading-9 max-xs:max-w-[80%]"
               style={{ minHeight: '100px' }}
             >
               {showDelivery ? (
@@ -229,8 +263,41 @@ const ProductsDetails = ({ product }) => {
           onDeleteItem={handleDeleteItem}
         />
       )}
+
+      {isCarouselOpen && (
+        <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="relative">
+            <HiX
+              className="absolute top-2 right-2 text-white cursor-pointer"
+              size={24}
+              onClick={handleCarouselClose}
+            />
+            <img
+              className="w-full max-h-[100vh] object-contain"
+              src={product.images[currentImageIndex].src}
+              alt={product.title}
+            />
+            {product.images.length > 1 && (
+              <div className="absolute bottom-2 left-0 right-0 flex justify-center">
+                <button
+                  className="bg-white rounded-full w-6 h-6 mr-2 focus:outline-none"
+                  onClick={handlePrevImage}
+                >
+                  {'<'}
+                </button>
+                <button
+                  className="bg-white rounded-full w-6 h-6 ml-2 focus:outline-none"
+                  onClick={handleNextImage}
+                >
+                  {'>'}
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   )
 }
 
-export default ProductsDetails
+export default ProductDetails

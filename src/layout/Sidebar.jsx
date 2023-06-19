@@ -30,7 +30,7 @@ const Sidebar = ({ isOpen }) => {
           className="menu-bars"
           onClick={showSidebar}
         >
-          <img
+          <imgx
             src={Burger}
             alt="Burger"
             className="h-10 cursor-pointer"

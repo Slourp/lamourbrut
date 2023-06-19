@@ -52,7 +52,7 @@ const Products = () => {
   const handleProductClick = (product) => {
     setSelectedProduct(product)
   }
-/* 
+  /* 
   const handleAddToCart = (product) => {
     const existingItemIndex = cartItems.findIndex(
       (item) => item.id === product.id
@@ -67,17 +67,6 @@ const Products = () => {
       setCartItems([...cartItems, newItem])
     }
   } */
-
-  const handleAddToCartOnce = (product) => {
-    const existingItemIndex = cartItems.findIndex(
-      (item) => item.id === product.id
-    )
-
-    if (existingItemIndex === -1) {
-      const newItem = { id: product.id, quantity: 1 }
-      setCartItems([...cartItems, newItem])
-    }
-  }
 
   const handleRemoveItem = (itemId) => {
     const updatedCartItems = cartItems.filter(
@@ -117,18 +106,21 @@ const Products = () => {
   }
 
   return (
-    <div className="flex flex-col pt-[130px] pb-10 bg-lbyellow">
-      <h2 className="font-arial-black text-[120px] text-lbpink  rotate absolute">
-        SHOP
-      </h2>
-      <h2 className="font-times-new-roman font-extrabold text-[75px] text-lbgreenlight text-center ">
-        NEW ARRIVALS
-      </h2>
-      <ul className="grid grid-cols-2 mx-auto gap-[130px] pt-[70px]">
+    <div className="flex flex-col pt-[130px] pb-8  bg-lbyellow">
+      <div className="flex gap-5 absolute ml-8">
+        <p className="font-arial-black text-[110px] max-xs:text-[40px] max-xs:text-center max-md:text-[70px] text-lbpink">
+          New
+        </p>
+        <p className="font-arial-black text-[110px] max-xs:text-[40px] max-xs:text-center max-md:text-[70px] text-lbpink">
+          Arrivals
+        </p>
+      </div>
+
+      <ul className="grid grid-cols-2 mx-auto gap-[60px] pt-[140px] max-md:grid-cols-1 max-xs:grid-cols-1 max-xs:pt-12 max-md:pt-[90px]">
         {products.map((product, index) => (
           <li
             key={product.id}
-            className={` w-[300px] border-4 border-lbgreenlight bg-lbpinklight  p-5 rounded hover:border-lbpink ${
+            className={` w-[600px] border-4 border-lbgreenlight bg-lbpinklight  p-5 rounded hover:border-lbpink max-xs:w-[300px] ${
               index % 2 === 0 ? '' : ''
             }`}
           >
@@ -150,10 +142,6 @@ const Products = () => {
                   {product.variants[0].price.currencyCode}
                 </p>
               )}
-              <BsFillBasket3Fill
-                className="text-2xl text-lbpink cursor-pointer"
-                onClick={() => handleAddToCartOnce(product)}
-              />
             </div>
           </li>
         ))}

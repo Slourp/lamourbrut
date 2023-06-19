@@ -1,19 +1,10 @@
 .basket-open {
-  animation-name: basketOpenAnimation;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
+  animation: basketOpenAnimation 0.5s forwards;
 }
 
 .basket-closing {
-  animation-name: basketClosingAnimation;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
+  animation: basketClosingAnimation 0.5s forwards;
 }
-
-.basket-icon {
-  transition: transform 0.3s ease;
-}
-
 
 @keyframes basketOpenAnimation {
   0% {
@@ -36,5 +27,3 @@
     transform: translateX(100%);
   }
 }
-
-
