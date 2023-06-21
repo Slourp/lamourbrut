@@ -193,7 +193,7 @@ const Basket = ({
           <FaSadTear className="text-yellow-500" size={60} />
           <div>
             <button
-              onClick={() => handleRedirect('/test')}
+              onClick={() => handleRedirect('/shop')}
               className="border-4 cursor-pointer border-black rounded p-2 bg-lbpink text-black font-bold"
             >
               START SHOPPING

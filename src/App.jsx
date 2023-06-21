@@ -36,11 +36,10 @@ function App() {
       <MainLayout>
         <Routes>
           <Route index element={<Home />} />
-          <Route path="shop" element={<Shop />} />
+          <Route path="shop" element={<Layout />} />
           <Route path="about-us" element={<AboutUs />} />
           <Route path="story" element={<Story />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="test" element={<Layout />} />
           <Route path="checkout" element={<CheckOut />} />
           <Route path="mentionslegales" element={<Mentions />} />
           <Route

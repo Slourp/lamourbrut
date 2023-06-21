@@ -243,7 +243,7 @@ const ProductDetails = ({ product }) => {
             <button
               type="button"
               onClick={() => {
-                window.location.href = '/test'
+                window.location.href = '/shop'
               }}
               className="text-black flex items-center text-xl font-extrabold border-6 border-black uppercase p-1 px-5 mt-12"
               style={{ border: '2px solid black' }}
