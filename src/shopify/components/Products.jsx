@@ -52,21 +52,6 @@ const Products = () => {
   const handleProductClick = (product) => {
     setSelectedProduct(product)
   }
-  /* 
-  const handleAddToCart = (product) => {
-    const existingItemIndex = cartItems.findIndex(
-      (item) => item.id === product.id
-    )
-
-    if (existingItemIndex !== -1) {
-      const updatedItems = [...cartItems]
-      updatedItems[existingItemIndex].quantity += 1
-      setCartItems(updatedItems)
-    } else {
-      const newItem = { id: product.id, quantity: 1 }
-      setCartItems([...cartItems, newItem])
-    }
-  } */
 
   const handleRemoveItem = (itemId) => {
     const updatedCartItems = cartItems.filter(
@@ -106,7 +91,7 @@ const Products = () => {
   }
 
   return (
-    <div className="flex flex-col pt-[130px] pb-8  bg-lbyellow">
+    <div className="flex flex-col pt-[130px] pb-8 bg-lbyellow">
       <div className="flex gap-5 absolute ml-8">
         <p className="font-arial-black text-[110px] max-xs:text-[40px] max-xs:text-center max-md:text-[70px] text-lbpink">
           New
@@ -120,19 +105,19 @@ const Products = () => {
         {products.map((product, index) => (
           <li
             key={product.id}
-            className={` w-[600px] border-4 border-lbgreenlight bg-lbpinklight  p-5 rounded hover:border-lbpink max-xs:w-[300px] ${
+            className={` w-[600px] border-1 bg-white p-5 rounded max-xs:w-[350px] max-md:w-[700px] ${
               index % 2 === 0 ? '' : ''
             }`}
           >
             {product.images && product.images.length > 0 && (
               <img
-                className="w-full h-auto mx-auto h-[300px] object-cover cursor-pointer"
+                className="w-full h-auto mx-auto h-[300px] max-xs:w-screen object-cover cursor-pointer"
                 src={product.images[0].src}
                 alt={product.title}
                 onClick={() => handleProductClick(product)}
               />
             )}
-            <div className="flex justify-between">
+            <div className="flex justify-between mt-3">
               <h3 className="text-lg font-semibold">
                 {product.title}
               </h3>

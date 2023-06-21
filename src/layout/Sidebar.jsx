@@ -1,3 +1,5 @@
+// Sidebar.js
+
 import React, { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { IconContext } from 'react-icons'
@@ -30,7 +32,7 @@ const Sidebar = ({ isOpen }) => {
           className="menu-bars"
           onClick={showSidebar}
         >
-          <imgx
+          <img
             src={Burger}
             alt="Burger"
             className="h-10 cursor-pointer"

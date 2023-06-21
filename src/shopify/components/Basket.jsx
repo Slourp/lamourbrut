@@ -52,7 +52,7 @@ const Basket = ({
     if (itemIndex !== -1) {
       setSelectedItem(
         products.find((product) => product.id === itemId)
-      ) // Trouver l'article sélectionné dans la liste des produits
+      )
       setIsCheckOutOpen(true)
     }
   }
@@ -96,7 +96,7 @@ const Basket = ({
 
   return (
     <div
-      className={`fixed pt-12 right-0 top-0 bottom-0 w-[400px] h-full bg-lbpink z-10 ${
+      className={`fixed pt-12 right-0 top-0 bottom-0 w-[400px] h-screen bg-lbpink z-10 ${
         isBasketOpen
           ? 'basket-open'
           : isBasketClosing
@@ -194,7 +194,7 @@ const Basket = ({
           <div>
             <button
               onClick={() => handleRedirect('/shop')}
-              className="border-4 cursor-pointer border-black rounded p-2 bg-lbpink text-black font-bold"
+              className="border-4 cursor-pointer border-black rounded p-2 bg-lbpink z-10 text-black font-bold"
             >
               START SHOPPING
             </button>
