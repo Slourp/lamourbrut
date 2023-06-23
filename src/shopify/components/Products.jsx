@@ -91,7 +91,7 @@ const Products = () => {
   }
 
   return (
-    <div className="flex flex-col pt-[130px] pb-8 bg-lbyellow">
+    <div className="flex flex-col pt-[130px] pb-8 bg-lbgreenvintageria">
       <div className="flex gap-5 absolute ml-8">
         <p className="font-arial-black text-[110px] max-xs:text-[40px] max-xs:text-center max-md:text-[70px] text-lbpink">
           New

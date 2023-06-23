@@ -152,11 +152,11 @@ const ProductDetails = ({ product }) => {
   }
 
   return (
-    <div className="pt-10 w-[100%] bg-lbyellow max-xs:flex max-md:flex">
+    <div className="pt-10 w-[100%] bg-lbyellowvintageria max-xs:flex max-md:flex">
       <div className="flex flex-col">
         <div className="flex justify-around mt-10 max-xs:flex-col max-md:flex-col">
-          <div className="w-[500px] max-xs:max-w-[70%] max-md:w-full">
-            <div className="flex justify-center">
+          <div className="w-[700px] max-xs:max-w-[70%] max-md:w-full ">
+            <div className="flex justify-center border-1 bg-white p-5 rounded">
               {product.images && product.images.length > 0 && (
                 <img
                   className="w-full cursor-pointer"
@@ -166,7 +166,7 @@ const ProductDetails = ({ product }) => {
                 />
               )}
             </div>
-            <div className="flex flex-col items-center mt-5">
+            <div className="flex flex-col items-center mt-5 border-1 bg-white p-5 rounded">
               {product.images &&
                 product.images.length > 0 &&
                 product.images.map((image, index) => (
@@ -182,28 +182,31 @@ const ProductDetails = ({ product }) => {
                 ))}
             </div>
           </div>
-          <div className="w-[500px] max-md:mx-auto max-xs:mx-auto max-xs:max-w-[100%]">
-            <h3 className="text-3xl">{product.title}</h3>
+          <div className="mt-[20px] w-[500px] max-md:mx-auto max-xs:mx-auto max-xs:max-w-[100%]">
+            <p className="font-times-new-roman pb-10">
+              ACCESSORIES | BAG
+            </p>
+            <h3 className="text-[50px]">{product.title}</h3>
             {product.variants && product.variants.length > 0 && (
               <p className="mb-5">
                 {product.variants[0].price.amount}{' '}
                 {product.variants[0].price.currencyCode}
               </p>
             )}
-            <div className="flex gap-5 items-center">
+            <div
+              className="flex gap-5 items-center cursor-pointer"
+              onClick={() => handleAddToCartOnce(product)}
+            >
               <div className="cursor-pointer bg-black rounded-full w-12 h-12 flex justify-center items-center">
-                <FaShoppingCart
-                  onClick={() => handleAddToCartOnce(product)}
-                  size={30}
-                  color="white"
-                />
+                <FaShoppingCart size={30} color="white" />
               </div>
+              <p className="font-bold">ADD TO CART</p>
             </div>
-            <div className="border-dashed border-2 border-black my-8" />
+            <div className="border-2 border-dashed border-black my-8" />
             <div className="py-0 flex justify-start gap-7">
               <div
-                className={`cursor-pointer flex flex-col items-center ${
-                  isDetailsSelected ? 'underline' : ''
+                className={`flex flex-col items-center ${
+                  isDetailsSelected ? 'underline font-bold' : ''
                 }`}
                 onClick={handleDetailsClick}
               >
