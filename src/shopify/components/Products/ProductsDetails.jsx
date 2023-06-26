@@ -4,7 +4,7 @@ import { HiArrowLeft, HiX } from 'react-icons/hi'
 import { TbTruckDelivery, TbRulerMeasure } from 'react-icons/tb'
 import { FaShoppingCart } from 'react-icons/fa'
 import { MdDescription } from 'react-icons/md'
-import Basket from './Basket'
+import Basket from '../Basket/Basket'
 
 const ProductDetails = ({ product }) => {
   useEffect(() => {

@@ -5,7 +5,7 @@ import { BsFillBasketFill } from 'react-icons/bs'
 import { FaShoppingCart } from 'react-icons/fa'
 import Logo from '../assets/lamourbrutlogo.png'
 import Sidebar from './Sidebar'
-import Basket from '../shopify/components/Basket'
+import Basket from '../shopify/components/Basket/Basket'
 
 import './Navbar.css'
 

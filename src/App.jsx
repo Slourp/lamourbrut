@@ -19,7 +19,7 @@ import './App.css'
 import Story from './screens/Story'
 import Layout from './shopify/pages/Layout'
 import Footer from './layout/Footer'
-import CheckOut from './shopify/components/CheckOut'
+import CheckOut from './shopify/components/Checkout/CheckOut'
 
 function MainLayout({ children }) {
   return (

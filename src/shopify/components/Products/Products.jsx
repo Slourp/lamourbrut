@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Client from 'shopify-buy'
 import { BsFillBasket3Fill } from 'react-icons/bs'
 import ProductsDetails from './ProductsDetails'
-import Basket from './Basket'
+import Basket from '../Basket/Basket'
 
 const Products = () => {
   const [products, setProducts] = useState([])

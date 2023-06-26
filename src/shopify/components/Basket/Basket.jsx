@@ -9,7 +9,7 @@ import {
 import { BsFillCartCheckFill } from 'react-icons/bs'
 import { CgMathPlus, CgMathMinus } from 'react-icons/cg'
 import { TbTruckDelivery } from 'react-icons/tb'
-import CheckOut from './CheckOut'
+import CheckOut from '../Checkout/CheckOut'
 
 import './Basket.css'
 
