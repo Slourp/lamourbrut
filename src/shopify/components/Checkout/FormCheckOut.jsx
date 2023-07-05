@@ -66,7 +66,7 @@ const FormCheckout = () => {
                     activeIcon === 'delivery' ? 'text-lbblue' : ''
                   }
                 />
-                <p className="text-center mt-1">Where ?</p>
+                <p className="text-center  mt-1">Where ?</p>
               </div>
               <div className="flex flex-col items-center cursor-pointer">
                 <MdOutlinePreview

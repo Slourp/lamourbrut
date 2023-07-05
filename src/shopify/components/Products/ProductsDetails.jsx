@@ -99,6 +99,7 @@ const ProductDetails = ({ product }) => {
     if (existingItemIndex === -1) {
       const newItem = { id: product.id, quantity: 1 }
       setCartItems([...cartItems, newItem])
+      setIsProductAdded(true) // Ajout de cette ligne pour indiquer que le produit a été ajouté au panier
     }
   }
 
@@ -151,15 +152,19 @@ const ProductDetails = ({ product }) => {
     )
   }
 
+  const handleAddToCart = () => {
+    handleAddToCartOnce(product)
+  }
+
   return (
-    <div className="flex pt-10 px-12 pb-10 w-[100%] h-full bg-lbyellowvintageria max-xs:flex max-md:flex">
+    <div className="pt-10 pb-10 h-full bg-green-500">
       <div className="flex flex-col">
-        <div className="flex mt-10 max-xs:flex-col max-md:flex-col">
-          <div className="w-[700px] max-xs:max-w-[70%] max-md:w-full border-1 mt-5 bg-white p-5 rounded ">
+        <div className="flex justify-center mt-10 max-xs:flex-col max-md:flex-col gap-8">
+          <div className="mx-auto border-1 xl:w-[600px] bg-white p-5 rounded max-xs:w-[70%]">
             <div>
               {product.images && product.images.length > 0 && (
                 <img
-                  className="w-full cursor-pointer"
+                  className="w-full cursor-pointer "
                   src={product.images[0].src}
                   alt={product.title}
                   onClick={() => handleCarouselOpen(0)}
@@ -172,7 +177,7 @@ const ProductDetails = ({ product }) => {
                 product.images.map((image, index) => (
                   <img
                     key={index}
-                    className={`product-image w-full h-auto object-cover cursor-pointer ${
+                    className={` object-cover cursor-pointer ${
                       isCarouselOpen ? 'carousel-open' : ''
                     }`}
                     src={image.src}
@@ -182,46 +187,50 @@ const ProductDetails = ({ product }) => {
                 ))}
             </div>
           </div>
-          {/* DESCRIPTION PRODUCTS */}
-          <div className="fixed right-0 px-12">
-            <div className="mt-[50px] w-[500px] max-md:mx-auto max-xs:mx-auto max-xs:max-w-[100%]">
+
+          <div className="flex justify-center">
+            <div className="xl:mt-[50px]">
               <button
                 type="button"
                 onClick={() => {
                   window.location.href = '/shop'
                 }}
-                className="text-black flex items-center text-xl font-extrabold border-6 border-black uppercase p-1 px-5"
+                className="text-black flex items-center text-xl font-extrabold border-6 border-black uppercase p-1 px-5 max-xs:mx-auto max-xs:border-2 max-xs:px-2 py-0 max-xs:text-[12px]"
                 style={{ border: '2px solid black' }}
               >
                 <HiArrowLeft className="mr-4" /> Back
               </button>
-              <p className="font-times-new-roman pt-5 pb-5">
-                ACCESSORIES | BAG
-              </p>
-              <h3 className="text-[70px] max-xs:text-xl">
-                {product.title}
-              </h3>
-              {product.variants && product.variants.length > 0 && (
-                <div className="flex my-5">
-                  <p>{product.variants[0].price.amount}</p>
-                  <p>
-                    <span />
-                    {product.variants[0].price.currencyCode}
-                  </p>
-                </div>
-              )}
+              <div className="max-xs:flex flex-col justify-center items-center">
+                <p className="font-times-new-roman pt-5 pb-5" />
+                <h3 className="text-[40px] max-xl:text-[35px] max-md:text-[30px] max-sm:text-[25px] max-xs:text-[22px]">
+                  {product.title}
+                </h3>
+              </div>
+
+              <div>
+                {product.variants && product.variants.length > 0 && (
+                  <div className="flex gap-0">
+                    <p>{product.variants[0].price.amount}</p>
+                    <p>
+                      <span>€</span>
+                    </p>
+                  </div>
+                )}
+              </div>
 
               <div
-                className="flex gap-5 items-center cursor-pointer"
-                onClick={() => handleAddToCartOnce(product)}
+                className="flex gap-3 mt-4 items-center cursor-pointer"
+                onClick={handleAddToCart}
               >
                 <div className="cursor-pointer bg-black rounded-full w-12 h-12 flex justify-center items-center">
                   <FaShoppingCart size={25} color="white" />
                 </div>
                 <p className="font-bold">ADD TO CART</p>
               </div>
-              <div className="border border-dashed border-black my-8" />
-              <div className="py-0 flex justify-start gap-7">
+
+              <div className="border border-dashed border-black my-8 w-full max-xs:w-full" />
+
+              <div className="py-0 flex gap-7 max-xs:justify-center">
                 <div
                   className={`flex flex-col items-center ${
                     isDetailsSelected ? 'underline font-bold' : ''
@@ -234,10 +243,7 @@ const ProductDetails = ({ product }) => {
                   />
                   <p className="text-xs text-center">DETAILS</p>
                 </div>
-                <div className="cursor-pointer flex flex-col items-center">
-                  <TbRulerMeasure size={30} />
-                  <p className="text-xs text-center">SIZE & FIT</p>
-                </div>
+
                 <div
                   className={`cursor-pointer flex flex-col items-center ${
                     isDeliverySelected ? 'underline font-bold' : ''
@@ -248,23 +254,28 @@ const ProductDetails = ({ product }) => {
                   <p className="text-xs text-center">DELIVERY</p>
                 </div>
               </div>
+
               <div
-                className="max-w-[600px] mt-5 leading-9 max-xs:max-w-[80%]"
-                style={{ minHeight: '100px' }}
+                className={`max-w-[600px] mt-5 leading-9 max-xs:max-w-[100%] ${
+                  isDeliverySelected ? 'hidden' : ''
+                }`}
               >
-                {showDelivery ? (
-                  <p>
+                <p className="section-text">{product.description}</p>
+              </div>
+
+              {isDeliverySelected && (
+                <div className="max-w-[600px] mt-5 leading-9 max-xs:max-w-[100%]">
+                  <p className="section-text">
                     Worldwide shipping with Colissimo. All sales are
                     final.
                   </p>
-                ) : (
-                  <p>{product.description}</p>
-                )}
-              </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
       </div>
+
       {cartItems.length > 0 && (
         <Basket
           cartItems={cartItems}
@@ -291,18 +302,16 @@ const ProductDetails = ({ product }) => {
             />
             {product.images.length > 1 && (
               <div className="absolute bottom-2 left-0 right-0 flex justify-center">
-                <button
-                  className="bg-white rounded-full w-6 h-6 mr-2 focus:outline-none"
-                  onClick={handlePrevImage}
-                >
-                  {'<'}
-                </button>
-                <button
-                  className="bg-white rounded-full w-6 h-6 ml-2 focus:outline-none"
-                  onClick={handleNextImage}
-                >
-                  {'>'}
-                </button>
+                <div className="flex items-center gap-2">
+                  <div
+                    className="w-2 h-2 rounded-full cursor-pointer bg-white"
+                    onClick={handlePrevImage}
+                  />
+                  <div
+                    className="w-2 h-2 rounded-full cursor-pointer bg-white"
+                    onClick={handleNextImage}
+                  />
+                </div>
               </div>
             )}
           </div>

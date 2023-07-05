@@ -5,21 +5,11 @@ import {
   Route,
 } from 'react-router-dom'
 import Layout from './pages/Layout'
-import Products from './components/Products'
-import Basket from './components/Basket'
-import CheckOut from './components/CheckOut'
+import Products from './components/Products/Products'
+import Basket from './components/Basket/Basket'
+import CheckOut from './components/Checkout/CheckOut'
 
 const ShopifyApp = () => {
-
-  const ShopifyApp = () => {
-    const cartItems = [] // Remplacez par votre logique pour obtenir les éléments du panier
-    const products = [] // Remplacez par votre logique pour obtenir les produits correspondants aux éléments du panier
-    const totalPrice = 0 // Remplacez par votre logique pour calculer le prix total
-    const handleBuy = () => {
-      // Logique pour traiter l'achat
-    }
-  
-
   return (
     <Router>
       <Layout>

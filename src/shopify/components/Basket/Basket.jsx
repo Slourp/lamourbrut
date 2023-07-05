@@ -50,10 +50,9 @@ const Basket = ({
       (item) => item.id === itemId
     )
     if (itemIndex !== -1) {
-      setSelectedItem(
-        products.find((product) => product.id === itemId)
-      )
-      setIsCheckOutOpen(true)
+      const updatedItems = [...cartItems]
+      updatedItems[itemIndex].quantity += 1
+      onAddItem(updatedItems)
     }
   }
 
@@ -84,7 +83,7 @@ const Basket = ({
   const getProductQuantity = (itemId) => {
     return cartItems.reduce((total, item) => {
       if (item.id === itemId) {
-        return total + 1
+        return total + item.quantity
       }
       return total
     }, 0)
@@ -112,9 +111,7 @@ const Basket = ({
         />
       </div>
       <div className="p-4">
-        <h3 className="text-[35px] pt-10 font-bold font-times-new-roman text-center">
-          MY CART
-        </h3>
+       
       </div>
       {cartItems && cartItems.length > 0 ? (
         <div className="">
@@ -124,7 +121,7 @@ const Basket = ({
             return (
               <div
                 key={index}
-                className="flex items-start mb-4 hover:bg-lbgreen"
+                className="flex items-start mb-4 hover:bg-green-500"
               >
                 {product.images && product.images.length > 0 && (
                   <img
@@ -146,20 +143,23 @@ const Basket = ({
                         onClick={() => handleAddItem(item.id)}
                       />
 
+                      <span className="text-black">
+                        {item.quantity}
+                      </span>
+
                       <CgMathMinus
-                        className="text-black cursor-pointer"
+                        className="ml-2 text-black cursor-pointer"
                         onClick={() => handleRemoveItem(item.id)}
                       />
 
                       <FaTrash
-                        className="ml-2 text-red-500 cursor-pointer"
+                        className="ml-2 text-black cursor-pointer"
                         size={20}
                         onClick={() => handleDeleteItem(item.id)}
                       />
                     </div>
                   </div>
                   <div className="mt-auto text-[16px]">
-                    quantity: {item.quantity}{' '}
                     <div className="mt-10">
                       {product.variants[0].price.amount} €
                     </div>
@@ -168,12 +168,13 @@ const Basket = ({
               </div>
             )
           })}
-          <div className="bg-black text-white w-[100%] h-12 mt-[230px] flex items-center gap-5 justify-center">
+          <div className="bg-black text-white w-[100%] h-12 mt-[130px] flex items-center gap-5 justify-center">
             <p>TOTAL</p>
             <p>{calculateTotalPrice()} €</p>
+            <CgMathPlus />
             <TbTruckDelivery size={25} />
           </div>
-          <div className="mt-8 flex gap-5 items-center justify-center">
+          <div className="mt-[55px] flex gap-5 items-center justify-center">
             <div className="cursor-pointer bg-black rounded-full w-12 h-12 flex items-center justify-center">
               <FaCashRegister size={25} color="white" />
             </div>
