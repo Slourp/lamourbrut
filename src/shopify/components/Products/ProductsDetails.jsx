@@ -1,59 +1,17 @@
 import React, { useEffect, useState } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 import Client from 'shopify-buy'
 import { HiArrowLeft, HiX } from 'react-icons/hi'
-import { TbTruckDelivery, TbRulerMeasure } from 'react-icons/tb'
+import { TbTruckDelivery } from 'react-icons/tb'
 import { FaShoppingCart } from 'react-icons/fa'
 import { MdDescription } from 'react-icons/md'
 import Basket from '../Basket/Basket'
 
 const ProductDetails = ({ product }) => {
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
-
-  useEffect(() => {
-    const initializeCart = async () => {
-      const existingCartId = localStorage.getItem('cartId')
-      if (existingCartId) {
-        setCartId(existingCartId)
-      } else {
-        const newCart = await client.checkout.create()
-        setCartId(newCart.id)
-        localStorage.setItem('cartId', newCart.id)
-      }
-    }
-
-    initializeCart()
-  }, [])
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const fetchedProducts = await client.product.fetchAll()
-
-      const detailedProducts = await Promise.all(
-        fetchedProducts.map(async (product) => {
-          const fetchedProduct = await client.product.fetch(
-            product.id
-          )
-          return fetchedProduct
-        })
-      )
-
-      setProducts(detailedProducts)
-    }
-
-    fetchProducts()
-  }, [])
-
   const [products, setProducts] = useState([])
-  const [cartId, setCartId] = useState(null)
-  const [selectedProduct, setSelectedProduct] = useState(null)
   const [cartItems, setCartItems] = useState([])
-  const [isProductAdded, setIsProductAdded] = useState(false)
   const [isDetailsSelected, setIsDetailsSelected] = useState(false)
-  const [isSizeSelected, setIsSizeSelected] = useState(false)
   const [isDeliverySelected, setIsDeliverySelected] = useState(false)
-  const [showDelivery, setShowDelivery] = useState(false)
   const [isCarouselOpen, setIsCarouselOpen] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
@@ -62,44 +20,67 @@ const ProductDetails = ({ product }) => {
     domain: '10a614.myshopify.com',
   })
 
-  const handleProductClick = (product) => {
-    setSelectedProduct(product)
-  }
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  useEffect(() => {
+    const initializeCart = async () => {
+      const existingCartId = localStorage.getItem('cartId')
+      if (!existingCartId) {
+        const newCart = await client.checkout.create()
+        localStorage.setItem('cartId', newCart.id)
+      }
+    }
+
+    initializeCart()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const fetchedProducts = await client.product.fetchAll()
+
+      const detailedProducts = await Promise.all(
+        fetchedProducts.map(async (fetchedProduct) => {
+          // Renommez la variable ici
+          const produit = await client.product.fetch(
+            fetchedProduct.id
+          )
+          return produit
+        })
+      )
+
+      setProducts(detailedProducts)
+    }
+
+    fetchProducts()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const handleDetailsClick = () => {
     setIsDetailsSelected(true)
     setIsDeliverySelected(false)
-    setShowDelivery(false)
   }
 
   const handleDeliveryClick = () => {
     setIsDetailsSelected(false)
     setIsDeliverySelected(true)
-    setShowDelivery(true)
-  }
-
-  const handleSizeClick = () => {
-    setIsDetailsSelected(false)
-    setIsSizeSelected(true)
-    setIsDeliverySelected(true)
-    setShowDelivery(true)
   }
 
   const handleDescriptionClick = () => {
     setIsDetailsSelected(false)
     setIsDeliverySelected(false)
-    setShowDelivery(false)
   }
 
-  const handleAddToCartOnce = (product) => {
+  const handleAddToCartOnce = (item) => {
     const existingItemIndex = cartItems.findIndex(
-      (item) => item.id === product.id
+      (cartItem) => cartItem.id === item.id
     )
 
     if (existingItemIndex === -1) {
-      const newItem = { id: product.id, quantity: 1 }
+      const newItem = { id: item.id, quantity: 1 }
       setCartItems([...cartItems, newItem])
-      setIsProductAdded(true) // Ajout de cette ligne pour indiquer que le produit a été ajouté au panier
     }
   }
 
@@ -128,7 +109,6 @@ const ProductDetails = ({ product }) => {
 
   const handleCloseBasket = () => {
     setCartItems([])
-    setIsProductAdded(false)
   }
 
   const handleCarouselOpen = (startIndex) => {
@@ -163,27 +143,37 @@ const ProductDetails = ({ product }) => {
           <div className="mx-auto border-1 xl:w-[600px] bg-white p-5 rounded max-xs:w-[70%]">
             <div>
               {product.images && product.images.length > 0 && (
-                <img
-                  className="w-full cursor-pointer "
-                  src={product.images[0].src}
-                  alt={product.title}
+                <button
+                  type="button"
+                  className="w-full cursor-pointer"
                   onClick={() => handleCarouselOpen(0)}
-                />
+                >
+                  <img
+                    src={product.images[0].src}
+                    alt={product.title}
+                  />
+                </button>
               )}
             </div>
+
             <div className="flex flex-col">
               {product.images &&
                 product.images.length > 0 &&
-                product.images.map((image, index) => (
-                  <img
-                    key={index}
-                    className={` object-cover cursor-pointer ${
+                product.images.map((image) => (
+                  <button
+                    type="button"
+                    key={uuidv4()}
+                    className={`object-cover cursor-pointer ${
                       isCarouselOpen ? 'carousel-open' : ''
-                    }`}
-                    src={image.src}
-                    alt={product.title}
-                    onClick={() => handleCarouselOpen(index)}
-                  />
+                    } button-like`}
+                    onClick={() => handleCarouselOpen(image.id)}
+                  >
+                    <img
+                      className="w-full"
+                      src={image.src}
+                      alt={product.title}
+                    />
+                  </button>
                 ))}
             </div>
           </div>
@@ -221,6 +211,9 @@ const ProductDetails = ({ product }) => {
               <div
                 className="flex gap-3 mt-4 items-center cursor-pointer"
                 onClick={handleAddToCart}
+                onKeyDown={() => {}} // Ajoutez un gestionnaire de clavier vide
+                role="button" // Ajoutez l'attribut role
+                tabIndex={0} // Ajoutez l'attribut tabIndex
               >
                 <div className="cursor-pointer bg-black rounded-full w-12 h-12 flex justify-center items-center">
                   <FaShoppingCart size={25} color="white" />
@@ -232,6 +225,9 @@ const ProductDetails = ({ product }) => {
 
               <div className="py-0 flex gap-7 max-xs:justify-center">
                 <div
+                  onKeyDown={() => {}} // Ajoutez un gestionnaire de clavier vide
+                  role="button" // Ajoutez l'attribut role
+                  tabIndex={0} // Ajoutez l'attribut tabIndex
                   className={`flex flex-col items-center ${
                     isDetailsSelected ? 'underline font-bold' : ''
                   }`}
@@ -245,6 +241,9 @@ const ProductDetails = ({ product }) => {
                 </div>
 
                 <div
+                  onKeyDown={() => {}} // Ajoutez un gestionnaire de clavier vide
+                  role="button" // Ajoutez l'attribut role
+                  tabIndex={0} // Ajoutez l'attribut tabIndex
                   className={`cursor-pointer flex flex-col items-center ${
                     isDeliverySelected ? 'underline font-bold' : ''
                   }`}
@@ -303,14 +302,20 @@ const ProductDetails = ({ product }) => {
             {product.images.length > 1 && (
               <div className="absolute bottom-2 left-0 right-0 flex justify-center">
                 <div className="flex items-center gap-2">
-                  <div
+                  <button
+                    type="button"
                     className="w-2 h-2 rounded-full cursor-pointer bg-white"
                     onClick={handlePrevImage}
-                  />
-                  <div
+                  >
+                    Previous
+                  </button>
+                  <button
+                    type="button"
                     className="w-2 h-2 rounded-full cursor-pointer bg-white"
                     onClick={handleNextImage}
-                  />
+                  >
+                    Next
+                  </button>
                 </div>
               </div>
             )}
