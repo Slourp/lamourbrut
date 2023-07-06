@@ -1,12 +1,6 @@
 import React, { useState } from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
-import {
-  FaSadTear,
-  FaTrash,
-  FaTimes,
-  FaCashRegister,
-} from 'react-icons/fa'
-import { BsFillCartCheckFill } from 'react-icons/bs'
+import { FaSadTear, FaTrash, FaCashRegister } from 'react-icons/fa'
 import { CgMathPlus, CgMathMinus } from 'react-icons/cg'
 import { TbTruckDelivery } from 'react-icons/tb'
 import CheckOut from '../Checkout/CheckOut'
@@ -21,10 +15,9 @@ const Basket = ({
   onAddItem,
   onDeleteItem,
 }) => {
-  const [isBasketOpen, setIsBasketOpen] = useState(true)
+  const [isBasketOpen] = useState(true)
   const [isBasketClosing, setIsBasketClosing] = useState(false)
-  const [isCheckOutOpen, setIsCheckOutOpen] = useState(false)
-  const [selectedItem, setSelectedItem] = useState(null)
+  const [isCheckOutOpen] = useState(false)
 
   const handleRedirect = (path) => {
     window.location.href = path
@@ -80,28 +73,20 @@ const Basket = ({
     )
   }
 
-  const getProductQuantity = (itemId) => {
-    return cartItems.reduce((total, item) => {
-      if (item.id === itemId) {
-        return total + item.quantity
-      }
-      return total
-    }, 0)
-  }
-
   if (!isBasketOpen) {
     return null
   }
 
+  let basketClassName = 'basket-closed'
+  if (isBasketOpen) {
+    basketClassName = 'basket-open'
+  } else if (isBasketClosing) {
+    basketClassName = 'basket-closing'
+  }
+
   return (
     <div
-      className={`fixed pt-12 right-0 top-0 bottom-0 w-[400px] h-screen bg-lbpink z-10 ${
-        isBasketOpen
-          ? 'basket-open'
-          : isBasketClosing
-          ? 'basket-closing'
-          : 'basket-closed'
-      }`}
+      className={`fixed pt-12 right-0 top-0 bottom-0 w-[400px] h-screen bg-lbpink z-10 ${basketClassName}`}
     >
       <div className="p-4 mt-auto">
         <AiOutlineClose
@@ -110,17 +95,15 @@ const Basket = ({
           size={50}
         />
       </div>
-      <div className="p-4">
-       
-      </div>
+      <div className="p-4" />
       {cartItems && cartItems.length > 0 ? (
         <div className="">
-          {cartItems.map((item, index) => {
+          {cartItems.map((item) => {
             const product = products.find((p) => p.id === item.id)
 
             return (
               <div
-                key={index}
+                key={product.id}
                 className="flex items-start mb-4 hover:bg-green-500"
               >
                 {product.images && product.images.length > 0 && (
@@ -131,15 +114,13 @@ const Basket = ({
                   />
                 )}
                 <div className="flex-grow">
-                  <div className="flex justify-between items-center">
+                  <div className="flex justify-around items-center">
                     <p className="text-[12px] font-bold">
                       {product.title}{' '}
-                      {getProductQuantity(item.id) > 1 && <FaTimes />}{' '}
-                      {getProductQuantity(item.id)}
                     </p>
                     <div className="flex items-center">
                       <CgMathPlus
-                        className="mr-2 text-black cursor-pointer"
+                        className=" text-black cursor-pointer"
                         onClick={() => handleAddItem(item.id)}
                       />
 
@@ -154,12 +135,12 @@ const Basket = ({
 
                       <FaTrash
                         className="ml-2 text-black cursor-pointer"
-                        size={20}
+                        size={15}
                         onClick={() => handleDeleteItem(item.id)}
                       />
                     </div>
                   </div>
-                  <div className="mt-auto text-[16px]">
+                  <div className="text-start ml-4 mt-auto text-[16px]">
                     <div className="mt-10">
                       {product.variants[0].price.amount} €
                     </div>
@@ -168,17 +149,18 @@ const Basket = ({
               </div>
             )
           })}
-          <div className="bg-black text-white w-[100%] h-12 mt-[130px] flex items-center gap-5 justify-center">
+          <div className="bg-black text-white w-[100%] h-12 flex items-center mt-[350px]  gap-5 justify-center">
             <p>TOTAL</p>
             <p>{calculateTotalPrice()} €</p>
             <CgMathPlus />
             <TbTruckDelivery size={25} />
           </div>
-          <div className="mt-[55px] flex gap-5 items-center justify-center">
+          <div className="mt-5 flex gap-5 items-center justify-center">
             <div className="cursor-pointer bg-black rounded-full w-12 h-12 flex items-center justify-center">
               <FaCashRegister size={25} color="white" />
             </div>
             <button
+              type="button"
               className="text-[18px] font-bold"
               onClick={() => openCheckOut()}
             >
@@ -194,6 +176,7 @@ const Basket = ({
           <FaSadTear className="text-yellow-500" size={60} />
           <div>
             <button
+              type="button"
               onClick={() => handleRedirect('/shop')}
               className="border-4 cursor-pointer border-black rounded p-2 bg-lbpink z-10 text-black font-bold"
             >
@@ -208,7 +191,6 @@ const Basket = ({
           products={products}
           totalPrice={calculateTotalPrice()}
           onBuy={() => {}}
-          selectedItem={selectedItem}
         />
       )}
     </div>

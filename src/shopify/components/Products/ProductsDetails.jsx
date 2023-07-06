@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import Client from 'shopify-buy'
-import { HiArrowLeft, HiX } from 'react-icons/hi'
+import { HiArrowLeft } from 'react-icons/hi'
 import { TbTruckDelivery } from 'react-icons/tb'
 import { FaShoppingCart } from 'react-icons/fa'
 import { MdDescription } from 'react-icons/md'
+import { CiDeliveryTruck } from 'react-icons/ci'
 import Basket from '../Basket/Basket'
 
 const ProductDetails = ({ product }) => {
@@ -12,8 +13,6 @@ const ProductDetails = ({ product }) => {
   const [cartItems, setCartItems] = useState([])
   const [isDetailsSelected, setIsDetailsSelected] = useState(false)
   const [isDeliverySelected, setIsDeliverySelected] = useState(false)
-  const [isCarouselOpen, setIsCarouselOpen] = useState(false)
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
   const client = Client.buildClient({
     storefrontAccessToken: '066e26865bdd41f342997f449e1ea7a3',
@@ -43,7 +42,6 @@ const ProductDetails = ({ product }) => {
 
       const detailedProducts = await Promise.all(
         fetchedProducts.map(async (fetchedProduct) => {
-          // Renommez la variable ici
           const produit = await client.product.fetch(
             fetchedProduct.id
           )
@@ -111,74 +109,36 @@ const ProductDetails = ({ product }) => {
     setCartItems([])
   }
 
-  const handleCarouselOpen = (startIndex) => {
-    setCurrentImageIndex(startIndex)
-    setIsCarouselOpen(true)
-  }
-
-  const handleCarouselClose = () => {
-    setIsCarouselOpen(false)
-  }
-
-  const handlePrevImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? product.images.length - 1 : prevIndex - 1
-    )
-  }
-
-  const handleNextImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === product.images.length - 1 ? 0 : prevIndex + 1
-    )
-  }
+  const handleCarouselOpen = () => {}
 
   const handleAddToCart = () => {
     handleAddToCartOnce(product)
   }
 
   return (
-    <div className="pt-10 pb-10 h-full bg-green-500">
+    <div className="pt-10 pb-10 h-full w-screen bg-green-500">
       <div className="flex flex-col">
-        <div className="flex justify-center mt-10 max-xs:flex-col max-md:flex-col gap-8">
-          <div className="mx-auto border-1 xl:w-[600px] bg-white p-5 rounded max-xs:w-[70%]">
+        <div className="flex justify-center gap-10 mt-10 max-xs:flex-col max-md:flex-col">
+          {/* PHOTOS SECTIONS */}
+          <div className="border-1 xl:w-[700px] bg-white p-5 rounded max-xs:w-[70%]">
             <div>
-              {product.images && product.images.length > 0 && (
-                <button
-                  type="button"
-                  className="w-full cursor-pointer"
-                  onClick={() => handleCarouselOpen(0)}
-                >
-                  <img
-                    src={product.images[0].src}
-                    alt={product.title}
-                  />
-                </button>
-              )}
-            </div>
-
-            <div className="flex flex-col">
               {product.images &&
                 product.images.length > 0 &&
                 product.images.map((image) => (
                   <button
                     type="button"
                     key={uuidv4()}
-                    className={`object-cover cursor-pointer ${
-                      isCarouselOpen ? 'carousel-open' : ''
-                    } button-like`}
+                    className="w-full cursor-pointer"
                     onClick={() => handleCarouselOpen(image.id)}
                   >
-                    <img
-                      className="w-full"
-                      src={image.src}
-                      alt={product.title}
-                    />
+                    <img src={image.src} alt={product.title} />
                   </button>
                 ))}
             </div>
           </div>
 
-          <div className="flex justify-center">
+          {/* DESCRIPTION PRODUCTS */}
+          <div>
             <div className="xl:mt-[50px]">
               <button
                 type="button"
@@ -211,9 +171,9 @@ const ProductDetails = ({ product }) => {
               <div
                 className="flex gap-3 mt-4 items-center cursor-pointer"
                 onClick={handleAddToCart}
-                onKeyDown={() => {}} // Ajoutez un gestionnaire de clavier vide
-                role="button" // Ajoutez l'attribut role
-                tabIndex={0} // Ajoutez l'attribut tabIndex
+                onKeyDown={() => {}}
+                role="button"
+                tabIndex={0}
               >
                 <div className="cursor-pointer bg-black rounded-full w-12 h-12 flex justify-center items-center">
                   <FaShoppingCart size={25} color="white" />
@@ -223,11 +183,12 @@ const ProductDetails = ({ product }) => {
 
               <div className="border border-dashed border-black my-8 w-full max-xs:w-full" />
 
+              {/* DETAILS PRODUCTS */}
               <div className="py-0 flex gap-7 max-xs:justify-center">
                 <div
-                  onKeyDown={() => {}} // Ajoutez un gestionnaire de clavier vide
-                  role="button" // Ajoutez l'attribut role
-                  tabIndex={0} // Ajoutez l'attribut tabIndex
+                  onKeyDown={() => {}}
+                  role="button"
+                  tabIndex={0}
                   className={`flex flex-col items-center ${
                     isDetailsSelected ? 'underline font-bold' : ''
                   }`}
@@ -241,9 +202,9 @@ const ProductDetails = ({ product }) => {
                 </div>
 
                 <div
-                  onKeyDown={() => {}} // Ajoutez un gestionnaire de clavier vide
-                  role="button" // Ajoutez l'attribut role
-                  tabIndex={0} // Ajoutez l'attribut tabIndex
+                  onKeyDown={() => {}}
+                  role="button"
+                  tabIndex={0}
                   className={`cursor-pointer flex flex-col items-center ${
                     isDeliverySelected ? 'underline font-bold' : ''
                   }`}
@@ -256,17 +217,18 @@ const ProductDetails = ({ product }) => {
 
               <div
                 className={`max-w-[600px] mt-5 leading-9 max-xs:max-w-[100%] ${
-                  isDeliverySelected ? 'hidden' : ''
+                  isDeliverySelected ? '' : ''
                 }`}
               >
                 <p className="section-text">{product.description}</p>
               </div>
 
               {isDeliverySelected && (
-                <div className="max-w-[600px] mt-5 leading-9 max-xs:max-w-[100%]">
+                <div className="flex  items-center gap-3 max-w-[600px] mt-5 leading-9 max-xs:max-w-[100%]">
+                  <CiDeliveryTruck size={30} />
                   <p className="section-text">
-                    Worldwide shipping with Colissimo. All sales are
-                    final.
+                    Worldwide shipping with Colissimo.{' '}
+                    <strong>All sales are final.</strong>
                   </p>
                 </div>
               )}
@@ -284,43 +246,6 @@ const ProductDetails = ({ product }) => {
           onAddItem={handleAddItem}
           onDeleteItem={handleDeleteItem}
         />
-      )}
-
-      {isCarouselOpen && (
-        <div className="fixed h-[100%] top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="relative">
-            <HiX
-              className="absolute top-2 right-2 text-white cursor-pointer"
-              size={24}
-              onClick={handleCarouselClose}
-            />
-            <img
-              className="w-full max-h-[100vh] object-contain"
-              src={product.images[currentImageIndex].src}
-              alt={product.title}
-            />
-            {product.images.length > 1 && (
-              <div className="absolute bottom-2 left-0 right-0 flex justify-center">
-                <div className="flex items-center gap-2">
-                  <button
-                    type="button"
-                    className="w-2 h-2 rounded-full cursor-pointer bg-white"
-                    onClick={handlePrevImage}
-                  >
-                    Previous
-                  </button>
-                  <button
-                    type="button"
-                    className="w-2 h-2 rounded-full cursor-pointer bg-white"
-                    onClick={handleNextImage}
-                  >
-                    Next
-                  </button>
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
       )}
     </div>
   )

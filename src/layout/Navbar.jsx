@@ -1,7 +1,6 @@
 // Navbar.js
 
 import React, { useState, useEffect } from 'react'
-import { BsFillBasketFill } from 'react-icons/bs'
 import { FaShoppingCart } from 'react-icons/fa'
 import Logo from '../assets/lamourbrutlogo.png'
 import Sidebar from './Sidebar'
@@ -83,7 +82,7 @@ const Navbar = () => {
       {!isMobile && (
         <div className="flex gap-4">
           <button
-            className="border-[3px] border-black font-extrabold px-2 z-50"
+            className="border-[3px] border-black font-extrabold px-2"
             onClick={() => handleRedirect('/shop')}
             type="button"
           >

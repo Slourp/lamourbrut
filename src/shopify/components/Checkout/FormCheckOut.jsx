@@ -14,7 +14,6 @@ const FormCheckout = () => {
     postalCode: '',
     country: '',
     phone: '',
-    apartmentNumber: '',
     additionalInfo: '',
     cardNumber: '',
     expirationDate: '',
@@ -30,7 +29,6 @@ const FormCheckout = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(formData)
   }
 
   const handleIconClick = (icon) => {
@@ -38,7 +36,7 @@ const FormCheckout = () => {
   }
 
   return (
-    <div className="w-[55%] max-sm:w-full max-xs:w-full bg-white flex flex-col h-screen">
+    <div className="w-[55%] max-md:w-full max-sm:w-full max-xs:w-full bg-white flex flex-col h-screen">
       <div>
         <p className="text-black font-bold text-xl text-start p-9">
           CHECKOUT
@@ -47,7 +45,7 @@ const FormCheckout = () => {
       <div className="pt-[10px] h-full">
         <form onSubmit={handleSubmit} className="px-8 h-[100%]">
           <div className="">
-            <div className="flex justify-start gap-[100px] mt-5">
+            <div className="max-sm:justify-around flex justify-around mt-5">
               <div className="flex flex-col items-center cursor-pointer">
                 <BsFillPersonFill
                   size={30}
@@ -89,7 +87,7 @@ const FormCheckout = () => {
                 <p className="text-center mt-1">Pay</p>
               </div>
             </div>
-            <div className="border border-solid border-black w-[90%]" />
+            <div className="border border-solid border-black w-full" />
           </div>
 
           {activeIcon === 'person' && (
@@ -249,48 +247,46 @@ const FormCheckout = () => {
           {activeIcon === 'preview' && (
             <>
               <p className="py-8 text-xl text-gray-400 font-arial-black">
-                3. PREVIEW
+                3. REVIEW
               </p>
 
-              <div className="flex flex-col gap-5 py-5 font-times-new-roman">
-                <div>
-                  <p className="font-bold">First Name:</p>
-                  <p>{formData.firstName}</p>
+              <div className="flex justify-start gap-[150px]">
+                <div className="flex-col gap-5 py-5 font-times-new-roman">
+                  <div>
+                    <p className="font-bold">First Name:</p>
+                    <p>{formData.firstName}</p>
+                  </div>
+
+                  <div>
+                    <p className="font-bold">Last Name:</p>
+                    <p>{formData.lastName}</p>
+                  </div>
+
+                  <div>
+                    <p className="font-bold">Email:</p>
+                    <p>{formData.email}</p>
+                  </div>
+
+                  <div>
+                    <p className="font-bold">Phone:</p>
+                    <p>{formData.phone}</p>
+                  </div>
                 </div>
 
-                <div>
-                  <p className="font-bold">Last Name:</p>
-                  <p>{formData.lastName}</p>
-                </div>
+                <div className="flex-col gap-5 py-5 font-times-new-roman">
+                  <div>
+                    <p className="font-bold">Address:</p>
+                    <p>{formData.address}</p>
+                  </div>
+                  <div>
+                    <p className="font-bold">Postal Code:</p>
+                    <p>{formData.postalCode}</p>
+                  </div>
 
-                <div>
-                  <p className="font-bold">Email:</p>
-                  <p>{formData.email}</p>
-                </div>
-
-                <div>
-                  <p className="font-bold">Phone:</p>
-                  <p>{formData.phone}</p>
-                </div>
-
-                <div>
-                  <p className="font-bold">Address:</p>
-                  <p>{formData.address}</p>
-                </div>
-
-                <div>
-                  <p className="font-bold">Postal Code:</p>
-                  <p>{formData.postalCode}</p>
-                </div>
-
-                <div>
-                  <p className="font-bold">Country:</p>
-                  <p>{formData.country}</p>
-                </div>
-
-                <div>
-                  <p className="font-bold">Apartment Number:</p>
-                  <p>{formData.apartmentNumber}</p>
+                  <div>
+                    <p className="font-bold">Country:</p>
+                    <p>{formData.country}</p>
+                  </div>
                 </div>
               </div>
             </>

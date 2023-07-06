@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Client from 'shopify-buy'
+import Headline from '../../../components/shared/Headline'
+import { headline5 } from '../../../data/headlines'
 import ProductsDetails from './ProductsDetails'
 import Basket from '../Basket/Basket'
 
@@ -84,8 +86,19 @@ const Products = () => {
   }
 
   return (
-    <div className="flex flex-col pt-[130px] bg-white">
-      <ul className="flex justify-around flex-wrap">
+    <div className="flex flex-col  bg-white">
+      <div className="mt-12 fixed-top overflow-hidden">
+        <div className="flex justify-center top-9 overflow-hidden max-w-screen">
+          <Headline
+            className="overflow-hidden"
+            headlines={headline5}
+            backgroundColor="bg-black"
+            textColor="text-white"
+            textSize={32}
+          />
+        </div>
+      </div>
+      <ul className="flex justify-around flex-wrap pt-10">
         {products.map((product) => (
           <button
             type="button"
