@@ -54,7 +54,9 @@ const FormCheckout = () => {
                     activeIcon === 'person' ? 'text-lbblue' : ''
                   }
                 />
-                <p className="text-center mt-1">Who ?</p>
+                <p className="text-center font-times-new-roman  mt-1">
+                  Who ?
+                </p>
               </div>
               <div className="flex flex-col items-center cursor-pointer">
                 <TbTruckDelivery
@@ -64,7 +66,9 @@ const FormCheckout = () => {
                     activeIcon === 'delivery' ? 'text-lbblue' : ''
                   }
                 />
-                <p className="text-center  mt-1">Where ?</p>
+                <p className="text-center font-times-new-roman mt-1">
+                  Where ?
+                </p>
               </div>
               <div className="flex flex-col items-center cursor-pointer">
                 <MdOutlinePreview
@@ -74,7 +78,9 @@ const FormCheckout = () => {
                     activeIcon === 'preview' ? 'text-lbblue' : ''
                   }
                 />
-                <p className="text-center mt-1">Review</p>
+                <p className="text-center font-times-new-roman  mt-1">
+                  Review
+                </p>
               </div>
               <div className="flex flex-col items-center cursor-pointer">
                 <FaCreditCard
@@ -84,7 +90,9 @@ const FormCheckout = () => {
                     activeIcon === 'payment' ? 'text-lbblue' : ''
                   }
                 />
-                <p className="text-center mt-1">Pay</p>
+                <p className="text-center font-times-new-roman  mt-1">
+                  Pay
+                </p>
               </div>
             </div>
             <div className="border border-solid border-black w-full" />
