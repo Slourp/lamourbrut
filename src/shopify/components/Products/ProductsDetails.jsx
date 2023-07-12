@@ -6,6 +6,7 @@ import { TbTruckDelivery } from 'react-icons/tb'
 import { FaShoppingCart } from 'react-icons/fa'
 import { MdDescription } from 'react-icons/md'
 import { CiDeliveryTruck } from 'react-icons/ci'
+import CarousselProducts from '../CarousselProducts/CarousselProducts'
 import Basket from '../Basket/Basket'
 
 const ProductDetails = ({ product }) => {
@@ -109,8 +110,6 @@ const ProductDetails = ({ product }) => {
     setCartItems([])
   }
 
-  const handleCarouselOpen = () => {}
-
   const handleAddToCart = () => {
     handleAddToCartOnce(product)
   }
@@ -120,48 +119,26 @@ const ProductDetails = ({ product }) => {
       <div className="flex flex-col">
         <div className="flex justify-center gap-10 mt-10 max-xs:flex-col max-md:flex-col">
           {/* PHOTOS SECTIONS */}
-          <div className="border-1 xl:w-[700px] bg-white p-5 rounded max-xs:w-[70%]">
-            <div>
-              {product.images &&
-                product.images.length > 0 &&
-                product.images.map((image) => (
-                  <button
-                    type="button"
-                    key={uuidv4()}
-                    className="w-full cursor-pointer"
-                    onClick={() => handleCarouselOpen(image.id)}
-                  >
-                    <img src={image.src} alt={product.title} />
-                  </button>
-                ))}
-            </div>
+          <div className="border-1 xl:w-[700px] bg-white p-5 rounded max-md:mx-auto max-xs:mx-auto max-xs:w-[90%]">
+            <CarousselProducts images={product.images} />
           </div>
 
           {/* DESCRIPTION PRODUCTS */}
           <div>
-            <div className="xl:mt-[50px]">
-              <button
-                type="button"
-                onClick={() => {
-                  window.location.href = '/shop'
-                }}
-                className="text-black flex items-center text-xl font-extrabold border-6 border-black uppercase p-1 px-5 max-xs:mx-auto max-xs:border-2 max-xs:px-2 py-0 max-xs:text-[12px]"
-                style={{ border: '2px solid black' }}
-              >
-                <HiArrowLeft className="mr-4" /> Back
-              </button>
-              <div className="max-xs:flex flex-col justify-center items-center">
-                <p className="font-times-new-roman pt-5 pb-5" />
-                <h3 className="text-[40px] max-xl:text-[35px] max-md:text-[30px] max-sm:text-[25px] max-xs:text-[22px]">
+            <div className="xl:mt-[60px]">
+              <div className="max-xs:flex flex-col justify-center items-center max-md:flex">
+                <h3 className="text-[40px] max-xl:text-[35px] max-md:text-[30px] max-sm:text-[28px] max-xs:text-[25px]">
                   {product.title}
                 </h3>
               </div>
 
-              <div>
+              <div className="max-xs:flex justify-center max-md:flex">
                 {product.variants && product.variants.length > 0 && (
                   <div className="flex gap-0">
-                    <p>{product.variants[0].price.amount}</p>
-                    <p>
+                    <p className="text-[20px]">
+                      {product.variants[0].price.amount}
+                    </p>
+                    <p className="text-[20px]">
                       <span>€</span>
                     </p>
                   </div>
@@ -169,14 +146,14 @@ const ProductDetails = ({ product }) => {
               </div>
 
               <div
-                className="flex gap-3 mt-4 items-center cursor-pointer"
+                className="flex gap-3 mt-4 items-center cursor-pointer max-xs:justify-center max-md:justify-center"
                 onClick={handleAddToCart}
                 onKeyDown={() => {}}
                 role="button"
                 tabIndex={0}
               >
-                <div className="cursor-pointer bg-black rounded-full w-12 h-12 flex justify-center items-center">
-                  <FaShoppingCart size={25} color="white" />
+                <div className="cursor-pointer bg-black rounded-full w-10 h-10 flex justify-center items-center max-xs:w-8 max-xs:h-8">
+                  <FaShoppingCart size={20} color="white" />
                 </div>
                 <p className="font-bold">ADD TO CART</p>
               </div>
@@ -184,7 +161,7 @@ const ProductDetails = ({ product }) => {
               <div className="border border-dashed border-black my-8 w-full max-xs:w-full" />
 
               {/* DETAILS PRODUCTS */}
-              <div className="py-0 flex gap-7 max-xs:justify-center">
+              <div className="py-0 flex gap-7 max-xs:justify-center max-md:justify-center">
                 <div
                   onKeyDown={() => {}}
                   role="button"
@@ -195,7 +172,7 @@ const ProductDetails = ({ product }) => {
                   onClick={handleDetailsClick}
                 >
                   <MdDescription
-                    size={30}
+                    size={25}
                     onClick={handleDescriptionClick}
                   />
                   <p className="text-xs text-center">DETAILS</p>
@@ -210,13 +187,13 @@ const ProductDetails = ({ product }) => {
                   }`}
                   onClick={handleDeliveryClick}
                 >
-                  <TbTruckDelivery size={30} />
+                  <TbTruckDelivery size={25} />
                   <p className="text-xs text-center">DELIVERY</p>
                 </div>
               </div>
 
               <div
-                className={`max-w-[600px] mt-5 leading-9 max-xs:max-w-[100%] ${
+                className={`max-w-[600px] mt-5 leading-9 max-xs:max-w-[90%] max-xs:mx-auto max-md:mx-auto ${
                   isDeliverySelected ? '' : ''
                 }`}
               >
@@ -224,7 +201,7 @@ const ProductDetails = ({ product }) => {
               </div>
 
               {isDeliverySelected && (
-                <div className="flex  items-center gap-3 max-w-[600px] mt-5 leading-9 max-xs:max-w-[100%]">
+                <div className="flex items-center gap-3 max-w-[600px] mt-5 leading-9 max-xs:max-w-[90%] max-xs:flex-col max-xs:mx-auto">
                   <CiDeliveryTruck size={30} />
                   <p className="section-text">
                     Worldwide shipping with Colissimo.{' '}
@@ -232,6 +209,16 @@ const ProductDetails = ({ product }) => {
                   </p>
                 </div>
               )}
+              <button
+                type="button"
+                onClick={() => {
+                  window.location.href = '/shop'
+                }}
+                className="text-black mt-10 flex items-center text-xl font-extrabold border-6 border-black uppercase p-1 px-5 max-xs:mx-auto max-md:mx-auto max-xs:border-2 max-xs:px-2 py-0 max-xs:text-[12px]"
+                style={{ border: '2px solid black' }}
+              >
+                <HiArrowLeft className="mr-4" /> Back
+              </button>
             </div>
           </div>
         </div>
