@@ -26,8 +26,13 @@ const useProducts = () => {
   }
 
   useEffect(() => {
-    if (selectedProduct) fetchProductDetails(selectedProduct.id)
+    const fetchProductDetailsIfNeeded = async () => {
+      if (selectedProduct && !selectedProduct.details) {
+        await fetchProductDetails(selectedProduct.id)
+      }
+    }
 
+    fetchProductDetailsIfNeeded()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedProduct])
 
