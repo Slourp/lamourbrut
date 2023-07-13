@@ -18,9 +18,10 @@ import Confidentials from './components/Mentions/Confidentials'
 import './App.css'
 import Story from './screens/Story'
 import Layout from './shopify/pages/Layout'
-import Footer from './layout/Footer'
 import CheckOut from './shopify/components/Checkout/CheckOut'
 import CarousselProducts from './shopify/components/CarousselProducts/CarousselProducts'
+import CartContext from './ShoppingCart/Context/CartContext'
+import useShoppingCart from './ShoppingCart/Hook/useShoppingCart'
 
 function MainLayout({ children }) {
   return (
@@ -32,25 +33,28 @@ function MainLayout({ children }) {
 }
 
 function App() {
+  const cart = useShoppingCart()
   return (
-    <Router>
-      <MainLayout>
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="shop" element={<Layout />} />
-          <Route path="test" element={<CarousselProducts />} />
-          <Route path="about-us" element={<AboutUs />} />
-          <Route path="story" element={<Story />} />
-          <Route path="*" element={<NotFound />} />
-          <Route path="checkout" element={<CheckOut />} />
-          <Route path="mentionslegales" element={<Mentions />} />
-          <Route
-            path="politiquedeconfidentialite"
-            element={<Confidentials />}
-          />
-        </Routes>
-      </MainLayout>
-    </Router>
+    <CartContext.Provider value={cart}>
+      <Router>
+        <MainLayout>
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="shop" element={<Layout />} />
+            <Route path="test" element={<CarousselProducts />} />
+            <Route path="about-us" element={<AboutUs />} />
+            <Route path="story" element={<Story />} />
+            <Route path="*" element={<NotFound />} />
+            <Route path="checkout" element={<CheckOut />} />
+            <Route path="mentionslegales" element={<Mentions />} />
+            <Route
+              path="politiquedeconfidentialite"
+              element={<Confidentials />}
+            />
+          </Routes>
+        </MainLayout>
+      </Router>
+    </CartContext.Provider>
   )
 }
 

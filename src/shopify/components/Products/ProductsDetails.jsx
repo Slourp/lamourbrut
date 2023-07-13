@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import Client from 'shopify-buy'
 import { HiArrowLeft } from 'react-icons/hi'
@@ -9,12 +9,10 @@ import { MdDescription } from 'react-icons/md'
 import { CiDeliveryTruck } from 'react-icons/ci'
 import CarousselProducts from '../CarousselProducts/CarousselProducts'
 import Basket from '../Basket/Basket'
-import useShoppingCart from '../../../ShoppingCart/Hook/useShoppingCart'
-import Product from '../../../ShoppingCart/Entity/Product'
 import ProductBuilder from '../../../ShoppingCart/Entity/ProductBuilder'
+import CartContext from '../../../ShoppingCart/Context/CartContext'
 
 const ProductDetails = ({ product }) => {
-  const [cartItems, setCartItems] = useState([])
   const [isDetailsSelected, setIsDetailsSelected] = useState(false)
   const [isDeliverySelected, setIsDeliverySelected] = useState(false)
 
@@ -24,18 +22,15 @@ const ProductDetails = ({ product }) => {
   })
 
   const {
-    cart,
     addToCart,
-    deleteProduct,
-    resetCart,
-    closeShoppingCart,
-    increaseProduct,
-    decreaseProduct,
-    undoCommand,
     calculateTotal,
-    openShoppingCart,
+    cart,
+    closeShoppingCart,
+    decreaseProduct,
+    deleteProduct,
     isOpen,
-  } = useShoppingCart()
+    openShoppingCart,
+  } = useContext(CartContext)
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -211,10 +206,15 @@ const ProductDetails = ({ product }) => {
       {isOpen && (
         <Basket
           cartItems={cart}
-          onClose={handleCloseBasket}
+          onClose={closeShoppingCart}
           onRemoveItem={deleteProduct}
           onAddItem={handleAddItem}
           onDeleteItem={handleDeleteItem}
+          cart={cart}
+          calculateTotal={calculateTotal}
+          deleteProduct={deleteProduct}
+          addToCart={addToCart}
+          decreaseProduct={decreaseProduct}
         />
       )}
     </div>

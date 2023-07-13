@@ -20,6 +20,11 @@ class ProductBuilder {
     return this
   }
 
+  withpictures(pictures) {
+    this.product.pictures = pictures
+    return this
+  }
+
   withQuantity(quantity) {
     this.product.quantity = quantity
     return this
@@ -37,6 +42,9 @@ class ProductBuilder {
 
     return this.withId(item.attrs.id.value)
       .withTitle(item.attrs.title.value)
+      .withpictures(
+        item.images.map((object) => object.attrs.src.value)
+      )
       .withPrice(+price)
       .withQuantity(1)
   }

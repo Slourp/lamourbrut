@@ -7,6 +7,7 @@ import Sidebar from './Sidebar'
 import Basket from '../shopify/components/Basket/Basket'
 
 import './Navbar.css'
+import { useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true)
@@ -42,8 +43,10 @@ const Navbar = () => {
     }
   }, [lastScrollPos])
 
+  const navigate = useNavigate() // Ajouter cette ligne
+
   const handleRedirect = (path) => {
-    window.location.href = path
+    navigate(path)
   }
 
   /*  const toggleSidebar = () => {

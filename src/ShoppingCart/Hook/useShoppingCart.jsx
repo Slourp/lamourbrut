@@ -1,4 +1,3 @@
-// src/hooks/useShoppingCart.js
 import { useState, useEffect } from 'react'
 import {
   AddToCartCommand,

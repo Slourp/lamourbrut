@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
 import { FaSadTear, FaTrash, FaCashRegister } from 'react-icons/fa'
 import { CgMathPlus, CgMathMinus } from 'react-icons/cg'
@@ -7,6 +7,8 @@ import CheckOut from '../Checkout/CheckOut'
 
 import './Basket.css'
 import useProducts from '../Products/Hook/useProduct'
+import CartContext from '../../../ShoppingCart/Context/CartContext'
+import { useNavigate } from 'react-router-dom'
 
 const Basket = ({
   cartItems,
@@ -21,40 +23,36 @@ const Basket = ({
 
   const { products } = useProducts()
 
+  const {
+    // isOpen,
+    // closeShoppingCart,
+    // openShoppingCart,
+    // resetCart,
+    // increaseProduct,
+    // undoCommand,
+    cart,
+    addToCart,
+    deleteProduct,
+    decreaseProduct,
+    calculateTotal,
+  } = useContext(CartContext)
+
+  const navigate = useNavigate() // Ajouter cette ligne
+
   const handleRedirect = (path) => {
-    window.location.href = path
+    navigate(path)
   }
 
-  const handleRemoveItem = (itemId) => {
-    // const itemIndex = cartItems.findIndex(
-    //   (item) => item.id === itemId
-    // )
-    // if (itemIndex !== -1) {
-    //   const updatedItems = [...cartItems]
-    //   if (updatedItems[itemIndex].quantity > 1) {
-    //     updatedItems[itemIndex].quantity -= 1
-    //   } else {
-    //     updatedItems.splice(itemIndex, 1)
-    //   }
-    //   onRemoveItem(updatedItems)
-    // }
-    console.log('TEST')
+  const handleRemoveItem = (product) => {
+    decreaseProduct(product.id)
   }
 
-  const handleAddItem = (itemId) => {
-    console.log('handleAddItem')
-    // const itemIndex = cartItems.findIndex(
-    //   (item) => item.id === itemId
-    // )
-    // if (itemIndex !== -1) {
-    //   const updatedItems = [...cartItems]
-    //   updatedItems[itemIndex].quantity += 1
-    //   onAddItem(updatedItems)
-    // }
+  const handleAddItem = (product) => {
+    addToCart(product)
   }
 
-  const handleDeleteItem = (itemId) => {
-    onDeleteItem(itemId)
+  const handleDeleteItem = (product) => {
+    deleteProduct(product.id)
   }
 
   const closeBasket = () => {
@@ -63,19 +61,11 @@ const Basket = ({
   }
 
   const openCheckOut = () => {
-    window.location.href = '/checkout'
+    handleRedirect('/checkout')
   }
 
   const calculateTotalPrice = () => {
-    console.log('calculateTotalPrice')
-    // return cartItems.reduce(
-    //   (total, item) =>
-    //     total +
-    //     item.quantity *
-    //       products.find((product) => product.id === item.id)
-    //         .variants[0].price.amount,
-    //   0
-    // )
+    return calculateTotal()
   }
 
   if (!isBasketOpen) {
@@ -101,11 +91,9 @@ const Basket = ({
         />
       </div>
       <div className="p-4" />
-      {/* {cartItems && cartItems.length > 0 ? (
+      {cart && cart.length > 0 ? (
         <div className="">
-          {cartItems.map((item) => {
-            const product = products.find((p) => p.id === item.id)
-
+          {cart.map((product) => {
             return (
               <div
                 key={product.id}
@@ -126,29 +114,27 @@ const Basket = ({
                     <div className="flex items-center">
                       <CgMathPlus
                         className=" text-black cursor-pointer"
-                        onClick={() => handleAddItem(item.id)}
+                        onClick={() => handleAddItem(product)}
                       />
 
                       <span className="text-black">
-                        {item.quantity}
+                        {product.quantity}
                       </span>
 
                       <CgMathMinus
                         className="ml-2 text-black cursor-pointer"
-                        onClick={() => handleRemoveItem(item.id)}
+                        onClick={() => handleRemoveItem(product)}
                       />
 
                       <FaTrash
                         className="ml-2 text-black cursor-pointer"
                         size={15}
-                        onClick={() => handleDeleteItem(item.id)}
+                        onClick={() => handleDeleteItem(product)}
                       />
                     </div>
                   </div>
                   <div className="text-start ml-4 mt-auto text-[16px]">
-                    <div className="mt-10">
-                      {product.variants[0].price.amount} €
-                    </div>
+                    <div className="mt-10">{product.price} €</div>
                   </div>
                 </div>
               </div>
@@ -189,7 +175,7 @@ const Basket = ({
             </button>
           </div>
         </div>
-      )} */}
+      )}
       {isCheckOutOpen && (
         <CheckOut
           cartItems={cartItems}
