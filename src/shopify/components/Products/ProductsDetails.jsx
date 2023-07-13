@@ -37,26 +37,6 @@ const ProductDetails = ({ product }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const fetchedProducts = await client.product.fetchAll()
-
-      const detailedProducts = await Promise.all(
-        fetchedProducts.map(async (fetchedProduct) => {
-          const produit = await client.product.fetch(
-            fetchedProduct.id
-          )
-          return produit
-        })
-      )
-
-      setProducts(detailedProducts)
-    }
-
-    fetchProducts()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-
   const handleDetailsClick = () => {
     setIsDetailsSelected(true)
     setIsDeliverySelected(false)
