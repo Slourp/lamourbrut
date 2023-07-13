@@ -1,46 +1,70 @@
 /* eslint-disable no-console */
 import { useEffect, useState } from 'react'
+import { useMutation } from 'react-query'
 import ShopifyProductRepositoryStrategy from '../Repositories/ShopifyProductRepositoryStrategy'
 
 const useProducts = () => {
   const [products, setProducts] = useState([])
+  const [selectedProductId, setSelectedProductId] = useState(null)
   const [selectedProduct, setSelectedProduct] = useState(null)
   const repository = new ShopifyProductRepositoryStrategy()
 
-  const fetchAllProducts = async () => {
-    try {
-      const allProducts = await repository.fetchAllProducts()
-      setProducts(allProducts)
-    } catch (error) {
-      console.error('Error fetching all products:', error)
+  const fetchAllProductsMutation = useMutation(
+    () => repository.fetchAllProducts(),
+    {
+      onError: (error) =>
+        console.error('Error fetching all products:', error),
+      onSuccess: (data) => {
+        setProducts(data)
+        console.log('Products fetched:', data)
+      },
     }
+  )
+
+  const fetchProductDetailsMutation = useMutation(
+    (productId) => repository.fetchProductDetails(productId),
+    {
+      onError: (error) =>
+        console.error('Error fetching product details:', error),
+      onSuccess: (product) => {
+        setSelectedProduct(product)
+        console.log('Product details fetched:', product)
+      },
+    }
+  )
+
+  const fetchAllProducts = () => {
+    fetchAllProductsMutation.mutate()
   }
 
-  const fetchProductDetails = async (productId) => {
-    try {
-      const product = await repository.fetchProductDetails(productId)
-      setSelectedProduct(product)
-    } catch (error) {
-      console.error('Error fetching product details:', error)
-    }
+  const fetchProductDetails = (productId) => {
+    fetchProductDetailsMutation.mutate(productId)
   }
 
   useEffect(() => {
-    const fetchProductDetailsIfNeeded = async () => {
-      if (selectedProduct && !selectedProduct.details) {
-        await fetchProductDetails(selectedProduct.id)
+    fetchAllProducts()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  useEffect(() => {
+    const fetchProductDetailsIfNeeded = () => {
+      if (selectedProductId) {
+        fetchProductDetails(selectedProductId)
       }
     }
 
     fetchProductDetailsIfNeeded()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedProduct])
+  }, [selectedProductId])
+
+  const handleProductClick = (productId) => {
+    setSelectedProductId(productId)
+  }
 
   return {
     products,
     selectedProduct,
-    fetchAllProducts,
-    fetchProductDetails,
+    handleProductClick,
   }
 }
 

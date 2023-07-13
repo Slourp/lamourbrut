@@ -14,6 +14,7 @@ const useShoppingCart = () => {
     return cartData ? JSON.parse(cartData) : []
   })
   const [commandStack, setCommandStack] = useState([])
+  const [isOpen, setIOpen] = useState(false)
 
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart))
@@ -66,8 +67,18 @@ const useShoppingCart = () => {
     )
   }
 
+  const openShoppingCart = () => {
+    setIOpen(true)
+  }
+  const closeShoppingCart = () => {
+    setIOpen(false)
+  }
+
   return {
     cart,
+    isOpen,
+    closeShoppingCart,
+    openShoppingCart,
     addToCart,
     deleteProduct,
     resetCart,

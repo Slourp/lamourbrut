@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { useEffect, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import Client from 'shopify-buy'
@@ -8,9 +9,11 @@ import { MdDescription } from 'react-icons/md'
 import { CiDeliveryTruck } from 'react-icons/ci'
 import CarousselProducts from '../CarousselProducts/CarousselProducts'
 import Basket from '../Basket/Basket'
+import useShoppingCart from '../../../ShoppingCart/Hook/useShoppingCart'
+import Product from '../../../ShoppingCart/Entity/Product'
+import ProductBuilder from '../../../ShoppingCart/Entity/ProductBuilder'
 
 const ProductDetails = ({ product }) => {
-  const [products, setProducts] = useState([])
   const [cartItems, setCartItems] = useState([])
   const [isDetailsSelected, setIsDetailsSelected] = useState(false)
   const [isDeliverySelected, setIsDeliverySelected] = useState(false)
@@ -19,6 +22,20 @@ const ProductDetails = ({ product }) => {
     storefrontAccessToken: '066e26865bdd41f342997f449e1ea7a3',
     domain: '10a614.myshopify.com',
   })
+
+  const {
+    cart,
+    addToCart,
+    deleteProduct,
+    resetCart,
+    closeShoppingCart,
+    increaseProduct,
+    decreaseProduct,
+    undoCommand,
+    calculateTotal,
+    openShoppingCart,
+    isOpen,
+  } = useShoppingCart()
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -29,6 +46,7 @@ const ProductDetails = ({ product }) => {
       const existingCartId = localStorage.getItem('cartId')
       if (!existingCartId) {
         const newCart = await client.checkout.create()
+        console.log({ newCart })
         localStorage.setItem('cartId', newCart.id)
       }
     }
@@ -53,37 +71,21 @@ const ProductDetails = ({ product }) => {
   }
 
   const handleAddToCartOnce = (item) => {
-    const existingItemIndex = cartItems.findIndex(
-      (cartItem) => cartItem.id === item.id
-    )
+    const product = new ProductBuilder()
+      .withAllParamsForShoppingCart(item)
+      .build()
 
-    if (existingItemIndex === -1) {
-      const newItem = { id: item.id, quantity: 1 }
-      setCartItems([...cartItems, newItem])
-    }
-  }
-
-  const handleRemoveItem = (itemId) => {
-    const updatedCartItems = cartItems.filter(
-      (item) => item.id !== itemId
-    )
-    setCartItems(updatedCartItems)
+    console.log(product)
+    addToCart(product)
+    openShoppingCart()
   }
 
   const handleAddItem = (itemId) => {
-    const updatedItems = cartItems.map((item) =>
-      item.id === itemId
-        ? { ...item, quantity: item.quantity + 1 }
-        : item
-    )
-    setCartItems(updatedItems)
+    addToCart(itemId)
   }
 
   const handleDeleteItem = (itemId) => {
-    const updatedItems = cartItems.filter(
-      (item) => item.id !== itemId
-    )
-    setCartItems(updatedItems)
+    deleteProduct(itemId)
   }
 
   const handleCloseBasket = () => {
@@ -92,6 +94,7 @@ const ProductDetails = ({ product }) => {
 
   const handleAddToCart = () => {
     handleAddToCartOnce(product)
+    console.log('handleAddToCart')
   }
 
   return (
@@ -100,7 +103,7 @@ const ProductDetails = ({ product }) => {
         <div className="flex justify-center gap-10 mt-10 max-xs:flex-col max-md:flex-col">
           {/* PHOTOS SECTIONS */}
           <div className="border-1 xl:w-[700px] bg-white p-5 rounded max-md:mx-auto max-xs:mx-auto max-xs:w-[90%]">
-            <CarousselProducts images={product.images} />
+            <CarousselProducts images={product?.images} />
           </div>
 
           {/* DESCRIPTION PRODUCTS */}
@@ -108,21 +111,22 @@ const ProductDetails = ({ product }) => {
             <div className="xl:mt-[60px]">
               <div className="max-xs:flex flex-col justify-center items-center max-md:flex">
                 <h3 className="text-[40px] max-xl:text-[35px] max-md:text-[30px] max-sm:text-[28px] max-xs:text-[25px]">
-                  {product.title}
+                  {product?.title}
                 </h3>
               </div>
 
               <div className="max-xs:flex justify-center max-md:flex">
-                {product.variants && product.variants.length > 0 && (
-                  <div className="flex gap-0">
-                    <p className="text-[20px]">
-                      {product.variants[0].price.amount}
-                    </p>
-                    <p className="text-[20px]">
-                      <span>€</span>
-                    </p>
-                  </div>
-                )}
+                {product?.variants &&
+                  product?.variants.length > 0 && (
+                    <div className="flex gap-0">
+                      <p className="text-[20px]">
+                        {product?.variants[0].price.amount}
+                      </p>
+                      <p className="text-[20px]">
+                        <span>€</span>
+                      </p>
+                    </div>
+                  )}
               </div>
 
               <div
@@ -177,7 +181,7 @@ const ProductDetails = ({ product }) => {
                   isDeliverySelected ? '' : ''
                 }`}
               >
-                <p className="section-text">{product.description}</p>
+                <p className="section-text">{product?.description}</p>
               </div>
 
               {isDeliverySelected && (
@@ -204,12 +208,11 @@ const ProductDetails = ({ product }) => {
         </div>
       </div>
 
-      {cartItems.length > 0 && (
+      {isOpen && (
         <Basket
-          cartItems={cartItems}
-          products={products}
+          cartItems={cart}
           onClose={handleCloseBasket}
-          onRemoveItem={handleRemoveItem}
+          onRemoveItem={deleteProduct}
           onAddItem={handleAddItem}
           onDeleteItem={handleDeleteItem}
         />

@@ -6,10 +6,10 @@ import { TbTruckDelivery } from 'react-icons/tb'
 import CheckOut from '../Checkout/CheckOut'
 
 import './Basket.css'
+import useProducts from '../Products/Hook/useProduct'
 
 const Basket = ({
   cartItems,
-  products,
   onClose,
   onRemoveItem,
   onAddItem,
@@ -19,34 +19,38 @@ const Basket = ({
   const [isBasketClosing, setIsBasketClosing] = useState(false)
   const [isCheckOutOpen] = useState(false)
 
+  const { products } = useProducts()
+
   const handleRedirect = (path) => {
     window.location.href = path
   }
 
   const handleRemoveItem = (itemId) => {
-    const itemIndex = cartItems.findIndex(
-      (item) => item.id === itemId
-    )
-    if (itemIndex !== -1) {
-      const updatedItems = [...cartItems]
-      if (updatedItems[itemIndex].quantity > 1) {
-        updatedItems[itemIndex].quantity -= 1
-      } else {
-        updatedItems.splice(itemIndex, 1)
-      }
-      onRemoveItem(updatedItems)
-    }
+    // const itemIndex = cartItems.findIndex(
+    //   (item) => item.id === itemId
+    // )
+    // if (itemIndex !== -1) {
+    //   const updatedItems = [...cartItems]
+    //   if (updatedItems[itemIndex].quantity > 1) {
+    //     updatedItems[itemIndex].quantity -= 1
+    //   } else {
+    //     updatedItems.splice(itemIndex, 1)
+    //   }
+    //   onRemoveItem(updatedItems)
+    // }
+    console.log('TEST')
   }
 
   const handleAddItem = (itemId) => {
-    const itemIndex = cartItems.findIndex(
-      (item) => item.id === itemId
-    )
-    if (itemIndex !== -1) {
-      const updatedItems = [...cartItems]
-      updatedItems[itemIndex].quantity += 1
-      onAddItem(updatedItems)
-    }
+    console.log('handleAddItem')
+    // const itemIndex = cartItems.findIndex(
+    //   (item) => item.id === itemId
+    // )
+    // if (itemIndex !== -1) {
+    //   const updatedItems = [...cartItems]
+    //   updatedItems[itemIndex].quantity += 1
+    //   onAddItem(updatedItems)
+    // }
   }
 
   const handleDeleteItem = (itemId) => {
@@ -63,14 +67,15 @@ const Basket = ({
   }
 
   const calculateTotalPrice = () => {
-    return cartItems.reduce(
-      (total, item) =>
-        total +
-        item.quantity *
-          products.find((product) => product.id === item.id)
-            .variants[0].price.amount,
-      0
-    )
+    console.log('calculateTotalPrice')
+    // return cartItems.reduce(
+    //   (total, item) =>
+    //     total +
+    //     item.quantity *
+    //       products.find((product) => product.id === item.id)
+    //         .variants[0].price.amount,
+    //   0
+    // )
   }
 
   if (!isBasketOpen) {
@@ -96,7 +101,7 @@ const Basket = ({
         />
       </div>
       <div className="p-4" />
-      {cartItems && cartItems.length > 0 ? (
+      {/* {cartItems && cartItems.length > 0 ? (
         <div className="">
           {cartItems.map((item) => {
             const product = products.find((p) => p.id === item.id)
@@ -184,7 +189,7 @@ const Basket = ({
             </button>
           </div>
         </div>
-      )}
+      )} */}
       {isCheckOutOpen && (
         <CheckOut
           cartItems={cartItems}

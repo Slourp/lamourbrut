@@ -1,14 +1,18 @@
+/* eslint-disable no-console */
 import React, { useEffect, useState } from 'react'
 import Client from 'shopify-buy'
 import Headline from '../../../components/shared/Headline'
 import { headline5 } from '../../../data/headlines'
 import ProductsDetails from './ProductsDetails'
 import Basket from '../Basket/Basket'
+import useProducts from './Hook/useProduct'
 
 const Products = () => {
-  const [products, setProducts] = useState([])
   const [selectedProduct, setSelectedProduct] = useState(null)
   const [cartItems, setCartItems] = useState([])
+
+  const { products } = useProducts()
+
   const client = Client.buildClient({
     storefrontAccessToken: '066e26865bdd41f342997f449e1ea7a3',
     domain: '10a614.myshopify.com',
@@ -26,66 +30,33 @@ const Products = () => {
     initializeCart()
   }, [client.checkout])
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const fetchedProducts = await client.product.fetchAll()
-
-      const detailedProducts = await Promise.all(
-        fetchedProducts.map(async (product) => {
-          const fetchedProduct = await client.product.fetch(
-            product.id
-          )
-          return fetchedProduct
-        })
-      )
-
-      setProducts(detailedProducts)
-    }
-
-    fetchProducts()
-  }, [client.product])
-
   const handleProductClick = (product) => {
     setSelectedProduct(product)
   }
 
   const handleRemoveItem = (itemId) => {
-    const updatedCartItems = cartItems.filter(
-      (item) => item.id !== itemId
-    )
-    setCartItems(updatedCartItems)
+    console.log('handleRemoveItem', itemId)
   }
 
   const handleAddItem = (itemId) => {
-    const updatedItems = cartItems.map((item) =>
-      item.id === itemId
-        ? { ...item, quantity: item.quantity + 1 }
-        : item
-    )
-    setCartItems(updatedItems)
+    console.log('handleAddItem', itemId)
   }
 
   const handleDeleteItem = (itemId) => {
-    const updatedItems = cartItems.filter(
-      (item) => item.id !== itemId
-    )
-    setCartItems(updatedItems)
+    console.log('handleDeleteItem', itemId)
   }
 
   const handleCloseBasket = () => {
-    setCartItems([])
+    console.log('handleCloseBasket')
+    // setCartItems([])
   }
 
-  if (selectedProduct) {
-    return (
-      <ProductsDetails
-        product={selectedProduct}
-        setSelectedProduct={setSelectedProduct}
-      />
-    )
-  }
-
-  return (
+  return selectedProduct ? (
+    <ProductsDetails
+      product={selectedProduct}
+      setSelectedProduct={setSelectedProduct}
+    />
+  ) : (
     <div className="flex flex-col  bg-white">
       <div className="mt-12 fixed-top overflow-hidden">
         <div className="flex justify-center top-9 overflow-hidden max-w-screen">
